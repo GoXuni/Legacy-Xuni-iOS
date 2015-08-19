@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F273C2101B45D38000958473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C20F1B45D38000958473 /* AppDelegate.swift */; };
+		F273C2121B45D38000958473 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2111B45D38000958473 /* ViewController.swift */; };
+		F273C2151B45D38000958473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F273C2131B45D38000958473 /* Main.storyboard */; };
+		F273C2171B45D38000958473 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F273C2161B45D38000958473 /* Images.xcassets */; };
+		F273C21A1B45D38000958473 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F273C2181B45D38000958473 /* LaunchScreen.xib */; };
+		F273C2261B45D38000958473 /* FlexChart101Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2251B45D38000958473 /* FlexChart101Tests.swift */; };
+		F273C2301B45D65000958473 /* GettingStartedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C22F1B45D65000958473 /* GettingStartedController.swift */; };
+		F273C2321B45D66100958473 /* BasicChartTypesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2311B45D66100958473 /* BasicChartTypesController.swift */; };
+		F273C2341B45D67300958473 /* MixedChartTypesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2331B45D67300958473 /* MixedChartTypesController.swift */; };
+		F273C2361B45D68900958473 /* FinancialChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2351B45D68900958473 /* FinancialChartController.swift */; };
+		F273C2381B45D69A00958473 /* BubbleChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2371B45D69A00958473 /* BubbleChartController.swift */; };
+		F273C23A1B45D6AE00958473 /* CustomTooltipsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2391B45D6AE00958473 /* CustomTooltipsController.swift */; };
+		F273C23C1B45D6BD00958473 /* ThemingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C23B1B45D6BD00958473 /* ThemingController.swift */; };
+		F273C23E1B45D6CF00958473 /* StylingSeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C23D1B45D6CF00958473 /* StylingSeriesController.swift */; };
+		F273C2401B45D6E000958473 /* CustomizingAxesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C23F1B45D6E000958473 /* CustomizingAxesController.swift */; };
+		F273C2441B45D71B00958473 /* LegendAndTitlesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2431B45D71B00958473 /* LegendAndTitlesController.swift */; };
+		F273C2461B45D72D00958473 /* SelectionModesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2451B45D72D00958473 /* SelectionModesController.swift */; };
+		F273C2481B45D73E00958473 /* TogglesSeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2471B45D73E00958473 /* TogglesSeriesController.swift */; };
+		F273C24A1B45D75300958473 /* AnimationOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2491B45D75300958473 /* AnimationOptionsController.swift */; };
+		F273C24C1B45D76400958473 /* DynamicChartsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C24B1B45D76400958473 /* DynamicChartsController.swift */; };
+		F273C24E1B45D77C00958473 /* ZoomingAndScrollingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C24D1B45D77C00958473 /* ZoomingAndScrollingController.swift */; };
+		F273C2501B45D79200958473 /* HitTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C24F1B45D79200958473 /* HitTestController.swift */; };
+		F273C2521B45D7AF00958473 /* SnapshotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2511B45D7AF00958473 /* SnapshotController.swift */; };
+		F273C2541B45D7C700958473 /* MultipleAxesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2531B45D7C700958473 /* MultipleAxesController.swift */; };
+		F273C2561B45D7DF00958473 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2551B45D7DF00958473 /* ChartData.swift */; };
+		F273C2581B45D7EF00958473 /* FinancialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2571B45D7EF00958473 /* FinancialData.swift */; };
+		F273C25A1B45D80200958473 /* HitTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2591B45D80200958473 /* HitTestData.swift */; };
+		F273C25C1B45D81700958473 /* DynamicChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C25B1B45D81700958473 /* DynamicChartData.swift */; };
+		F273C25E1B45D82900958473 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C25D1B45D82900958473 /* WeatherData.swift */; };
+		F273C2601B45D83400958473 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C25F1B45D83400958473 /* License.swift */; };
+		F273C2621B45D87D00958473 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C2611B45D87D00958473 /* XuniCoreKit.framework */; };
+		F273C2641B45D88900958473 /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C2631B45D88900958473 /* XuniChartCoreKit.framework */; };
+		F273C2661B45D89D00958473 /* FlexChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C2651B45D89D00958473 /* FlexChartKit.framework */; };
+		F2BEDBA01B73E6BE00DD2454 /* DataLabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BEDB9F1B73E6BE00DD2454 /* DataLabelController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F273C2201B45D38000958473 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F273C2021B45D38000958473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F273C2091B45D38000958473;
+			remoteInfo = FlexChart101;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F273C20A1B45D38000958473 /* FlexChart101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexChart101.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F273C20E1B45D38000958473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F273C20F1B45D38000958473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F273C2111B45D38000958473 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F273C2141B45D38000958473 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F273C2161B45D38000958473 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F273C2191B45D38000958473 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F273C21F1B45D38000958473 /* FlexChart101Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexChart101Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F273C2241B45D38000958473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F273C2251B45D38000958473 /* FlexChart101Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexChart101Tests.swift; sourceTree = "<group>"; };
+		F273C22F1B45D65000958473 /* GettingStartedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GettingStartedController.swift; sourceTree = "<group>"; };
+		F273C2311B45D66100958473 /* BasicChartTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicChartTypesController.swift; sourceTree = "<group>"; };
+		F273C2331B45D67300958473 /* MixedChartTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedChartTypesController.swift; sourceTree = "<group>"; };
+		F273C2351B45D68900958473 /* FinancialChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinancialChartController.swift; sourceTree = "<group>"; };
+		F273C2371B45D69A00958473 /* BubbleChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartController.swift; sourceTree = "<group>"; };
+		F273C2391B45D6AE00958473 /* CustomTooltipsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTooltipsController.swift; sourceTree = "<group>"; };
+		F273C23B1B45D6BD00958473 /* ThemingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemingController.swift; sourceTree = "<group>"; };
+		F273C23D1B45D6CF00958473 /* StylingSeriesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylingSeriesController.swift; sourceTree = "<group>"; };
+		F273C23F1B45D6E000958473 /* CustomizingAxesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizingAxesController.swift; sourceTree = "<group>"; };
+		F273C2431B45D71B00958473 /* LegendAndTitlesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegendAndTitlesController.swift; sourceTree = "<group>"; };
+		F273C2451B45D72D00958473 /* SelectionModesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionModesController.swift; sourceTree = "<group>"; };
+		F273C2471B45D73E00958473 /* TogglesSeriesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglesSeriesController.swift; sourceTree = "<group>"; };
+		F273C2491B45D75300958473 /* AnimationOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationOptionsController.swift; sourceTree = "<group>"; };
+		F273C24B1B45D76400958473 /* DynamicChartsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicChartsController.swift; sourceTree = "<group>"; };
+		F273C24D1B45D77C00958473 /* ZoomingAndScrollingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomingAndScrollingController.swift; sourceTree = "<group>"; };
+		F273C24F1B45D79200958473 /* HitTestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitTestController.swift; sourceTree = "<group>"; };
+		F273C2511B45D7AF00958473 /* SnapshotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotController.swift; sourceTree = "<group>"; };
+		F273C2531B45D7C700958473 /* MultipleAxesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleAxesController.swift; sourceTree = "<group>"; };
+		F273C2551B45D7DF00958473 /* ChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		F273C2571B45D7EF00958473 /* FinancialData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinancialData.swift; sourceTree = "<group>"; };
+		F273C2591B45D80200958473 /* HitTestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitTestData.swift; sourceTree = "<group>"; };
+		F273C25B1B45D81700958473 /* DynamicChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicChartData.swift; sourceTree = "<group>"; };
+		F273C25D1B45D82900958473 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		F273C25F1B45D83400958473 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		F273C2611B45D87D00958473 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
+		F273C2631B45D88900958473 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = ../../../Controls/XuniChartCoreKit.framework; sourceTree = "<group>"; };
+		F273C2651B45D89D00958473 /* FlexChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexChartKit.framework; path = ../../../Controls/FlexChartKit.framework; sourceTree = "<group>"; };
+		F2BEDB9F1B73E6BE00DD2454 /* DataLabelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLabelController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F273C2071B45D38000958473 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F273C2621B45D87D00958473 /* XuniCoreKit.framework in Frameworks */,
+				F273C2641B45D88900958473 /* XuniChartCoreKit.framework in Frameworks */,
+				F273C2661B45D89D00958473 /* FlexChartKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F273C21C1B45D38000958473 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F273C2011B45D38000958473 = {
+			isa = PBXGroup;
+			children = (
+				F273C2651B45D89D00958473 /* FlexChartKit.framework */,
+				F273C2631B45D88900958473 /* XuniChartCoreKit.framework */,
+				F273C2611B45D87D00958473 /* XuniCoreKit.framework */,
+				F273C20C1B45D38000958473 /* FlexChart101 */,
+				F273C2221B45D38000958473 /* FlexChart101Tests */,
+				F273C20B1B45D38000958473 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F273C20B1B45D38000958473 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F273C20A1B45D38000958473 /* FlexChart101.app */,
+				F273C21F1B45D38000958473 /* FlexChart101Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F273C20C1B45D38000958473 /* FlexChart101 */ = {
+			isa = PBXGroup;
+			children = (
+				F273C20F1B45D38000958473 /* AppDelegate.swift */,
+				F273C2111B45D38000958473 /* ViewController.swift */,
+				F273C2131B45D38000958473 /* Main.storyboard */,
+				F273C2161B45D38000958473 /* Images.xcassets */,
+				F273C2181B45D38000958473 /* LaunchScreen.xib */,
+				F273C20D1B45D38000958473 /* Supporting Files */,
+				F273C22F1B45D65000958473 /* GettingStartedController.swift */,
+				F273C2311B45D66100958473 /* BasicChartTypesController.swift */,
+				F273C2331B45D67300958473 /* MixedChartTypesController.swift */,
+				F273C2351B45D68900958473 /* FinancialChartController.swift */,
+				F273C2371B45D69A00958473 /* BubbleChartController.swift */,
+				F273C2391B45D6AE00958473 /* CustomTooltipsController.swift */,
+				F273C23B1B45D6BD00958473 /* ThemingController.swift */,
+				F273C23D1B45D6CF00958473 /* StylingSeriesController.swift */,
+				F273C23F1B45D6E000958473 /* CustomizingAxesController.swift */,
+				F273C2431B45D71B00958473 /* LegendAndTitlesController.swift */,
+				F273C2451B45D72D00958473 /* SelectionModesController.swift */,
+				F273C2471B45D73E00958473 /* TogglesSeriesController.swift */,
+				F273C2491B45D75300958473 /* AnimationOptionsController.swift */,
+				F273C24B1B45D76400958473 /* DynamicChartsController.swift */,
+				F273C24D1B45D77C00958473 /* ZoomingAndScrollingController.swift */,
+				F273C24F1B45D79200958473 /* HitTestController.swift */,
+				F273C2511B45D7AF00958473 /* SnapshotController.swift */,
+				F273C2531B45D7C700958473 /* MultipleAxesController.swift */,
+				F273C2551B45D7DF00958473 /* ChartData.swift */,
+				F273C2571B45D7EF00958473 /* FinancialData.swift */,
+				F273C2591B45D80200958473 /* HitTestData.swift */,
+				F273C25B1B45D81700958473 /* DynamicChartData.swift */,
+				F273C25D1B45D82900958473 /* WeatherData.swift */,
+				F273C25F1B45D83400958473 /* License.swift */,
+				F2BEDB9F1B73E6BE00DD2454 /* DataLabelController.swift */,
+			);
+			path = FlexChart101;
+			sourceTree = "<group>";
+		};
+		F273C20D1B45D38000958473 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F273C20E1B45D38000958473 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F273C2221B45D38000958473 /* FlexChart101Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F273C2251B45D38000958473 /* FlexChart101Tests.swift */,
+				F273C2231B45D38000958473 /* Supporting Files */,
+			);
+			path = FlexChart101Tests;
+			sourceTree = "<group>";
+		};
+		F273C2231B45D38000958473 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F273C2241B45D38000958473 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F273C2091B45D38000958473 /* FlexChart101 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F273C2291B45D38000958473 /* Build configuration list for PBXNativeTarget "FlexChart101" */;
+			buildPhases = (
+				F273C2061B45D38000958473 /* Sources */,
+				F273C2071B45D38000958473 /* Frameworks */,
+				F273C2081B45D38000958473 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlexChart101;
+			productName = FlexChart101;
+			productReference = F273C20A1B45D38000958473 /* FlexChart101.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F273C21E1B45D38000958473 /* FlexChart101Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F273C22C1B45D38000958473 /* Build configuration list for PBXNativeTarget "FlexChart101Tests" */;
+			buildPhases = (
+				F273C21B1B45D38000958473 /* Sources */,
+				F273C21C1B45D38000958473 /* Frameworks */,
+				F273C21D1B45D38000958473 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F273C2211B45D38000958473 /* PBXTargetDependency */,
+			);
+			name = FlexChart101Tests;
+			productName = FlexChart101Tests;
+			productReference = F273C21F1B45D38000958473 /* FlexChart101Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F273C2021B45D38000958473 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = GrapeCity;
+				TargetAttributes = {
+					F273C2091B45D38000958473 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					F273C21E1B45D38000958473 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = F273C2091B45D38000958473;
+					};
+				};
+			};
+			buildConfigurationList = F273C2051B45D38000958473 /* Build configuration list for PBXProject "FlexChart101" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F273C2011B45D38000958473;
+			productRefGroup = F273C20B1B45D38000958473 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F273C2091B45D38000958473 /* FlexChart101 */,
+				F273C21E1B45D38000958473 /* FlexChart101Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F273C2081B45D38000958473 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F273C2151B45D38000958473 /* Main.storyboard in Resources */,
+				F273C21A1B45D38000958473 /* LaunchScreen.xib in Resources */,
+				F273C2171B45D38000958473 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F273C21D1B45D38000958473 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F273C2061B45D38000958473 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F273C2361B45D68900958473 /* FinancialChartController.swift in Sources */,
+				F273C2441B45D71B00958473 /* LegendAndTitlesController.swift in Sources */,
+				F2BEDBA01B73E6BE00DD2454 /* DataLabelController.swift in Sources */,
+				F273C2301B45D65000958473 /* GettingStartedController.swift in Sources */,
+				F273C2601B45D83400958473 /* License.swift in Sources */,
+				F273C24A1B45D75300958473 /* AnimationOptionsController.swift in Sources */,
+				F273C2561B45D7DF00958473 /* ChartData.swift in Sources */,
+				F273C2121B45D38000958473 /* ViewController.swift in Sources */,
+				F273C25E1B45D82900958473 /* WeatherData.swift in Sources */,
+				F273C2401B45D6E000958473 /* CustomizingAxesController.swift in Sources */,
+				F273C24C1B45D76400958473 /* DynamicChartsController.swift in Sources */,
+				F273C23C1B45D6BD00958473 /* ThemingController.swift in Sources */,
+				F273C2541B45D7C700958473 /* MultipleAxesController.swift in Sources */,
+				F273C2341B45D67300958473 /* MixedChartTypesController.swift in Sources */,
+				F273C23E1B45D6CF00958473 /* StylingSeriesController.swift in Sources */,
+				F273C2481B45D73E00958473 /* TogglesSeriesController.swift in Sources */,
+				F273C2581B45D7EF00958473 /* FinancialData.swift in Sources */,
+				F273C2461B45D72D00958473 /* SelectionModesController.swift in Sources */,
+				F273C2381B45D69A00958473 /* BubbleChartController.swift in Sources */,
+				F273C2501B45D79200958473 /* HitTestController.swift in Sources */,
+				F273C2521B45D7AF00958473 /* SnapshotController.swift in Sources */,
+				F273C25C1B45D81700958473 /* DynamicChartData.swift in Sources */,
+				F273C2101B45D38000958473 /* AppDelegate.swift in Sources */,
+				F273C24E1B45D77C00958473 /* ZoomingAndScrollingController.swift in Sources */,
+				F273C25A1B45D80200958473 /* HitTestData.swift in Sources */,
+				F273C23A1B45D6AE00958473 /* CustomTooltipsController.swift in Sources */,
+				F273C2321B45D66100958473 /* BasicChartTypesController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F273C21B1B45D38000958473 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F273C2261B45D38000958473 /* FlexChart101Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F273C2211B45D38000958473 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F273C2091B45D38000958473 /* FlexChart101 */;
+			targetProxy = F273C2201B45D38000958473 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F273C2131B45D38000958473 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F273C2141B45D38000958473 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F273C2181B45D38000958473 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F273C2191B45D38000958473 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F273C2271B45D38000958473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F273C2281B45D38000958473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F273C22A1B45D38000958473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/frameworks,
+					../../../Controls,
+				);
+				INFOPLIST_FILE = FlexChart101/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F273C22B1B45D38000958473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/frameworks,
+					../../../Controls,
+				);
+				INFOPLIST_FILE = FlexChart101/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F273C22D1B45D38000958473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlexChart101Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlexChart101.app/FlexChart101";
+			};
+			name = Debug;
+		};
+		F273C22E1B45D38000958473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlexChart101Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlexChart101.app/FlexChart101";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F273C2051B45D38000958473 /* Build configuration list for PBXProject "FlexChart101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F273C2271B45D38000958473 /* Debug */,
+				F273C2281B45D38000958473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F273C2291B45D38000958473 /* Build configuration list for PBXNativeTarget "FlexChart101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F273C22A1B45D38000958473 /* Debug */,
+				F273C22B1B45D38000958473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F273C22C1B45D38000958473 /* Build configuration list for PBXNativeTarget "FlexChart101Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F273C22D1B45D38000958473 /* Debug */,
+				F273C22E1B45D38000958473 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F273C2021B45D38000958473 /* Project object */;
+}

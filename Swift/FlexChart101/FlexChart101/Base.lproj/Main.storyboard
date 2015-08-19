@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uNv-2u-nJf">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="N30-Uv-M3i">
+            <objects>
+                <navigationController id="uNv-2u-nJf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FpX-yK-Gm1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uJ4-Uq-KsB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XU5-XG-yIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2991" y="344"/>
+        </scene>
+        <!--Hit Test Controller-->
+        <scene sceneID="5Ca-BH-oRx">
+            <objects>
+                <viewController id="y0O-I8-Tj8" customClass="HitTestController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AUd-9l-UUR"/>
+                        <viewControllerLayoutGuide type="bottom" id="T3x-3b-QDo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dbz-pf-bt7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJJ-85-QDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1319" y="-2046"/>
+        </scene>
+        <!--Data Label Controller-->
+        <scene sceneID="6yO-iV-PlO">
+            <objects>
+                <viewController id="aro-mV-Ucb" customClass="DataLabelController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cJ3-x6-BRj"/>
+                        <viewControllerLayoutGuide type="bottom" id="CRW-HL-gfJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AU0-1b-ZCp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMr-aI-1fk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2745" y="-2054"/>
+        </scene>
+        <!--Multiple Axes Controller-->
+        <scene sceneID="KQq-X1-UJC">
+            <objects>
+                <viewController id="FEo-N0-pQQ" customClass="MultipleAxesController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="902-gj-5uE"/>
+                        <viewControllerLayoutGuide type="bottom" id="1WU-MN-Zyf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X3r-1V-rMp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejc-CY-i3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2047" y="-2054"/>
+        </scene>
+        <!--Zooming And Scrolling Controller-->
+        <scene sceneID="xA1-yV-SRT">
+            <objects>
+                <viewController id="17F-pd-w9o" customClass="ZoomingAndScrollingController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sXJ-SN-4pV"/>
+                        <viewControllerLayoutGuide type="bottom" id="bNh-Sw-IAk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hjb-Hd-Qrs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evI-5E-eCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-611" y="-2054"/>
+        </scene>
+        <!--Getting Started Controller-->
+        <scene sceneID="G9m-V7-Hn3">
+            <objects>
+                <viewController id="3nb-iG-UmY" customClass="GettingStartedController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ilt-Gd-VAX"/>
+                        <viewControllerLayoutGuide type="bottom" id="sP8-we-wRC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jfs-3V-dzj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQW-w5-jK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117" y="-2054"/>
+        </scene>
+        <!--Basic Chart Types Controller-->
+        <scene sceneID="HkO-2u-mva">
+            <objects>
+                <viewController id="S0B-KJ-YTf" customClass="BasicChartTypesController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VbZ-Oo-evf"/>
+                        <viewControllerLayoutGuide type="bottom" id="nka-C5-sdP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0KK-DG-KHB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mpc-KO-Gjt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="-2046"/>
+        </scene>
+        <!--Mixed Chart Types Controller-->
+        <scene sceneID="mTl-Q9-TCs">
+            <objects>
+                <viewController id="22u-Jk-AvF" customClass="MixedChartTypesController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oPA-3h-EFu"/>
+                        <viewControllerLayoutGuide type="bottom" id="i5y-WY-Cap"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kKK-ab-xxc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCI-Td-GWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573" y="-2054"/>
+        </scene>
+        <!--Financial Chart Controller-->
+        <scene sceneID="sGQ-lG-TA8">
+            <objects>
+                <viewController id="XE5-3n-p16" customClass="FinancialChartController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mNm-6m-b7O"/>
+                        <viewControllerLayoutGuide type="bottom" id="74L-Bi-Y1v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gBJ-xM-Aab">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xv2-iX-Bb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573" y="-1302"/>
+        </scene>
+        <!--Bubble Chart Controller-->
+        <scene sceneID="jiZ-A1-nHw">
+            <objects>
+                <viewController id="FU5-Sw-ZeC" customClass="BubbleChartController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5AL-7c-aD4"/>
+                        <viewControllerLayoutGuide type="bottom" id="cvK-zX-bra"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l61-n8-kyg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QBK-CR-7uO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573" y="-566"/>
+        </scene>
+        <!--Custom Tooltips Controller-->
+        <scene sceneID="u2h-FF-TG9">
+            <objects>
+                <viewController id="gdo-7c-Pre" customClass="CustomTooltipsController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BGj-gu-zW1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Osq-sY-76i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Imo-Xr-oAs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWU-B5-h00" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557" y="146"/>
+        </scene>
+        <!--Theming Controller-->
+        <scene sceneID="ge9-N7-zEK">
+            <objects>
+                <viewController id="UL4-eT-5gn" customClass="ThemingController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="44Q-hK-Maj"/>
+                        <viewControllerLayoutGuide type="bottom" id="5gA-ez-P69"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JvQ-hS-EaE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IkD-7h-uz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557" y="874"/>
+        </scene>
+        <!--Styling Series Controller-->
+        <scene sceneID="vEi-Lr-wrN">
+            <objects>
+                <viewController id="dwP-HP-K8y" customClass="StylingSeriesController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6bd-TX-n3r"/>
+                        <viewControllerLayoutGuide type="bottom" id="5bB-BR-vc3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9HE-un-IVy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ws1-HY-4nQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1601" y="1578"/>
+        </scene>
+        <!--Snapshot Controller-->
+        <scene sceneID="u0S-qB-Nl1">
+            <objects>
+                <viewController id="dWp-JY-CMT" customClass="SnapshotController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dD7-3D-ruk"/>
+                        <viewControllerLayoutGuide type="bottom" id="CAH-ia-biu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oew-vD-kw0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oIA-Jb-v2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2787" y="2154"/>
+        </scene>
+        <!--Dynamic Charts Controller-->
+        <scene sceneID="mVP-Ak-C8w">
+            <objects>
+                <viewController id="BXN-pW-LlV" customClass="DynamicChartsController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="njt-CY-VxU"/>
+                        <viewControllerLayoutGuide type="bottom" id="U8u-TV-NMd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3En-th-PVt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X65-K2-6N5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2047" y="2186"/>
+        </scene>
+        <!--Animation Options Controller-->
+        <scene sceneID="wIZ-kb-zcP">
+            <objects>
+                <viewController id="hMl-sH-L7r" customClass="AnimationOptionsController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ec-9u-ggX"/>
+                        <viewControllerLayoutGuide type="bottom" id="ESe-Dl-vl6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GAM-AF-QEy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPZ-oe-ubk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1255" y="2194"/>
+        </scene>
+        <!--Toggles Series Controller-->
+        <scene sceneID="Ozu-Rx-Bcm">
+            <objects>
+                <viewController id="fqd-X4-NsV" customClass="TogglesSeriesController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wbt-Ei-va7"/>
+                        <viewControllerLayoutGuide type="bottom" id="j93-Gc-o8g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f94-Vk-g4t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pG-id-SUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-555" y="2210"/>
+        </scene>
+        <!--Selection Modes Controller-->
+        <scene sceneID="kSI-2N-PRi">
+            <objects>
+                <viewController id="hN7-F5-2SP" customClass="SelectionModesController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SMM-Y8-TwH"/>
+                        <viewControllerLayoutGuide type="bottom" id="by5-7u-lqh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GQU-rb-nHh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRW-yq-EBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="2286"/>
+        </scene>
+        <!--Legend And Titles Controller-->
+        <scene sceneID="jMY-Sb-uK0">
+            <objects>
+                <viewController id="rz8-3J-Xgs" customClass="LegendAndTitlesController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ijL-5j-gJ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="bcB-Ej-YkY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fLL-0k-NCk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QI7-fO-rPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="2286"/>
+        </scene>
+        <!--Customizing Axes Controller-->
+        <scene sceneID="9rK-iX-Pip">
+            <objects>
+                <viewController id="kty-Nb-HgT" customClass="CustomizingAxesController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2QX-Cg-Zr5"/>
+                        <viewControllerLayoutGuide type="bottom" id="TaC-Bf-IAU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gqJ-9K-GDK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHf-Nw-fKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="2298"/>
+        </scene>
+        <!--FlexChart101-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RDB-f2-YuZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kje-XN-PJt"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VWX-Zn-yhm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FlexChart101" id="w1j-On-IGM">
+                        <barButtonItem key="backBarButtonItem" title="FlexChart101" id="r3m-XM-Mvy"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="3nb-iG-UmY" kind="show" identifier="GettingStartedSegue" id="jWT-P8-dco"/>
+                        <segue destination="S0B-KJ-YTf" kind="show" identifier="BasicChartTypesSegue" id="525-DS-KEX"/>
+                        <segue destination="22u-Jk-AvF" kind="show" identifier="MixedChartTypesSegue" id="GnR-H7-jc9"/>
+                        <segue destination="XE5-3n-p16" kind="show" identifier="FinancialChartSegue" id="zLn-7s-lfe"/>
+                        <segue destination="FU5-Sw-ZeC" kind="show" identifier="BubbleChartSegue" id="fIi-gc-vVy"/>
+                        <segue destination="gdo-7c-Pre" kind="show" identifier="CustomTooltipsSegue" id="Tns-A2-u2H"/>
+                        <segue destination="UL4-eT-5gn" kind="show" identifier="ThemingSegue" id="JTW-f1-YZc"/>
+                        <segue destination="dwP-HP-K8y" kind="show" identifier="StylingSeriesSegue" id="OVb-bS-IaD"/>
+                        <segue destination="kty-Nb-HgT" kind="show" identifier="CustomizingAxesSegue" id="6JC-hX-tNJ"/>
+                        <segue destination="rz8-3J-Xgs" kind="show" identifier="LegendAndTitlesSegue" id="oYO-Bc-h6P"/>
+                        <segue destination="hN7-F5-2SP" kind="show" identifier="SelectionModesSegue" id="Y3Z-rV-0ig"/>
+                        <segue destination="fqd-X4-NsV" kind="show" identifier="ToggleSeriesSegue" id="7la-4O-aPv"/>
+                        <segue destination="hMl-sH-L7r" kind="show" identifier="AnimationOptionsSegue" id="M0R-J1-wyT"/>
+                        <segue destination="BXN-pW-LlV" kind="show" identifier="DynamicChartsSegue" id="DOa-J5-MZP"/>
+                        <segue destination="17F-pd-w9o" kind="show" identifier="ZoomingAndScrollingSegue" id="Qbd-Gv-DXw"/>
+                        <segue destination="y0O-I8-Tj8" kind="show" identifier="HitTestSegue" id="9cc-Wp-adK"/>
+                        <segue destination="dWp-JY-CMT" kind="show" identifier="SnapshotSegue" id="pfX-do-iB0"/>
+                        <segue destination="FEo-N0-pQQ" kind="show" identifier="MultipleAxesSegue" id="3Du-u0-DVu"/>
+                        <segue destination="aro-mV-Ucb" kind="show" identifier="DataLabelSegue" id="2It-RV-Bp5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1735" y="384"/>
+        </scene>
+    </scenes>
+</document>

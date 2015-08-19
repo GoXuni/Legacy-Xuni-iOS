@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2160F8B1B18D45F00F3ADD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160F8A1B18D45F00F3ADD5 /* main.m */; };
+		F2160F8E1B18D45F00F3ADD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160F8D1B18D45F00F3ADD5 /* AppDelegate.m */; };
+		F2160F911B18D45F00F3ADD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160F901B18D45F00F3ADD5 /* ViewController.m */; };
+		F2160F941B18D45F00F3ADD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2160F921B18D45F00F3ADD5 /* Main.storyboard */; };
+		F2160F961B18D45F00F3ADD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2160F951B18D45F00F3ADD5 /* Images.xcassets */; };
+		F2160F991B18D45F00F3ADD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2160F971B18D45F00F3ADD5 /* LaunchScreen.xib */; };
+		F2160FA51B18D45F00F3ADD5 /* FlexChart101Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FA41B18D45F00F3ADD5 /* FlexChart101Tests.m */; };
+		F2160FB01B18EA8100F3ADD5 /* GettingStartedController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FAF1B18EA8100F3ADD5 /* GettingStartedController.m */; };
+		F2160FB31B18EABA00F3ADD5 /* BasicChartTypesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FB21B18EABA00F3ADD5 /* BasicChartTypesController.m */; };
+		F2160FB61B18EAEA00F3ADD5 /* MixedChartTypesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FB51B18EAEA00F3ADD5 /* MixedChartTypesController.m */; };
+		F2160FB91B18EAFE00F3ADD5 /* FinancialChartController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FB81B18EAFE00F3ADD5 /* FinancialChartController.m */; };
+		F2160FBC1B18EB1200F3ADD5 /* BubbleChartController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FBB1B18EB1200F3ADD5 /* BubbleChartController.m */; };
+		F2160FBF1B18EB2C00F3ADD5 /* CustomTooltipsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FBE1B18EB2C00F3ADD5 /* CustomTooltipsController.m */; };
+		F2160FC21B18EB3D00F3ADD5 /* ThemingController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FC11B18EB3D00F3ADD5 /* ThemingController.m */; };
+		F2160FC81B18EB9200F3ADD5 /* StylingSeriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FC71B18EB9200F3ADD5 /* StylingSeriesController.m */; };
+		F2160FCB1B18EBA900F3ADD5 /* CustomizingAxesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FCA1B18EBA900F3ADD5 /* CustomizingAxesController.m */; };
+		F2160FCE1B18EBC600F3ADD5 /* LegendAndTitlesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FCD1B18EBC600F3ADD5 /* LegendAndTitlesController.m */; };
+		F2160FD11B18EBDC00F3ADD5 /* SelectionModesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FD01B18EBDC00F3ADD5 /* SelectionModesController.m */; };
+		F2160FD41B18EBF300F3ADD5 /* ToggleSeriesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FD31B18EBF300F3ADD5 /* ToggleSeriesController.m */; };
+		F2160FD71B18EC0E00F3ADD5 /* AnimationOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FD61B18EC0E00F3ADD5 /* AnimationOptionsController.m */; };
+		F2160FDA1B18EC2100F3ADD5 /* DynamicChartsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FD91B18EC2100F3ADD5 /* DynamicChartsController.m */; };
+		F2160FDD1B18EC3500F3ADD5 /* ZoomingAndScrollingController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FDC1B18EC3500F3ADD5 /* ZoomingAndScrollingController.m */; };
+		F2160FE01B18ECF000F3ADD5 /* HitTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160FDF1B18ECF000F3ADD5 /* HitTestController.m */; };
+		F23573681B445E3800F300D7 /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = F23573671B445E3800F300D7 /* License.m */; };
+		F24A601F1B223614000FDBD1 /* DynamicChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = F24A601E1B223614000FDBD1 /* DynamicChartData.m */; };
+		F254FABF1B31E8BE009CD853 /* SnapshotController.m in Sources */ = {isa = PBXBuildFile; fileRef = F254FABE1B31E8BE009CD853 /* SnapshotController.m */; };
+		F254FAC21B3313FF009CD853 /* MultipleAxesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F254FAC11B3313FF009CD853 /* MultipleAxesController.m */; };
+		F254FAC51B331663009CD853 /* WeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = F254FAC41B331663009CD853 /* WeatherData.m */; };
+		F2774A441B21EE69008E721D /* HitTestData.m in Sources */ = {isa = PBXBuildFile; fileRef = F2774A431B21EE69008E721D /* HitTestData.m */; };
+		F2795FFB1B6165E300531186 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2795FFA1B6165E300531186 /* XuniCoreKit.framework */; };
+		F2795FFD1B6165F000531186 /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2795FFC1B6165F000531186 /* XuniChartCoreKit.framework */; };
+		F2795FFF1B6165FD00531186 /* FlexChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2795FFE1B6165FD00531186 /* FlexChartKit.framework */; };
+		F2BEDB9E1B73DF4000DD2454 /* DataLabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BEDB9D1B73DF4000DD2454 /* DataLabelController.m */; };
+		F2C5897E1B1CAAF100371F29 /* ChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5897D1B1CAAF100371F29 /* ChartData.m */; };
+		F2C5898F1B1CF43500371F29 /* FinancialData.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C5898E1B1CF43500371F29 /* FinancialData.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2160F9F1B18D45F00F3ADD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2160F7D1B18D45F00F3ADD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2160F841B18D45F00F3ADD5;
+			remoteInfo = FlexChart101;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F2160F851B18D45F00F3ADD5 /* FlexChart101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexChart101.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2160F891B18D45F00F3ADD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2160F8A1B18D45F00F3ADD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2160F8C1B18D45F00F3ADD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F2160F8D1B18D45F00F3ADD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2160F8F1B18D45F00F3ADD5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F2160F901B18D45F00F3ADD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F2160F931B18D45F00F3ADD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2160F951B18D45F00F3ADD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F2160F981B18D45F00F3ADD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F2160F9E1B18D45F00F3ADD5 /* FlexChart101Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexChart101Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2160FA31B18D45F00F3ADD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2160FA41B18D45F00F3ADD5 /* FlexChart101Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlexChart101Tests.m; sourceTree = "<group>"; };
+		F2160FAE1B18EA8100F3ADD5 /* GettingStartedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingStartedController.h; sourceTree = "<group>"; };
+		F2160FAF1B18EA8100F3ADD5 /* GettingStartedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GettingStartedController.m; sourceTree = "<group>"; };
+		F2160FB11B18EABA00F3ADD5 /* BasicChartTypesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicChartTypesController.h; sourceTree = "<group>"; };
+		F2160FB21B18EABA00F3ADD5 /* BasicChartTypesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicChartTypesController.m; sourceTree = "<group>"; };
+		F2160FB41B18EAEA00F3ADD5 /* MixedChartTypesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixedChartTypesController.h; sourceTree = "<group>"; };
+		F2160FB51B18EAEA00F3ADD5 /* MixedChartTypesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixedChartTypesController.m; sourceTree = "<group>"; };
+		F2160FB71B18EAFE00F3ADD5 /* FinancialChartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialChartController.h; sourceTree = "<group>"; };
+		F2160FB81B18EAFE00F3ADD5 /* FinancialChartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinancialChartController.m; sourceTree = "<group>"; };
+		F2160FBA1B18EB1200F3ADD5 /* BubbleChartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleChartController.h; sourceTree = "<group>"; };
+		F2160FBB1B18EB1200F3ADD5 /* BubbleChartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleChartController.m; sourceTree = "<group>"; };
+		F2160FBD1B18EB2C00F3ADD5 /* CustomTooltipsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTooltipsController.h; sourceTree = "<group>"; };
+		F2160FBE1B18EB2C00F3ADD5 /* CustomTooltipsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTooltipsController.m; sourceTree = "<group>"; };
+		F2160FC01B18EB3D00F3ADD5 /* ThemingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemingController.h; sourceTree = "<group>"; };
+		F2160FC11B18EB3D00F3ADD5 /* ThemingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemingController.m; sourceTree = "<group>"; };
+		F2160FC61B18EB9200F3ADD5 /* StylingSeriesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StylingSeriesController.h; sourceTree = "<group>"; };
+		F2160FC71B18EB9200F3ADD5 /* StylingSeriesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StylingSeriesController.m; sourceTree = "<group>"; };
+		F2160FC91B18EBA900F3ADD5 /* CustomizingAxesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizingAxesController.h; sourceTree = "<group>"; };
+		F2160FCA1B18EBA900F3ADD5 /* CustomizingAxesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizingAxesController.m; sourceTree = "<group>"; };
+		F2160FCC1B18EBC600F3ADD5 /* LegendAndTitlesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegendAndTitlesController.h; sourceTree = "<group>"; };
+		F2160FCD1B18EBC600F3ADD5 /* LegendAndTitlesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegendAndTitlesController.m; sourceTree = "<group>"; };
+		F2160FCF1B18EBDC00F3ADD5 /* SelectionModesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionModesController.h; sourceTree = "<group>"; };
+		F2160FD01B18EBDC00F3ADD5 /* SelectionModesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionModesController.m; sourceTree = "<group>"; };
+		F2160FD21B18EBF300F3ADD5 /* ToggleSeriesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToggleSeriesController.h; sourceTree = "<group>"; };
+		F2160FD31B18EBF300F3ADD5 /* ToggleSeriesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToggleSeriesController.m; sourceTree = "<group>"; };
+		F2160FD51B18EC0E00F3ADD5 /* AnimationOptionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationOptionsController.h; sourceTree = "<group>"; };
+		F2160FD61B18EC0E00F3ADD5 /* AnimationOptionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationOptionsController.m; sourceTree = "<group>"; };
+		F2160FD81B18EC2100F3ADD5 /* DynamicChartsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicChartsController.h; sourceTree = "<group>"; };
+		F2160FD91B18EC2100F3ADD5 /* DynamicChartsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicChartsController.m; sourceTree = "<group>"; };
+		F2160FDB1B18EC3500F3ADD5 /* ZoomingAndScrollingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomingAndScrollingController.h; sourceTree = "<group>"; };
+		F2160FDC1B18EC3500F3ADD5 /* ZoomingAndScrollingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomingAndScrollingController.m; sourceTree = "<group>"; };
+		F2160FDE1B18ECF000F3ADD5 /* HitTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestController.h; sourceTree = "<group>"; };
+		F2160FDF1B18ECF000F3ADD5 /* HitTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestController.m; sourceTree = "<group>"; };
+		F23573661B445E3800F300D7 /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
+		F23573671B445E3800F300D7 /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
+		F24A601D1B223614000FDBD1 /* DynamicChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicChartData.h; sourceTree = "<group>"; };
+		F24A601E1B223614000FDBD1 /* DynamicChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicChartData.m; sourceTree = "<group>"; };
+		F254FABD1B31E8BE009CD853 /* SnapshotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapshotController.h; sourceTree = "<group>"; };
+		F254FABE1B31E8BE009CD853 /* SnapshotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnapshotController.m; sourceTree = "<group>"; };
+		F254FAC01B3313FF009CD853 /* MultipleAxesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleAxesController.h; sourceTree = "<group>"; };
+		F254FAC11B3313FF009CD853 /* MultipleAxesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleAxesController.m; sourceTree = "<group>"; };
+		F254FAC31B331663009CD853 /* WeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherData.h; sourceTree = "<group>"; };
+		F254FAC41B331663009CD853 /* WeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherData.m; sourceTree = "<group>"; };
+		F2774A421B21EE69008E721D /* HitTestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestData.h; sourceTree = "<group>"; };
+		F2774A431B21EE69008E721D /* HitTestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestData.m; sourceTree = "<group>"; };
+		F2795FFA1B6165E300531186 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
+		F2795FFC1B6165F000531186 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = ../../../Controls/XuniChartCoreKit.framework; sourceTree = "<group>"; };
+		F2795FFE1B6165FD00531186 /* FlexChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexChartKit.framework; path = ../../../Controls/FlexChartKit.framework; sourceTree = "<group>"; };
+		F2BEDB9C1B73DF4000DD2454 /* DataLabelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLabelController.h; sourceTree = "<group>"; };
+		F2BEDB9D1B73DF4000DD2454 /* DataLabelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLabelController.m; sourceTree = "<group>"; };
+		F2C5897C1B1CAAF100371F29 /* ChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartData.h; sourceTree = "<group>"; };
+		F2C5897D1B1CAAF100371F29 /* ChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartData.m; sourceTree = "<group>"; };
+		F2C5898D1B1CF43500371F29 /* FinancialData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialData.h; sourceTree = "<group>"; };
+		F2C5898E1B1CF43500371F29 /* FinancialData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinancialData.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2160F821B18D45F00F3ADD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2795FFB1B6165E300531186 /* XuniCoreKit.framework in Frameworks */,
+				F2795FFD1B6165F000531186 /* XuniChartCoreKit.framework in Frameworks */,
+				F2795FFF1B6165FD00531186 /* FlexChartKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2160F9B1B18D45F00F3ADD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2160F7C1B18D45F00F3ADD5 = {
+			isa = PBXGroup;
+			children = (
+				F2795FFE1B6165FD00531186 /* FlexChartKit.framework */,
+				F2795FFC1B6165F000531186 /* XuniChartCoreKit.framework */,
+				F2795FFA1B6165E300531186 /* XuniCoreKit.framework */,
+				F2160F871B18D45F00F3ADD5 /* FlexChart101 */,
+				F2160FA11B18D45F00F3ADD5 /* FlexChart101Tests */,
+				F2160F861B18D45F00F3ADD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2160F861B18D45F00F3ADD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2160F851B18D45F00F3ADD5 /* FlexChart101.app */,
+				F2160F9E1B18D45F00F3ADD5 /* FlexChart101Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2160F871B18D45F00F3ADD5 /* FlexChart101 */ = {
+			isa = PBXGroup;
+			children = (
+				F2160F8C1B18D45F00F3ADD5 /* AppDelegate.h */,
+				F2160F8D1B18D45F00F3ADD5 /* AppDelegate.m */,
+				F2160F8F1B18D45F00F3ADD5 /* ViewController.h */,
+				F2160F901B18D45F00F3ADD5 /* ViewController.m */,
+				F2160F921B18D45F00F3ADD5 /* Main.storyboard */,
+				F2160F951B18D45F00F3ADD5 /* Images.xcassets */,
+				F2160F971B18D45F00F3ADD5 /* LaunchScreen.xib */,
+				F2160F881B18D45F00F3ADD5 /* Supporting Files */,
+				F2160FAE1B18EA8100F3ADD5 /* GettingStartedController.h */,
+				F2160FAF1B18EA8100F3ADD5 /* GettingStartedController.m */,
+				F2160FB11B18EABA00F3ADD5 /* BasicChartTypesController.h */,
+				F2160FB21B18EABA00F3ADD5 /* BasicChartTypesController.m */,
+				F2160FB41B18EAEA00F3ADD5 /* MixedChartTypesController.h */,
+				F2160FB51B18EAEA00F3ADD5 /* MixedChartTypesController.m */,
+				F2160FB71B18EAFE00F3ADD5 /* FinancialChartController.h */,
+				F2160FB81B18EAFE00F3ADD5 /* FinancialChartController.m */,
+				F2160FBA1B18EB1200F3ADD5 /* BubbleChartController.h */,
+				F2160FBB1B18EB1200F3ADD5 /* BubbleChartController.m */,
+				F2160FBD1B18EB2C00F3ADD5 /* CustomTooltipsController.h */,
+				F2160FBE1B18EB2C00F3ADD5 /* CustomTooltipsController.m */,
+				F2160FC01B18EB3D00F3ADD5 /* ThemingController.h */,
+				F2160FC11B18EB3D00F3ADD5 /* ThemingController.m */,
+				F2160FC61B18EB9200F3ADD5 /* StylingSeriesController.h */,
+				F2160FC71B18EB9200F3ADD5 /* StylingSeriesController.m */,
+				F2160FC91B18EBA900F3ADD5 /* CustomizingAxesController.h */,
+				F2160FCA1B18EBA900F3ADD5 /* CustomizingAxesController.m */,
+				F2160FCC1B18EBC600F3ADD5 /* LegendAndTitlesController.h */,
+				F2160FCD1B18EBC600F3ADD5 /* LegendAndTitlesController.m */,
+				F2160FCF1B18EBDC00F3ADD5 /* SelectionModesController.h */,
+				F2160FD01B18EBDC00F3ADD5 /* SelectionModesController.m */,
+				F2160FD21B18EBF300F3ADD5 /* ToggleSeriesController.h */,
+				F2160FD31B18EBF300F3ADD5 /* ToggleSeriesController.m */,
+				F2160FD51B18EC0E00F3ADD5 /* AnimationOptionsController.h */,
+				F2160FD61B18EC0E00F3ADD5 /* AnimationOptionsController.m */,
+				F2160FD81B18EC2100F3ADD5 /* DynamicChartsController.h */,
+				F2160FD91B18EC2100F3ADD5 /* DynamicChartsController.m */,
+				F2160FDB1B18EC3500F3ADD5 /* ZoomingAndScrollingController.h */,
+				F2160FDC1B18EC3500F3ADD5 /* ZoomingAndScrollingController.m */,
+				F2160FDE1B18ECF000F3ADD5 /* HitTestController.h */,
+				F2160FDF1B18ECF000F3ADD5 /* HitTestController.m */,
+				F2C5897C1B1CAAF100371F29 /* ChartData.h */,
+				F2C5897D1B1CAAF100371F29 /* ChartData.m */,
+				F2C5898D1B1CF43500371F29 /* FinancialData.h */,
+				F2C5898E1B1CF43500371F29 /* FinancialData.m */,
+				F2774A421B21EE69008E721D /* HitTestData.h */,
+				F2774A431B21EE69008E721D /* HitTestData.m */,
+				F24A601D1B223614000FDBD1 /* DynamicChartData.h */,
+				F24A601E1B223614000FDBD1 /* DynamicChartData.m */,
+				F254FABD1B31E8BE009CD853 /* SnapshotController.h */,
+				F254FABE1B31E8BE009CD853 /* SnapshotController.m */,
+				F254FAC01B3313FF009CD853 /* MultipleAxesController.h */,
+				F254FAC11B3313FF009CD853 /* MultipleAxesController.m */,
+				F254FAC31B331663009CD853 /* WeatherData.h */,
+				F254FAC41B331663009CD853 /* WeatherData.m */,
+				F23573661B445E3800F300D7 /* License.h */,
+				F23573671B445E3800F300D7 /* License.m */,
+				F2BEDB9C1B73DF4000DD2454 /* DataLabelController.h */,
+				F2BEDB9D1B73DF4000DD2454 /* DataLabelController.m */,
+			);
+			path = FlexChart101;
+			sourceTree = "<group>";
+		};
+		F2160F881B18D45F00F3ADD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2160F891B18D45F00F3ADD5 /* Info.plist */,
+				F2160F8A1B18D45F00F3ADD5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2160FA11B18D45F00F3ADD5 /* FlexChart101Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F2160FA41B18D45F00F3ADD5 /* FlexChart101Tests.m */,
+				F2160FA21B18D45F00F3ADD5 /* Supporting Files */,
+			);
+			path = FlexChart101Tests;
+			sourceTree = "<group>";
+		};
+		F2160FA21B18D45F00F3ADD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2160FA31B18D45F00F3ADD5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2160F841B18D45F00F3ADD5 /* FlexChart101 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2160FA81B18D45F00F3ADD5 /* Build configuration list for PBXNativeTarget "FlexChart101" */;
+			buildPhases = (
+				F2160F811B18D45F00F3ADD5 /* Sources */,
+				F2160F821B18D45F00F3ADD5 /* Frameworks */,
+				F2160F831B18D45F00F3ADD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlexChart101;
+			productName = FlexChart101;
+			productReference = F2160F851B18D45F00F3ADD5 /* FlexChart101.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2160F9D1B18D45F00F3ADD5 /* FlexChart101Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2160FAB1B18D45F00F3ADD5 /* Build configuration list for PBXNativeTarget "FlexChart101Tests" */;
+			buildPhases = (
+				F2160F9A1B18D45F00F3ADD5 /* Sources */,
+				F2160F9B1B18D45F00F3ADD5 /* Frameworks */,
+				F2160F9C1B18D45F00F3ADD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2160FA01B18D45F00F3ADD5 /* PBXTargetDependency */,
+			);
+			name = FlexChart101Tests;
+			productName = FlexChart101Tests;
+			productReference = F2160F9E1B18D45F00F3ADD5 /* FlexChart101Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2160F7D1B18D45F00F3ADD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = GrapeCity;
+				TargetAttributes = {
+					F2160F841B18D45F00F3ADD5 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					F2160F9D1B18D45F00F3ADD5 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = F2160F841B18D45F00F3ADD5;
+					};
+				};
+			};
+			buildConfigurationList = F2160F801B18D45F00F3ADD5 /* Build configuration list for PBXProject "FlexChart101" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2160F7C1B18D45F00F3ADD5;
+			productRefGroup = F2160F861B18D45F00F3ADD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2160F841B18D45F00F3ADD5 /* FlexChart101 */,
+				F2160F9D1B18D45F00F3ADD5 /* FlexChart101Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2160F831B18D45F00F3ADD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2160F941B18D45F00F3ADD5 /* Main.storyboard in Resources */,
+				F2160F991B18D45F00F3ADD5 /* LaunchScreen.xib in Resources */,
+				F2160F961B18D45F00F3ADD5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2160F9C1B18D45F00F3ADD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2160F811B18D45F00F3ADD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F23573681B445E3800F300D7 /* License.m in Sources */,
+				F2160FCE1B18EBC600F3ADD5 /* LegendAndTitlesController.m in Sources */,
+				F2C5898F1B1CF43500371F29 /* FinancialData.m in Sources */,
+				F2160FC21B18EB3D00F3ADD5 /* ThemingController.m in Sources */,
+				F2774A441B21EE69008E721D /* HitTestData.m in Sources */,
+				F2160FC81B18EB9200F3ADD5 /* StylingSeriesController.m in Sources */,
+				F2BEDB9E1B73DF4000DD2454 /* DataLabelController.m in Sources */,
+				F2160FDA1B18EC2100F3ADD5 /* DynamicChartsController.m in Sources */,
+				F2160FE01B18ECF000F3ADD5 /* HitTestController.m in Sources */,
+				F254FAC21B3313FF009CD853 /* MultipleAxesController.m in Sources */,
+				F2160FB61B18EAEA00F3ADD5 /* MixedChartTypesController.m in Sources */,
+				F2160FCB1B18EBA900F3ADD5 /* CustomizingAxesController.m in Sources */,
+				F254FAC51B331663009CD853 /* WeatherData.m in Sources */,
+				F2160FD41B18EBF300F3ADD5 /* ToggleSeriesController.m in Sources */,
+				F2160F911B18D45F00F3ADD5 /* ViewController.m in Sources */,
+				F2160FD71B18EC0E00F3ADD5 /* AnimationOptionsController.m in Sources */,
+				F2160FDD1B18EC3500F3ADD5 /* ZoomingAndScrollingController.m in Sources */,
+				F2160F8E1B18D45F00F3ADD5 /* AppDelegate.m in Sources */,
+				F2160FB01B18EA8100F3ADD5 /* GettingStartedController.m in Sources */,
+				F2160FBC1B18EB1200F3ADD5 /* BubbleChartController.m in Sources */,
+				F2160FD11B18EBDC00F3ADD5 /* SelectionModesController.m in Sources */,
+				F2160FB31B18EABA00F3ADD5 /* BasicChartTypesController.m in Sources */,
+				F24A601F1B223614000FDBD1 /* DynamicChartData.m in Sources */,
+				F254FABF1B31E8BE009CD853 /* SnapshotController.m in Sources */,
+				F2160F8B1B18D45F00F3ADD5 /* main.m in Sources */,
+				F2160FBF1B18EB2C00F3ADD5 /* CustomTooltipsController.m in Sources */,
+				F2C5897E1B1CAAF100371F29 /* ChartData.m in Sources */,
+				F2160FB91B18EAFE00F3ADD5 /* FinancialChartController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2160F9A1B18D45F00F3ADD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2160FA51B18D45F00F3ADD5 /* FlexChart101Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2160FA01B18D45F00F3ADD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2160F841B18D45F00F3ADD5 /* FlexChart101 */;
+			targetProxy = F2160F9F1B18D45F00F3ADD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F2160F921B18D45F00F3ADD5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2160F931B18D45F00F3ADD5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2160F971B18D45F00F3ADD5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2160F981B18D45F00F3ADD5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2160FA61B18D45F00F3ADD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2160FA71B18D45F00F3ADD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2160FA91B18D45F00F3ADD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					/Volumes/frameworks,
+					../../../Controls,
+				);
+				INFOPLIST_FILE = FlexChart101/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		F2160FAA1B18D45F00F3ADD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					/Volumes/frameworks,
+					../../../Controls,
+				);
+				INFOPLIST_FILE = FlexChart101/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		F2160FAC1B18D45F00F3ADD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlexChart101Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlexChart101.app/FlexChart101";
+			};
+			name = Debug;
+		};
+		F2160FAD1B18D45F00F3ADD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlexChart101Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlexChart101.app/FlexChart101";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2160F801B18D45F00F3ADD5 /* Build configuration list for PBXProject "FlexChart101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2160FA61B18D45F00F3ADD5 /* Debug */,
+				F2160FA71B18D45F00F3ADD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2160FA81B18D45F00F3ADD5 /* Build configuration list for PBXNativeTarget "FlexChart101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2160FA91B18D45F00F3ADD5 /* Debug */,
+				F2160FAA1B18D45F00F3ADD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2160FAB1B18D45F00F3ADD5 /* Build configuration list for PBXNativeTarget "FlexChart101Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2160FAC1B18D45F00F3ADD5 /* Debug */,
+				F2160FAD1B18D45F00F3ADD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2160F7D1B18D45F00F3ADD5 /* Project object */;
+}

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D4C-HR-MMc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Wmt-U1-ndr">
+            <objects>
+                <navigationController id="D4C-HR-MMc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ruK-uG-bIn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ysm-ge-WfC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIp-eV-ANa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-444" y="517"/>
+        </scene>
+        <!--Getting Started Controller-->
+        <scene sceneID="Iyx-2t-TTf">
+            <objects>
+                <viewController id="Qjt-lR-kkJ" customClass="GettingStartedController" customModule="Gauges101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Leo-rj-BbJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="hal-Bn-tLF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7lV-G5-xbq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWR-MN-27x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="-1093"/>
+        </scene>
+        <!--Gauges101-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gauges101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iyu-UB-Tx8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xxn-uI-UzY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Cjp-uQ-tkj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gauges101" id="kW8-zU-waE">
+                        <barButtonItem key="backBarButtonItem" title="Gauges101" id="oZL-jx-Glf"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Qjt-lR-kkJ" kind="show" identifier="GettingStartedSegue" id="rHq-Mk-p9v"/>
+                        <segue destination="3YN-iB-xNL" kind="show" identifier="DisplayingValuesSegue" id="QYF-1y-ivH"/>
+                        <segue destination="Q1x-Rc-srA" kind="show" identifier="BulletGraphSegue" id="Zyj-yF-ykW"/>
+                        <segue destination="GlJ-rl-U9T" kind="show" identifier="SnapshotSegue" id="BsC-yj-yZZ"/>
+                        <segue destination="kUr-MY-oRL" kind="show" identifier="CustomAnimationSegue" id="3JH-7f-rIf"/>
+                        <segue destination="qbz-oq-Hfi" kind="show" identifier="AutomaticScalingSegue" id="I0x-0e-8h7"/>
+                        <segue destination="yOT-rH-cRH" kind="show" identifier="UsingRangesSegue" id="46R-R3-aHd"/>
+                        <segue destination="kan-A3-SPr" kind="show" identifier="DirectionSegue" id="H5e-ev-HCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="517"/>
+        </scene>
+        <!--Displaying Values Controller-->
+        <scene sceneID="NG9-te-0fR">
+            <objects>
+                <viewController id="3YN-iB-xNL" customClass="DisplayingValuesController" customModule="Gauges101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9yy-8X-vgX"/>
+                        <viewControllerLayoutGuide type="bottom" id="st1-YK-ZV3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gDI-29-JwK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GrU-ah-BK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="-377"/>
+        </scene>
+        <!--Bullet Graph Controller-->
+        <scene sceneID="p4u-Pm-aA9">
+            <objects>
+                <viewController id="Q1x-Rc-srA" customClass="BulletGraphController" customModule="Gauges101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1qo-g4-in5"/>
+                        <viewControllerLayoutGuide type="bottom" id="bBb-mL-7KO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hc5-Nc-xzk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NV7-U2-jxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="391"/>
+        </scene>
+        <!--Snapshot Controller-->
+        <scene sceneID="007-Mv-sPa">
+            <objects>
+                <viewController id="GlJ-rl-U9T" customClass="SnapshotController" customModule="Gauges101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y95-e6-bOw"/>
+                        <viewControllerLayoutGuide type="bottom" id="f0g-EM-bRk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Ii-sA-d2h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H64-bc-24s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="1099"/>
+        </scene>
+        <!--Direction Controller-->
+        <scene sceneID="9jP-3V-XYJ">
+            <objects>
+                <viewController id="kan-A3-SPr" customClass="DirectionController" customModule="Gauges101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FCo-zf-hsj"/>
+                        <viewControllerLayoutGuide type="bottom" id="A2y-9y-yeO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cn9-7Y-Frt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJ5-z6-7kq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="-659"/>
+        </scene>
+        <!--Using Ranges Controller-->
+        <scene sceneID="2vS-UT-nY1">
+            <objects>
+                <viewController id="yOT-rH-cRH" customClass="UsingRangesController" customModule="Gauges101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yg6-I3-k89"/>
+                        <viewControllerLayoutGuide type="bottom" id="hZY-UR-11H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IrA-hJ-J4W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSg-5z-utk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="1797"/>
+        </scene>
+        <!--Automatic Scaling Controller-->
+        <scene sceneID="vEG-dS-fqa">
+            <objects>
+                <viewController id="qbz-oq-Hfi" customClass="AutomaticScalingController" customModule="Gauges101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="973-ix-TBF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z0j-gP-XlI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uVF-lb-HcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XF7-Re-DgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="1842"/>
+        </scene>
+        <!--Custom Animation Controller-->
+        <scene sceneID="dxy-FD-Ltk">
+            <objects>
+                <viewController id="kUr-MY-oRL" customClass="CustomAnimationController" customModule="Gauges101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uej-vP-8KK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Siu-qR-q1M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kOc-1A-zAe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDH-Pz-Yjg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="1860"/>
+        </scene>
+    </scenes>
+</document>

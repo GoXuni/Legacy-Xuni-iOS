@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F235736B1B44608100F300D7 /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = F235736A1B44608100F300D7 /* License.m */; };
+		F23675D31B59503000194040 /* EditConfirmationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23675D21B59503000194040 /* EditConfirmationController.m */; };
+		F2BA19551B2883CF00F2B835 /* XuniGaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BA19541B2883CF00F2B835 /* XuniGaugeKit.framework */; };
+		F2BA19581B288F1600F2B835 /* EditingController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA19571B288F1600F2B835 /* EditingController.m */; };
+		F2BA19941B2B1E3200F2B835 /* FilterFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA19931B2B1E3200F2B835 /* FilterFormController.m */; };
+		F2CFF3BF1B7122BB00FE6FDF /* SharedFilterData.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CFF3BE1B7122BB00FE6FDF /* SharedFilterData.m */; };
+		F2E2A9F31B27254E00AFEA5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2A9F21B27254E00AFEA5D /* main.m */; };
+		F2E2A9F61B27254E00AFEA5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2A9F51B27254E00AFEA5D /* AppDelegate.m */; };
+		F2E2A9F91B27254E00AFEA5D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2A9F81B27254E00AFEA5D /* ViewController.m */; };
+		F2E2A9FC1B27254E00AFEA5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E2A9FA1B27254E00AFEA5D /* Main.storyboard */; };
+		F2E2A9FE1B27254E00AFEA5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E2A9FD1B27254E00AFEA5D /* Images.xcassets */; };
+		F2E2AA011B27254E00AFEA5D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E2A9FF1B27254E00AFEA5D /* LaunchScreen.xib */; };
+		F2E2AA0D1B27254E00AFEA5D /* FlexGrid101Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA0C1B27254E00AFEA5D /* FlexGrid101Tests.m */; };
+		F2E2AA261B27300A00AFEA5D /* GettingStartedController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA251B27300A00AFEA5D /* GettingStartedController.m */; };
+		F2E2AA291B27302300AFEA5D /* ColumnDefinitionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA281B27302300AFEA5D /* ColumnDefinitionsController.m */; };
+		F2E2AA2C1B27303700AFEA5D /* SelectionModesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA2B1B27303700AFEA5D /* SelectionModesController.m */; };
+		F2E2AA2F1B27304C00AFEA5D /* CustomCellsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA2E1B27304C00AFEA5D /* CustomCellsController.m */; };
+		F2E2AA321B27306300AFEA5D /* GroupingController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA311B27306300AFEA5D /* GroupingController.m */; };
+		F2E2AA351B27307300AFEA5D /* FilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA341B27307300AFEA5D /* FilterController.m */; };
+		F2E2AA381B27308500AFEA5D /* FullTextFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA371B27308500AFEA5D /* FullTextFilterController.m */; };
+		F2E2AA3E1B2731B700AFEA5D /* CustomerData.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA3D1B2731B700AFEA5D /* CustomerData.m */; };
+		F2E2AA401B27345900AFEA5D /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E2AA3F1B27345900AFEA5D /* XuniCoreKit.framework */; };
+		F2E2AA421B27346E00AFEA5D /* FlexGridKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E2AA411B27346E00AFEA5D /* FlexGridKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2E2AA071B27254E00AFEA5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2E2A9E51B27254C00AFEA5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2E2A9EC1B27254C00AFEA5D;
+			remoteInfo = FlexGrid101;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F23573691B44608100F300D7 /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
+		F235736A1B44608100F300D7 /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
+		F23675D11B59503000194040 /* EditConfirmationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditConfirmationController.h; sourceTree = "<group>"; };
+		F23675D21B59503000194040 /* EditConfirmationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditConfirmationController.m; sourceTree = "<group>"; };
+		F2BA19541B2883CF00F2B835 /* XuniGaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeKit.framework; path = ../../../Controls/XuniGaugeKit.framework; sourceTree = "<group>"; };
+		F2BA19561B288F1600F2B835 /* EditingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingController.h; sourceTree = "<group>"; };
+		F2BA19571B288F1600F2B835 /* EditingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingController.m; sourceTree = "<group>"; };
+		F2BA19921B2B1E3200F2B835 /* FilterFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterFormController.h; sourceTree = "<group>"; };
+		F2BA19931B2B1E3200F2B835 /* FilterFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterFormController.m; sourceTree = "<group>"; };
+		F2CFF3BD1B7122BB00FE6FDF /* SharedFilterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedFilterData.h; sourceTree = "<group>"; };
+		F2CFF3BE1B7122BB00FE6FDF /* SharedFilterData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedFilterData.m; sourceTree = "<group>"; };
+		F2E2A9ED1B27254C00AFEA5D /* FlexGrid101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexGrid101.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E2A9F11B27254E00AFEA5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E2A9F21B27254E00AFEA5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2E2A9F41B27254E00AFEA5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F2E2A9F51B27254E00AFEA5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2E2A9F71B27254E00AFEA5D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F2E2A9F81B27254E00AFEA5D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F2E2A9FB1B27254E00AFEA5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2E2A9FD1B27254E00AFEA5D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F2E2AA001B27254E00AFEA5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F2E2AA061B27254E00AFEA5D /* FlexGrid101Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexGrid101Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E2AA0B1B27254E00AFEA5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E2AA0C1B27254E00AFEA5D /* FlexGrid101Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlexGrid101Tests.m; sourceTree = "<group>"; };
+		F2E2AA241B27300A00AFEA5D /* GettingStartedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingStartedController.h; sourceTree = "<group>"; };
+		F2E2AA251B27300A00AFEA5D /* GettingStartedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GettingStartedController.m; sourceTree = "<group>"; };
+		F2E2AA271B27302300AFEA5D /* ColumnDefinitionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnDefinitionsController.h; sourceTree = "<group>"; };
+		F2E2AA281B27302300AFEA5D /* ColumnDefinitionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnDefinitionsController.m; sourceTree = "<group>"; };
+		F2E2AA2A1B27303700AFEA5D /* SelectionModesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionModesController.h; sourceTree = "<group>"; };
+		F2E2AA2B1B27303700AFEA5D /* SelectionModesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionModesController.m; sourceTree = "<group>"; };
+		F2E2AA2D1B27304C00AFEA5D /* CustomCellsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellsController.h; sourceTree = "<group>"; };
+		F2E2AA2E1B27304C00AFEA5D /* CustomCellsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellsController.m; sourceTree = "<group>"; };
+		F2E2AA301B27306300AFEA5D /* GroupingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupingController.h; sourceTree = "<group>"; };
+		F2E2AA311B27306300AFEA5D /* GroupingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupingController.m; sourceTree = "<group>"; };
+		F2E2AA331B27307300AFEA5D /* FilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterController.h; sourceTree = "<group>"; };
+		F2E2AA341B27307300AFEA5D /* FilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterController.m; sourceTree = "<group>"; };
+		F2E2AA361B27308500AFEA5D /* FullTextFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTextFilterController.h; sourceTree = "<group>"; };
+		F2E2AA371B27308500AFEA5D /* FullTextFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTextFilterController.m; sourceTree = "<group>"; };
+		F2E2AA3C1B2731B700AFEA5D /* CustomerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerData.h; sourceTree = "<group>"; };
+		F2E2AA3D1B2731B700AFEA5D /* CustomerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerData.m; sourceTree = "<group>"; };
+		F2E2AA3F1B27345900AFEA5D /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
+		F2E2AA411B27346E00AFEA5D /* FlexGridKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexGridKit.framework; path = ../../../Controls/FlexGridKit.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2E2A9EA1B27254C00AFEA5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E2AA401B27345900AFEA5D /* XuniCoreKit.framework in Frameworks */,
+				F2BA19551B2883CF00F2B835 /* XuniGaugeKit.framework in Frameworks */,
+				F2E2AA421B27346E00AFEA5D /* FlexGridKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E2AA031B27254E00AFEA5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2E2A9E41B27254C00AFEA5D = {
+			isa = PBXGroup;
+			children = (
+				F2BA19541B2883CF00F2B835 /* XuniGaugeKit.framework */,
+				F2E2AA411B27346E00AFEA5D /* FlexGridKit.framework */,
+				F2E2AA3F1B27345900AFEA5D /* XuniCoreKit.framework */,
+				F2E2A9EF1B27254C00AFEA5D /* FlexGrid101 */,
+				F2E2AA091B27254E00AFEA5D /* FlexGrid101Tests */,
+				F2E2A9EE1B27254C00AFEA5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2E2A9EE1B27254C00AFEA5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2E2A9ED1B27254C00AFEA5D /* FlexGrid101.app */,
+				F2E2AA061B27254E00AFEA5D /* FlexGrid101Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2E2A9EF1B27254C00AFEA5D /* FlexGrid101 */ = {
+			isa = PBXGroup;
+			children = (
+				F2CFF3BD1B7122BB00FE6FDF /* SharedFilterData.h */,
+				F2CFF3BE1B7122BB00FE6FDF /* SharedFilterData.m */,
+				F2E2A9F41B27254E00AFEA5D /* AppDelegate.h */,
+				F2E2A9F51B27254E00AFEA5D /* AppDelegate.m */,
+				F2E2A9F71B27254E00AFEA5D /* ViewController.h */,
+				F2E2A9F81B27254E00AFEA5D /* ViewController.m */,
+				F2E2A9FA1B27254E00AFEA5D /* Main.storyboard */,
+				F2E2A9FD1B27254E00AFEA5D /* Images.xcassets */,
+				F2E2A9FF1B27254E00AFEA5D /* LaunchScreen.xib */,
+				F2E2A9F01B27254E00AFEA5D /* Supporting Files */,
+				F2E2AA241B27300A00AFEA5D /* GettingStartedController.h */,
+				F2E2AA251B27300A00AFEA5D /* GettingStartedController.m */,
+				F2E2AA271B27302300AFEA5D /* ColumnDefinitionsController.h */,
+				F2E2AA281B27302300AFEA5D /* ColumnDefinitionsController.m */,
+				F2E2AA2A1B27303700AFEA5D /* SelectionModesController.h */,
+				F2E2AA2B1B27303700AFEA5D /* SelectionModesController.m */,
+				F2E2AA2D1B27304C00AFEA5D /* CustomCellsController.h */,
+				F2E2AA2E1B27304C00AFEA5D /* CustomCellsController.m */,
+				F2E2AA301B27306300AFEA5D /* GroupingController.h */,
+				F2E2AA311B27306300AFEA5D /* GroupingController.m */,
+				F2E2AA331B27307300AFEA5D /* FilterController.h */,
+				F2E2AA341B27307300AFEA5D /* FilterController.m */,
+				F2E2AA361B27308500AFEA5D /* FullTextFilterController.h */,
+				F2E2AA371B27308500AFEA5D /* FullTextFilterController.m */,
+				F2E2AA3C1B2731B700AFEA5D /* CustomerData.h */,
+				F2E2AA3D1B2731B700AFEA5D /* CustomerData.m */,
+				F2BA19561B288F1600F2B835 /* EditingController.h */,
+				F2BA19571B288F1600F2B835 /* EditingController.m */,
+				F2BA19921B2B1E3200F2B835 /* FilterFormController.h */,
+				F2BA19931B2B1E3200F2B835 /* FilterFormController.m */,
+				F23573691B44608100F300D7 /* License.h */,
+				F235736A1B44608100F300D7 /* License.m */,
+				F23675D11B59503000194040 /* EditConfirmationController.h */,
+				F23675D21B59503000194040 /* EditConfirmationController.m */,
+			);
+			path = FlexGrid101;
+			sourceTree = "<group>";
+		};
+		F2E2A9F01B27254E00AFEA5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2E2A9F11B27254E00AFEA5D /* Info.plist */,
+				F2E2A9F21B27254E00AFEA5D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2E2AA091B27254E00AFEA5D /* FlexGrid101Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F2E2AA0C1B27254E00AFEA5D /* FlexGrid101Tests.m */,
+				F2E2AA0A1B27254E00AFEA5D /* Supporting Files */,
+			);
+			path = FlexGrid101Tests;
+			sourceTree = "<group>";
+		};
+		F2E2AA0A1B27254E00AFEA5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2E2AA0B1B27254E00AFEA5D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2E2A9EC1B27254C00AFEA5D /* FlexGrid101 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2E2AA101B27254E00AFEA5D /* Build configuration list for PBXNativeTarget "FlexGrid101" */;
+			buildPhases = (
+				F2E2A9E91B27254C00AFEA5D /* Sources */,
+				F2E2A9EA1B27254C00AFEA5D /* Frameworks */,
+				F2E2A9EB1B27254C00AFEA5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlexGrid101;
+			productName = FlexGrid101;
+			productReference = F2E2A9ED1B27254C00AFEA5D /* FlexGrid101.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2E2AA051B27254E00AFEA5D /* FlexGrid101Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2E2AA131B27254E00AFEA5D /* Build configuration list for PBXNativeTarget "FlexGrid101Tests" */;
+			buildPhases = (
+				F2E2AA021B27254E00AFEA5D /* Sources */,
+				F2E2AA031B27254E00AFEA5D /* Frameworks */,
+				F2E2AA041B27254E00AFEA5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2E2AA081B27254E00AFEA5D /* PBXTargetDependency */,
+			);
+			name = FlexGrid101Tests;
+			productName = FlexGrid101Tests;
+			productReference = F2E2AA061B27254E00AFEA5D /* FlexGrid101Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2E2A9E51B27254C00AFEA5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = GrapeCity;
+				TargetAttributes = {
+					F2E2A9EC1B27254C00AFEA5D = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					F2E2AA051B27254E00AFEA5D = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = F2E2A9EC1B27254C00AFEA5D;
+					};
+				};
+			};
+			buildConfigurationList = F2E2A9E81B27254C00AFEA5D /* Build configuration list for PBXProject "FlexGrid101" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2E2A9E41B27254C00AFEA5D;
+			productRefGroup = F2E2A9EE1B27254C00AFEA5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2E2A9EC1B27254C00AFEA5D /* FlexGrid101 */,
+				F2E2AA051B27254E00AFEA5D /* FlexGrid101Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2E2A9EB1B27254C00AFEA5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E2A9FC1B27254E00AFEA5D /* Main.storyboard in Resources */,
+				F2E2AA011B27254E00AFEA5D /* LaunchScreen.xib in Resources */,
+				F2E2A9FE1B27254E00AFEA5D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E2AA041B27254E00AFEA5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2E2A9E91B27254C00AFEA5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E2A9F91B27254E00AFEA5D /* ViewController.m in Sources */,
+				F23675D31B59503000194040 /* EditConfirmationController.m in Sources */,
+				F2E2AA351B27307300AFEA5D /* FilterController.m in Sources */,
+				F2E2AA291B27302300AFEA5D /* ColumnDefinitionsController.m in Sources */,
+				F2CFF3BF1B7122BB00FE6FDF /* SharedFilterData.m in Sources */,
+				F2BA19941B2B1E3200F2B835 /* FilterFormController.m in Sources */,
+				F2E2A9F61B27254E00AFEA5D /* AppDelegate.m in Sources */,
+				F235736B1B44608100F300D7 /* License.m in Sources */,
+				F2E2AA3E1B2731B700AFEA5D /* CustomerData.m in Sources */,
+				F2E2AA2F1B27304C00AFEA5D /* CustomCellsController.m in Sources */,
+				F2E2AA261B27300A00AFEA5D /* GettingStartedController.m in Sources */,
+				F2E2A9F31B27254E00AFEA5D /* main.m in Sources */,
+				F2E2AA381B27308500AFEA5D /* FullTextFilterController.m in Sources */,
+				F2E2AA321B27306300AFEA5D /* GroupingController.m in Sources */,
+				F2BA19581B288F1600F2B835 /* EditingController.m in Sources */,
+				F2E2AA2C1B27303700AFEA5D /* SelectionModesController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E2AA021B27254E00AFEA5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E2AA0D1B27254E00AFEA5D /* FlexGrid101Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2E2AA081B27254E00AFEA5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2E2A9EC1B27254C00AFEA5D /* FlexGrid101 */;
+			targetProxy = F2E2AA071B27254E00AFEA5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F2E2A9FA1B27254E00AFEA5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2E2A9FB1B27254E00AFEA5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2E2A9FF1B27254E00AFEA5D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2E2AA001B27254E00AFEA5D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2E2AA0E1B27254E00AFEA5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2E2AA0F1B27254E00AFEA5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2E2AA111B27254E00AFEA5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/frameworks,
+					../../../Controls,
+				);
+				INFOPLIST_FILE = FlexGrid101/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F2E2AA121B27254E00AFEA5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/frameworks,
+					../../../Controls,
+				);
+				INFOPLIST_FILE = FlexGrid101/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F2E2AA141B27254E00AFEA5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlexGrid101Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlexGrid101.app/FlexGrid101";
+			};
+			name = Debug;
+		};
+		F2E2AA151B27254E00AFEA5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlexGrid101Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlexGrid101.app/FlexGrid101";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2E2A9E81B27254C00AFEA5D /* Build configuration list for PBXProject "FlexGrid101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E2AA0E1B27254E00AFEA5D /* Debug */,
+				F2E2AA0F1B27254E00AFEA5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2E2AA101B27254E00AFEA5D /* Build configuration list for PBXNativeTarget "FlexGrid101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E2AA111B27254E00AFEA5D /* Debug */,
+				F2E2AA121B27254E00AFEA5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2E2AA131B27254E00AFEA5D /* Build configuration list for PBXNativeTarget "FlexGrid101Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E2AA141B27254E00AFEA5D /* Debug */,
+				F2E2AA151B27254E00AFEA5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2E2A9E51B27254C00AFEA5D /* Project object */;
+}
