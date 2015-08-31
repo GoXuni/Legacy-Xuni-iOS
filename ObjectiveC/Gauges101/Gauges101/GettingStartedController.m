@@ -128,7 +128,7 @@
     
     XuniRect *r1 = [[XuniRect alloc] initLeft:0 top:150 width:self.view.bounds.size.width height:self.view.bounds.size.height/8];
     XuniRect *r2 = [[XuniRect alloc] initLeft:0 top:100 + (self.view.bounds.size.height/4) width:self.view.bounds.size.width height:self.view.bounds.size.height/8];
-    XuniRect *r3 = [[XuniRect alloc] initLeft:0 top:100 + (self.view.bounds.size.height/2) width:self.view.bounds.size.width height:(self.view.bounds.size.height/2)];
+    XuniRect *r3 = [[XuniRect alloc] initLeft:0 top:100 + (self.view.bounds.size.height/2) width:self.view.bounds.size.width height:((self.view.bounds.size.height/2) - 100)];
 
     
     _title.frame = CGRectMake(0, 50, self.view.bounds.size.width, 100);
@@ -137,7 +137,7 @@
     linearGauge.rectGauge = r1;
     bulletGraph.frame = CGRectMake(0, 100 + (self.view.bounds.size.height/4), self.view.bounds.size.width, self.view.bounds.size.height/8);
     bulletGraph.rectGauge = r2;
-    radialGauge.frame = CGRectMake(0, 100 + (self.view.bounds.size.height/2), self.view.bounds.size.width, self.view.bounds.size.height/2);
+    radialGauge.frame = CGRectMake(0, 100 + (self.view.bounds.size.height/2), self.view.bounds.size.width, (self.view.bounds.size.height/2) - 100);
     radialGauge.rectGauge = r3;
     value.frame = CGRectMake(0, 110, 200, 50);
     

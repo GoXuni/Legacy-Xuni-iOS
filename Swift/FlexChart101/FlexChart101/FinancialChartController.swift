@@ -27,7 +27,6 @@ class FinancialChartController: UIViewController, UIPickerViewDataSource, UIPick
         _chart.bindingX = "date"
         
         let finance = XuniSeries(forChart: _chart, binding: "high,low,open,close", name: "AAPL")
-
         
         _chart.series.addObject(finance)
 
@@ -36,7 +35,7 @@ class FinancialChartController: UIViewController, UIPickerViewDataSource, UIPick
         _chart.legend.orientation = XuniChartLegendOrientation.Auto
         _chart.legend.position = XuniChartLegendPosition.Auto
         _chart.chartType = XuniChartType.Candlestick
-        _chart.tooltip.visible = true
+        _chart.tooltip.isVisible = true
         _chart.axisX.labelsVisible = true
         _chart.axisY.labelsVisible = true
         

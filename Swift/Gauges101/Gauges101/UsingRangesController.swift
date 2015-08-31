@@ -94,13 +94,13 @@ class UsingRangesController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         var r1 = XuniRect(left: 0, top: 250, width: Double(self.view.bounds.size.width), height: Double(self.view.bounds.size.height/8))
-        var r2 = XuniRect(left: 0, top: Double(100 + (self.view.bounds.size.height/2)), width: Double(self.view.bounds.size.width), height: Double(self.view.bounds.size.height/2))
+        var r2 = XuniRect(left: 0, top: Double(100 + (self.view.bounds.size.height/2)), width: Double(self.view.bounds.size.width), height: Double((self.view.bounds.size.height/2) - 100))
         
         linearGauge.frame = CGRectMake(0, 250, self.view.bounds.size.width, self.view.bounds.size.height/8)
         linearGauge.rectGauge = r1
         linearGauge.setNeedsDisplay()
         
-        radialGauge.frame = CGRectMake(0, 100 + (self.view.bounds.size.height/2), self.view.bounds.size.width, self.view.bounds.size.height/2)
+        radialGauge.frame = CGRectMake(0, 100 + (self.view.bounds.size.height/2), self.view.bounds.size.width, (self.view.bounds.size.height/2) - 100)
         radialGauge.rectGauge = r2
         radialGauge.setNeedsDisplay()
         

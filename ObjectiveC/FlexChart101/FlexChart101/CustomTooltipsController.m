@@ -34,7 +34,7 @@
     chart.itemsSource = chartData;
     chart.axisX.labelsVisible = true;
     chart.axisY.labelsVisible = true;
-    chart.tooltip.visible = false;
+    chart.tooltip.isVisible = true;
     
     
     t = [[MyTooltip alloc] init];

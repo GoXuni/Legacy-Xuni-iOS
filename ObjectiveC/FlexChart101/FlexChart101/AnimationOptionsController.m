@@ -58,7 +58,7 @@
     
     chart.legend.orientation = XuniChartLegendOrientationAuto;
     chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.visible = true;
+    chart.tooltip.isVisible = true;
 
     chart.tag = 1;
     chartTypePicker.tag = 2;

@@ -106,14 +106,14 @@
     UIStepper *stepper = (UIStepper*)[self.view viewWithTag:3];
     UIPickerView *picker = (UIPickerView*)[self.view viewWithTag:5];
     XuniRect *r1 = [[XuniRect alloc] initLeft:0 top:250 width:self.view.bounds.size.width height:self.view.bounds.size.height/8];
-    XuniRect *r2 = [[XuniRect alloc] initLeft:0 top:100 + (self.view.bounds.size.height/2) width:self.view.bounds.size.width height:(self.view.bounds.size.height/2)];
+    XuniRect *r2 = [[XuniRect alloc] initLeft:0 top:100 + (self.view.bounds.size.height/2) width:self.view.bounds.size.width height:((self.view.bounds.size.height/2) - 100)];
     
     _title.frame = CGRectMake(0, 45, self.view.bounds.size.width, 100);
     stepper.frame = CGRectMake(self.view.bounds.size.width/2 - 25, 200, 50, 50);
     linearGauge.frame = CGRectMake(0, 250, self.view.bounds.size.width, self.view.bounds.size.height/8);
     linearGauge.rectGauge = r1;
     
-    radialGauge.frame = CGRectMake(0, 100 + (self.view.bounds.size.height/2), self.view.bounds.size.width, self.view.bounds.size.height/2);
+    radialGauge.frame = CGRectMake(0, 100 + (self.view.bounds.size.height/2), self.view.bounds.size.width, (self.view.bounds.size.height/2) - 100);
     radialGauge.rectGauge = r2;
     showTextLabel.frame = CGRectMake(5, 110, 110, 50);
     picker.frame = CGRectMake(self.view.bounds.size.width - 120, 60, 100, 162);

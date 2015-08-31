@@ -41,7 +41,7 @@ class TogglesSeriesController: UIViewController {
         
         _chart.legend.orientation = XuniChartLegendOrientation.Auto
         _chart.legend.position = XuniChartLegendPosition.Auto
-        _chart.tooltip.visible = true
+        _chart.tooltip.isVisible = true
         _chart.axisX.labelsVisible = true
         _chart.axisY.labelsVisible = true
         

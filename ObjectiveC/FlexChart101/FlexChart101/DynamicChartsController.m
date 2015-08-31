@@ -41,9 +41,9 @@
     chart.chartType = XuniChartTypeLine;
     chart.legend.orientation = XuniChartLegendOrientationAuto;
     chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.visible = true;
+    chart.tooltip.isVisible = true;
     
-    NSDate *d = [NSDate dateWithTimeIntervalSinceNow: 1.0];
+    NSDate *d = [NSDate dateWithTimeIntervalSinceNow: chart.loadAnimation.duration + 0.1];
     NSTimer *timer = [[NSTimer alloc] initWithFireDate: d
                              interval: 1
                                target: self
@@ -70,7 +70,7 @@
 
 -(void)onTick{
     FlexChart *chart = (FlexChart *)[self.view viewWithTag:1];
-    chart.loadAnimation.duration = 0;
+    chart.isAnimated = NO;
     chart.itemsSource = [DynamicChartData dynamicData:chartData];
 }
 /*

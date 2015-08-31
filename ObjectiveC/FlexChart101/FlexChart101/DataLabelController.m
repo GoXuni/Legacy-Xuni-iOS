@@ -48,7 +48,7 @@
     
     chart.legend.orientation = XuniChartLegendOrientationAuto;
     chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.visible = true;
+    chart.tooltip.isVisible = true;
     chart.dataLabel.content= @"{seriesName}\n{y}";
     chart.dataLabel.dataLabelFormat = @"C";
     chart.dataLabel.position = FlexChartDataLabelPositionTop;

@@ -59,7 +59,7 @@
     pieChart.binding = @"value";
     pieChart.bindingName = @"name";
     pieChart.itemsSource = pieData;
-    pieChart.tooltip.visible = true;
+    pieChart.tooltip.isVisible = true;
     pieChart.header = _headerField.text;
     [pieChart sizeToFit];
     

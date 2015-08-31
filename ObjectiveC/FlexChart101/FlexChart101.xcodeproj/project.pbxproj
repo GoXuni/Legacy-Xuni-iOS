@@ -517,7 +517,7 @@
 				FRAMEWORK_SEARCH_PATHS = "";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
-					/Volumes/frameworks,
+					/Volumes/main-frameworks,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexChart101/Info.plist;
@@ -537,7 +537,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
-					/Volumes/frameworks,
+					/Volumes/main-frameworks,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexChart101/Info.plist;

@@ -22,11 +22,11 @@ class GettingStartedController: UIViewController {
         _pieChart.binding = "value"
         _pieChart.bindingName = "name"
         _pieChart.itemsSource = pieData
-        _pieChart.tooltip.visible = true
+        _pieChart.tooltip.isVisible = true
         _donutChart.binding = "value"
         _donutChart.bindingName = "name"
         _donutChart.itemsSource = pieData
-        _donutChart.tooltip.visible = true
+        _donutChart.tooltip.isVisible = true
         _donutChart.innerRadius = 0.6
         self.view.addSubview(_pieChart)
         self.view.addSubview(_donutChart)

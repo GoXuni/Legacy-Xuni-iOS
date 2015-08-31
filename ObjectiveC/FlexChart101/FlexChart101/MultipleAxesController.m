@@ -56,7 +56,7 @@
     chart.axisY.labelsVisible = true;
     chart.legend.position = XuniChartLegendPositionNone;
     [[chart.series objectAtIndex:1] setAxisY:axisT];
-    chart.tooltip.visible = true;
+    chart.tooltip.isVisible = true;
     
     chart.tag = 1;
     [self.view addSubview:chart];

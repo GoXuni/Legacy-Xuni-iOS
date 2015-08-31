@@ -51,7 +51,7 @@
     pieChart.binding = @"value";
     pieChart.bindingName = @"name";
     pieChart.itemsSource = pieData;
-    pieChart.tooltip.visible = true;
+    pieChart.tooltip.isVisible = true;
     pieChart.selectedItemOffset = stepper.value;
     pieChart.selectedItemPosition = XuniPositionBottom;
     pieChart.isAnimated = false;

@@ -55,8 +55,8 @@ class MultipleAxesController: UIViewController {
         _chart.legend.position = XuniChartLegendPosition.None
         
         (_chart.series.objectAtIndex(1) as! XuniSeries).axisY = axisT
+        _chart.tooltip.isVisible = true
         
-        _chart.tooltip.visible = true
         self.view.addSubview(_chart)
     }
     

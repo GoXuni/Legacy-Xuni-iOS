@@ -96,13 +96,13 @@ class GettingStartedController: UIViewController {
         
         var r1 = XuniRect(left: 0, top: 150, width: Double(self.view.bounds.size.width), height: Double(self.view.bounds.size.height/8))
         var r2 = XuniRect(left: 0, top: Double(100 + (self.view.bounds.size.height/4)), width: Double(self.view.bounds.size.width), height: Double(self.view.bounds.size.height/8))
-        var r3 = XuniRect(left: 0, top: Double(100 + (self.view.bounds.size.height/2)), width: Double(self.view.bounds.size.width), height: Double(self.view.bounds.size.height/2))
+        var r3 = XuniRect(left: 0, top: Double(100 + (self.view.bounds.size.height/2)), width: Double(self.view.bounds.size.width), height: Double((self.view.bounds.size.height/2) - 100))
         
         linearGauge.frame = CGRectMake(0, 150, self.view.bounds.size.width, self.view.bounds.size.height/8)
         linearGauge.rectGauge = r1
         bulletGraph.frame = CGRectMake(0, 100 + (self.view.bounds.size.height/4), self.view.bounds.size.width, self.view.bounds.size.height/8)
         bulletGraph.rectGauge = r2
-        radialGauge.frame = CGRectMake(0, 100 + (self.view.bounds.size.height/2), self.view.bounds.size.width, self.view.bounds.size.height/2)
+        radialGauge.frame = CGRectMake(0, 100 + (self.view.bounds.size.height/2), self.view.bounds.size.width, (self.view.bounds.size.height/2) - 100)
         radialGauge.rectGauge = r3
         value.frame = CGRectMake(0, 110, 200, 50)
         stepper.frame = CGRectMake(self.view.bounds.size.width - 100, 120, 50, 50)

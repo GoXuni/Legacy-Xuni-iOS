@@ -442,7 +442,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/frameworks,
+					/Volumes/main-frameworks,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexGrid101/Info.plist;
@@ -458,7 +458,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/frameworks,
+					/Volumes/main-frameworks,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexGrid101/Info.plist;

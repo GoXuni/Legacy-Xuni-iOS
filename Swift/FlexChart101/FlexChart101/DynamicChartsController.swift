@@ -34,7 +34,7 @@ class DynamicChartsController: UIViewController {
         _chart.legend.position = XuniChartLegendPosition.Auto
         _chart.chartType = XuniChartType.Line
         _chart.loadAnimation.duration = 0
-        _chart.tooltip.visible = true
+        _chart.tooltip.isVisible = true
         _chart.axisX.labelsVisible = true
         _chart.axisY.labelsVisible = true
         

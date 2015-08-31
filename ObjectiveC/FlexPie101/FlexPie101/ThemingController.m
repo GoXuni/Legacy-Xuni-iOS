@@ -35,7 +35,7 @@
     pieChart.binding = @"value";
     pieChart.bindingName = @"name";
     pieChart.itemsSource = pieData;
-    pieChart.tooltip.visible = true;
+    pieChart.tooltip.isVisible = true;
 
     pieChart.tag = 1;
     pickerView.tag = 2;

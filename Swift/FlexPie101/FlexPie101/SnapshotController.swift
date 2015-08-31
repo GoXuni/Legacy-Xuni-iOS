@@ -22,7 +22,7 @@ class SnapshotController: UIViewController {
         _pieChart.binding = "value"
         _pieChart.bindingName = "name"
         _pieChart.itemsSource = pieData
-        _pieChart.tooltip.visible = true
+        _pieChart.tooltip.isVisible = true
         
         _snapshotButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         _snapshotButton.setTitle("Take a snapshot", forState: UIControlState.Normal)

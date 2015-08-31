@@ -30,7 +30,7 @@ class ThemingController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         _pieChart.binding = "value"
         _pieChart.bindingName = "name"
         _pieChart.itemsSource = pieData
-        _pieChart.tooltip.visible = true
+        _pieChart.tooltip.isVisible = true
         self.view.addSubview(_pieChart)
         self.view.addSubview(_pickerView)
     }

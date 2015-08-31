@@ -50,7 +50,7 @@ class LegendAndTitlesController: UIViewController, UIPickerViewDelegate, UIPicke
         _pieChart.binding = "value"
         _pieChart.bindingName = "name"
         _pieChart.itemsSource = pieData
-        _pieChart.tooltip.visible = true
+        _pieChart.tooltip.isVisible = true
         _pieChart.header = _headerField.text
         _pieChart.sizeToFit()
         self.view.addSubview(_footerField)

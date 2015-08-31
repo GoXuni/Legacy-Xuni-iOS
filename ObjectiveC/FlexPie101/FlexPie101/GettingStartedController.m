@@ -27,11 +27,11 @@
     pieChart.binding = @"value";
     pieChart.bindingName = @"name";
     pieChart.itemsSource = pieData;
-    pieChart.tooltip.visible = true;
+    pieChart.tooltip.isVisible = true;
     donutChart.binding = @"value";
     donutChart.bindingName = @"name";
     donutChart.itemsSource = pieData;
-    donutChart.tooltip.visible = true;
+    donutChart.tooltip.isVisible = true;
     donutChart.innerRadius = 0.6;
     pieChart.tag = 1;
     donutChart.tag = 2;

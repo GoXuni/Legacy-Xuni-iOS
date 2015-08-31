@@ -40,7 +40,7 @@
     
     chart.legend.orientation = XuniChartLegendOrientationAuto;
     chart.legend.position = XuniChartLegendPositionNone;
-    chart.tooltip.visible = true;
+    chart.tooltip.isVisible = true;
     
     chart.tag = 1;
     pickerView.tag = 2;
