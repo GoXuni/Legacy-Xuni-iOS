@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexPieKit
+import XuniFlexPieKit
 
 class GettingStartedController: UIViewController {
     

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexGridKit
+import XuniFlexGridKit
 
 class ColumnDefinitionController: UIViewController {
     var _flex = FlexGrid()
@@ -16,15 +16,19 @@ class ColumnDefinitionController: UIViewController {
         // Do any additional setup after loading the view.
 
         _flex.autoGenerateColumns = false
-        var c1 = FlexColumn()
+        let c1 = FlexColumn()
         c1.binding = "customerID"
+        c1.header = "ID"
         c1.width = 100
-        var c2 = FlexColumn()
-        c2.binding = "first"
-        var c3 = FlexColumn()
-        c3.binding = "last"
-        var c4 = FlexColumn()
-        c4.binding = "weight"
+        let c2 = FlexColumn()
+        c2.binding = "firstName"
+        c2.header = "First name"
+        let c3 = FlexColumn()
+        c3.header = "Last name"
+        c3.binding = "lastName"
+        let c4 = FlexColumn()
+        c4.binding = "orderTotal"
+        c4.header = "Total orders"
         c4.format = "N1"
         _flex.columns.addObject(c1)
         _flex.columns.addObject(c2)
@@ -50,7 +54,7 @@ class ColumnDefinitionController: UIViewController {
             var c = FlexColumn()
             c = g.columns.objectAtIndex(i) as! FlexColumn
             c.widthType = FlexColumnWidth.Star
-            c.width = (i == 0) ? 5 : (i == 3) ? 3 : 4
+            c.width = (i == 0) ? 3 : (i == 3) ? 3 : 4
         }
     }
     /*

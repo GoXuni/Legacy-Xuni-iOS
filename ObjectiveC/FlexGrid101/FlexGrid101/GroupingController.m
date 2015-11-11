@@ -7,7 +7,7 @@
 
 #import "GroupingController.h"
 #import "CustomerData.h"
-#import "FlexGridKit/FlexGridKit.h"
+#import "XuniFlexGridKit/XuniFlexGridKit.h"
 
 @interface GroupingController ()
 
@@ -31,8 +31,28 @@
     [sortAscendingButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     FlexGrid *flex = [[FlexGrid alloc] init];
     flex.isReadOnly = true;
-    XuniPropertyGroupDescription *gd = [[XuniPropertyGroupDescription alloc]initWithProperty:@"last"];
-    XuniSortDescription *sd =[[XuniSortDescription alloc] initWithProperty:@"last" ascending:true];
+    
+    flex.autoGenerateColumns = false;
+    FlexColumn *c1 = [[FlexColumn alloc] init];
+    c1.binding = @"firstName";
+    c1.header = @"First Name";
+    
+    c1.width = 100;
+    FlexColumn *c2 = [[FlexColumn alloc] init];
+    c2.binding = @"lastName";
+    c2.header = @"Last Name";
+    FlexColumn *c3 = [[FlexColumn alloc] init];
+    c3.binding = @"orderTotal";
+    c3.header = @"Order Total";
+    c3.format = @"C";
+    c3.aggregate = XuniAggregateSum;
+    [flex.columns addObject:c1];
+    [flex.columns addObject:c2];
+    [flex.columns addObject:c3];
+    
+    
+    XuniPropertyGroupDescription *gd = [[XuniPropertyGroupDescription alloc]initWithProperty:@"country"];
+    XuniSortDescription *sd =[[XuniSortDescription alloc] initWithProperty:@"country" ascending:true];
 
     flex.itemsSource = [CustomerData getCustomerData:100];
     [flex.collectionView.groupDescriptions addObject:gd];
@@ -42,7 +62,16 @@
     sortDescendingButton.tag = 3;
     [self.view addSubview:sortAscendingButton];
     [self.view addSubview:sortDescendingButton];
+    [self starSizing:flex];
     [self.view addSubview:flex];
+}
+
+-(void)starSizing:(FlexGrid*)g{
+    for (int i = 0; i < g.columns.count; i++) {
+        FlexColumn *c = [g.columns objectAtIndex:i];
+        c.widthType = FlexColumnWidthStar;
+        c.width = (i == 0) ? 3 : (i == 3) ? 3 : 4;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,14 +95,14 @@
 -(void)sortAscendingButtonClicked{
     FlexGrid *flex =  (FlexGrid *)[self.view viewWithTag:1];
     [flex.collectionView.sortDescriptions removeAllObjects];
-    XuniSortDescription *sd =[[XuniSortDescription alloc] initWithProperty:@"last" ascending:true];
+    XuniSortDescription *sd =[[XuniSortDescription alloc] initWithProperty:@"country" ascending:true];
     [flex.collectionView.sortDescriptions addObject:sd];
 }
 
 -(void)sortDescendingButtonClicked{
     FlexGrid *flex =  (FlexGrid *)[self.view viewWithTag:1];
     [flex.collectionView.sortDescriptions removeAllObjects];
-    XuniSortDescription *sd =[[XuniSortDescription alloc] initWithProperty:@"last" ascending:false];
+    XuniSortDescription *sd =[[XuniSortDescription alloc] initWithProperty:@"country" ascending:false];
     [flex.collectionView.sortDescriptions addObject:sd];
 }
 

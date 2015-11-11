@@ -52,8 +52,8 @@
 		F22B15821B0CDEAF00C1647E /* CustomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimationController.m; sourceTree = "<group>"; };
 		F235735E1B443ECA00F300D7 /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
 		F235735F1B443ECA00F300D7 /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
-		F23653EE1B0FA0CB008518FE /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
-		F23653F01B0FA0D7008518FE /* XuniGaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeKit.framework; path = ../../../Controls/XuniGaugeKit.framework; sourceTree = "<group>"; };
+		F23653EE1B0FA0CB008518FE /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../../../Controls/XuniCoreKit.framework"; sourceTree = "<group>"; };
+		F23653F01B0FA0D7008518FE /* XuniGaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeKit.framework; path = "../../../Controls/XuniGaugeKit.framework"; sourceTree = "<group>"; };
 		F254FAB71B31BF11009CD853 /* SnapshotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapshotController.h; sourceTree = "<group>"; };
 		F254FAB81B31BF11009CD853 /* SnapshotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnapshotController.m; sourceTree = "<group>"; };
 		F26DAA941B0A2011005E5B6D /* Gauges101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauges101.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -414,10 +414,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/main-frameworks,
+					"/Volumes/main-frameworks",
 					../../../Controls,
+					"/Users/kotyuck/Desktop/Volumes/main-frameworks/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Gauges101/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -429,10 +431,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/main-frameworks,
+					"/Volumes/main-frameworks",
 					../../../Controls,
+					"/Users/kotyuck/Desktop/Volumes/main-frameworks/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Gauges101/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

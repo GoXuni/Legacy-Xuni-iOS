@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 
 class ZoomingAndScrollingController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -17,38 +17,29 @@ class ZoomingAndScrollingController: UIViewController, UIPickerViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Zooming and Scrolling"
         
         // Do any additional setup after loading the view.
-        
         _pickerData = ["X", "Y", "XY", "Disabled"]
         _pickerView.delegate = self
         _pickerView.showsSelectionIndicator = true
         _pickerView.hidden = false
-        
+        _pickerView.selectRow(2, inComponent: 0, animated: false)
         _label.text = "Zoom Mode"
         
-        _chart.bindingX = "name"
-        
-        let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")
-        let expenses = XuniSeries(forChart: _chart, binding: "expenses, expenses", name: "Expenses")
-        let downloads = XuniSeries(forChart: _chart, binding: "downloads, downloads", name: "Downloads")
-        
+        let sales = XuniSeries(forChart: _chart, binding: "y", name: "Normal Distribution")
         _chart.series.addObject(sales)
-        _chart.series.addObject(expenses)
-        _chart.series.addObject(downloads)
         
-        _chart.itemsSource = ChartData.demoData()
-        
-        _chart.axisX.scale = 0.5
-        _chart.axisY.displayedRange = 16000
-        _chart.chartType = XuniChartType.Area
-        _chart.stacking = XuniStacking.Stacked
-        
-        _chart.legend.orientation = XuniChartLegendOrientation.Auto
-        _chart.legend.position = XuniChartLegendPosition.Auto
-        _chart.tooltip.isVisible = true
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
+        _chart.itemsSource = ChartPoint.generateRandomPoints(500)
+        _chart.bindingX = "x"
+        _chart.chartType = XuniChartType.Scatter
+        _chart.zoomMode = XuniZoomMode.XY
+        _chart.isAnimated = false
+        _chart.header = "Drag to scroll/Pinch to zoom"
+        _chart.headerFont = UIFont.systemFontOfSize(14)
+        _chart.headerTextAlignment = XuniHorizontalAlignment.Center
+        _chart.palette = XuniPalettes.superhero()
+        _chart.axisY.format = "N2"
 
         self.view.addSubview(_chart)
         self.view.addSubview(_pickerView)
@@ -62,17 +53,21 @@ class ZoomingAndScrollingController: UIViewController, UIPickerViewDataSource, U
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         _label.frame = CGRectMake(10, 110, 50, 25)
         _label.sizeToFit()
-        _pickerView.frame = CGRectMake(self.view.bounds.size.width/3, 44, self.view.bounds.size.width/2, 162)
+        _pickerView.frame = CGRectMake(self.view.bounds.size.width / 3, 44, self.view.bounds.size.width / 2, 162)
         _chart.frame = CGRectMake(0, 206, self.view.bounds.size.width, self.view.bounds.size.height - 206)
     }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return _pickerData.count
     }
+    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (row == 0) {
             _chart.zoomMode = XuniZoomMode.X
@@ -87,9 +82,11 @@ class ZoomingAndScrollingController: UIViewController, UIPickerViewDataSource, U
             _chart.zoomMode = XuniZoomMode.Disabled
         }
     }
+    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return _pickerData.objectAtIndex(row) as! String
     }
+    
     /*
     // MARK: - Navigation
     

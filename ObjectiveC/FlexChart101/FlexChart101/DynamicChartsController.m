@@ -7,7 +7,7 @@
 
 
 #import "DynamicChartsController.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 #import "DynamicChartData.h"
 
 @interface DynamicChartsController (){
@@ -20,12 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setTitle:@"Dynamic Charts"];
     
+    // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];
     chartData = [DynamicChartData demoData];
-    chart.tag = 1;
-    //chart.bindingX = @"name";
     chart.bindingX = @"time";
     XuniSeries *trucks = [[XuniSeries alloc] initForChart:chart binding:@"trucks, trucks" name:@"Trucks"];
     XuniSeries *ships = [[XuniSeries alloc] initForChart:chart binding:@"ships, ships" name:@"Ships"];
@@ -36,19 +35,17 @@
     [chart.series addObject:planes];
     
     chart.itemsSource = chartData;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
     chart.chartType = XuniChartTypeLine;
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.isVisible = true;
+    chart.palette = [XuniPalettes coral];
+    chart.tooltip.isVisible = false;
     
     NSDate *d = [NSDate dateWithTimeIntervalSinceNow: chart.loadAnimation.duration + 0.1];
-    NSTimer *timer = [[NSTimer alloc] initWithFireDate: d
-                             interval: 1
-                               target: self
-                             selector:@selector(onTick)
-                             userInfo:nil repeats:YES];
+    NSTimer *timer = [[NSTimer alloc] initWithFireDate:d
+                                              interval:1
+                                                target:self
+                                              selector:@selector(onTick)
+                                              userInfo:nil
+                                               repeats:YES];
     NSRunLoop *runner = [NSRunLoop currentRunLoop];
     [runner addTimer:timer forMode: NSDefaultRunLoopMode];
     

@@ -7,7 +7,7 @@
 
 #import "FullTextFilterController.h"
 #import "CustomerData.h"
-#import "FlexGridKit/FlexGridKit.h"
+#import "XuniFlexGridKit/XuniFlexGridKit.h"
 
 
 @interface FullTextFilterController ()
@@ -67,32 +67,32 @@
     flex.collectionView.filter = ^ BOOL (NSObject *item){
         CustomerData *d = (CustomerData*)item;
 
-        if ([[NSString stringWithFormat:@"%@", d.customerID] isEqualToString:textField.text]) {
+        if ([[NSString stringWithFormat:@"%lu", d.customerID] isEqualToString:textField.text]) {
             return true;
         }
-        else if ([[NSString stringWithFormat:@"%@", d.countryID] isEqualToString:textField.text]) {
+        else if ([[NSString stringWithFormat:@"%lu", d.countryID] isEqualToString:textField.text]) {
             return true;
         }
-        else if ([[NSString stringWithFormat:@"%@", d.weight] isEqualToString:textField.text]) {
+        else if ([[NSString stringWithFormat:@"%@", d.email] isEqualToString:textField.text]) {
             return true;
         }
-        else if ([d.first isEqualToString:textField.text]) {
+        else if ([d.firstName isEqualToString:textField.text]) {
             return true;
         }
-        else if ([d.last isEqualToString:textField.text])
+        else if ([d.lastName isEqualToString:textField.text])
         {
             return true;
         }
-        else if ([d.father isEqualToString:textField.text]){
+        else if ([d.country isEqualToString:textField.text]){
             return true;
         }
-        else if ([d.brother isEqualToString:textField.text]){
+        else if ([d.city isEqualToString:textField.text]){
             return true;
         }
-        else if ([d.cousin isEqualToString:textField.text]){
+        else if ([d.address isEqualToString:textField.text]){
             return true;
         }
-        else if ([[dateFormat stringFromDate:d.hireDate] isEqualToString:textField.text]) {
+        else if ([[dateFormat stringFromDate:d.lastOrderDate] isEqualToString:textField.text]) {
             return true;
         }
         else {

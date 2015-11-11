@@ -6,7 +6,7 @@
 //
 
 #import "SelectionModesController.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 #import "ChartData.h"
 
 @interface SelectionModesController (){
@@ -19,29 +19,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Selection Modes"];
     // Do any additional setup after loading the view.
     
     chartTypePickerData =[[NSMutableArray alloc] initWithObjects:@"Column", @"Bar", @"Scatter", @"Line", @"LineSymbol", @"Area", nil];
     selectionModePickerData = [[NSMutableArray alloc]initWithObjects: @"None", @"Series", @"Point", nil];
 
     UIPickerView *chartTypePicker = [[UIPickerView alloc] init];
-    UIPickerView *selectionModePicker = [[UIPickerView alloc] init];
-    FlexChart *chart = [[FlexChart alloc] init];
-    
-    NSMutableArray *chartData = [ChartData demoData];
-    
-    
     chartTypePicker.delegate = self;
     chartTypePicker.showsSelectionIndicator = YES;
     chartTypePicker.hidden = false;
     
+    UIPickerView *selectionModePicker = [[UIPickerView alloc] init];
     selectionModePicker.delegate = self;
     selectionModePicker.tag = 3;
     selectionModePicker.showsSelectionIndicator = YES;
     selectionModePicker.hidden = false;
     
-    chart.stacking = XuniStackingStacked;
-    chart.bindingX = @"name";
+    NSMutableArray *chartData = [ChartData demoData];
+    FlexChart *chart = [[FlexChart alloc] init];
+    
     XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
     XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses, expenses" name:@"Expenses"];
     XuniSeries *downloads = [[XuniSeries alloc] initForChart:chart binding:@"downloads, downloads" name:@"Downloads"];
@@ -50,12 +47,12 @@
     [chart.series addObject:expenses];
     [chart.series addObject:downloads];
     
+    chart.bindingX = @"name";
     chart.itemsSource = chartData;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
-    
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
+    chart.selectionMode = XuniSelectionModeSeries;
+    chart.selectedBorderColor = [UIColor redColor];
+    chart.selectedBorderWidth = 3;
+    chart.selectedDashes = [[NSArray alloc] initWithObjects:@7.5, @2.5, nil];
     
     chart.tag = 1;
     chartTypePicker.tag = 2;
@@ -71,14 +68,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    UIPickerView *chartTypePicker = (UIPickerView*)[self.view viewWithTag:2];
+    [chartTypePicker selectRow:0 inComponent:0 animated:NO];
+    
+    UIPickerView *selectionModePicker = (UIPickerView*)[self.view viewWithTag:3];
+    [selectionModePicker selectRow:1 inComponent:0 animated:NO];
+}
+
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
     UIPickerView *chartTypePicker = (UIPickerView*)[self.view viewWithTag:2];
     UIPickerView *selectionModePicker = (UIPickerView*)[self.view viewWithTag:3];
 
-    chartTypePicker.frame = CGRectMake(0, 44, self.view.bounds.size.width/2, 162);
-    selectionModePicker.frame = CGRectMake(self.view.bounds.size.width/2, 44, self.view.bounds.size.width/2, 162);
+    chartTypePicker.frame = CGRectMake(0, 44, self.view.bounds.size.width / 2, 162);
+    selectionModePicker.frame = CGRectMake(self.view.bounds.size.width / 2, 44, self.view.bounds.size.width / 2, 162);
     chart.frame = CGRectMake(0, 206, self.view.bounds.size.width, self.view.bounds.size.height - 206);
     [chart setNeedsDisplay];
 }

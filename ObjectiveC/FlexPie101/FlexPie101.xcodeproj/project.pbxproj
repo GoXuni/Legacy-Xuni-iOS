@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F23573651B445AAB00F300D7 /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = F23573641B445AAB00F300D7 /* License.m */; };
 		F24015E81B16262600D4D296 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24015E71B16262600D4D296 /* XuniCoreKit.framework */; };
-		F24015EC1B16264100D4D296 /* FlexPieKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24015EB1B16264100D4D296 /* FlexPieKit.framework */; };
+		F24015EC1B16264100D4D296 /* XuniFlexPieKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24015EB1B16264100D4D296 /* XuniFlexPieKit.framework */; };
 		F24015EE1B16266600D4D296 /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24015ED1B16266600D4D296 /* XuniChartCoreKit.framework */; };
 		F24016291B1646A000D4D296 /* PieChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = F24016281B1646A000D4D296 /* PieChartData.m */; };
 		F254FABC1B31E10D009CD853 /* SnapshotController.m in Sources */ = {isa = PBXBuildFile; fileRef = F254FABB1B31E10D009CD853 /* SnapshotController.m */; };
@@ -40,9 +40,9 @@
 /* Begin PBXFileReference section */
 		F23573631B445AAB00F300D7 /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
 		F23573641B445AAB00F300D7 /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
-		F24015E71B16262600D4D296 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
-		F24015EB1B16264100D4D296 /* FlexPieKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexPieKit.framework; path = ../../../Controls/FlexPieKit.framework; sourceTree = "<group>"; };
-		F24015ED1B16266600D4D296 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = ../../../Controls/XuniChartCoreKit.framework; sourceTree = "<group>"; };
+		F24015E71B16262600D4D296 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../../../Controls/XuniCoreKit.framework"; sourceTree = "<group>"; };
+		F24015EB1B16264100D4D296 /* XuniFlexPieKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexPieKit.framework; path = "../../../Controls/XuniFlexPieKit.framework"; sourceTree = "<group>"; };
+		F24015ED1B16266600D4D296 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = "../../../Controls/XuniChartCoreKit.framework"; sourceTree = "<group>"; };
 		F24016271B1646A000D4D296 /* PieChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartData.h; sourceTree = "<group>"; };
 		F24016281B1646A000D4D296 /* PieChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartData.m; sourceTree = "<group>"; };
 		F254FABA1B31E10D009CD853 /* SnapshotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapshotController.h; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			files = (
 				F24015E81B16262600D4D296 /* XuniCoreKit.framework in Frameworks */,
 				F24015EE1B16266600D4D296 /* XuniChartCoreKit.framework in Frameworks */,
-				F24015EC1B16264100D4D296 /* FlexPieKit.framework in Frameworks */,
+				F24015EC1B16264100D4D296 /* XuniFlexPieKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				F24015ED1B16266600D4D296 /* XuniChartCoreKit.framework */,
-				F24015EB1B16264100D4D296 /* FlexPieKit.framework */,
+				F24015EB1B16264100D4D296 /* XuniFlexPieKit.framework */,
 				F24015E71B16262600D4D296 /* XuniCoreKit.framework */,
 				F2A870631B15FEFF001C957B /* FlexPie101 */,
 				F2A8707D1B15FF00001C957B /* FlexPie101Tests */,
@@ -411,10 +411,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/main-frameworks,
+					"/Volumes/main-frameworks",
 					../../../Controls,
+					"/Users/kotyuck/Desktop/Volumes/main-frameworks/**",
 				);
 				INFOPLIST_FILE = FlexPie101/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -429,10 +431,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/main-frameworks,
+					"/Volumes/main-frameworks",
 					../../../Controls,
+					"/Users/kotyuck/Desktop/Volumes/main-frameworks/**",
 				);
 				INFOPLIST_FILE = FlexPie101/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

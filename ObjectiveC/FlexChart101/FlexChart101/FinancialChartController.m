@@ -6,7 +6,7 @@
 //
 
 #import "FinancialChartController.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 #import "FinancialData.h"
 
 @interface FinancialChartController (){
@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Financial Chart"];
+    
     // Do any additional setup after loading the view.
     UIPickerView *pickerView;
     pickerData =[[NSMutableArray alloc] initWithObjects:@"Candlestick", @"HLOC", nil];
@@ -30,17 +32,13 @@
     NSMutableArray *financialData = [FinancialData demoData];
     chart.bindingX = @"date";
     XuniSeries *finance = [[XuniSeries alloc] initForChart:chart binding: @"high,low,open,close" name: @"AAPL"];
-
     
     [chart.series addObject:finance];
     chart.itemsSource = financialData;
     chart.chartType = XuniChartTypeCandlestick;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
-    
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
+    chart.selectionMode = XuniSelectionModePoint;
+    chart.axisY.majorGridFill = [UIColor colorWithWhite:0.6 alpha:0.2];
     chart.legend.position = XuniChartLegendPositionNone;
-    chart.tooltip.isVisible = true;
     
     chart.tag = 1;
     pickerView.tag = 2;

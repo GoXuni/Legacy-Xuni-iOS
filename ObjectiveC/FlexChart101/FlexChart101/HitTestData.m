@@ -21,7 +21,7 @@
 
 +(NSMutableArray *) cosData{
     NSMutableArray *cosData = [[NSMutableArray alloc] init];
-    for (int i = 0; i <40; i++) {
+    for (int i = 0; i < 40; i++) {
         HitTestData *cosPoint = [[HitTestData alloc]initWithX:@(i) Y:@(cos(i * 0.12))];
         [cosData addObject:cosPoint];
     }
@@ -29,8 +29,8 @@
 }
 +(NSMutableArray *) sinData{
     NSMutableArray *sinData = [[NSMutableArray alloc] init];
-    for (int i = 0; i <40; i++) {
-        HitTestData *sinPoint = [[HitTestData alloc]initWithX:@(i) Y:@(sin(i *0.12))];
+    for (int i = 0; i < 40; i++) {
+        HitTestData *sinPoint = [[HitTestData alloc]initWithX:@(i) Y:@(sin(i * 0.12))];
         [sinData addObject:sinPoint];
     }
     return sinData;

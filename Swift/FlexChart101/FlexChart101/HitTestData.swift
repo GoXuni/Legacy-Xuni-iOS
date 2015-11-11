@@ -11,12 +11,13 @@ class HitTestData: NSObject {
     var x: Double
     var y: Double
     
-    init(x: Double, y: Double){
+    init(x: Double, y: Double) {
         self.x = x
         self.y = y
 
     }
-    class func cosData() -> NSMutableArray{
+    
+    class func cosData() -> NSMutableArray {
         var cosData = NSMutableArray()
 
         for var i = 0; i < 40; i++ {
@@ -25,7 +26,8 @@ class HitTestData: NSObject {
         }
         return cosData
     }
-    class func sinData() -> NSMutableArray{
+    
+    class func sinData() -> NSMutableArray {
         var sinData = NSMutableArray()
         
         for var i = 0; i < 40; i++ {

@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        var table = self.view.viewWithTag(1) as! UITableView
+        let table = self.view.viewWithTag(1) as! UITableView
         table.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)
     }
 }

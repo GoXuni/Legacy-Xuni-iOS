@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexGridKit
+import XuniFlexGridKit
 
 class GettingStartedController: UIViewController {
     var _flex = FlexGrid()
@@ -17,6 +17,7 @@ class GettingStartedController: UIViewController {
         // Do any additional setup after loading the view.
         _flex.isReadOnly = true
         _flex.itemsSource = CustomerData.getCustomerData(100)
+        _flex.autoSizeColumn(0, to: Int32(Int(_flex.columns.count)-1))
         self.view.addSubview(_flex)
     }
 
@@ -26,7 +27,12 @@ class GettingStartedController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        _flex.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65)
+        
+        if (self.navigationController == nil) {return;}
+        
+        let ss = UIApplication.sharedApplication().statusBarFrame.size.height + self.navigationController!.navigationBar.intrinsicContentSize().height;
+        
+        _flex.frame = CGRectMake(0, ss, self.view.bounds.size.width, self.view.bounds.size.height - ss)
         _flex.setNeedsDisplay()
     }
     /*

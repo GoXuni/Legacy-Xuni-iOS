@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexGridKit
+import XuniFlexGridKit
 import XuniGaugeKit
 class CustomCellsController: UIViewController, FlexGridDelegate {
 
@@ -19,18 +19,21 @@ class CustomCellsController: UIViewController, FlexGridDelegate {
         _flex.isReadOnly = true
         _flex.delegate = self
         _flex.autoGenerateColumns = false
-        var c1 = FlexColumn()
-        c1.binding = "customerID"
-        c1.width = 100
-        var c2 = FlexColumn()
-        c2.binding = "first"
-        var c3 = FlexColumn()
-        c3.header = "performance"
-        c3.binding = "weight"
+        let c1: FlexColumn = FlexColumn()
+        c1.header = "First Name"
+        c1.binding = "firstName"
+        let c2: FlexColumn = FlexColumn()
+        c2.header = "Last Name"
+        c2.binding = "lastName"
+        let c3: FlexColumn = FlexColumn()
+        c3.header = "Total Orders"
+        c3.binding = "orderTotal"
 
         _flex.columns.addObject(c1)
         _flex.columns.addObject(c2)
         _flex.columns.addObject(c3)
+        
+        _flex.selectionMode = FlexSelectionMode.None
 
         _flex.itemsSource = CustomerData.getCustomerData(100)
         _flex.isReadOnly = true
@@ -44,18 +47,18 @@ class CustomCellsController: UIViewController, FlexGridDelegate {
     }
 
     func formatItem(args: FlexFormatItemEventArgs!) {
-        var col = _flex.columns.objectAtIndex(UInt(args.col)) as! FlexColumn
-        if(col.header == "performance"){
-            var v = args.panel.getCellDataForRow(args.row, inColumn: args.col, formatted: false)
+        let col = _flex.columns.objectAtIndex(UInt(args.col)) as! FlexColumn
+        if(col.header == "Total Orders"){
+            let v = args.panel.getCellDataForRow(args.row, inColumn: args.col, formatted: false)
             if(v != nil){
                 //check for column header... if not equal to header performance  proceed
-                if(v.description != "performance"){
-                    var radialGauge = XuniRadialGauge()
-                    var lower = XuniGaugeRange(gauge: radialGauge)
+                if(v.description != "Total Orders"){
+                    let radialGauge = XuniRadialGauge()
+                    let lower = XuniGaugeRange(gauge: radialGauge)
                     lower.min = 0
                     lower.max = 40
                     lower.color = UIColor(red: CGFloat(0.133), green: CGFloat(0.694), blue: CGFloat(0.298), alpha: CGFloat(1))
-                    var middle = XuniGaugeRange(gauge: radialGauge)
+                    let middle = XuniGaugeRange(gauge: radialGauge)
                     middle.min = 40
                     middle.max = 80
                     middle.color = UIColor(red: CGFloat(1), green: CGFloat(0.502), blue: CGFloat(0.502), alpha: CGFloat(1))
@@ -73,10 +76,17 @@ class CustomCellsController: UIViewController, FlexGridDelegate {
                     radialGauge.min = 0
                     radialGauge.max = 100
                     radialGauge.loadAnimation = nil
-                    radialGauge.value = Double(v.description.toInt()! / 3);
+                    radialGauge.value = Double(v.description)! * (100.0/90000.0);
                     radialGauge.showRanges = false
                     
                     var r : CGRect = args.panel.getCellRectForRow(args.row, inColumn: args.col)
+                    
+                    r.size.width-=4;
+                    r.size.height-=4;
+                    
+                    r.origin.x+=2;
+                    r.origin.y+=2;
+                    
                     var t = XuniRect(left: 0.0, top: 0.0, width: Double(r.size.width), height: Double(r.size.height))
                     radialGauge.rectGauge = t
                     radialGauge.frame = CGRectMake(0, 0, r.size.width, r.size.height)
@@ -84,7 +94,8 @@ class CustomCellsController: UIViewController, FlexGridDelegate {
                     var image = UIImage()
                     image = UIImage(data: radialGauge.getImage())!
                     image.drawInRect(r)
-                    args.cancel = true               }
+                    args.cancel = true
+                    }
             }
         }
     }

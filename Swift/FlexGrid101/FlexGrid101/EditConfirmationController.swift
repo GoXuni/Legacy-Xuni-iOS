@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexGridKit
+import XuniFlexGridKit
 
 class EditConfirmationController: UIViewController, FlexGridDelegate {
 
@@ -36,16 +36,28 @@ class EditConfirmationController: UIViewController, FlexGridDelegate {
     func beginningEdit(args: FlexCellRangeEventArgs!) {
         _temp = _flex.cells.getCellDataForRow(args.row, inColumn: args.col, formatted: false)
     }
+    
     func cellEditEnding(args: FlexCellRangeEventArgs!) {
-        let title = "Edit Confirmation"
-        let message = "Do you want to commit the edit?"
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: {(action) -> Void in
-            self._flex.cells.setCellData(self._temp, forRow: args.row, inColumn: args.col)
-            self._flex.invalidate()
-        }))
-        presentViewController(alert, animated: true, completion: nil)
+        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            
+            if(self._flex.cells.getCellDataForRow(args.row, inColumn: args.col, formatted: false).isEqual(self._temp))
+            {
+                return;
+            }
+            
+            let title = "Edit Confirmation"
+            let message = "Do you want to commit the edit?"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: {(action) -> Void in
+                self._flex.cells.setCellData(self._temp, forRow: args.row, inColumn: args.col)
+                self._flex.invalidate()
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
+
     }
     /*
     // MARK: - Navigation

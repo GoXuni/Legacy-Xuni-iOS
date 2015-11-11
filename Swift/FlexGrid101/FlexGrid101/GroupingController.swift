@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexGridKit
+import XuniFlexGridKit
 
 class GroupingController: UIViewController {
     var _flex = FlexGrid()
@@ -14,34 +14,62 @@ class GroupingController: UIViewController {
     var _sortDescendingButton = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        _flex.autoGenerateColumns = false
+        let c1: FlexColumn = FlexColumn()
+        c1.binding = "firstName"
+        c1.header = "First Name"
+        c1.width = 100
+        let c2: FlexColumn = FlexColumn()
+        c2.binding = "lastName"
+        c2.header = "Last Name"
+        let c3: FlexColumn = FlexColumn()
+        c3.binding = "orderTotal"
+        c3.header = "Order Total"
+        c3.format = "C"
+        c3.aggregate = XuniAggregate.Sum
+        _flex.columns.addObject(c1)
+        _flex.columns.addObject(c2)
+        _flex.columns.addObject(c3)
+
 
         // Do any additional setup after loading the view.
-        _sortAscendingButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        _sortAscendingButton = UIButton(type: UIButtonType.System)
         _sortAscendingButton.setTitle("Ascending", forState: UIControlState.Normal)
         _sortAscendingButton.addTarget(self, action: "sortAscendingButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
-        _sortDescendingButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        _sortDescendingButton = UIButton(type: UIButtonType.System)
         _sortDescendingButton.setTitle("Descending", forState: UIControlState.Normal)
         _sortDescendingButton.addTarget(self, action: "sortDescendingButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
         _flex.itemsSource = CustomerData.getCustomerData(100)
         _flex.isReadOnly = true
         
-        var gd = XuniPropertyGroupDescription(property: "last")
-        var sd = XuniSortDescription(property: "last", ascending: true)
+        let gd = XuniPropertyGroupDescription(property: "country")
+        let sd = XuniSortDescription(property: "country", ascending: true)
         
         _flex.collectionView.groupDescriptions.addObject(gd)
         _flex.collectionView.sortDescriptions.addObject(sd)
         
+        self.starSizing(_flex)
         self.view.addSubview(_flex)
         self.view.addSubview(_sortDescendingButton)
         self.view.addSubview(_sortAscendingButton)
+    }
+    
+    func starSizing(g: FlexGrid) {
+        for var i:UInt = 0; i < g.columns.count; i++ {
+            let c: FlexColumn = g.columns.objectAtIndex(i) as! FlexColumn
+            c.widthType = FlexColumnWidth.Star
+            c.width = (i == 0) ? 3 : (i == 3) ? 3 : 4
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -54,13 +82,13 @@ class GroupingController: UIViewController {
     
     func sortAscendingButtonClicked(){
         _flex.collectionView.sortDescriptions.removeAllObjects()
-        var sd = XuniSortDescription(property: "last", ascending: true)
+        let sd = XuniSortDescription(property: "country", ascending: true)
         _flex.collectionView.sortDescriptions.addObject(sd)
     }
     
     func sortDescendingButtonClicked(){
         _flex.collectionView.sortDescriptions.removeAllObjects()
-        var sd = XuniSortDescription(property: "last", ascending: false)
+        let sd = XuniSortDescription(property: "country", ascending: false)
         _flex.collectionView.sortDescriptions.addObject(sd)
     }
     

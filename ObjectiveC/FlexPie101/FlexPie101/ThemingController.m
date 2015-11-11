@@ -6,7 +6,7 @@
 //
 
 #import "ThemingController.h"
-#import "FlexPieKit/FlexPieKit.h"
+#import "XuniFlexPieKit/XuniFlexPieKit.h"
 #import "PieChartData.h"
 
 @interface ThemingController (){

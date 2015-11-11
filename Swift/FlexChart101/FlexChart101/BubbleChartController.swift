@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 
 class BubbleChartController: UIViewController {
     
@@ -14,10 +14,9 @@ class BubbleChartController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Bubble Chart"
 
         // Do any additional setup after loading the view.
-        _chart.bindingX = "name"
-        
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")
         let expenses = XuniSeries(forChart: _chart, binding: "expenses, expenses", name: "Expenses")
         
@@ -25,12 +24,8 @@ class BubbleChartController: UIViewController {
         _chart.series.addObject(expenses)
         _chart.chartType = XuniChartType.Bubble
         _chart.itemsSource = ChartData.demoData()
-
-        _chart.legend.orientation = XuniChartLegendOrientation.Auto
-        _chart.legend.position = XuniChartLegendPosition.Auto
-        _chart.tooltip.isVisible = true
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
+        _chart.bindingX = "name"
+        _chart.loadAnimation.animationMode = XuniAnimationMode.Series;
         
         self.view.addSubview(_chart)
     }

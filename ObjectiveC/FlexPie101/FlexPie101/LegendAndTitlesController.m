@@ -6,7 +6,7 @@
 //
 
 #import "LegendAndTitlesController.h"
-#import "FlexPieKit/FlexPieKit.h"
+#import "XuniFlexPieKit/XuniFlexPieKit.h"
 #import "PieChartData.h"
 
 @interface LegendAndTitlesController (){
@@ -53,14 +53,16 @@
     _footerField.returnKeyType = UIReturnKeyDone;
     _footerField.keyboardType = UIKeyboardTypeDefault;
     _footerField.backgroundColor = [UIColor lightGrayColor];
+    
     FlexPie *pieChart = [[FlexPie alloc] init];
     NSMutableArray *pieData = [PieChartData demoData];
-     
+    pieChart.legend.position = XuniChartLegendPositionRight;
     pieChart.binding = @"value";
     pieChart.bindingName = @"name";
     pieChart.itemsSource = pieData;
     pieChart.tooltip.isVisible = true;
     pieChart.header = _headerField.text;
+    pieChart.footer = _footerField.text;
     [pieChart sizeToFit];
     
     pieChart.tag = 1;

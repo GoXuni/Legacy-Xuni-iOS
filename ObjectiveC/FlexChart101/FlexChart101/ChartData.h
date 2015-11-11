@@ -14,8 +14,19 @@
 @property NSNumber *expenses;
 @property NSNumber *downloads;
 
--(id)initWithName: (NSString *)name sales: (NSNumber *)sales expenses: (NSNumber *)expenses downloads: (NSNumber *)downloads;
+- (id)initWithName:(NSString *)name sales:(NSNumber *)sales expenses:(NSNumber *)expenses downloads:(NSNumber *)downloads;
 
-+(NSMutableArray *)demoData;
++ (NSMutableArray *)demoData;
+
+@end
+
+@interface ChartPoint : NSObject
+
+@property NSNumber *x;
+@property NSNumber *y;
+
+- (id)initWithX:(NSNumber*)x y:(NSNumber*)y;
+
++ (NSMutableArray *)generateRandomPoints:(NSInteger)count;
 
 @end

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexGridKit
+import XuniFlexGridKit
 import Foundation
 
 class FilterController: UIViewController {
@@ -20,11 +20,11 @@ class FilterController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        _filterButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        _filterButton = UIButton(type: UIButtonType.System) 
         _filterButton.setTitle("Filter", forState: UIControlState.Normal)
         _filterButton.addTarget(self, action: "filterButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
-        _removeButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        _removeButton = UIButton(type: UIButtonType.System)
         _removeButton.setTitle("Remove", forState: UIControlState.Normal)
         _removeButton.addTarget(self, action: "removeButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -94,26 +94,26 @@ class FilterController: UIViewController {
             else if (String(format: "%.f", d.countryID).rangeOfString(self.sharedData.filterString) != nil) {
                 return true
             }
-            else if (String(format: "%.f", d.weight).rangeOfString(self.sharedData.filterString) != nil) {
+            else if (String(format: "%.f", d.orderTotal).rangeOfString(self.sharedData.filterString.lowercaseString) != nil) {
                 return true
             }
-            else if (d.first.lowercaseString.rangeOfString(self.sharedData.filterString) != nil) {
+            else if (d.firstName.lowercaseString.rangeOfString(self.sharedData.filterString.lowercaseString) != nil) {
                 return true
             }
-            else if (d.last.lowercaseString.rangeOfString(self.sharedData.filterString) != nil)
+            else if (d.lastName.lowercaseString.rangeOfString(self.sharedData.filterString.lowercaseString) != nil)
             {
                 return true
             }
-            else if (d.father.lowercaseString.rangeOfString(self.sharedData.filterString) != nil){
+            else if (d.city.lowercaseString.rangeOfString(self.sharedData.filterString.lowercaseString) != nil){
                 return true
             }
-            else if (d.brother.lowercaseString.rangeOfString(self.sharedData.filterString) != nil){
+            else if (d.address.lowercaseString.rangeOfString(self.sharedData.filterString.lowercaseString) != nil){
                 return true
             }
-            else if (d.cousin.lowercaseString.rangeOfString(self.sharedData.filterString) != nil){
+            else if (d.country.lowercaseString.rangeOfString(self.sharedData.filterString.lowercaseString) != nil){
                 return true
             }
-            else if (dateFormat.stringFromDate(d.hireDate).rangeOfString(self.sharedData.filterString) != nil) {
+            else if (dateFormat.stringFromDate(d.lastOrderDate).rangeOfString(self.sharedData.filterString.lowercaseString) != nil) {
                 return true
             }
             else {
@@ -134,26 +134,26 @@ class FilterController: UIViewController {
             else if (String(format: "%.f", d.countryID) == self.sharedData.filterString) {
                 return true
             }
-            else if (String(format: "%.f", d.weight) == self.sharedData.filterString) {
+            else if (String(format: "%.f", d.orderTotal) == self.sharedData.filterString) {
                 return true
             }
-            else if (d.first == self.sharedData.filterString) {
+            else if (d.firstName == self.sharedData.filterString) {
                 return true
             }
-            else if (d.last == self.sharedData.filterString)
+            else if (d.lastName == self.sharedData.filterString)
             {
                 return true
             }
-            else if (d.father == self.sharedData.filterString){
+            else if (d.city == self.sharedData.filterString){
                 return true
             }
-            else if (d.brother == self.sharedData.filterString){
+            else if (d.address == self.sharedData.filterString){
                 return true
             }
-            else if (d.cousin == self.sharedData.filterString){
+            else if (d.country == self.sharedData.filterString){
                 return true
             }
-            else if (dateFormat.stringFromDate(d.hireDate) == self.sharedData.filterString) {
+            else if (dateFormat.stringFromDate(d.lastOrderDate) == self.sharedData.filterString) {
                 return true
             }
             else {
@@ -173,25 +173,25 @@ class FilterController: UIViewController {
             else if (String(format: "%.f", d.countryID).hasSuffix(self.sharedData.filterString)) {
                 return true
             }
-            else if (String(format: "%.f", d.weight).hasSuffix(self.sharedData.filterString)) {
+            else if (String(format: "%.f", d.orderTotal).hasSuffix(self.sharedData.filterString)) {
                 return true
             }
-            else if (d.first.lowercaseString.hasSuffix(self.sharedData.filterString.lowercaseString)) {
+            else if (d.firstName.lowercaseString.hasSuffix(self.sharedData.filterString.lowercaseString)) {
                 return true
             }
-            else if (d.last.lowercaseString.hasSuffix(self.sharedData.filterString.lowercaseString)){
+            else if (d.lastName.lowercaseString.hasSuffix(self.sharedData.filterString.lowercaseString)){
                 return true
             }
-            else if (d.father.lowercaseString.hasSuffix(self.sharedData.filterString.lowercaseString)){
+            else if (d.city.lowercaseString.hasSuffix(self.sharedData.filterString.lowercaseString)){
                 return true
             }
-            else if (d.brother.hasSuffix(self.sharedData.filterString.lowercaseString)){
+            else if (d.address.hasSuffix(self.sharedData.filterString.lowercaseString)){
                 return true
             }
-            else if (d.cousin.lowercaseString.hasSuffix(self.sharedData.filterString.lowercaseString)){
+            else if (d.country.lowercaseString.hasSuffix(self.sharedData.filterString.lowercaseString)){
                 return true
             }
-            else if (dateFormat.stringFromDate(d.hireDate).hasSuffix(self.sharedData.filterString.lowercaseString)) {
+            else if (dateFormat.stringFromDate(d.lastOrderDate).hasSuffix(self.sharedData.filterString.lowercaseString)) {
                 return true
             }
             else {
@@ -211,30 +211,31 @@ class FilterController: UIViewController {
             else if (String(format: "%.f", d.countryID).hasPrefix(self.sharedData.filterString)) {
                 return true
             }
-            else if (String(format: "%.f", d.weight).hasPrefix(self.sharedData.filterString)) {
+            else if (String(format: "%.f", d.orderTotal).hasPrefix(self.sharedData.filterString)) {
                 return true
             }
-            else if (d.first.lowercaseString.hasPrefix(self.sharedData.filterString.lowercaseString)) {
+            else if (d.firstName.lowercaseString.hasPrefix(self.sharedData.filterString.lowercaseString)) {
                 return true
             }
-            else if (d.last.lowercaseString.hasPrefix(self.sharedData.filterString.lowercaseString)) {
+            else if (d.lastName.lowercaseString.hasPrefix(self.sharedData.filterString.lowercaseString)) {
                 return true
             }
-            else if (d.father.lowercaseString.hasPrefix(self.sharedData.filterString.lowercaseString)) {
+            else if (d.city.lowercaseString.hasPrefix(self.sharedData.filterString.lowercaseString)) {
                 return true
             }
-            else if (d.brother.lowercaseString.hasPrefix(self.sharedData.filterString.lowercaseString)) {
+            else if (d.address.lowercaseString.hasPrefix(self.sharedData.filterString.lowercaseString)) {
                 return true
             }
-            else if (d.cousin.lowercaseString.hasPrefix(self.sharedData.filterString.lowercaseString)) {
+            else if (d.country.lowercaseString.hasPrefix(self.sharedData.filterString.lowercaseString)) {
                 return true
             }
-            else if (dateFormat.stringFromDate(d.hireDate).hasPrefix(self.sharedData.filterString)) {
+            else if (dateFormat.stringFromDate(d.lastOrderDate).hasPrefix(self.sharedData.filterString)) {
                 return true
             }
             else {
                 return false
             }
+            return false
         } as IXuniPredicate
     }
     func removeButtonClicked(){

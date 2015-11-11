@@ -6,7 +6,7 @@
 //
 
 #import "ThemingController.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 #import "ChartData.h"
 
 @interface ThemingController (){
@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Theming"];
+    
     // Do any additional setup after loading the view.
     UIPickerView *pickerView;
     pickerData =[[NSMutableArray alloc] initWithObjects:@"Standard", @"Cocoa", @"Coral", @"Dark", @"HighContrast", @"Light", @"Midnight", @"Minimal", @"Modern", @"Organic", @"Slate", @"Zen", @"Cyborg", @"Superhero", @"Flatly", @"Darkly", @"Cerulean", nil];
@@ -28,8 +30,6 @@
     pickerView.hidden = false;
     
     FlexChart *chart = [[FlexChart alloc] init];
-    NSMutableArray *chartData = [ChartData demoData];
-    chart.bindingX = @"name";
     XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
     XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses, expenses" name:@"Expenses"];
     XuniSeries *downloads = [[XuniSeries alloc] initForChart:chart binding:@"downloads, downloads" name:@"Downloads"];
@@ -38,13 +38,8 @@
     [chart.series addObject:expenses];
     [chart.series addObject:downloads];
     
-    chart.itemsSource = chartData;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
-    
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.isVisible = true;
+    chart.bindingX = @"name";
+    chart.itemsSource = [ChartData demoData];
     
     chart.tag = 1;
     pickerView.tag = 2;
@@ -61,8 +56,10 @@
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
+    
     FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
     UIPickerView *pickerView = (UIPickerView*)[self.view viewWithTag:2];
+    
     pickerView.frame = CGRectMake(self.view.bounds.size.width/4, 44, self.view.bounds.size.width/2, 162);
     chart.frame = CGRectMake(0, 206, self.view.bounds.size.width, self.view.bounds.size.height - 206);
     [chart setNeedsDisplay];

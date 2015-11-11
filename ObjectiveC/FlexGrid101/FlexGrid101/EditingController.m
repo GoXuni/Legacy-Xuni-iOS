@@ -7,7 +7,7 @@
 
 #import "EditingController.h"
 #import "CustomerData.h"
-#import "FlexGridKit/FlexGridKit.h"
+#import "XuniFlexGridKit/XuniFlexGridKit.h"
 
 @interface EditingController ()
 

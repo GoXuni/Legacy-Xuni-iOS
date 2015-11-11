@@ -7,7 +7,7 @@
 
 #import "BasicChartTypesController.h"
 #import "ChartData.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 @interface BasicChartTypesController (){
     NSMutableArray *chartTypePickerData;
     NSMutableArray *stackingPickerData;
@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Basic Chart Types"];
+    
     // Do any additional setup after loading the view.
     chartTypePickerData =[[NSMutableArray alloc] initWithObjects:@"Column", @"Bar", @"Scatter", @"Line", @"LineSymbol", @"Area", nil];
     stackingPickerData = [[NSMutableArray alloc]initWithObjects: @"None", @"Stacked", @"Stacked100pc", nil];
@@ -34,12 +36,10 @@
     chartTypePicker.delegate = self;
     chartTypePicker.showsSelectionIndicator = YES;
     chartTypePicker.hidden = false;
-    [chartTypePicker selectRow:5 inComponent:0 animated:false];
     
     stackingPicker.delegate = self;
     stackingPicker.showsSelectionIndicator = YES;
     stackingPicker.hidden = false;
-    [stackingPicker selectRow:0 inComponent:0 animated:false];
     
     chart.bindingX = @"name";
     XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
@@ -51,12 +51,8 @@
     [chart.series addObject:downloads];
     
     chart.itemsSource = chartData;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
-    
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.isVisible = true;
+    chart.chartType = XuniChartTypeArea;
+    chart.stacking = XuniStackingStacked;
     
     chart.tag = 1;
     chartTypePicker.tag = 2;
@@ -74,7 +70,20 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewDidLayoutSubviews{
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    UIPickerView *chartTypePicker = (UIPickerView*)[self.view viewWithTag:2];
+    [chartTypePicker selectRow:5 inComponent:0 animated:NO];
+    
+    UIPickerView *stackingPicker = (UIPickerView*)[self.view viewWithTag:3];
+    [stackingPicker selectRow:1 inComponent:0 animated:NO];
+    
+    UISwitch *rotatedSwitch = (UISwitch*)[self.view viewWithTag:4];
+    rotatedSwitch.on = NO;
+}
+
+- (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
     UIPickerView *chartTypePicker = (UIPickerView*)[self.view viewWithTag:2];
@@ -87,91 +96,94 @@
     [chart setNeedsDisplay];
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
-    if(pickerView.tag == 2){
+    if(pickerView.tag == 2) {
         return [chartTypePickerData count];
     }
-    else{
+    else {
         return [stackingPickerData count];
     }
 }
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     FlexChart *chart = (FlexChart *)[self.view viewWithTag:1];
     
-    if(pickerView.tag == 2)
+    if (pickerView.tag == 2)
     {
         if (row == 0) {
             chart.chartType = XuniChartTypeColumn;
         }
-        else if (row == 1){
+        else if (row == 1) {
             chart.chartType = XuniChartTypeBar;
         }
-        else if (row == 2){
+        else if (row == 2) {
             chart.chartType = XuniChartTypeScatter;
         }
-        else if (row == 3){
+        else if (row == 3) {
             chart.chartType = XuniChartTypeLine;
         }
-        else if (row == 4){
+        else if (row == 4) {
             chart.chartType = XuniChartTypeLineSymbols;
         }
-        else if (row == 5){
+        else if (row == 5) {
             chart.chartType = XuniChartTypeArea;
         }
     }
-    else if(pickerView.tag == 3){
+    else if (pickerView.tag == 3) {
         if (row == 0) {
             chart.stacking = XuniStackingNone;
 
         }
-        else if (row == 1){
+        else if (row == 1) {
             chart.stacking= XuniStackingStacked;
         }
-        else if (row == 2){
+        else if (row == 2) {
             chart.stacking = XuniStackingStacked100pc;
         }
     }
+    
     [self setAxisFormatting];
 }
--(void)setAxisFormatting{
+
+- (void)setAxisFormatting {
     FlexChart *chart = (FlexChart *)[self.view viewWithTag:1];
+    
     if (chart.chartType == XuniChartTypeBar) {
-        if (chart.stacking == XuniStackingStacked100pc  && chart.rotated == false) {
-            chart.axisX.format = @"p";
-            chart.axisY.format = @"d";
+        if (chart.stacking == XuniStackingStacked100pc && chart.rotated == false) {
+            chart.axisX.format = @"F2";
+            chart.axisY.format = @"D";
         }
-        else if (chart.stacking == XuniStackingStacked100pc  && chart.rotated == true){
-            chart.axisX.format = @"d";
-            chart.axisY.format = @"p";
+        else if (chart.stacking == XuniStackingStacked100pc && chart.rotated == true) {
+            chart.axisX.format = @"D";
+            chart.axisY.format = @"F2";
         }
-        else{
-            chart.axisX.format = @"d";
-            chart.axisY.format = @"d";
+        else {
+            chart.axisX.format = @"D";
+            chart.axisY.format = @"D";
         }
     }
-    else{
-        if(chart.stacking == XuniStackingStacked100pc && chart.rotated == false){
-            chart.axisX.format = @"d";
-            chart.axisY.format = @"p";
+    else {
+        if (chart.stacking == XuniStackingStacked100pc && chart.rotated == false) {
+            chart.axisX.format = @"D";
+            chart.axisY.format = @"F2";
         }
-        else if(chart.stacking == XuniStackingStacked100pc && chart.rotated == true){
-            chart.axisX.format = @"p";
-            chart.axisY.format = @"d";
+        else if (chart.stacking == XuniStackingStacked100pc && chart.rotated == true) {
+            chart.axisX.format = @"F2";
+            chart.axisY.format = @"F2";
         }
-        else{
-            chart.axisX.format = @"d";
-            chart.axisY.format = @"d";
+        else {
+            chart.axisX.format = @"D";
+            chart.axisY.format = @"D";
         }
     }
 }
 
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     if(pickerView.tag == 2)
     {
         return [chartTypePickerData objectAtIndex:row];
@@ -184,7 +196,7 @@
     }
 }
 
--(void)switchChanged:(UISwitch *) switchState{
+- (void)switchChanged:(UISwitch *) switchState {
     FlexChart *chart = (FlexChart *)[self.view viewWithTag:1];
     NSString *temp = [[NSString alloc] init];
     if ([switchState isOn]) {
@@ -198,6 +210,7 @@
     chart.axisX.format = chart.axisY.format;
     chart.axisY.format = temp;
 }
+
 /*
 #pragma mark - Navigation
 

@@ -9,7 +9,5 @@
 
 @interface ViewController : UIViewController
 
-@property NSArray* samples;
-
 @end
 

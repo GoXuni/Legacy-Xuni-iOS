@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 
 class ThemingController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -16,15 +16,13 @@ class ThemingController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Theming"
         
         // Do any additional setup after loading the view.
-        
         _pickerData = ["Standard", "Cocoa", "Coral", "Dark", "HighContrast", "Light", "Midnight", "Minimal", "Modern", "Organic", "Slate", "Zen", "Cyborg", "Superhero", "Flatly", "Darkly", "Cerulean"]
         _pickerView.delegate = self
         _pickerView.showsSelectionIndicator = true
         _pickerView.hidden = false
-        
-        _chart.bindingX = "name"
         
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")
         let expenses = XuniSeries(forChart: _chart, binding: "expenses, expenses", name: "Expenses")
@@ -33,14 +31,8 @@ class ThemingController: UIViewController, UIPickerViewDataSource, UIPickerViewD
         _chart.series.addObject(sales)
         _chart.series.addObject(expenses)
         _chart.series.addObject(downloads)
-        
         _chart.itemsSource = ChartData.demoData()
-        
-        _chart.legend.orientation = XuniChartLegendOrientation.Auto
-        _chart.legend.position = XuniChartLegendPosition.Auto
-        _chart.tooltip.isVisible = true
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
+        _chart.bindingX = "name"
         
         self.view.addSubview(_chart)
         self.view.addSubview(_pickerView)
@@ -53,15 +45,19 @@ class ThemingController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        _chart.frame = CGRectMake(0, 206, self.view.bounds.size.width, (self.view.bounds.size.height-206))
-        _pickerView.frame = CGRectMake(self.view.bounds.size.width/4, 44, self.view.bounds.size.width/2, 162)
+        
+        _pickerView.frame = CGRectMake(self.view.bounds.size.width / 4, 44, self.view.bounds.size.width / 2, 162)
+        _chart.frame = CGRectMake(0, 206, self.view.bounds.size.width, (self.view.bounds.size.height - 206))
     }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return _pickerData.count
     }
+    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch (row) {
         case 0:
@@ -102,9 +98,11 @@ class ThemingController: UIViewController, UIPickerViewDataSource, UIPickerViewD
             break
         }
     }
+    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return _pickerData.objectAtIndex(row) as! String
     }
+    
     /*
     // MARK: - Navigation
 

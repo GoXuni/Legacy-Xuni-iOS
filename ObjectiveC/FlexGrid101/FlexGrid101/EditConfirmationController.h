@@ -6,7 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <FlexGridKit/FlexGridKit.h>
+
+#import "XuniFlexGridKit/XuniFlexGridKit.h"
 @interface EditConfirmationController : UIViewController<FlexGridDelegate>
 
 - (void) beginningEdit:(FlexCellRangeEventArgs *)args;

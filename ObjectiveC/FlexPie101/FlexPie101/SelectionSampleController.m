@@ -6,7 +6,7 @@
 //
 
 #import "SelectionSampleController.h"
-#import "FlexPieKit/FlexPieKit.h"
+#import "XuniFlexPieKit/XuniFlexPieKit.h"
 #import "PieChartData.h"
 @interface SelectionSampleController (){
     NSMutableArray *pickerData;

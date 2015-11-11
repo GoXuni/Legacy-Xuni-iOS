@@ -6,7 +6,7 @@
 //
 
 #import "ZoomingAndScrollingController.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 #import "ChartData.h"
 
 @interface ZoomingAndScrollingController (){
@@ -19,12 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Zooming and Scrolling"];
+    
     // Do any additional setup after loading the view.
     pickerData =[[NSMutableArray alloc] initWithObjects:@"X", @"Y", @"XY", @"Disabled", nil];
     UILabel *label = [[UILabel alloc] init];
     UIPickerView *pickerView = [[UIPickerView alloc] init];
     FlexChart *chart = [[FlexChart alloc] init];
-    NSMutableArray *chartData = [ChartData demoData];
     
     label.text = @"Zoom Mode";
     
@@ -33,30 +34,19 @@
     pickerView.hidden = false;
     [pickerView selectRow:2 inComponent:0 animated:false];
     
-    chart.zoomMode = XuniZoomModeXY;
-    
-    chart.bindingX = @"name";
-    XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
-    XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses, expenses" name:@"Expenses"];
-    XuniSeries *downloads = [[XuniSeries alloc] initForChart:chart binding:@"downloads, downloads" name:@"Downloads"];
-    sales.chartType = XuniChartTypeArea;
-    expenses.chartType = XuniChartTypeArea;
-    downloads.chartType = XuniChartTypeArea;
-    
+    XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"y" name:@"Normal Distribution"];
     [chart.series addObject:sales];
-    [chart.series addObject:expenses];
-    [chart.series addObject:downloads];
     
-    chart.itemsSource = chartData;
-    chart.axisX.scale = 0.5;
-    chart.axisY.displayedRange = 16000;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
-    
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
-    chart.chartType = XuniChartTypeArea;
-    chart.stacking = XuniStackingStacked;
+    chart.itemsSource = [ChartPoint generateRandomPoints:500];
+    chart.bindingX = @"x";
+    chart.chartType = XuniChartTypeScatter;
+    chart.zoomMode = XuniZoomModeXY;
+    chart.isAnimated = NO;
+    chart.header = @"Drag to scroll/Pinch to zoom";
+    chart.headerFont = [UIFont systemFontOfSize:14];
+    chart.headerTextAlignment = XuniHorizontalAlignmentCenter;
+    chart.palette = [XuniPalettes superhero];
+    chart.axisY.format = @"N2";
     
     chart.tag = 1;
     pickerView.tag = 2;
@@ -74,9 +64,11 @@
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
+    
     FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
     UIPickerView *pickerView = (UIPickerView*)[self.view viewWithTag:2];
     UILabel *label = (UILabel*)[self.view viewWithTag:3];
+    
     label.frame = CGRectMake(10, 110, 50, 25);
     [label sizeToFit];
     pickerView.frame = CGRectMake(self.view.bounds.size.width/3, 44, self.view.bounds.size.width/2, 162);
@@ -94,6 +86,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     FlexChart *chart = (FlexChart *)[self.view viewWithTag:1];
+    
     if (row == 0) {
         chart.zoomMode = XuniZoomModeX;
     }

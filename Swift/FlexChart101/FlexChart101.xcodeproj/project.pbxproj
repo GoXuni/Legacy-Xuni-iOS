@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8407E6921BA170B3001C1582 /* LineMarkerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8407E6911BA170B3001C1582 /* LineMarkerController.swift */; };
+		84D4F3161BCCB08D000B5960 /* ConditionalFormattingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.swift */; };
+		84D4F3171BCCB08D000B5960 /* CustomPlotElementsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.swift */; };
+		84D4F3201BCF89A1000B5960 /* ScrollingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F31F1BCF89A1000B5960 /* ScrollingController.swift */; };
 		F273C2101B45D38000958473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C20F1B45D38000958473 /* AppDelegate.swift */; };
 		F273C2121B45D38000958473 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2111B45D38000958473 /* ViewController.swift */; };
 		F273C2151B45D38000958473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F273C2131B45D38000958473 /* Main.storyboard */; };
 		F273C2171B45D38000958473 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F273C2161B45D38000958473 /* Images.xcassets */; };
 		F273C21A1B45D38000958473 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F273C2181B45D38000958473 /* LaunchScreen.xib */; };
 		F273C2261B45D38000958473 /* FlexChart101Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2251B45D38000958473 /* FlexChart101Tests.swift */; };
+		84E33AB91B8D6BF4002AE146 /* UpdateAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.swift */; };
+		F2160FD71B18EC0E00F3ADD5 /* LoadAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.swift */; };
 		F273C2301B45D65000958473 /* GettingStartedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C22F1B45D65000958473 /* GettingStartedController.swift */; };
 		F273C2321B45D66100958473 /* BasicChartTypesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2311B45D66100958473 /* BasicChartTypesController.swift */; };
 		F273C2341B45D67300958473 /* MixedChartTypesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2331B45D67300958473 /* MixedChartTypesController.swift */; };
@@ -25,7 +31,6 @@
 		F273C2441B45D71B00958473 /* LegendAndTitlesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2431B45D71B00958473 /* LegendAndTitlesController.swift */; };
 		F273C2461B45D72D00958473 /* SelectionModesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2451B45D72D00958473 /* SelectionModesController.swift */; };
 		F273C2481B45D73E00958473 /* TogglesSeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2471B45D73E00958473 /* TogglesSeriesController.swift */; };
-		F273C24A1B45D75300958473 /* AnimationOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2491B45D75300958473 /* AnimationOptionsController.swift */; };
 		F273C24C1B45D76400958473 /* DynamicChartsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C24B1B45D76400958473 /* DynamicChartsController.swift */; };
 		F273C24E1B45D77C00958473 /* ZoomingAndScrollingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C24D1B45D77C00958473 /* ZoomingAndScrollingController.swift */; };
 		F273C2501B45D79200958473 /* HitTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C24F1B45D79200958473 /* HitTestController.swift */; };
@@ -39,7 +44,7 @@
 		F273C2601B45D83400958473 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C25F1B45D83400958473 /* License.swift */; };
 		F273C2621B45D87D00958473 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C2611B45D87D00958473 /* XuniCoreKit.framework */; };
 		F273C2641B45D88900958473 /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C2631B45D88900958473 /* XuniChartCoreKit.framework */; };
-		F273C2661B45D89D00958473 /* FlexChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C2651B45D89D00958473 /* FlexChartKit.framework */; };
+		F273C2661B45D89D00958473 /* XuniFlexChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C2651B45D89D00958473 /* XuniFlexChartKit.framework */; };
 		F2BEDBA01B73E6BE00DD2454 /* DataLabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BEDB9F1B73E6BE00DD2454 /* DataLabelController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8407E6911BA170B3001C1582 /* LineMarkerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineMarkerController.swift; sourceTree = "<group>"; };
+		84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalFormattingController.swift; sourceTree = "<group>"; };
+		84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPlotElementsController.swift; sourceTree = "<group>"; };
+		84D4F31F1BCF89A1000B5960 /* ScrollingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingController.swift; sourceTree = "<group>"; };
 		F273C20A1B45D38000958473 /* FlexChart101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexChart101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F273C20E1B45D38000958473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F273C20F1B45D38000958473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +74,8 @@
 		F273C2241B45D38000958473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F273C2251B45D38000958473 /* FlexChart101Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexChart101Tests.swift; sourceTree = "<group>"; };
 		F273C22F1B45D65000958473 /* GettingStartedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GettingStartedController.swift; sourceTree = "<group>"; };
+		F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAnimationController.swift; sourceTree = "<group>"; };
+		84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateAnimationController.swift; sourceTree = "<group>"; };
 		F273C2311B45D66100958473 /* BasicChartTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicChartTypesController.swift; sourceTree = "<group>"; };
 		F273C2331B45D67300958473 /* MixedChartTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedChartTypesController.swift; sourceTree = "<group>"; };
 		F273C2351B45D68900958473 /* FinancialChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinancialChartController.swift; sourceTree = "<group>"; };
@@ -76,7 +87,6 @@
 		F273C2431B45D71B00958473 /* LegendAndTitlesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegendAndTitlesController.swift; sourceTree = "<group>"; };
 		F273C2451B45D72D00958473 /* SelectionModesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionModesController.swift; sourceTree = "<group>"; };
 		F273C2471B45D73E00958473 /* TogglesSeriesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglesSeriesController.swift; sourceTree = "<group>"; };
-		F273C2491B45D75300958473 /* AnimationOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationOptionsController.swift; sourceTree = "<group>"; };
 		F273C24B1B45D76400958473 /* DynamicChartsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicChartsController.swift; sourceTree = "<group>"; };
 		F273C24D1B45D77C00958473 /* ZoomingAndScrollingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomingAndScrollingController.swift; sourceTree = "<group>"; };
 		F273C24F1B45D79200958473 /* HitTestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HitTestController.swift; sourceTree = "<group>"; };
@@ -90,7 +100,7 @@
 		F273C25F1B45D83400958473 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		F273C2611B45D87D00958473 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
 		F273C2631B45D88900958473 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = ../../../Controls/XuniChartCoreKit.framework; sourceTree = "<group>"; };
-		F273C2651B45D89D00958473 /* FlexChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexChartKit.framework; path = ../../../Controls/FlexChartKit.framework; sourceTree = "<group>"; };
+		F273C2651B45D89D00958473 /* XuniFlexChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexChartKit.framework; path = ../../../Controls/XuniFlexChartKit.framework; sourceTree = "<group>"; };
 		F2BEDB9F1B73E6BE00DD2454 /* DataLabelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLabelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +111,7 @@
 			files = (
 				F273C2621B45D87D00958473 /* XuniCoreKit.framework in Frameworks */,
 				F273C2641B45D88900958473 /* XuniChartCoreKit.framework in Frameworks */,
-				F273C2661B45D89D00958473 /* FlexChartKit.framework in Frameworks */,
+				F273C2661B45D89D00958473 /* XuniFlexChartKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +128,7 @@
 		F273C2011B45D38000958473 = {
 			isa = PBXGroup;
 			children = (
-				F273C2651B45D89D00958473 /* FlexChartKit.framework */,
+				F273C2651B45D89D00958473 /* XuniFlexChartKit.framework */,
 				F273C2631B45D88900958473 /* XuniChartCoreKit.framework */,
 				F273C2611B45D87D00958473 /* XuniCoreKit.framework */,
 				F273C20C1B45D38000958473 /* FlexChart101 */,
@@ -146,6 +156,12 @@
 				F273C2181B45D38000958473 /* LaunchScreen.xib */,
 				F273C20D1B45D38000958473 /* Supporting Files */,
 				F273C22F1B45D65000958473 /* GettingStartedController.swift */,
+				84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.swift */,
+				84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.swift */,
+				8407E6911BA170B3001C1582 /* LineMarkerController.swift */,
+				84D4F31F1BCF89A1000B5960 /* ScrollingController.swift */,
+				84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.swift */,
+				F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.swift */,
 				F273C2311B45D66100958473 /* BasicChartTypesController.swift */,
 				F273C2331B45D67300958473 /* MixedChartTypesController.swift */,
 				F273C2351B45D68900958473 /* FinancialChartController.swift */,
@@ -157,7 +173,6 @@
 				F273C2431B45D71B00958473 /* LegendAndTitlesController.swift */,
 				F273C2451B45D72D00958473 /* SelectionModesController.swift */,
 				F273C2471B45D73E00958473 /* TogglesSeriesController.swift */,
-				F273C2491B45D75300958473 /* AnimationOptionsController.swift */,
 				F273C24B1B45D76400958473 /* DynamicChartsController.swift */,
 				F273C24D1B45D77C00958473 /* ZoomingAndScrollingController.swift */,
 				F273C24F1B45D79200958473 /* HitTestController.swift */,
@@ -243,6 +258,7 @@
 		F273C2021B45D38000958473 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = GrapeCity;
 				TargetAttributes = {
@@ -299,12 +315,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D4F3161BCCB08D000B5960 /* ConditionalFormattingController.swift in Sources */,
+				84D4F3171BCCB08D000B5960 /* CustomPlotElementsController.swift in Sources */,
+				84D4F3201BCF89A1000B5960 /* ScrollingController.swift in Sources */,
+				8407E6921BA170B3001C1582 /* LineMarkerController.swift in Sources */,
 				F273C2361B45D68900958473 /* FinancialChartController.swift in Sources */,
 				F273C2441B45D71B00958473 /* LegendAndTitlesController.swift in Sources */,
 				F2BEDBA01B73E6BE00DD2454 /* DataLabelController.swift in Sources */,
 				F273C2301B45D65000958473 /* GettingStartedController.swift in Sources */,
+				84E33AB91B8D6BF4002AE146 /* UpdateAnimationController.swift in Sources */,
+				F2160FD71B18EC0E00F3ADD5 /* LoadAnimationController.swift in Sources */,
 				F273C2601B45D83400958473 /* License.swift in Sources */,
-				F273C24A1B45D75300958473 /* AnimationOptionsController.swift in Sources */,
 				F273C2561B45D7DF00958473 /* ChartData.swift in Sources */,
 				F273C2121B45D38000958473 /* ViewController.swift in Sources */,
 				F273C25E1B45D82900958473 /* WeatherData.swift in Sources */,
@@ -454,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Volumes/main-frameworks,
@@ -469,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Volumes/main-frameworks,

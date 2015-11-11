@@ -6,7 +6,7 @@
 //
 
 #import "CustomTooltipsController.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 #import "XuniChartCoreKit/XuniChartCoreKit.h"
 #import "ChartData.h"
 
@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Custom Tooltips"];
+    
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];
     NSMutableArray *chartData = [ChartData demoData];
@@ -32,17 +34,16 @@
     [chart.series addObject:downloads];
     
     chart.itemsSource = chartData;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
-    chart.tooltip.isVisible = true;
-    
+    chart.stacking = XuniStackingStacked;
+    chart.palette = [XuniPalettes zen];
+    chart.loadAnimation.animationMode = XuniAnimationModeSeries;
+    chart.axisY.axisLineVisible = NO;
+    chart.axisY.majorUnit = 2000;
     
     t = [[MyTooltip alloc] init];
     t.backgroundColor = [UIColor colorWithRed:1 green:1 blue:0.792 alpha:1];
     chart.tooltip.content = t;
     
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
     chart.tag = 1;
     [self.view addSubview:chart];
 }
@@ -90,7 +91,7 @@
         label.textColor = [UIColor blackColor];
 
         label.numberOfLines = 3;
-        label.text = [NSString stringWithFormat:@"%@ \n%.0f \n%.0f ", chartData.seriesName , chartData.dataX, chartData.dataY];
+        label.text = [NSString stringWithFormat:@"%@ \n\n $%.2f", chartData.seriesName, chartData.dataY];
         label.font = [label.font fontWithSize:11];
         image = [UIImage imageNamed:[countryNum stringValue]];
         imageView = [[UIImageView alloc] initWithImage:image];
@@ -100,7 +101,7 @@
     else{
         image = [UIImage imageNamed:[countryNum stringValue]];
         [imageView setImage:image];
-        label.text = [NSString stringWithFormat:@"%@ \n%.0f \n%.0f ", chartData.seriesName , chartData.dataX, chartData.dataY];
+        label.text = [NSString stringWithFormat:@"%@ \n\n $%.2f", chartData.seriesName, chartData.dataY];
         [imageView setNeedsLayout];
         [label setNeedsLayout];
     }

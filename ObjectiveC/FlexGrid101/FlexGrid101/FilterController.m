@@ -7,7 +7,7 @@
 
 #import "FilterController.h"
 #import "CustomerData.h"
-#import "FlexGridKit/FlexGridKit.h"
+#import "XuniFlexGridKit/XuniFlexGridKit.h"
 #import "FilterFormController.h"
 #import "SharedFilterData.h"
 
@@ -96,32 +96,32 @@
     [dateFormat setDateFormat:@"M/d/yy"];
     flex.collectionView.filter = ^ BOOL (NSObject *item){
         CustomerData *d = (CustomerData*)item;
-        if ([[NSString stringWithFormat:@"%@", d.customerID] rangeOfString:sharedData.filterString].location != NSNotFound) {
+        if ([[NSString stringWithFormat:@"%lu", d.customerID] rangeOfString:sharedData.filterString].location != NSNotFound) {
             return true;
         }
-        else if ([[NSString stringWithFormat:@"%@", d.countryID]  rangeOfString:sharedData.filterString].location != NSNotFound) {
+        else if ([[NSString stringWithFormat:@"%lu", d.countryID]  rangeOfString:sharedData.filterString].location != NSNotFound) {
             return true;
         }
-        else if ([[NSString stringWithFormat:@"%@",d.weight] rangeOfString:sharedData.filterString].location != NSNotFound) {
+        else if ([[NSString stringWithFormat:@"%@",d.email] rangeOfString:sharedData.filterString].location != NSNotFound) {
             return true;
         }
-        else if ([[d.first lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound) {
+        else if ([[d.firstName lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound) {
             return true;
         }
-        else if ([[d.last lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound)
+        else if ([[d.lastName lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound)
         {
             return true;
         }
-        else if ([[d.father lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound){
+        else if ([[d.country lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound){
             return true;
         }
-        else if ([[d.brother lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound){
+        else if ([[d.address lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound){
             return true;
         }
-        else if ([[d.cousin lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound){
+        else if ([[d.city lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound){
             return true;
         }
-        else if ([[dateFormat stringFromDate:d.hireDate] rangeOfString:sharedData.filterString].location != NSNotFound) {
+        else if ([[dateFormat stringFromDate:d.lastOrderDate] rangeOfString:sharedData.filterString].location != NSNotFound) {
             return true;
         }
         else {
@@ -138,32 +138,32 @@
     flex.collectionView.filter = ^ BOOL (NSObject *item){
         CustomerData *d = (CustomerData*)item;
         
-        if ([[NSString stringWithFormat:@"%@", d.customerID] isEqualToString:sharedData.filterString]) {
+        if ([[NSString stringWithFormat:@"%lu", d.customerID] isEqualToString:sharedData.filterString]) {
             return true;
         }
-        else if ([[NSString stringWithFormat:@"%@", d.countryID] isEqualToString:sharedData.filterString]) {
+        else if ([[NSString stringWithFormat:@"%lu", d.countryID] isEqualToString:sharedData.filterString]) {
             return true;
         }
-        else if ([[NSString stringWithFormat:@"%@", d.weight] isEqualToString:sharedData.filterString]) {
+        else if ([[NSString stringWithFormat:@"%@", d.email] isEqualToString:sharedData.filterString]) {
             return true;
         }
-        else if ([d.first isEqualToString:sharedData.filterString]) {
+        else if ([d.firstName isEqualToString:sharedData.filterString]) {
             return true;
         }
-        else if ([d.last isEqualToString:sharedData.filterString])
+        else if ([d.lastName isEqualToString:sharedData.filterString])
         {
             return true;
         }
-        else if ([d.father isEqualToString:sharedData.filterString]){
+        else if ([d.country isEqualToString:sharedData.filterString]){
             return true;
         }
-        else if ([d.brother isEqualToString:sharedData.filterString]){
+        else if ([d.address isEqualToString:sharedData.filterString]){
             return true;
         }
-        else if ([d.cousin isEqualToString:sharedData.filterString]){
+        else if ([d.city isEqualToString:sharedData.filterString]){
             return true;
         }
-        else if ([[dateFormat stringFromDate:d.hireDate] isEqualToString:sharedData.filterString]) {
+        else if ([[dateFormat stringFromDate:d.lastOrderDate] isEqualToString:sharedData.filterString]) {
             return true;
         }
         else {
@@ -178,33 +178,33 @@
     [dateFormat setDateFormat:@"M/d/yy"];
     flex.collectionView.filter = ^ BOOL (NSObject *item){
         CustomerData *d = (CustomerData*)item;
-        if ([[NSString stringWithFormat:@"%@", d.customerID] hasPrefix:sharedData.filterString]) {
+        if ([[NSString stringWithFormat:@"%lu", d.customerID] hasPrefix:sharedData.filterString]) {
             return true;
         }
-        else if ([[NSString stringWithFormat:@"%@", d.countryID]  hasPrefix:sharedData.filterString]) {
+        else if ([[NSString stringWithFormat:@"%lu", d.countryID]  hasPrefix:sharedData.filterString]) {
             return true;
         }
-        else if ([[NSString stringWithFormat:@"%@",d.weight] hasPrefix:sharedData.filterString]) {
+        else if ([[NSString stringWithFormat:@"%@",d.email] hasPrefix:sharedData.filterString]) {
             return true;
         }
             
-        else if ([[d.first lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]) {
+        else if ([[d.firstName lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]) {
             return true;
         }
-        else if ([[d.last lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]])
+        else if ([[d.lastName lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]])
         {
             return true;
         }
-        else if ([[d.father lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]){
+        else if ([[d.country lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]){
             return true;
         }
-        else if ([[d.brother lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]){
+        else if ([[d.address lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]){
             return true;
         }
-        else if ([[d.cousin lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]){
+        else if ([[d.city lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]){
             return true;
         }
-        else if ([[dateFormat stringFromDate:d.hireDate] hasPrefix:sharedData.filterString]) {
+        else if ([[dateFormat stringFromDate:d.lastOrderDate] hasPrefix:sharedData.filterString]) {
             return true;
         }
         else {
@@ -219,33 +219,33 @@
     [dateFormat setDateFormat:@"M/d/yy"];
     flex.collectionView.filter = ^ BOOL (NSObject *item){
         CustomerData *d = (CustomerData*)item;
-        if ([[NSString stringWithFormat:@"%@", d.customerID] hasSuffix:sharedData.filterString]) {
+        if ([[NSString stringWithFormat:@"%lu", d.customerID] hasSuffix:sharedData.filterString]) {
             return true;
         }
-        else if ([[NSString stringWithFormat:@"%@", d.countryID]  hasSuffix:sharedData.filterString]) {
+        else if ([[NSString stringWithFormat:@"%lu", d.countryID]  hasSuffix:sharedData.filterString]) {
             return true;
         }
-        else if ([[NSString stringWithFormat:@"%@",d.weight] hasSuffix:sharedData.filterString]) {
+        else if ([[NSString stringWithFormat:@"%@",d.email] hasSuffix:sharedData.filterString]) {
             return true;
         }
         
-        else if ([[d.first lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]) {
+        else if ([[d.firstName lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]) {
             return true;
         }
-        else if ([[d.last lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]])
+        else if ([[d.lastName lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]])
         {
             return true;
         }
-        else if ([[d.father lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]){
+        else if ([[d.country lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]){
             return true;
         }
-        else if ([[d.brother lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]){
+        else if ([[d.address lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]){
             return true;
         }
-        else if ([[d.cousin lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]){
+        else if ([[d.city lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]){
             return true;
         }
-        else if ([[dateFormat stringFromDate:d.hireDate] hasSuffix:sharedData.filterString]) {
+        else if ([[dateFormat stringFromDate:d.lastOrderDate] hasSuffix:sharedData.filterString]) {
             return true;
         }
         else {

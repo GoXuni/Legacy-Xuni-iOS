@@ -10,8 +10,11 @@
 @interface WeatherData : NSObject
 
 @property NSString *monthName;
+@property NSNumber *index;
 @property NSNumber *temp;
 @property NSNumber *precipitation;
-+(NSMutableArray *)demoData;
+@property NSNumber *volume;
+
++ (NSMutableArray *)demoData;
 
 @end

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 
 class StylingSeriesController: UIViewController {
     
@@ -14,16 +14,15 @@ class StylingSeriesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Styling Series"
         
         // Do any additional setup after loading the view.
-        _chart.bindingX = "name"
-        
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")
         let expenses = XuniSeries(forChart: _chart, binding: "expenses, expenses", name: "Expenses")
         let downloads = XuniSeries(forChart: _chart, binding: "downloads, downloads", name: "Downloads")
         
-        sales.color = UIColor.greenColor()
-        sales.borderColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
+        sales.color = UIColor.purpleColor()
+        sales.borderColor = UIColor.greenColor()
         sales.borderWidth = 2
         expenses.color = UIColor.redColor()
         expenses.borderColor = UIColor(red: 0.502, green: 0, blue: 0, alpha: 1)
@@ -38,14 +37,8 @@ class StylingSeriesController: UIViewController {
         _chart.series.addObject(sales)
         _chart.series.addObject(expenses)
         _chart.series.addObject(downloads)
-        
         _chart.itemsSource = ChartData.demoData()
-        
-        _chart.legend.orientation = XuniChartLegendOrientation.Auto
-        _chart.legend.position = XuniChartLegendPosition.Auto
-        _chart.tooltip.isVisible = true
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
+        _chart.bindingX = "name"
         
         self.view.addSubview(_chart)
     }
@@ -59,6 +52,7 @@ class StylingSeriesController: UIViewController {
         super.viewDidLayoutSubviews()
         _chart.frame = CGRectMake(0, 55, self.view.bounds.size.width, self.view.bounds.size.height - 55)
     }
+    
     /*
     // MARK: - Navigation
 

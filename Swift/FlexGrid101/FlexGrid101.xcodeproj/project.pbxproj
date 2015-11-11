@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F229417B1B5010C6007703FD /* XuniGaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F229417A1B5010C6007703FD /* XuniGaugeKit.framework */; };
+		4C435C9E1BD563180099A651 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C435C9B1BD563180099A651 /* XuniCoreKit.framework */; };
+		4C435C9F1BD563180099A651 /* XuniFlexGridKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C435C9C1BD563180099A651 /* XuniFlexGridKit.framework */; };
+		4C435CA01BD563180099A651 /* XuniGaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C435C9D1BD563180099A651 /* XuniGaugeKit.framework */; };
+		4C435CA71BD7C2410099A651 /* StarSizingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C435CA61BD7C2410099A651 /* StarSizingController.swift */; };
+		4C435CAC1BD804F80099A651 /* FrozenCellsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C435CAB1BD804F80099A651 /* FrozenCellsController.swift */; };
+		4C435CB91BD8D10B0099A651 /* ConditionalFormattingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C435CB81BD8D10B0099A651 /* ConditionalFormattingController.swift */; };
 		F229417D1B504196007703FD /* SharedFilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229417C1B504196007703FD /* SharedFilterData.swift */; };
 		F23675D01B592C9B00194040 /* EditConfirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23675CF1B592C9B00194040 /* EditConfirmationController.swift */; };
 		F273C1C81B45C40A00958473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C1C71B45C40A00958473 /* AppDelegate.swift */; };
@@ -28,7 +33,8 @@
 		F273C1FA1B45CB5B00958473 /* CustomerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C1F91B45CB5B00958473 /* CustomerData.swift */; };
 		F273C1FC1B45CB7A00958473 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C1FB1B45CB7A00958473 /* License.swift */; };
 		F273C1FE1B45CBAA00958473 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C1FD1B45CBAA00958473 /* XuniCoreKit.framework */; };
-		F273C2001B45CBB800958473 /* FlexGridKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C1FF1B45CBB800958473 /* FlexGridKit.framework */; };
+		F229417B1B5010C6007703FD /* XuniGaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F229417A1B5010C6007703FD /* XuniGaugeKit.framework */; };
+		F273C2001B45CBB800958473 /* XuniFlexGridKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C1FF1B45CBB800958473 /* XuniFlexGridKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F229417A1B5010C6007703FD /* XuniGaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeKit.framework; path = ../../../../Controls/XuniGaugeKit.framework; sourceTree = "<group>"; };
 		F229417C1B504196007703FD /* SharedFilterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedFilterData.swift; sourceTree = "<group>"; };
 		F23675CF1B592C9B00194040 /* EditConfirmationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditConfirmationController.swift; sourceTree = "<group>"; };
 		F273C1C21B45C40A00958473 /* FlexGrid101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexGrid101.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,10 +69,14 @@
 		F273C1F31B45CAFD00958473 /* FullTextFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullTextFilterController.swift; sourceTree = "<group>"; };
 		F273C1F51B45CB1900958473 /* EditingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingController.swift; sourceTree = "<group>"; };
 		F273C1F71B45CB3100958473 /* FilterFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterFormController.swift; sourceTree = "<group>"; };
+		4C435CA61BD7C2410099A651 /* StarSizingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarSizingController.swift; sourceTree = "<group>"; };
+		4C435CAB1BD804F80099A651 /* FrozenCellsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrozenCellsController.swift; sourceTree = "<group>"; };
+		4C435CB81BD8D10B0099A651 /* ConditionalFormattingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalFormattingController.swift; sourceTree = "<group>"; };
 		F273C1F91B45CB5B00958473 /* CustomerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerData.swift; sourceTree = "<group>"; };
 		F273C1FB1B45CB7A00958473 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		F273C1FD1B45CBAA00958473 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
-		F273C1FF1B45CBB800958473 /* FlexGridKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexGridKit.framework; path = ../../../Controls/FlexGridKit.framework; sourceTree = "<group>"; };
+		F229417A1B5010C6007703FD /* XuniGaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeKit.framework; path = ../../../Controls/XuniGaugeKit.framework; sourceTree = "<group>"; };
+		F273C1FF1B45CBB800958473 /* XuniFlexGridKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexGridKit.framework; path = ../../../Controls/XuniFlexGridKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +86,7 @@
 			files = (
 				F273C1FE1B45CBAA00958473 /* XuniCoreKit.framework in Frameworks */,
 				F229417B1B5010C6007703FD /* XuniGaugeKit.framework in Frameworks */,
-				F273C2001B45CBB800958473 /* FlexGridKit.framework in Frameworks */,
+				F273C2001B45CBB800958473 /* XuniFlexGridKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				F229417A1B5010C6007703FD /* XuniGaugeKit.framework */,
-				F273C1FF1B45CBB800958473 /* FlexGridKit.framework */,
+				F273C1FF1B45CBB800958473 /* XuniFlexGridKit.framework */,
 				F273C1FD1B45CBAA00958473 /* XuniCoreKit.framework */,
 				F273C1C41B45C40A00958473 /* FlexGrid101 */,
 				F273C1DA1B45C40A00958473 /* FlexGrid101Tests */,
@@ -130,6 +139,9 @@
 				F273C1F31B45CAFD00958473 /* FullTextFilterController.swift */,
 				F273C1F51B45CB1900958473 /* EditingController.swift */,
 				F273C1F71B45CB3100958473 /* FilterFormController.swift */,
+				4C435CA61BD7C2410099A651 /* StarSizingController.swift */,
+				4C435CAB1BD804F80099A651 /* FrozenCellsController.swift */,
+				4C435CB81BD8D10B0099A651 /* ConditionalFormattingController.swift */,
 				F273C1F91B45CB5B00958473 /* CustomerData.swift */,
 				F273C1FB1B45CB7A00958473 /* License.swift */,
 				F229417C1B504196007703FD /* SharedFilterData.swift */,
@@ -276,6 +288,9 @@
 				F229417D1B504196007703FD /* SharedFilterData.swift in Sources */,
 				F273C1EE1B45CAC400958473 /* CustomCellsController.swift in Sources */,
 				F273C1F41B45CAFD00958473 /* FullTextFilterController.swift in Sources */,
+				4C435CA71BD7C2410099A651 /* StarSizingController.swift in Sources */,
+				4C435CAC1BD804F80099A651 /* FrozenCellsController.swift in Sources */,
+				4C435CB91BD8D10B0099A651 /* ConditionalFormattingController.swift in Sources */,
 				F273C1C81B45C40A00958473 /* AppDelegate.swift in Sources */,
 				F23675D01B592C9B00194040 /* EditConfirmationController.swift in Sources */,
 			);
@@ -406,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Volumes/main-frameworks,
@@ -421,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Volumes/main-frameworks,

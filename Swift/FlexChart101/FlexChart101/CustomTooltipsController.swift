@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 import XuniChartCoreKit
 import XuniCoreKit
 
@@ -16,10 +16,9 @@ class CustomTooltipsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Custom Tooltips"
         
         // Do any additional setup after loading the view.
-        _chart.bindingX = "name"
-        
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")
         let expenses = XuniSeries(forChart: _chart, binding: "expenses, expenses", name: "Expenses")
         let downloads = XuniSeries(forChart: _chart, binding: "downloads, downloads", name: "Downloads")
@@ -27,18 +26,19 @@ class CustomTooltipsController: UIViewController {
         _chart.series.addObject(sales)
         _chart.series.addObject(expenses)
         _chart.series.addObject(downloads)
-        _chart.tooltip.backgroundColor = UIColor(red: 1, green: 1, blue: 0.792, alpha: 1)
+        
         _chart.itemsSource = ChartData.demoData()
+        _chart.bindingX = "name"
+        _chart.stacking = XuniStacking.Stacked
+        _chart.palette = XuniPalettes.zen()
+        _chart.loadAnimation.animationMode = XuniAnimationMode.Series
+        _chart.axisY.axisLineVisible = false
+        _chart.axisY.majorUnit = 2000
 
         let t = MyTooltip()
         t.backgroundColor = UIColor(red: 1, green: 1, blue: 0.792, alpha: 1)
-        _chart.tooltip.content = t;
-        
-        _chart.legend.orientation = XuniChartLegendOrientation.Auto
-        _chart.legend.position = XuniChartLegendPosition.Auto
-        _chart.tooltip.isVisible = true
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
+        _chart.tooltip.content = t
+        //_chart.tooltip.backgroundColor = UIColor(red: 1, green: 1, blue: 0.792, alpha: 1)
         
         self.view.addSubview(_chart)
     }
@@ -52,7 +52,6 @@ class CustomTooltipsController: UIViewController {
         super.viewDidLayoutSubviews()
         _chart.frame = CGRectMake(0, 55, self.view.bounds.size.width, self.view.bounds.size.height - 55)
     }
-
 
     /*
     // MARK: - Navigation
@@ -74,7 +73,7 @@ class MyTooltip : XuniBaseChartTooltipView {
     var tooltipWidth = CGFloat()
     var tooltipHeight = CGFloat()
     
-    override var chartData : XuniDataPoint?{
+    override var chartData : XuniDataPoint? {
         get{
             return self.chartData
         }
@@ -86,7 +85,7 @@ class MyTooltip : XuniBaseChartTooltipView {
                 label.frame = CGRectMake(self.bounds.size.width/4, 0, self.bounds.size.width*3/4, self.bounds.size.height)
                 label.textColor = UIColor.blackColor()
                 label.numberOfLines = 3
-                label.text = "\(newValue!.seriesName)\n\(newValue!.dataX)\n\(newValue!.dataY)"
+                label.text = "\(newValue!.seriesName) \n\n $\(newValue!.dataY)"
                 label.font = label.font.fontWithSize(11)
                 image = UIImage(named:"\(newValue!.dataX)")!
                 imageView =  UIImageView(image: image)
@@ -96,19 +95,21 @@ class MyTooltip : XuniBaseChartTooltipView {
             else{
                 image = UIImage(named:"\(newValue!.dataX)")!
                 imageView.image = image
-                label.text = "\(newValue!.seriesName)\n\(newValue!.dataX)\n\(newValue!.dataY)"
+                label.text = "\(newValue!.seriesName) \n\n $\(newValue!.dataY)"
                 imageView.setNeedsLayout()
             }
         }
     }
-    func _render(){
+    
+    func _render() {
         //prevents drawing of default tooltip
     }
     
     //these two methods draw the tooltip frames... the conditional logic checks screen bounds
-    func _getFrameRect(contentFrame: CGRect, senderPoint:CGPoint)->(CGRect){
+    func _getFrameRect(contentFrame: CGRect, senderPoint:CGPoint)->(CGRect) {
         tooltipHeight = 50
         tooltipWidth = 100
+        
         if ((UIScreen.mainScreen().bounds.width - senderPoint.x) < tooltipWidth  && (UIScreen.mainScreen().bounds.height - senderPoint.y) < tooltipHeight){
             return CGRectMake((UIScreen.mainScreen().bounds.width - tooltipWidth), (UIScreen.mainScreen().bounds.height - tooltipHeight), tooltipWidth, tooltipHeight)
         }
@@ -122,9 +123,11 @@ class MyTooltip : XuniBaseChartTooltipView {
             return CGRectMake(senderPoint.x, senderPoint.y, tooltipWidth, tooltipHeight)
         }
     }
-    func _getContentFrameRect(contentFrame: CGRect, senderPoint:CGPoint)->(CGRect){
+    
+    func _getContentFrameRect(contentFrame: CGRect, senderPoint:CGPoint)->(CGRect) {
         tooltipHeight = 50
         tooltipWidth = 100
+        
         if ((UIScreen.mainScreen().bounds.width - senderPoint.x) < tooltipWidth  && (UIScreen.mainScreen().bounds.height - senderPoint.y) < tooltipHeight){
             return CGRectMake((UIScreen.mainScreen().bounds.width - tooltipWidth), (UIScreen.mainScreen().bounds.height - tooltipHeight), tooltipWidth, tooltipHeight)
         }

@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let samples = ["Getting Started", "Column Definitions", "Selection Modes", "Editing", "Custom Cells", "Grouping", "Filter", "Full Text Filter", "Edit Confirmation"]
+    let samples = ["Getting Started", "Column Definitions", "Selection Modes", "Editing", "Custom Cells", "Grouping", "Filter", "Full Text Filter", "Edit Confirmation", "Star Sizing", "Frozen Cells", "Conditional Formatting"]
     let SimpleIdentifier = "SimpleIdentifier"
     
     override func viewDidLoad() {
@@ -59,6 +59,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.performSegueWithIdentifier("FullTextFilterSegue", sender:tableView)
         case 8:
             self.performSegueWithIdentifier("EditConfirmationSegue", sender:tableView)
+        case 9:
+            self.performSegueWithIdentifier("StarSizingSegue", sender:tableView)
+        case 10:
+            self.performSegueWithIdentifier("FrozenCellsSegue", sender:tableView)
+        case 11:
+            self.performSegueWithIdentifier("ConditionalFormattingSegue", sender:tableView)
         default:
             break
         }

@@ -16,7 +16,7 @@
 @property NSNumber *close;
 @property NSNumber *volume;
 
--(id)initWithDate: (NSDate *)date open: (NSNumber *)open high: (NSNumber *)high low: (NSNumber *)low close: (NSNumber *)close volume: (NSNumber *)volume;
+- (id)initWithDate: (NSDate *)date open: (NSNumber *)open high: (NSNumber *)high low: (NSNumber *)low close: (NSNumber *)close volume: (NSNumber *)volume;
 
-+(NSMutableArray *)demoData;
++ (NSMutableArray *)demoData;
 @end

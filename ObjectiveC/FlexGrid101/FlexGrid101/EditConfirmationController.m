@@ -7,7 +7,7 @@
 
 #import "EditConfirmationController.h"
 #import "CustomerData.h"
-#import "FlexGridKit/FlexGridKit.h"
+#import "XuniFlexGridKit/XuniFlexGridKit.h"
 
 @interface EditConfirmationController (){
     NSObject *_temp;
@@ -45,7 +45,15 @@
     
 }
 -(void) cellEditEnding:(FlexCellRangeEventArgs *)args{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
     FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
+    
+    if([[flex.cells getCellDataForRow:args.row inColumn:args.col formatted:false] isEqual:_temp])
+    {
+        return;
+    }
+    
     NSString *title = [[NSString alloc] init];
     NSString *message = [[NSString alloc] init];
     title = @"Edit Confirmation";
@@ -59,5 +67,7 @@
     [alertController addAction:okAction];
     [alertController addAction:cancelAction];
     [self presentViewController:alertController animated:true completion:nil];
+        
+    });
 }
 @end

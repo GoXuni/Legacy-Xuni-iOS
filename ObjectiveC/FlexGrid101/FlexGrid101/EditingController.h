@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <FlexGridKit/FlexGridKit.h>
+#import <XuniFlexGridKit/XuniFlexGridKit.h>
 
 @interface EditingController : UIViewController<FlexGridDelegate>
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MmS-hE-pab">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MmS-hE-pab">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Editing Controller-->
@@ -15,6 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="DSM-ZA-aOc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -33,6 +35,7 @@
                     <view key="view" contentMode="scaleToFill" id="rOt-yV-6Rq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -51,12 +54,13 @@
                     <view key="view" contentMode="scaleToFill" id="Nri-T9-306">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6UY-gF-Rx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2001" y="-406"/>
+            <point key="canvasLocation" x="1901" y="-962"/>
         </scene>
         <!--FlexGrid101-->
         <scene sceneID="tne-QT-ifu">
@@ -72,6 +76,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DCb-lL-CLQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="d3F-O1-c41"/>
@@ -79,6 +84,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="FlexGrid101" id="7st-KA-XBm">
@@ -94,6 +100,9 @@
                         <segue destination="mFl-lu-PW6" kind="show" identifier="GroupingSegue" id="fgX-F5-48T"/>
                         <segue destination="WeZ-9W-1Cq" kind="show" identifier="EditingSegue" id="BhE-Ut-yb7"/>
                         <segue destination="dgd-mH-iLJ" kind="show" identifier="EditConfirmationSegue" id="INY-eX-Bks"/>
+                        <segue destination="7z5-uH-rXe" kind="show" identifier="StarSizingSegue" id="43N-Pc-nb5"/>
+                        <segue destination="vPY-zI-jjr" kind="show" identifier="FrozenCellsSegue" id="2zq-Gb-ytv"/>
+                        <segue destination="AsH-gI-3LA" kind="show" identifier="ConditionalFormattingSegue" id="epD-hP-Wr5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -111,12 +120,13 @@
                     <view key="view" contentMode="scaleToFill" id="aTs-LT-oO5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sjx-rn-XLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2001" y="346"/>
+            <point key="canvasLocation" x="2225" y="366"/>
         </scene>
         <!--Custom Cells Controller-->
         <scene sceneID="Gr0-pD-VBC">
@@ -129,6 +139,7 @@
                     <view key="view" contentMode="scaleToFill" id="NXJ-iv-nfA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -147,6 +158,7 @@
                     <view key="view" contentMode="scaleToFill" id="UOx-sv-RBr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -165,6 +177,7 @@
                     <view key="view" contentMode="scaleToFill" id="Wte-NP-mfc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -183,6 +196,7 @@
                     <view key="view" contentMode="scaleToFill" id="nLG-kG-LSK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -201,6 +215,7 @@
                     <view key="view" contentMode="scaleToFill" id="sFh-9u-RaU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -219,6 +234,7 @@
                     <view key="view" contentMode="scaleToFill" id="YLz-Fq-Z3I">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
@@ -236,6 +252,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lJM-fu-2qz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fev-g9-WFd"/>
@@ -244,6 +261,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNF-jW-yEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="460" y="708"/>
+        </scene>
+        <!--Star Sizing Controller-->
+        <scene sceneID="UOw-HS-iDW">
+            <objects>
+                <viewController id="7z5-uH-rXe" customClass="StarSizingController" customModule="FlexGrid101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r6i-c0-nnU"/>
+                        <viewControllerLayoutGuide type="bottom" id="4dn-CD-kZP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mC2-ay-9SP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJj-Bx-WHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965" y="-470"/>
+        </scene>
+        <!--Frozen Cells Controller-->
+        <scene sceneID="CHY-ND-Fxh">
+            <objects>
+                <viewController id="vPY-zI-jjr" customClass="FrozenCellsController" customModule="FlexGrid101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nTu-v1-imD"/>
+                        <viewControllerLayoutGuide type="bottom" id="UvK-tY-5lC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rg1-wT-ErF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXN-gR-SPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2385" y="-378"/>
+        </scene>
+        <!--Conditional Formatting Controller-->
+        <scene sceneID="JIb-pV-8NQ">
+            <objects>
+                <viewController id="AsH-gI-3LA" customClass="ConditionalFormattingController" customModule="FlexGrid101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gws-JO-giF"/>
+                        <viewControllerLayoutGuide type="bottom" id="dzl-5P-toV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9MS-R3-zzN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nly-fK-z3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2225" y="110"/>
         </scene>
     </scenes>
 </document>

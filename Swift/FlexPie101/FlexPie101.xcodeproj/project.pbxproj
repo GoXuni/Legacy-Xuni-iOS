@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F235736D1B447EB300F300D7 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235736C1B447EB300F300D7 /* License.swift */; };
 		F235736F1B447F0800F300D7 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F235736E1B447F0800F300D7 /* XuniCoreKit.framework */; };
-		F23573711B447F1E00F300D7 /* FlexPieKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23573701B447F1E00F300D7 /* FlexPieKit.framework */; };
+		F23573711B447F1E00F300D7 /* XuniFlexPieKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23573701B447F1E00F300D7 /* XuniFlexPieKit.framework */; };
 		F23573731B45829A00F300D7 /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23573721B45829A00F300D7 /* XuniChartCoreKit.framework */; };
 		F2EC7C041B4315ED00A140F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EC7C031B4315ED00A140F4 /* AppDelegate.swift */; };
 		F2EC7C061B4315ED00A140F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EC7C051B4315ED00A140F4 /* ViewController.swift */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		F235736C1B447EB300F300D7 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		F235736E1B447F0800F300D7 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
-		F23573701B447F1E00F300D7 /* FlexPieKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexPieKit.framework; path = ../../../Controls/FlexPieKit.framework; sourceTree = "<group>"; };
+		F23573701B447F1E00F300D7 /* XuniFlexPieKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexPieKit.framework; path = ../../../Controls/XuniFlexPieKit.framework; sourceTree = "<group>"; };
 		F23573721B45829A00F300D7 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = ../../../Controls/XuniChartCoreKit.framework; sourceTree = "<group>"; };
 		F2EC7BFE1B4315ED00A140F4 /* FlexPie101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexPie101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2EC7C021B4315ED00A140F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 			files = (
 				F235736F1B447F0800F300D7 /* XuniCoreKit.framework in Frameworks */,
 				F23573731B45829A00F300D7 /* XuniChartCoreKit.framework in Frameworks */,
-				F23573711B447F1E00F300D7 /* FlexPieKit.framework in Frameworks */,
+				F23573711B447F1E00F300D7 /* XuniFlexPieKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,7 @@
 		F2EC7BF51B4315ED00A140F4 = {
 			isa = PBXGroup;
 			children = (
-				F23573701B447F1E00F300D7 /* FlexPieKit.framework */,
+				F23573701B447F1E00F300D7 /* XuniFlexPieKit.framework */,
 				F23573721B45829A00F300D7 /* XuniChartCoreKit.framework */,
 				F235736E1B447F0800F300D7 /* XuniCoreKit.framework */,
 				F2EC7C001B4315ED00A140F4 /* FlexPie101 */,
@@ -192,6 +192,7 @@
 		F2EC7BF61B4315ED00A140F4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = GrapeCity;
 				TargetAttributes = {
@@ -386,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Volumes/main-frameworks,
@@ -401,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Volumes/main-frameworks,

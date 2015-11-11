@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <FlexChartKit/FlexChartKit.h>
+#import <XuniFlexChartKit/XuniFlexChartKit.h>
 
 @interface HitTestController : UIViewController <FlexChartDelegate>
 

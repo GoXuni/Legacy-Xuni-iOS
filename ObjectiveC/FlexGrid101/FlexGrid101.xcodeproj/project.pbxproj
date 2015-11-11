@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C41F60E1BDE854900D3F97A /* OnDemandController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C41F60D1BDE854900D3F97A /* OnDemandController.m */; };
+		4C435CA51BD7AA1E0099A651 /* StarSizingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C435CA41BD7AA1D0099A651 /* StarSizingController.m */; };
+		4C435CAA1BD7FD930099A651 /* FrozenCellsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C435CA91BD7FD930099A651 /* FrozenCellsController.m */; };
+		4C435CB11BD8C5F20099A651 /* ConditionalFormattingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C435CB01BD8C5F10099A651 /* ConditionalFormattingController.m */; };
+		4C435CBC1BD8D92B0099A651 /* EditingFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C435CBB1BD8D92B0099A651 /* EditingFormController.m */; };
+		4C63EDBE1BD94F6E00209E09 /* CustomerObjectEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63EDBD1BD94F6E00209E09 /* CustomerObjectEditor.m */; };
+		4C63EDC11BD95A2700209E09 /* ColumnLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63EDC01BD95A2700209E09 /* ColumnLayoutController.m */; };
+		4C63EDC61BDA1AED00209E09 /* ColumnReordererTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C63EDC51BDA1AED00209E09 /* ColumnReordererTableViewController.m */; };
 		F235736B1B44608100F300D7 /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = F235736A1B44608100F300D7 /* License.m */; };
 		F23675D31B59503000194040 /* EditConfirmationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23675D21B59503000194040 /* EditConfirmationController.m */; };
 		F2BA19551B2883CF00F2B835 /* XuniGaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BA19541B2883CF00F2B835 /* XuniGaugeKit.framework */; };
@@ -28,8 +36,8 @@
 		F2E2AA351B27307300AFEA5D /* FilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA341B27307300AFEA5D /* FilterController.m */; };
 		F2E2AA381B27308500AFEA5D /* FullTextFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA371B27308500AFEA5D /* FullTextFilterController.m */; };
 		F2E2AA3E1B2731B700AFEA5D /* CustomerData.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E2AA3D1B2731B700AFEA5D /* CustomerData.m */; };
-		F2E2AA401B27345900AFEA5D /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E2AA3F1B27345900AFEA5D /* XuniCoreKit.framework */; };
-		F2E2AA421B27346E00AFEA5D /* FlexGridKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E2AA411B27346E00AFEA5D /* FlexGridKit.framework */; };
+		F2E2AA401B27345900AFEA5D /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E2AA3F1B27345900AFEA5D /* XuniCoreKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		F2E2AA421B27346E00AFEA5D /* XuniFlexGridKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E2AA411B27346E00AFEA5D /* XuniFlexGridKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +51,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C41F60C1BDE854900D3F97A /* OnDemandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnDemandController.h; sourceTree = "<group>"; };
+		4C41F60D1BDE854900D3F97A /* OnDemandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnDemandController.m; sourceTree = "<group>"; };
+		4C435CA31BD7AA1D0099A651 /* StarSizingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarSizingController.h; sourceTree = "<group>"; };
+		4C435CA41BD7AA1D0099A651 /* StarSizingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarSizingController.m; sourceTree = "<group>"; };
+		4C435CA81BD7FD930099A651 /* FrozenCellsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrozenCellsController.h; sourceTree = "<group>"; };
+		4C435CA91BD7FD930099A651 /* FrozenCellsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrozenCellsController.m; sourceTree = "<group>"; };
+		4C435CAF1BD8C5F10099A651 /* ConditionalFormattingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionalFormattingController.h; sourceTree = "<group>"; };
+		4C435CB01BD8C5F10099A651 /* ConditionalFormattingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionalFormattingController.m; sourceTree = "<group>"; };
+		4C435CBA1BD8D92B0099A651 /* EditingFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingFormController.h; sourceTree = "<group>"; };
+		4C435CBB1BD8D92B0099A651 /* EditingFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingFormController.m; sourceTree = "<group>"; };
+		4C63EDBC1BD94F6E00209E09 /* CustomerObjectEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerObjectEditor.h; sourceTree = "<group>"; };
+		4C63EDBD1BD94F6E00209E09 /* CustomerObjectEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerObjectEditor.m; sourceTree = "<group>"; };
+		4C63EDBF1BD95A2700209E09 /* ColumnLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnLayoutController.h; sourceTree = "<group>"; };
+		4C63EDC01BD95A2700209E09 /* ColumnLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnLayoutController.m; sourceTree = "<group>"; };
+		4C63EDC41BDA1AED00209E09 /* ColumnReordererTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnReordererTableViewController.h; sourceTree = "<group>"; };
+		4C63EDC51BDA1AED00209E09 /* ColumnReordererTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnReordererTableViewController.m; sourceTree = "<group>"; };
 		F23573691B44608100F300D7 /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
 		F235736A1B44608100F300D7 /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
 		F23675D11B59503000194040 /* EditConfirmationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditConfirmationController.h; sourceTree = "<group>"; };
 		F23675D21B59503000194040 /* EditConfirmationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditConfirmationController.m; sourceTree = "<group>"; };
-		F2BA19541B2883CF00F2B835 /* XuniGaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeKit.framework; path = ../../../Controls/XuniGaugeKit.framework; sourceTree = "<group>"; };
+		F2BA19541B2883CF00F2B835 /* XuniGaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeKit.framework; path = "../../../Controls/XuniGaugeKit.framework"; sourceTree = "<group>"; };
 		F2BA19561B288F1600F2B835 /* EditingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingController.h; sourceTree = "<group>"; };
 		F2BA19571B288F1600F2B835 /* EditingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingController.m; sourceTree = "<group>"; };
 		F2BA19921B2B1E3200F2B835 /* FilterFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterFormController.h; sourceTree = "<group>"; };
@@ -83,8 +107,8 @@
 		F2E2AA371B27308500AFEA5D /* FullTextFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTextFilterController.m; sourceTree = "<group>"; };
 		F2E2AA3C1B2731B700AFEA5D /* CustomerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerData.h; sourceTree = "<group>"; };
 		F2E2AA3D1B2731B700AFEA5D /* CustomerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerData.m; sourceTree = "<group>"; };
-		F2E2AA3F1B27345900AFEA5D /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
-		F2E2AA411B27346E00AFEA5D /* FlexGridKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexGridKit.framework; path = ../../../Controls/FlexGridKit.framework; sourceTree = "<group>"; };
+		F2E2AA3F1B27345900AFEA5D /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../../../Controls/XuniCoreKit.framework"; sourceTree = "<group>"; };
+		F2E2AA411B27346E00AFEA5D /* XuniFlexGridKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexGridKit.framework; path = "../../../Controls/XuniFlexGridKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +118,7 @@
 			files = (
 				F2E2AA401B27345900AFEA5D /* XuniCoreKit.framework in Frameworks */,
 				F2BA19551B2883CF00F2B835 /* XuniGaugeKit.framework in Frameworks */,
-				F2E2AA421B27346E00AFEA5D /* FlexGridKit.framework in Frameworks */,
+				F2E2AA421B27346E00AFEA5D /* XuniFlexGridKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				F2BA19541B2883CF00F2B835 /* XuniGaugeKit.framework */,
-				F2E2AA411B27346E00AFEA5D /* FlexGridKit.framework */,
+				F2E2AA411B27346E00AFEA5D /* XuniFlexGridKit.framework */,
 				F2E2AA3F1B27345900AFEA5D /* XuniCoreKit.framework */,
 				F2E2A9EF1B27254C00AFEA5D /* FlexGrid101 */,
 				F2E2AA091B27254E00AFEA5D /* FlexGrid101Tests */,
@@ -166,6 +190,22 @@
 				F235736A1B44608100F300D7 /* License.m */,
 				F23675D11B59503000194040 /* EditConfirmationController.h */,
 				F23675D21B59503000194040 /* EditConfirmationController.m */,
+				4C435CA31BD7AA1D0099A651 /* StarSizingController.h */,
+				4C435CA41BD7AA1D0099A651 /* StarSizingController.m */,
+				4C435CA81BD7FD930099A651 /* FrozenCellsController.h */,
+				4C435CA91BD7FD930099A651 /* FrozenCellsController.m */,
+				4C435CAF1BD8C5F10099A651 /* ConditionalFormattingController.h */,
+				4C435CB01BD8C5F10099A651 /* ConditionalFormattingController.m */,
+				4C435CBA1BD8D92B0099A651 /* EditingFormController.h */,
+				4C435CBB1BD8D92B0099A651 /* EditingFormController.m */,
+				4C63EDBC1BD94F6E00209E09 /* CustomerObjectEditor.h */,
+				4C63EDBD1BD94F6E00209E09 /* CustomerObjectEditor.m */,
+				4C63EDBF1BD95A2700209E09 /* ColumnLayoutController.h */,
+				4C63EDC01BD95A2700209E09 /* ColumnLayoutController.m */,
+				4C63EDC41BDA1AED00209E09 /* ColumnReordererTableViewController.h */,
+				4C63EDC51BDA1AED00209E09 /* ColumnReordererTableViewController.m */,
+				4C41F60C1BDE854900D3F97A /* OnDemandController.h */,
+				4C41F60D1BDE854900D3F97A /* OnDemandController.m */,
 			);
 			path = FlexGrid101;
 			sourceTree = "<group>";
@@ -297,21 +337,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2E2A9F91B27254E00AFEA5D /* ViewController.m in Sources */,
+				4C41F60E1BDE854900D3F97A /* OnDemandController.m in Sources */,
 				F23675D31B59503000194040 /* EditConfirmationController.m in Sources */,
 				F2E2AA351B27307300AFEA5D /* FilterController.m in Sources */,
 				F2E2AA291B27302300AFEA5D /* ColumnDefinitionsController.m in Sources */,
 				F2CFF3BF1B7122BB00FE6FDF /* SharedFilterData.m in Sources */,
+				4C63EDBE1BD94F6E00209E09 /* CustomerObjectEditor.m in Sources */,
+				4C435CA51BD7AA1E0099A651 /* StarSizingController.m in Sources */,
 				F2BA19941B2B1E3200F2B835 /* FilterFormController.m in Sources */,
 				F2E2A9F61B27254E00AFEA5D /* AppDelegate.m in Sources */,
 				F235736B1B44608100F300D7 /* License.m in Sources */,
 				F2E2AA3E1B2731B700AFEA5D /* CustomerData.m in Sources */,
+				4C435CBC1BD8D92B0099A651 /* EditingFormController.m in Sources */,
 				F2E2AA2F1B27304C00AFEA5D /* CustomCellsController.m in Sources */,
+				4C63EDC11BD95A2700209E09 /* ColumnLayoutController.m in Sources */,
+				4C435CB11BD8C5F20099A651 /* ConditionalFormattingController.m in Sources */,
+				4C63EDC61BDA1AED00209E09 /* ColumnReordererTableViewController.m in Sources */,
 				F2E2AA261B27300A00AFEA5D /* GettingStartedController.m in Sources */,
 				F2E2A9F31B27254E00AFEA5D /* main.m in Sources */,
 				F2E2AA381B27308500AFEA5D /* FullTextFilterController.m in Sources */,
 				F2E2AA321B27306300AFEA5D /* GroupingController.m in Sources */,
 				F2BA19581B288F1600F2B835 /* EditingController.m in Sources */,
 				F2E2AA2C1B27303700AFEA5D /* SelectionModesController.m in Sources */,
+				4C435CAA1BD7FD930099A651 /* FrozenCellsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +421,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kotyuck/Desktop/Volumes/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -417,8 +467,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kotyuck/Desktop/Volumes/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -440,9 +492,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/main-frameworks,
+					"/Volumes/main-frameworks",
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexGrid101/Info.plist;
@@ -456,9 +509,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/main-frameworks,
+					"/Volumes/main-frameworks",
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexGrid101/Info.plist;

@@ -28,7 +28,7 @@ class FilterFormController: UIViewController, UIPickerViewDataSource, UIPickerVi
         _filterPicker.showsSelectionIndicator = true
         _filterPicker.hidden = false
         
-        _filterButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        _filterButton = UIButton(type: UIButtonType.System)
         _filterButton.setTitle("Filter", forState: UIControlState.Normal)
         _filterButton.addTarget(self, action: "filterButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         _filterButton.titleLabel?.textAlignment = NSTextAlignment.Center
@@ -54,7 +54,7 @@ class FilterFormController: UIViewController, UIPickerViewDataSource, UIPickerVi
         super.viewDidLayoutSubviews()
         _filterField.frame = CGRectMake(self.view.bounds.size.width/4, 65, self.view.bounds.size.width/2, 50)
         _filterPicker.selectRow(self.sharedData.filterOperation, inComponent: 0, animated: false)
-        _filterPicker.frame = CGRectMake(self.view.bounds.size.width/4, 100, self.view.bounds.size.width/2, 162)
+        _filterPicker.frame = CGRectMake(self.view.bounds.size.width/2 - 160, 100, 320, 162)
         _filterButton.frame = CGRectMake(self.view.bounds.size.width/4, 300, self.view.bounds.size.width/2, 50)
     }
     

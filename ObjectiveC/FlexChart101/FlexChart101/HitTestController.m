@@ -7,7 +7,7 @@
 
 #import "HitTestController.h"
 #import "HitTestData.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 
 @interface HitTestController ()
 
@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Hit Test"];
+    
     // Do any additional setup after loading the view.
     UILabel *chartElementlabel = [[UILabel alloc] init];
     chartElementlabel.text = @" Chart element";
@@ -39,15 +41,10 @@
     [chart.series addObject:seriesSinX];
     
     chart.delegate = self;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
     chart.chartType = XuniChartTypeLineSymbols;
-    chart.axisY.format = @"f";
+    chart.axisY.format = @"F";
     chart.header = @"Trigonometric Functions";
     chart.footer = @"Cartesian coordinates";
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.isVisible = true;
     
     chart.tag = 1;
     seriesLabel.tag = 2;
@@ -60,7 +57,6 @@
     [self.view addSubview:pointIndexlabel];
     [self.view addSubview:seriesLabel];
     [self.view addSubview:xyLabel];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,8 +64,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
--(void)viewDidLayoutSubviews{
+-(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
     UILabel *seriesLabel = (UILabel *)[self.view viewWithTag:2];
@@ -87,15 +82,15 @@
 - (void)selectionChanged:(XuniHitTestInfo*)hitTestInfo {
 
 }
-- (void)seriesVisibilityChanged:(XuniSeries*)series{
+- (void)seriesVisibilityChanged:(XuniSeries*)series {
 
 }
 
-- (void)rendered{
+- (void)rendered {
     
 }
 
-- (BOOL)tapped:(XuniPoint*)point{
+- (BOOL)tapped:(XuniPoint*)point {
     FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
     UILabel *s = (UILabel *)[self.view viewWithTag:2];
     UILabel *pi = (UILabel *)[self.view viewWithTag:3];
@@ -103,19 +98,20 @@
     UILabel *ce = (UILabel *)[self.view viewWithTag:5];
     XuniHitTestInfo *hitTest = [chart hitTest:point];
     pi.text = [@" Point Index: " stringByAppendingString: [NSString stringWithFormat:@"%i", hitTest.pointIndex]];
-    xy.text = [[NSString stringWithFormat:@" X:%1.2f", point.x] stringByAppendingString: [NSString stringWithFormat:@" Y:%1.2f", point.y]];
+    xy.text = [[NSString stringWithFormat:@" X:%1.2f", hitTest.x] stringByAppendingString: [NSString stringWithFormat:@" Y:%1.2f", hitTest.y]];
     if (hitTest.series != nil) {
         s.text = [@" Series: " stringByAppendingString: hitTest.series.name];
     }
     else
     {
-        s.text = @" null";
+        s.text = @" Series: ";
     }
     ce.text = [@" Chart element: " stringByAppendingString: [self getChartTypeString:(hitTest.chartElement)]];
-    return true;
+    
+    return false;
 }
 
--(NSString *)getChartTypeString: (XuniChartElement) chartElement{
+-(NSString *)getChartTypeString: (XuniChartElement) chartElement {
     switch (chartElement) {
         case XuniChartElementPlotArea:
             return @"PlotArea";
@@ -147,12 +143,12 @@
     }
 }
 
-- (void) axisRangeChanged:(NSObject *)axis{
+- (void) axisRangeChanged:(NSObject *)axis {
     
 }
 
 
-- (void)handleTooltip:(XuniPoint*)point isVisible:(BOOL)isVisible data:(NSArray*)data{
+- (void)handleTooltip:(XuniPoint*)point isVisible:(BOOL)isVisible data:(NSArray*)data {
     
 }
 

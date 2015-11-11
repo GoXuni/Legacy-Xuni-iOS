@@ -7,10 +7,9 @@
 
 #import "DataLabelController.h"
 #import "ChartData.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 
 @interface DataLabelController (){
-    NSMutableArray *chartTypePickerData;
     NSMutableArray *positionPickerData;
 }
 
@@ -20,48 +19,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    chartTypePickerData =[[NSMutableArray alloc] initWithObjects:@"Column", @"Bar", @"Scatter", @"Line", @"LineSymbol", @"Area", nil];
-    positionPickerData = [[NSMutableArray alloc]initWithObjects: @"Top", @"Bottom", @"Left", @"Right", @"None", nil];
+    [self setTitle:@"Data Labels"];
     
-    UIPickerView *chartTypePicker = [[UIPickerView alloc] init];
+    // Do any additional setup after loading the view.
+    positionPickerData = [[NSMutableArray alloc]initWithObjects:@"None", @"Left", @"Top", @"Right", @"Bottom", @"Center", nil];
+    
     UIPickerView *positionPicker = [[UIPickerView alloc] init];
+    positionPicker.delegate = self;
+    positionPicker.showsSelectionIndicator = YES;
+    positionPicker.hidden = NO;
     
     FlexChart *chart = [[FlexChart alloc] init];
     NSMutableArray *chartData = [ChartData demoData];
     
-    chartTypePicker.delegate = self;
-    chartTypePicker.showsSelectionIndicator = YES;
-    chartTypePicker.hidden = false;
-    positionPicker.delegate = self;
-    positionPicker.showsSelectionIndicator = YES;
-    positionPicker.hidden = false;
-    
     chart.bindingX = @"name";
-    XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
-    
-    [chart.series addObject:sales];
+    XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses" name:@"Total Expenses"];
+    [chart.series addObject:expenses];
     
     chart.itemsSource = chartData;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
+    chart.chartType = XuniChartTypeBar;
+    chart.isAnimated = NO;
+    chart.tooltip.isVisible = NO;
+    chart.axisX.majorGridVisible = YES;
+    chart.axisY.labelsVisible = NO;
+    chart.axisY.majorGridVisible = NO;
+    chart.axisY.minorGridVisible = NO;
+    chart.axisY.majorTickWidth = 0;
+    chart.palette = [XuniPalettes organic];
     
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.isVisible = true;
-    chart.dataLabel.content= @"{seriesName}\n{y}";
-    chart.dataLabel.dataLabelFormat = @"C";
-    chart.dataLabel.position = FlexChartDataLabelPositionTop;
+    chart.dataLabel.content= @"{x} {y}";
+    chart.dataLabel.dataLabelFormat = @"F2";
+    chart.dataLabel.position = FlexChartDataLabelPositionLeft;
     chart.dataLabel.dataLabelFontColor = [UIColor redColor];
     chart.dataLabel.dataLabelBackgroundColor = [UIColor whiteColor];
-    chart.dataLabel.dataLabelBorderColor = [UIColor grayColor];
-    chart.dataLabel.dataLabelBorderWidth = .1;
+    chart.dataLabel.dataLabelBorderColor = [UIColor blueColor];
+    chart.dataLabel.dataLabelBorderWidth = 1;
+    chart.dataLabel.dataLabelFont = [UIFont systemFontOfSize:15];
     
     chart.tag = 1;
-    chartTypePicker.tag = 2;
-    positionPicker.tag = 3;
+    positionPicker.tag = 2;
     
-    [self.view addSubview:chartTypePicker];
     [self.view addSubview:positionPicker];
     [self.view addSubview:chart];
 }
@@ -71,13 +68,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    UIPickerView *positionPicker = (UIPickerView*)[self.view viewWithTag:2];
+    [positionPicker selectRow:1 inComponent:0 animated:NO];
+}
+
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    UIPickerView *chartTypePicker = (UIPickerView*)[self.view viewWithTag:2];
-    UIPickerView *positionPicker = (UIPickerView*)[self.view viewWithTag:3];
-    chartTypePicker.frame = CGRectMake(0, 44, self.view.bounds.size.width/2, 162);
-    positionPicker.frame = CGRectMake(self.view.bounds.size.width/2, 44, self.view.bounds.size.width/2, 162);
+    UIPickerView *positionPicker = (UIPickerView*)[self.view viewWithTag:2];
+    positionPicker.frame = CGRectMake(0, 44, self.view.bounds.size.width, 162);
     chart.frame = CGRectMake(0, 206, self.view.bounds.size.width, self.view.bounds.size.height - 206);
     [chart setNeedsDisplay];
 }
@@ -89,11 +91,10 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
     if(pickerView.tag == 2){
-        return [chartTypePickerData count];
-    }
-    else{
         return [positionPickerData count];
     }
+    
+    return 0;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
@@ -102,39 +103,22 @@
     if(pickerView.tag == 2)
     {
         if (row == 0) {
-            chart.chartType = XuniChartTypeColumn;
+            chart.dataLabel.position = FlexChartDataLabelPositionNone;
         }
         else if (row == 1){
-            chart.chartType = XuniChartTypeBar;
-        }
-        else if (row == 2){
-            chart.chartType = XuniChartTypeScatter;
-        }
-        else if (row == 3){
-            chart.chartType = XuniChartTypeLine;
-        }
-        else if (row == 4){
-            chart.chartType = XuniChartTypeLineSymbols;
-        }
-        else if (row == 5){
-            chart.chartType = XuniChartTypeArea;
-        }
-    }
-    else if(pickerView.tag == 3){
-        if (row == 0) {
-            chart.dataLabel.position = FlexChartDataLabelPositionTop;
-        }
-        else if (row == 1){
-            chart.dataLabel.position = FlexChartDataLabelPositionBottom;
-        }
-        else if (row == 2){
             chart.dataLabel.position = FlexChartDataLabelPositionLeft;
+        }
+        else if (row == 2){
+            chart.dataLabel.position = FlexChartDataLabelPositionTop;
         }
         else if (row == 3){
             chart.dataLabel.position = FlexChartDataLabelPositionRight;
         }
         else if (row == 4){
-            chart.dataLabel.position = FlexChartDataLabelPositionNone;
+            chart.dataLabel.position = FlexChartDataLabelPositionBottom;
+        }
+        else if (row == 5){
+            chart.dataLabel.position = FlexChartDataLabelPositionCenter;
         }
     }
 }
@@ -142,9 +126,6 @@
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     if(pickerView.tag == 2)
     {
-        return [chartTypePickerData objectAtIndex:row];
-    }
-    else if(pickerView.tag == 3){
         return [positionPickerData objectAtIndex:row];
     }
     else{

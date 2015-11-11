@@ -6,19 +6,17 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 
 class MixedChartTypesController: UIViewController {
-
     
     var _chart = FlexChart()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Mixed Chart Types"
         
         // Do any additional setup after loading the view.
-        _chart.bindingX = "name"
-        
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")
         let expenses = XuniSeries(forChart: _chart, binding: "expenses, expenses", name: "Expenses")
         let downloads = XuniSeries(forChart: _chart, binding: "downloads, downloads", name: "Downloads")
@@ -29,12 +27,7 @@ class MixedChartTypesController: UIViewController {
         _chart.series.addObject(downloads)
         
         _chart.itemsSource = ChartData.demoData()
-        
-        _chart.legend.orientation = XuniChartLegendOrientation.Auto
-        _chart.legend.position = XuniChartLegendPosition.Auto
-        _chart.tooltip.isVisible = true
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
+        _chart.bindingX = "name"
         
         self.view.addSubview(_chart)
     }

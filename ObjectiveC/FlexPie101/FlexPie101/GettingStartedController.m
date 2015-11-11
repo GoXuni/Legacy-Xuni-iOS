@@ -6,7 +6,7 @@
 //
 
 #import "GettingStartedController.h"
-#import "FlexPieKit/FlexPieKit.h"
+#import "XuniFlexPieKit/XuniFlexPieKit.h"
 #import "PieChartData.h"
 
 @interface GettingStartedController ()

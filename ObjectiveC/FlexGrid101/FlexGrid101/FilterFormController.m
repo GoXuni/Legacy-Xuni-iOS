@@ -8,7 +8,7 @@
 #import "FilterFormController.h"
 #import "CustomerData.h"
 #import "FilterController.h"
-#import "FlexGridKit/FlexGridKit.h"
+#import "XuniFlexGridKit/XuniFlexGridKit.h"
 #import "SharedFilterData.h"
 
 @interface FilterFormController (){

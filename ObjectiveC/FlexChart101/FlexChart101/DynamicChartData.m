@@ -10,9 +10,7 @@
 
 @implementation DynamicChartData
 
-
-
--(id)initWithNum:(NSNumber *)time trucks:(NSNumber *)trucks ships:(NSNumber *)ships planes:(NSNumber *)planes{
+- (id)initWithNum:(NSString *)time trucks:(NSNumber *)trucks ships:(NSNumber *)ships planes:(NSNumber *)planes{
     self = [super init];
     if(self){
         _time = time;
@@ -23,26 +21,46 @@
     return self;
 }
 
-+(NSNumber *) generateRandom: (unsigned int) max{
-    return [NSNumber numberWithUnsignedInteger:(arc4random()% max)];
++ (NSInteger)randomNumberBetween:(NSInteger)min max:(NSInteger)max {
+    return min + rand() % (max - min + 1);
 }
 
-+(NSMutableArray *) demoData{
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 8; i++) {
-        DynamicChartData *dynamic = [[DynamicChartData alloc]initWithNum:@(i) trucks:@(920.0 + [[DynamicChartData generateRandom:(101)] integerValue]) ships: @(910.0 + [[DynamicChartData generateRandom:(101)] integerValue]) planes:@(900.0 + [[DynamicChartData generateRandom:(101)] integerValue])];
-        [array addObject:dynamic];
++ (DynamicChartData *)getOneData {
+    NSInteger num = [DynamicChartData randomNumberBetween:0 max:1000];
+    
+    while (num < 900)
+    {
+        num = [DynamicChartData randomNumberBetween:0 max:1000];
     }
+    
+    NSNumber *trucks = [NSNumber numberWithInteger:num + 20];
+    NSNumber *ships = [NSNumber numberWithInteger:num + 10];
+    NSNumber *planes = [NSNumber numberWithInteger:num];
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"mm:ss"];
+    NSDate *d = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSString *time = [NSString stringWithFormat:@"%@",[dateFormat stringFromDate:d]];
+    
+    return [[DynamicChartData alloc] initWithNum:time trucks:trucks ships:ships planes:planes];
+}
+
++ (NSMutableArray *)demoData {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < 8; i++) {
+        [array addObject:[DynamicChartData getOneData]];
+    }
+    
     return array;
 }
-+(NSMutableArray *) dynamicData: (NSMutableArray *) array{
-    if ([array count] > 8) {
+
++ (NSMutableArray *)dynamicData:(NSMutableArray *)array {
+    if ([array count] > 30) {
         [array removeObjectAtIndex:0];
     }
-    DynamicChartData *d = (DynamicChartData *)[array objectAtIndex:7];
     
-    DynamicChartData *dynamic = [[DynamicChartData alloc]initWithNum:@([d.time integerValue]+1) trucks:@(920.0 + [[DynamicChartData generateRandom:(81)] integerValue]) ships: @(910.0 + [[DynamicChartData generateRandom:(91)] integerValue]) planes:@(900.0 + [[DynamicChartData generateRandom:(101)] integerValue])];
-    [array addObject:dynamic];
+    [array addObject:[DynamicChartData getOneData]];
 
     return array;
 }

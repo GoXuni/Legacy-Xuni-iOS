@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexGridKit
+import XuniFlexGridKit
 
 class FullTextFilterController: UIViewController, UITextFieldDelegate {
 
@@ -62,26 +62,26 @@ class FullTextFilterController: UIViewController, UITextFieldDelegate {
             else if (String(format: "%.f", d.countryID) == textField.text) {
                 return true
             }
-            else if (String(format: "%.f", d.weight) == textField.text) {
+            else if (String(format: "%.f", d.orderTotal) == textField.text) {
                 return true
             }
-            else if (d.first == textField.text) {
+            else if (d.firstName == textField.text) {
                 return true
             }
-            else if (d.last == textField.text)
+            else if (d.lastName == textField.text)
             {
                 return true
             }
-            else if (d.father == textField.text){
+            else if (d.city == textField.text){
                 return true
             }
-            else if (d.brother == textField.text){
+            else if (d.address == textField.text){
                 return true
             }
-            else if (d.cousin == textField.text){
+            else if (d.country == textField.text){
                 return true
             }
-            else if (dateFormat.stringFromDate(d.hireDate) == textField.text) {
+            else if (dateFormat.stringFromDate(d.lastOrderDate) == textField.text) {
                 return true
             }
             else {

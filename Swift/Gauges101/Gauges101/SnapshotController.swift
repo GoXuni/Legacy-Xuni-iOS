@@ -17,7 +17,7 @@ class SnapshotController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        snapshotButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        snapshotButton = UIButton(type: UIButtonType.System)
         snapshotButton.setTitle("Take a snapshot", forState: UIControlState.Normal)
         snapshotButton.addTarget(self, action: "snapshotButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
 
@@ -45,7 +45,7 @@ class SnapshotController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        var r1 = XuniRect(left: 5, top: 115, width: Double(self.view.bounds.size.width-10), height: Double(self.view.bounds.size.height/2 - 65))
+        let r1 = XuniRect(left: 5, top: 115, width: Double(self.view.bounds.size.width-10), height: Double(self.view.bounds.size.height/2 - 65))
         
         radialGauge.frame = CGRectMake(5, 115, self.view.bounds.size.width-10, self.view.bounds.size.height/2 - 65)
         radialGauge.rectGauge = r1
@@ -58,8 +58,8 @@ class SnapshotController: UIViewController {
         radialGauge.value = Double(arc4random() % 101)
     }
     func snapshotButtonClicked(){
-        var image = UIImage(data: radialGauge.getImage())
-        UIImageWriteToSavedPhotosAlbum(image, self, "imageSavedToPhotoAlbum:error:contextInfo:", nil)
+        let image = UIImage(data: radialGauge.getImage())
+        UIImageWriteToSavedPhotosAlbum(image!, self, "imageSavedToPhotoAlbum:error:contextInfo:", nil)
         snapshotImage.image = image
     }
     func imageSavedToPhotoAlbum(image: UIImage!, error: NSError!, contextInfo: UnsafePointer<Void>){
@@ -73,7 +73,7 @@ class SnapshotController: UIViewController {
             title = "Failure"
             message = error.description
         }
-        var alert = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "OK")
         alert.show();
     }
     /*

@@ -7,7 +7,7 @@
 
 #import "MixedChartTypesController.h"
 #import "ChartData.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 
 @interface MixedChartTypesController ()
 
@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Mixed Chart Types"];
+    
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];
     NSMutableArray *chartData = [ChartData demoData];
@@ -29,14 +31,7 @@
     [chart.series addObject:sales];
     [chart.series addObject:expenses];
     [chart.series addObject:downloads];
-    
     chart.itemsSource = chartData;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
-    
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.isVisible = true;
     
     chart.tag = 1;
     [self.view addSubview:chart];

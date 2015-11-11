@@ -8,13 +8,27 @@
 #import <Foundation/Foundation.h>
 
 @interface CustomerData : NSObject
-@property NSNumber *customerID, *countryID, *weight;
-@property NSString *first, *last, *father, *brother, *cousin;
+@property NSUInteger customerID;
+@property NSString *firstName, *lastName, *address, *city;
+@property NSUInteger countryID;
+@property NSString *country, *postalCode, *email;
+@property NSDate *lastOrderDate;
+@property NSUInteger orderCount;
+@property double orderTotal;
 @property BOOL active;
-@property NSDate *hireDate;
 
--(id)initWithCustomerID:(NSNumber *)customerID countryID:(NSNumber *)countryID weight:(NSNumber *)weight firstName:(NSString *)first lastName:(NSString *) last father:(NSString *) father brother:(NSString *) brother cousin:(NSString *) cousin active: (BOOL) active hireDate:(NSDate *) hireDate;
+-(id)initWithCustomerID:(NSUInteger)customerID countryID:(NSUInteger)countryID firstName:(NSString *)first lastName:(NSString *) last address:(NSString *) address city:(NSString *) city country:(NSString *) country postalCode:(NSString *) postalCode lastOrderDate:(NSDate *) lastOrderDate orderCount:(NSUInteger) orderCount orderTotal:(double)orderTotal active: (BOOL) active;
+
 
 +(NSMutableArray *) getCustomerData: (NSInteger) count;
+
+
+///TODO - remove obsolete properties and constructor
+
+
+/*@property NSNumber *weight;
+@property NSString *first, *last, *father, *brother, *cousin;
+
+@property NSDate *hireDate;*/
 
 @end

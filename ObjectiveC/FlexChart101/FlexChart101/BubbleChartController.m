@@ -7,7 +7,7 @@
 
 #import "BubbleChartController.h"
 #import "ChartData.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 
 @interface BubbleChartController ()
 
@@ -17,24 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Bubble Chart"];
+    
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];
     NSMutableArray *chartData = [ChartData demoData];
     chart.bindingX = @"name";
-    XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
-    XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses, expenses" name:@"Expenses"];
-   
+    XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, downloads" name:@"Sales"];
+    XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses, downloads" name:@"Expenses"];
     
     [chart.series addObject:sales];
     [chart.series addObject:expenses];
     chart.chartType = XuniChartTypeBubble;
     chart.itemsSource = chartData;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
-
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.isVisible = true;
+    chart.loadAnimation.animationMode = XuniAnimationModeSeries;
     
     chart.tag = 1;
     [self.view addSubview:chart];

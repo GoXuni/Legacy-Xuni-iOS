@@ -6,7 +6,7 @@
 //
 
 #import "ColumnDefinitionsController.h"
-#import "FlexGridKit/FlexGridKit.h"
+#import "XuniFlexGridKit/XuniFlexGridKit.h"
 #import "CustomerData.h"
 @interface ColumnDefinitionsController ()
 
@@ -18,16 +18,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     FlexGrid *flex = [[FlexGrid alloc] init];
+    flex.columnHeaderFont = [UIFont boldSystemFontOfSize:flex.columnHeaderFont.pointSize];
     flex.autoGenerateColumns = false;
     FlexColumn *c1 = [[FlexColumn alloc] init];
     c1.binding = @"customerID";
+    c1.header = @"ID";
     c1.width = 100;
     FlexColumn *c2 = [[FlexColumn alloc] init];
-    c2.binding = @"first";
+    c2.binding = @"firstName";
+    c2.header = @"First Name";
     FlexColumn *c3 = [[FlexColumn alloc] init];
-    c3.binding = @"last";
+    c3.binding = @"lastName";
+    c3.header = @"Last Name";
     FlexColumn *c4 = [[FlexColumn alloc] init];
-    c4.binding = @"weight";
+    c4.binding = @"orderTotal";
+    c4.header = @"Order Total";
     c4.format = @"N1";
     [flex.columns addObject:c1];
     [flex.columns addObject:c2];
@@ -36,7 +41,6 @@
     flex.itemsSource = [CustomerData getCustomerData:100];
     flex.isReadOnly = true;
     flex.tag = 1;
-    [self starSizing:flex];
     [self.view addSubview:flex];
 }
 
@@ -44,17 +48,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)starSizing:(FlexGrid*)g{
-    for (int i = 0; i < g.columns.count; i++) {
-        FlexColumn *c = [g.columns objectAtIndex:i];
-        c.widthType = FlexColumnWidthStar;
-        c.width = (i == 0) ? 5 : (i == 3) ? 3 : 4;
-    }
-}
+
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    flex.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65);
+    
+    CGFloat ss = [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.intrinsicContentSize.height;
+    
+    flex.frame = CGRectMake(0, ss, self.view.bounds.size.width, self.view.bounds.size.height - ss);
     [flex setNeedsDisplay];
 }
 @end

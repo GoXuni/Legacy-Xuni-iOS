@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexGridKit
+import XuniFlexGridKit
 
 class EditingController: UIViewController, FlexGridDelegate  {
 

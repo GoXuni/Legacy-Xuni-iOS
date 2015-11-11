@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 
 class MultipleAxesController: UIViewController {
   
@@ -14,10 +14,9 @@ class MultipleAxesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Multiple Axes"
         
         // Do any additional setup after loading the view.
-        _chart.bindingX = "monthName"
-        
         var precip = XuniSeries(forChart: _chart, binding: "precipitation, precipitation", name: "Precip")
         var temp = XuniSeries(forChart: _chart, binding: "temp, temp", name: "Avg. Temp")
     
@@ -44,18 +43,15 @@ class MultipleAxesController: UIViewController {
         _chart.axisY.titleTextColor = UIColor(red: 0.533, green: 0.741, blue: 0.902, alpha: 1)
         _chart.axisX.labelAngle = 90
         _chart.axisX.majorGridVisible = false
-        temp.chartType = XuniChartType.Spline
 
         _chart.series.addObject(precip)
+        temp.chartType = XuniChartType.SplineSymbols
+        temp.axisY = axisT
         _chart.series.addObject(temp)
         
         _chart.itemsSource = WeatherData.demoData()
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
+        _chart.bindingX = "monthName"
         _chart.legend.position = XuniChartLegendPosition.None
-        
-        (_chart.series.objectAtIndex(1) as! XuniSeries).axisY = axisT
-        _chart.tooltip.isVisible = true
         
         self.view.addSubview(_chart)
     }

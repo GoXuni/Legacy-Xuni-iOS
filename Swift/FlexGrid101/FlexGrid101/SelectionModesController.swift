@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexGridKit
+import XuniFlexGridKit
 
 class SelectionModesController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 

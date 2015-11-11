@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 
 class TogglesSeriesController: UIViewController {
     
@@ -20,14 +20,20 @@ class TogglesSeriesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Toggle Series"
         
         // Do any additional setup after loading the view.
         
         _salesLabel.text = "Sales"
         _expensesLabel.text = "Expenses"
         _downloadsLabel.text = "Downloads"
-
-        _chart.bindingX = "name"
+        
+        _salesSwitch.addTarget(self, action: "salesSwitchChanged:", forControlEvents: UIControlEvents.ValueChanged)
+        _expensesSwitch.addTarget(self, action: "expensesSwitchChanged:", forControlEvents: UIControlEvents.ValueChanged)
+        _downloadsSwitch.addTarget(self, action: "downloadsSwitchChanged:", forControlEvents: UIControlEvents.ValueChanged)
+        _salesSwitch.on = true
+        _expensesSwitch.on = true
+        _downloadsSwitch.on = true
         
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")
         let expenses = XuniSeries(forChart: _chart, binding: "expenses, expenses", name: "Expenses")
@@ -38,20 +44,9 @@ class TogglesSeriesController: UIViewController {
         _chart.series.addObject(downloads)
         
         _chart.itemsSource = ChartData.demoData()
-        
-        _chart.legend.orientation = XuniChartLegendOrientation.Auto
-        _chart.legend.position = XuniChartLegendPosition.Auto
-        _chart.tooltip.isVisible = true
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
-        
-        _salesSwitch.addTarget(self, action: "salesSwitchChanged:", forControlEvents: UIControlEvents.ValueChanged)
-        _expensesSwitch.addTarget(self, action: "expensesSwitchChanged:", forControlEvents: UIControlEvents.ValueChanged)
-        _downloadsSwitch.addTarget(self, action: "downloadsSwitchChanged:", forControlEvents: UIControlEvents.ValueChanged)
-        
-        _salesSwitch.on = true
-        _expensesSwitch.on = true
-        _downloadsSwitch.on = true
+        _chart.bindingX = "name"
+        _chart.chartType = XuniChartType.LineSymbols
+        _chart.selectionMode = XuniSelectionMode.Series
         
         self.view.addSubview(_chart)
         self.view.addSubview(_salesSwitch)
@@ -69,19 +64,18 @@ class TogglesSeriesController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        _chart.frame = CGRectMake(0, self.view.bounds.size.height*2/8, self.view.bounds.size.width, self.view.bounds.size.height - (self.view.bounds.size.height*2/8))
-        _salesSwitch.frame = CGRectMake(self.view.bounds.size.width/12, self.view.bounds.size.height*3/16, self.view.bounds.size.width/6, self.view.bounds.size.height/16)
-        _expensesSwitch.frame = CGRectMake(self.view.bounds.size.width/2 - self.view.bounds.size.width/12, self.view.bounds.size.height*3/16, self.view.bounds.size.width/6, self.view.bounds.size.height/16)
-        _downloadsSwitch.frame = CGRectMake(self.view.bounds.size.width*3/4, self.view.bounds.size.height*3/16, self.view.bounds.size.width/6, self.view.bounds.size.height/16)
-        _salesLabel.frame = CGRectMake(self.view.bounds.size.width/12, self.view.bounds.size.height/8, self.view.bounds.size.width/6, self.view.bounds.size.height/16)
-        _expensesLabel.frame = CGRectMake(self.view.bounds.size.width/2 - self.view.bounds.size.width/12, self.view.bounds.size.height/8, self.view.bounds.size.width/6, self.view.bounds.size.height/16)
-        _downloadsLabel.frame = CGRectMake(self.view.bounds.size.width*3/4, self.view.bounds.size.height/8, self.view.bounds.size.width/6, self.view.bounds.size.height/16)
+        
+        _chart.frame = CGRectMake(0, self.view.bounds.size.height * 2 / 8, self.view.bounds.size.width, self.view.bounds.size.height - (self.view.bounds.size.height * 2 / 8))
+        _salesSwitch.frame = CGRectMake(self.view.bounds.size.width / 12, self.view.bounds.size.height * 3 / 16, self.view.bounds.size.width / 6, self.view.bounds.size.height / 16)
+        _expensesSwitch.frame = CGRectMake(self.view.bounds.size.width / 2 - self.view.bounds.size.width / 12, self.view.bounds.size.height * 3 / 16, self.view.bounds.size.width / 6, self.view.bounds.size.height / 16)
+        _downloadsSwitch.frame = CGRectMake(self.view.bounds.size.width * 3 / 4, self.view.bounds.size.height * 3 / 16, self.view.bounds.size.width / 6, self.view.bounds.size.height / 16)
+        _salesLabel.frame = CGRectMake(self.view.bounds.size.width / 12, self.view.bounds.size.height / 8, self.view.bounds.size.width / 6, self.view.bounds.size.height / 16)
+        _expensesLabel.frame = CGRectMake(self.view.bounds.size.width / 2 - self.view.bounds.size.width / 12, self.view.bounds.size.height / 8, self.view.bounds.size.width / 6, self.view.bounds.size.height / 16)
+        _downloadsLabel.frame = CGRectMake(self.view.bounds.size.width * 3 / 4, self.view.bounds.size.height / 8, self.view.bounds.size.width / 6, self.view.bounds.size.height / 16)
         
         _salesLabel.sizeToFit()
         _expensesLabel.sizeToFit()
         _downloadsLabel.sizeToFit()
-        
-        _chart.setNeedsDisplay()
     }
     
     func salesSwitchChanged(switchState: UISwitch) {
@@ -114,6 +108,7 @@ class TogglesSeriesController: UIViewController {
             (_chart.series.objectAtIndex(2) as! XuniSeries).visibility = XuniSeriesVisibility.Hidden
         }
     }
+    
     /*
     // MARK: - Navigation
 

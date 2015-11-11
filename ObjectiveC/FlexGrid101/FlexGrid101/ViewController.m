@@ -18,7 +18,7 @@
     UITableView *table = (UITableView*)[self.view viewWithTag:1];
     table.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     // Do any additional setup after loading the view, typically from a nib.
-    self.samples = @[@"Getting Started", @"Column Definitions", @"Selection Modes", @"Editing", @"Custom Cells", @"Grouping", @"Filter", @"Full Text Filter", @"Edit Confirmation"];
+    self.samples = @[@"Getting Started", @"Column Definitions", @"Selection Modes", @"Editing", @"Custom Cells", @"Grouping", @"Filter", @"Full Text Filter", @"Edit Confirmation", @"Star Sizing", @"Frozen Cells", @"Conditional Formatting", @"Editing form", @"Column Layout", @"On Demand Loading"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,6 +71,24 @@
             break;
         case 8:
             [self performSegueWithIdentifier:@"EditConfirmationSegue" sender:tableView];
+            break;
+        case 9:
+            [self performSegueWithIdentifier:@"StarSizingSegue" sender:tableView];
+            break;
+        case 10:
+            [self performSegueWithIdentifier:@"FrozenCellsSegue" sender:tableView];
+            break;
+        case 11:
+            [self performSegueWithIdentifier:@"ConditionalFormattingSegue" sender:tableView];
+            break;
+        case 12:
+            [self performSegueWithIdentifier:@"EditingFormSegue" sender:tableView];
+            break;
+        case 13:
+            [self performSegueWithIdentifier:@"ColumnLayoutSegue" sender:tableView];
+            break;
+        case 14:
+            [self performSegueWithIdentifier:@"OnDemandSegue" sender:tableView];
             break;
         default:
             break;

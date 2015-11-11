@@ -7,7 +7,7 @@
 
 #import "LegendAndTitlesController.h"
 #import "ChartData.h"
-#import "FlexChartKit/FlexChartKit.h"
+#import "XuniFlexChartKit/XuniFlexChartKit.h"
 
 @interface LegendAndTitlesController ()
 
@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"Legend and Titles"];
     // Do any additional setup after loading the view.
 
     FlexChart *chart = [[FlexChart alloc] init];
@@ -31,8 +32,8 @@
     [chart.series addObject:downloads];
     
     chart.itemsSource = chartData;
-    chart.axisX.labelsVisible = true;
-    chart.axisY.labelsVisible = true;
+    chart.chartType = XuniChartTypeScatter;
+    
     chart.header = @"Sample Chart";
     chart.headerTextColor = [UIColor colorWithRed:0.502 green:0.016 blue:0.302 alpha:1];
     chart.headerFont = [UIFont boldSystemFontOfSize:24.0f];
@@ -41,17 +42,15 @@
     chart.footerTextColor = [UIColor colorWithRed:0.502 green:0.016 blue:0.302 alpha:1];
     chart.footerFont = [UIFont systemFontOfSize:16.0f];
     chart.footerTextAlignment = XuniHorizontalAlignmentCenter;
+    
     chart.axisX.title = @"Country";
     chart.axisX.titleFont = [UIFont boldSystemFontOfSize:16.0f];
     chart.axisX.titleFont = [UIFont italicSystemFontOfSize:16.0f];
+    chart.axisX.majorGridVisible = YES;
     chart.axisY.title = @"Amount";
     chart.axisY.titleFont = [UIFont boldSystemFontOfSize:16.0f];
     chart.axisY.titleFont = [UIFont italicSystemFontOfSize:16.0f];
-    chart.axisY.format = @"c0";
-
-    chart.legend.orientation = XuniChartLegendOrientationAuto;
-    chart.legend.position = XuniChartLegendPositionAuto;
-    chart.tooltip.isVisible = true;
+    chart.axisY.format = @"C0";
     
     chart.tag = 1;
     [self.view addSubview:chart];

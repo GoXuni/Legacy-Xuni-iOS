@@ -7,7 +7,7 @@
 
 #import "SelectionModesController.h"
 #import "CustomerData.h"
-#import "FlexGridKit/FlexGridKit.h"
+#import "XuniFlexGridKit/XuniFlexGridKit.h"
 
 @interface SelectionModesController (){
     NSMutableArray *pickerData;
@@ -23,6 +23,7 @@
     UIPickerView *selectionModePicker = [[UIPickerView alloc] init];
     FlexGrid *flex = [[FlexGrid alloc] init];
     flex.isReadOnly = true;
+    flex.selectionMode = FlexSelectionModeNone;
     flex.itemsSource = [CustomerData getCustomerData:100];
 
     selectionModePicker.delegate = self;
@@ -44,10 +45,14 @@
 
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
+    
+    CGFloat ss = [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.intrinsicContentSize.height;
+    
     FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
     UIPickerView *selectionModePicker = (UIPickerView*)[self.view viewWithTag:2];
-    flex.frame = CGRectMake(0, 206, self.view.bounds.size.width, (self.view.bounds.size.height-206));
-    selectionModePicker.frame = CGRectMake(self.view.bounds.size.width/4, 44, self.view.bounds.size.width/2, 162);
+    selectionModePicker.frame = CGRectMake(self.view.bounds.size.width/4, ss, self.view.bounds.size.width/2, 162);
+    
+    flex.frame = CGRectMake(0, selectionModePicker.frame.origin.y+selectionModePicker.frame.size.height, self.view.bounds.size.width, (self.view.bounds.size.height-selectionModePicker.frame.origin.y-selectionModePicker.frame.size.height));
     [flex setNeedsDisplay];
     [selectionModePicker setNeedsDisplay];
 }

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 
 class HitTestController: UIViewController, FlexChartDelegate {
     
@@ -18,14 +18,14 @@ class HitTestController: UIViewController, FlexChartDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Hit Test"
+        
         // Do any additional setup after loading the view.
-
         _chartElementLabel.text = " Chart element"
         _seriesLabel.text = " Series"
         _pointIndexLabel.text = " Point Index"
         _xyLabel.text = " X Y Values"
         
-        _chart.bindingX = "x"
         let seriesCosX = XuniSeries(forChart: _chart, binding: "y, y", name: "cos(x)")
         let seriesSinX = XuniSeries(forChart: _chart, binding: "y, y", name: "sin(x)")
         
@@ -35,17 +35,12 @@ class HitTestController: UIViewController, FlexChartDelegate {
         _chart.series.addObject(seriesCosX)
         _chart.series.addObject(seriesSinX)
         
+        _chart.bindingX = "x"
         _chart.delegate = self
         _chart.chartType = XuniChartType.LineSymbols
-        _chart.axisY.format = "f"
+        _chart.axisY.format = "F"
         _chart.header = "Trigonometric Functions"
         _chart.footer = "Cartesian coordinates"
-        
-        _chart.legend.orientation = XuniChartLegendOrientation.Auto
-        _chart.legend.position = XuniChartLegendPosition.Auto
-        _chart.tooltip.isVisible = true
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
         
         self.view.addSubview(_chart)
         self.view.addSubview(_chartElementLabel)
@@ -61,23 +56,26 @@ class HitTestController: UIViewController, FlexChartDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        _chart.frame = CGRectMake(0, self.view.bounds.size.height/8, self.view.bounds.size.width, self.view.bounds.size.height*5/8)
-        _seriesLabel.frame = CGRectMake(0, self.view.bounds.size.height * 13/16, self.view.bounds.size.width, self.view.bounds.size.height/16)
-        _pointIndexLabel.frame = CGRectMake(0, self.view.bounds.size.height * 14/16, self.view.bounds.size.width, self.view.bounds.size.height/16)
-        _xyLabel.frame = CGRectMake(0, self.view.bounds.size.height * 15/16, self.view.bounds.size.width, self.view.bounds.size.height/16)
-        _chartElementLabel.frame = CGRectMake(0, self.view.bounds.size.height * 6/8, self.view.bounds.size.width, self.view.bounds.size.height/16)
-
+        
+        _chart.frame = CGRectMake(0, self.view.bounds.size.height / 8, self.view.bounds.size.width, self.view.bounds.size.height * 5 / 8)
+        _seriesLabel.frame = CGRectMake(0, self.view.bounds.size.height * 13 / 16, self.view.bounds.size.width, self.view.bounds.size.height / 16)
+        _pointIndexLabel.frame = CGRectMake(0, self.view.bounds.size.height * 14 / 16, self.view.bounds.size.width, self.view.bounds.size.height / 16)
+        _xyLabel.frame = CGRectMake(0, self.view.bounds.size.height * 15 / 16, self.view.bounds.size.width, self.view.bounds.size.height / 16)
+        _chartElementLabel.frame = CGRectMake(0, self.view.bounds.size.height * 6 / 8, self.view.bounds.size.width, self.view.bounds.size.height / 16)
     }
     
     func tapped(point: XuniPoint!) -> Bool {
-
         var hitTest = _chart.hitTest(point)
+        var seriesName = (hitTest.series != nil) ? hitTest.series.name : ""
+        
         _pointIndexLabel.text = " Point Index: " + String(hitTest.pointIndex);
-        _xyLabel.text = " X:" + String(stringInterpolationSegment: point.x) + " Y:" + String(stringInterpolationSegment: point.y)
-        _seriesLabel.text = " Series: " + String(hitTest.series.name)
+        _xyLabel.text = " X:" + String(format: "%1.2f", hitTest.x) + " Y:" + String(format: "%1.2f", hitTest.y)
+        _seriesLabel.text = " Series: " + seriesName
         _chartElementLabel.text = " Chart element: " + getChartTypeString(hitTest.chartElement)
-        return true
+        
+        return false;
     }
+    
     func getChartTypeString(chartElement: XuniChartElement) -> String {
         switch (chartElement) {
             case XuniChartElement.PlotArea:
@@ -100,6 +98,7 @@ class HitTestController: UIViewController, FlexChartDelegate {
                 return "Invalid Type"
         }
     }
+    
     /*
     // MARK: - Navigation
 

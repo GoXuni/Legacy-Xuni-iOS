@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexPieKit
+import XuniFlexPieKit
 
 class SnapshotController: UIViewController {
     
@@ -24,7 +24,7 @@ class SnapshotController: UIViewController {
         _pieChart.itemsSource = pieData
         _pieChart.tooltip.isVisible = true
         
-        _snapshotButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        _snapshotButton = UIButton(type: UIButtonType.System)
         _snapshotButton.setTitle("Take a snapshot", forState: UIControlState.Normal)
         _snapshotButton.addTarget(self, action: "snapshotButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -45,8 +45,8 @@ class SnapshotController: UIViewController {
     }
     
     func snapshotButtonClicked(){
-        var image = UIImage(data: _pieChart.getImage())
-        UIImageWriteToSavedPhotosAlbum(image, self, "imageSavedToPhotoAlbum:error:contextInfo:", nil)
+        let image = UIImage(data: _pieChart.getImage())
+        UIImageWriteToSavedPhotosAlbum(image!, self, "imageSavedToPhotoAlbum:error:contextInfo:", nil)
     }
     func imageSavedToPhotoAlbum(image: UIImage!, error: NSError!, contextInfo: UnsafePointer<Void>){
         var message = String()
@@ -59,7 +59,7 @@ class SnapshotController: UIViewController {
             title = "Failure"
             message = error.description
         }
-        var alert = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "OK")
         alert.show();
     }
     /*

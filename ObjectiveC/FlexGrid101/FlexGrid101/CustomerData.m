@@ -9,25 +9,29 @@
 
 @implementation CustomerData
 
--(id)initWithCustomerID:(NSNumber *)customerID countryID:(NSNumber *)countryID weight:(NSNumber *)weight firstName:(NSString *)first lastName:(NSString *) last father:(NSString *) father brother:(NSString *) brother cousin:(NSString *) cousin active: (BOOL) active hireDate:(NSDate *) hireDate{
+-(id)initWithCustomerID:(NSUInteger)customerID countryID:(NSUInteger)countryID firstName:(NSString *)first lastName:(NSString *) last address:(NSString *) address city:(NSString *) city country:(NSString *) country postalCode:(NSString *) postalCode lastOrderDate:(NSDate *)lastOrderDate orderCount:(NSUInteger) orderCount orderTotal:(double)orderTotal active: (BOOL) active
+{
     self = [super init];
     if(self){
         _customerID = customerID;
         _countryID = countryID;
-        _weight = weight;
-        _first = first;
-        _last = last;
-        _father = father;
-        _brother = brother;
-        _cousin = cousin;
+        _firstName = first;
+        _lastName = last;
         _active = active;
-        _hireDate = hireDate;
+        _address = address;
+        _city = city;
+        _country = country;
+        _postalCode = postalCode;
+        _lastOrderDate = lastOrderDate;
+        _orderCount = orderCount;
+        _orderTotal = orderTotal;
     }
     return self;
 }
 
-+(NSNumber *) generateRandom: (NSUInteger) max{
-    return [NSNumber numberWithUnsignedInteger:(arc4random()% max)];
+
++(NSUInteger) generateRandom: (NSUInteger) max{
+    return arc4random()% max;
 }
 +(BOOL)generateRandomBool{
     int random = (arc4random() % ((unsigned)RAND_MAX+1));
@@ -46,26 +50,40 @@
     NSArray *lastNamesArray = [lastNames componentsSeparatedByString:@"|"];
     NSString *countries = @"China|India|United States|Indonesia|Brazil|Pakistan|Bangladesh|Nigeria|Russia|Japan|Mexico|Philippines|Vietnam|Germany|Ethiopia|Egypt|Iran|Turkey|Congo|France|Thailand|United Kingdom|Italy|Myanmar";
     NSArray *countriesArray = [countries componentsSeparatedByString:@"|"];
+    
+    NSString *cities = @"Honolulu|Los Angeles|San Francisco|Las Vegas|Cancun|Chicago|New York|San Paolo|Miami|Dublin|London|Paris|Addis-Abeba|St. Petersburg|Frankfurt|Istanbul|Isfahan|Cairo|Milano|New Delhi|Bangalor|Mumbai|Dhaka|Tokyo|Osaka|Bangkok|Yangon|Manila";
+    NSArray *citiesArray = [cities componentsSeparatedByString:@"|"];
+    
+    NSString *streets = @"1st St.|Victory St.|Central Ave.|822th St.";
+    NSArray *streetsArray = [streets componentsSeparatedByString:@"|"];
+    
+    NSString *emails = @"info@google.com|info@apple.com|info@microsoft.com|info@samsung.com|info@oracle.com";
+    NSArray *emailsArray = [emails componentsSeparatedByString:@"|"];
+
+    
     NSDate *now = [NSDate date];
     NSDate *previousDate;
     NSDateComponents *dateComps = [[NSDateComponents alloc] init];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSMutableArray *array = [[NSMutableArray alloc] init];
     
-    for (NSInteger i = 0; i < total; i++) {
-        dateComps.day = ([[CustomerData generateRandom:1000] integerValue]* -1);
+    for (int i = 0; i < total; i++) {
+        dateComps.day = ([CustomerData generateRandom:1000] * -1);
         previousDate = [calendar dateByAddingComponents:dateComps toDate:now options:false];
         CustomerData *customer = [[CustomerData alloc] init];
-        customer.customerID = @(i);
-        customer.countryID = @([[CustomerData generateRandom:[countriesArray count]] integerValue]);
-        customer.weight = @(100 +[[CustomerData generateRandom:150] integerValue]);
-        customer.first = [firstNamesArray objectAtIndex:[[CustomerData generateRandom:[firstNamesArray count]] integerValue]];
-        customer.last = [lastNamesArray objectAtIndex:[[CustomerData generateRandom:[lastNamesArray count]] integerValue]];
-        customer.father = [firstNamesArray objectAtIndex:[[CustomerData generateRandom:[firstNamesArray count]] integerValue]];
-        customer.brother = [firstNamesArray objectAtIndex:[[CustomerData generateRandom:[firstNamesArray count]] integerValue]];
-        customer.cousin = [firstNamesArray objectAtIndex:[[CustomerData generateRandom:[firstNamesArray count]] integerValue]];
+        customer.customerID = i;
+        customer.countryID = [CustomerData generateRandom:[countriesArray count]];
+        customer.country = [countriesArray objectAtIndex:customer.countryID];
+        customer.firstName = [firstNamesArray objectAtIndex:[CustomerData generateRandom:[firstNamesArray count]]];
+        customer.lastName = [lastNamesArray objectAtIndex:[CustomerData generateRandom:[lastNamesArray count]]];
+        customer.city = [citiesArray objectAtIndex:[CustomerData generateRandom:[citiesArray count]]];
+        customer.address = [streetsArray objectAtIndex:[CustomerData generateRandom:[streetsArray count]]];
+        customer.postalCode = [NSString stringWithFormat:@"%lu%lu%lu%lu%lu", [self generateRandom:9], [self generateRandom:9],[self generateRandom:9],[self generateRandom:9],[self generateRandom:9]];
+        customer.lastOrderDate = previousDate;
+        customer.email = [emailsArray objectAtIndex:[CustomerData generateRandom:[emailsArray count]]];
+        customer.orderCount = [self generateRandom:100];
+        customer.orderTotal = [self generateRandom:100]/100.0+[self generateRandom:90000];
         customer.active = [CustomerData generateRandomBool];
-        customer.hireDate = previousDate;
         [array addObject:customer];
     }
     return array;

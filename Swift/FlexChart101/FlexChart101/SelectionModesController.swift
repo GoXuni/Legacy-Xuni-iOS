@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 
 class SelectionModesController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
@@ -18,9 +18,9 @@ class SelectionModesController: UIViewController, UIPickerViewDataSource, UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Selection Modes"
         
         // Do any additional setup after loading the view.
-    
         _chartTypePickerData = ["Column", "Bar", "Scatter", "Line", "LineSymbol", "Area"]
         _chartTypePickerView.delegate = self
         _chartTypePickerView.showsSelectionIndicator = true
@@ -32,8 +32,7 @@ class SelectionModesController: UIViewController, UIPickerViewDataSource, UIPick
         _selectionModePickerView.showsSelectionIndicator = true
         _selectionModePickerView.hidden = false
         _selectionModePickerView.tag = 3
-        
-        _chart.bindingX = "name"
+        _selectionModePickerView.selectRow(1, inComponent: 0, animated: false)
         
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")
         let expenses = XuniSeries(forChart: _chart, binding: "expenses, expenses", name: "Expenses")
@@ -44,12 +43,11 @@ class SelectionModesController: UIViewController, UIPickerViewDataSource, UIPick
         _chart.series.addObject(downloads)
         
         _chart.itemsSource = ChartData.demoData()
-        
-        _chart.stacking = XuniStacking.Stacked
-        _chart.legend.orientation = XuniChartLegendOrientation.Auto
-        _chart.legend.position = XuniChartLegendPosition.Auto
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
+        _chart.bindingX = "name"
+        _chart.selectionMode = XuniSelectionMode.Series
+        _chart.selectedBorderColor = UIColor.redColor()
+        _chart.selectedBorderWidth = 3
+        _chart.selectedDashes = [7.5, 2.5]
         
         self.view.addSubview(_chart)
         self.view.addSubview(_chartTypePickerView)
@@ -63,13 +61,15 @@ class SelectionModesController: UIViewController, UIPickerViewDataSource, UIPick
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        _selectionModePickerView.frame = CGRectMake(self.view.bounds.size.width/2, 44, self.view.bounds.size.width/2, 162)
+        _chartTypePickerView.frame = CGRectMake(0, 44, self.view.bounds.size.width / 2, 162)
+        _selectionModePickerView.frame = CGRectMake(self.view.bounds.size.width / 2, 44, self.view.bounds.size.width / 2, 162)
         _chart.frame = CGRectMake(0, 206, self.view.bounds.size.width, self.view.bounds.size.height - 206)
-        _chartTypePickerView.frame = CGRectMake(0, 44, self.view.bounds.size.width/2, 162)
     }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(pickerView.tag == 2){
             return _chartTypePickerData.count
@@ -78,6 +78,7 @@ class SelectionModesController: UIViewController, UIPickerViewDataSource, UIPick
             return _selectionModePickerData.count
         }
     }
+    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(pickerView.tag == 2)
         {
@@ -112,6 +113,7 @@ class SelectionModesController: UIViewController, UIPickerViewDataSource, UIPick
             }
         }
     }
+    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         if(pickerView.tag == 2)
         {
@@ -124,6 +126,7 @@ class SelectionModesController: UIViewController, UIPickerViewDataSource, UIPick
             return "error"
         }
     }
+    
     /*
     // MARK: - Navigation
     

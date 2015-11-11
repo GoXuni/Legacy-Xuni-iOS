@@ -6,7 +6,7 @@
 //
 
 #import "CustomCellsController.h"
-#import "FlexGridKit/FlexGridKit.h"
+#import "XuniFlexGridKit/XuniFlexGridKit.h"
 #import "XuniGaugeKit/XuniGaugeKit.h"
 #import "CustomerData.h"
 
@@ -27,16 +27,19 @@
     flex.tag = 1;
     
     FlexColumn *c1 = [[FlexColumn alloc] init];
-    c1.binding = @"customerID";
+    c1.header = @"First Name";
+    c1.binding = @"firstName";
     FlexColumn *c2 = [[FlexColumn alloc] init];
-    c2.binding = @"first";
+    c2.header = @"Last Name";
+    c2.binding = @"lastName";
     FlexColumn *c3 = [[FlexColumn alloc] init];
-    c3.header = @"performance";
-    c3.binding = @"weight";
+    c3.header = @"Total Orders";
+    c3.binding = @"orderTotal";
     [flex.columns addObject:c1];
     [flex.columns addObject:c2];
     [flex.columns addObject:c3];
     
+    flex.selectionMode = FlexSelectionModeNone;
     flex.itemsSource = [CustomerData getCustomerData:100];
     flex.tag = 1;
     [self starSizing:flex];
@@ -47,12 +50,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    flex.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65);
+    
+    CGFloat ss = [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.intrinsicContentSize.height;
+    
+    flex.frame = CGRectMake(0, ss, self.view.bounds.size.width, self.view.bounds.size.height - ss);
     [flex setNeedsDisplay];
 }
+
 -(void)starSizing:(FlexGrid*)g{
     for (int i = 0; i < g.columns.count; i++) {
         FlexColumn *c = [g.columns objectAtIndex:i];
@@ -63,10 +71,10 @@
 - (void)formatItem:(FlexFormatItemEventArgs*)args{
         FlexGrid *g = (FlexGrid*)[self.view viewWithTag:1];
         FlexColumn *col = [g.columns objectAtIndex:args.col];
-        if ([col.header isEqualToString:@"performance"]) {
+        if ([col.binding isEqualToString:@"orderTotal"]) {
             NSObject *v = [args.panel getCellDataForRow:args.row inColumn:args.col formatted:false];
             if (v != nil) {
-                if (![v.description  isEqual: @"performance"]){
+                if (![v.description  isEqual: @"Total Orders"]){
                     XuniRadialGauge *radialGauge = [[XuniRadialGauge alloc] init];
                     XuniGaugeRange *lower = [[XuniGaugeRange alloc] initWithGauge:radialGauge];
                     lower.min = 0;
@@ -90,10 +98,16 @@
                     radialGauge.min = 0;
                     radialGauge.max = 100;
                     radialGauge.loadAnimation = nil;
-                    radialGauge.value =[v.description integerValue]/3;
+                    radialGauge.value =[v.description doubleValue]*(100.0/90000.0);
                     radialGauge.showRanges = false;
                     
                     CGRect r = [args.panel getCellRectForRow:args.row inColumn:args.col];
+                    
+                    r.size.width-=4;
+                    r.size.height-=4;
+                    
+                    r.origin.x+=2;
+                    r.origin.y+=2;
                     
                     XuniRect *t = [[XuniRect alloc] initLeft:0 top:0 width:r.size.width height:r.size.height];
                     radialGauge.rectGauge = t;

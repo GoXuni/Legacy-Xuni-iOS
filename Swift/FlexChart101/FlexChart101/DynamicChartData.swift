@@ -8,34 +8,55 @@
 import UIKit
 
 class DynamicChartData: NSObject {
-    var time: Double
-    var trucks: Double
-    var ships: Double
-    var planes: Double
+    var time: String
+    var trucks: Int
+    var ships: Int
+    var planes: Int
     
-    init(time: Double, trucks: Double, ships: Double, planes: Double){
+    init(time: String, trucks: Int, ships: Int, planes: Int) {
         self.time = time
         self.trucks = trucks
         self.ships = ships
         self.planes = planes
     }
-    class func demoData() -> NSMutableArray{
-        var array = NSMutableArray()
-        for var i = 0; i < 8; i++ {
-            let dynamic = DynamicChartData(time: Double(i), trucks: Double(920 + arc4random() % 101), ships: Double(910 + arc4random() % 101), planes: Double(900 + arc4random() % 101))
-            array.addObject(dynamic)
+    
+    class func randomNumberBetween(min: Int, max: Int) -> Int {
+        return (min + Int(rand()) % (max - min + 1));
+    }
+    
+    class func getOneData() -> DynamicChartData {
+        var num = DynamicChartData.randomNumberBetween(0, max: 1000)
+        
+        while num < 900 {
+            num = DynamicChartData.randomNumberBetween(0, max: 1000)
         }
+        
+        var trucks = num + 20
+        var ships = num + 10
+        var planes = num
+        var dateFormat = NSDateFormatter()
+        var d = NSDate(timeIntervalSinceNow: 0)
+        dateFormat.dateFormat = "mm:ss"
+        
+        return DynamicChartData(time: dateFormat.stringFromDate(d), trucks: trucks, ships: ships, planes: planes)
+    }
+    
+    class func demoData() -> NSMutableArray {
+        var array = NSMutableArray()
+        
+        for var i = 0; i < 8; i++ {
+            array.addObject(DynamicChartData.getOneData())
+        }
+        
         return array
     }
-    class func dynamicData(array : NSMutableArray) -> NSMutableArray{
-        if(array.count > 8){
+    
+    class func dynamicData(array : NSMutableArray) -> NSMutableArray {
+        if(array.count > 30){
             array.removeObjectAtIndex(0)
         }
         
-        var d = array.objectAtIndex(7) as! DynamicChartData
-        
-        let dynamic = DynamicChartData(time: Double(d.time + 1), trucks: Double(920 + arc4random() % 101), ships: Double(910 + arc4random() % 101), planes: Double(900 + arc4random() % 101))
-        array.addObject(dynamic)
+        array.addObject(DynamicChartData.getOneData())
         
         return array
     }

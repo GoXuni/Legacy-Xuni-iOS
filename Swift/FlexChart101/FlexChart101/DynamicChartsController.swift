@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexChartKit
+import XuniFlexChartKit
 
 class DynamicChartsController: UIViewController {
     
@@ -15,10 +15,9 @@ class DynamicChartsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Dynamic Charts"
         
         // Do any additional setup after loading the view.
-        _chart.bindingX = "time"
-        
         let trucks = XuniSeries(forChart: _chart, binding: "trucks, trucks", name: "Trucks")
         let sales = XuniSeries(forChart: _chart, binding: "ships, ships", name: "Ships")
         let planes = XuniSeries(forChart: _chart, binding: "planes, planes", name: "Planes")
@@ -29,16 +28,15 @@ class DynamicChartsController: UIViewController {
         
         _chartData = DynamicChartData.demoData()
         _chart.itemsSource = _chartData
-        
-        _chart.legend.orientation = XuniChartLegendOrientation.Auto
-        _chart.legend.position = XuniChartLegendPosition.Auto
+        _chart.bindingX = "time"
         _chart.chartType = XuniChartType.Line
-        _chart.loadAnimation.duration = 0
-        _chart.tooltip.isVisible = true
-        _chart.axisX.labelsVisible = true
-        _chart.axisY.labelsVisible = true
+        _chart.tooltip.isVisible = false
+        _chart.palette = XuniPalettes.coral()
         
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "onTick", userInfo: nil, repeats: true)
+        var d = NSDate(timeIntervalSinceNow: _chart.loadAnimation.duration + 0.1)
+        var timer = NSTimer(fireDate: d, interval: 1, target: self, selector: Selector("onTick"), userInfo: nil, repeats: true)
+        var runner = NSRunLoop.currentRunLoop()
+        runner.addTimer(timer, forMode: NSDefaultRunLoopMode)
         
         self.view.addSubview(_chart)
     }
@@ -52,9 +50,12 @@ class DynamicChartsController: UIViewController {
         super.viewDidLayoutSubviews()
         _chart.frame = CGRectMake(0, 55, self.view.bounds.size.width, self.view.bounds.size.height - 55)
     }
-    func onTick(){
+    
+    func onTick() {
+        _chart.isAnimated = false
         _chart.itemsSource = DynamicChartData.dynamicData(_chartData)
     }
+    
     /*
     // MARK: - Navigation
 
