@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8407E6921BA170B3001C1582 /* LineMarkerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8407E6911BA170B3001C1582 /* LineMarkerController.swift */; };
+		8435C94B1C86ACB6001AC90E /* ChartAnnotationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435C94A1C86ACB6001AC90E /* ChartAnnotationsController.swift */; };
+		8456E5891C7D41B7007DBBC9 /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456E5861C7D41B7007DBBC9 /* XuniChartCoreKit.framework */; };
+		8456E58A1C7D41B7007DBBC9 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456E5871C7D41B7007DBBC9 /* XuniCoreKit.framework */; };
+		8456E58B1C7D41B7007DBBC9 /* XuniFlexChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456E5881C7D41B7007DBBC9 /* XuniFlexChartKit.framework */; };
+		84D2E7A01C03043800D46662 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D2E7A21C03043800D46662 /* Localizable.strings */; };
 		84D4F3161BCCB08D000B5960 /* ConditionalFormattingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.swift */; };
 		84D4F3171BCCB08D000B5960 /* CustomPlotElementsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.swift */; };
 		84D4F3201BCF89A1000B5960 /* ScrollingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F31F1BCF89A1000B5960 /* ScrollingController.swift */; };
+		84E33AB91B8D6BF4002AE146 /* UpdateAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.swift */; };
+		F2160FD71B18EC0E00F3ADD5 /* LoadAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.swift */; };
 		F273C2101B45D38000958473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C20F1B45D38000958473 /* AppDelegate.swift */; };
 		F273C2121B45D38000958473 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2111B45D38000958473 /* ViewController.swift */; };
 		F273C2151B45D38000958473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F273C2131B45D38000958473 /* Main.storyboard */; };
 		F273C2171B45D38000958473 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F273C2161B45D38000958473 /* Images.xcassets */; };
 		F273C21A1B45D38000958473 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F273C2181B45D38000958473 /* LaunchScreen.xib */; };
 		F273C2261B45D38000958473 /* FlexChart101Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2251B45D38000958473 /* FlexChart101Tests.swift */; };
-		84E33AB91B8D6BF4002AE146 /* UpdateAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.swift */; };
-		F2160FD71B18EC0E00F3ADD5 /* LoadAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.swift */; };
 		F273C2301B45D65000958473 /* GettingStartedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C22F1B45D65000958473 /* GettingStartedController.swift */; };
 		F273C2321B45D66100958473 /* BasicChartTypesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2311B45D66100958473 /* BasicChartTypesController.swift */; };
 		F273C2341B45D67300958473 /* MixedChartTypesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C2331B45D67300958473 /* MixedChartTypesController.swift */; };
@@ -42,9 +47,6 @@
 		F273C25C1B45D81700958473 /* DynamicChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C25B1B45D81700958473 /* DynamicChartData.swift */; };
 		F273C25E1B45D82900958473 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C25D1B45D82900958473 /* WeatherData.swift */; };
 		F273C2601B45D83400958473 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273C25F1B45D83400958473 /* License.swift */; };
-		F273C2621B45D87D00958473 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C2611B45D87D00958473 /* XuniCoreKit.framework */; };
-		F273C2641B45D88900958473 /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C2631B45D88900958473 /* XuniChartCoreKit.framework */; };
-		F273C2661B45D89D00958473 /* XuniFlexChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F273C2651B45D89D00958473 /* XuniFlexChartKit.framework */; };
 		F2BEDBA01B73E6BE00DD2454 /* DataLabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BEDB9F1B73E6BE00DD2454 /* DataLabelController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,9 +62,20 @@
 
 /* Begin PBXFileReference section */
 		8407E6911BA170B3001C1582 /* LineMarkerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineMarkerController.swift; sourceTree = "<group>"; };
+		8435C94A1C86ACB6001AC90E /* ChartAnnotationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartAnnotationsController.swift; sourceTree = "<group>"; };
+		8456E5861C7D41B7007DBBC9 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = "../../../ObjectiveC/DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniChartCoreKit.framework"; sourceTree = "<group>"; };
+		8456E5871C7D41B7007DBBC9 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../../../ObjectiveC/DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniCoreKit.framework"; sourceTree = "<group>"; };
+		8456E5881C7D41B7007DBBC9 /* XuniFlexChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexChartKit.framework; path = "../../../ObjectiveC/DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniFlexChartKit.framework"; sourceTree = "<group>"; };
+		84D2E79C1C0303D500D46662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		84D2E79D1C0303D500D46662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		84D2E7A11C03043800D46662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84D2E7A31C03043B00D46662 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84D2E7A41C03043C00D46662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalFormattingController.swift; sourceTree = "<group>"; };
 		84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPlotElementsController.swift; sourceTree = "<group>"; };
 		84D4F31F1BCF89A1000B5960 /* ScrollingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingController.swift; sourceTree = "<group>"; };
+		84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateAnimationController.swift; sourceTree = "<group>"; };
+		F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAnimationController.swift; sourceTree = "<group>"; };
 		F273C20A1B45D38000958473 /* FlexChart101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexChart101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F273C20E1B45D38000958473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F273C20F1B45D38000958473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,8 +87,6 @@
 		F273C2241B45D38000958473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F273C2251B45D38000958473 /* FlexChart101Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexChart101Tests.swift; sourceTree = "<group>"; };
 		F273C22F1B45D65000958473 /* GettingStartedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GettingStartedController.swift; sourceTree = "<group>"; };
-		F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAnimationController.swift; sourceTree = "<group>"; };
-		84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateAnimationController.swift; sourceTree = "<group>"; };
 		F273C2311B45D66100958473 /* BasicChartTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicChartTypesController.swift; sourceTree = "<group>"; };
 		F273C2331B45D67300958473 /* MixedChartTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixedChartTypesController.swift; sourceTree = "<group>"; };
 		F273C2351B45D68900958473 /* FinancialChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinancialChartController.swift; sourceTree = "<group>"; };
@@ -98,9 +109,6 @@
 		F273C25B1B45D81700958473 /* DynamicChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicChartData.swift; sourceTree = "<group>"; };
 		F273C25D1B45D82900958473 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		F273C25F1B45D83400958473 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
-		F273C2611B45D87D00958473 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
-		F273C2631B45D88900958473 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = ../../../Controls/XuniChartCoreKit.framework; sourceTree = "<group>"; };
-		F273C2651B45D89D00958473 /* XuniFlexChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexChartKit.framework; path = ../../../Controls/XuniFlexChartKit.framework; sourceTree = "<group>"; };
 		F2BEDB9F1B73E6BE00DD2454 /* DataLabelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLabelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,9 +117,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F273C2621B45D87D00958473 /* XuniCoreKit.framework in Frameworks */,
-				F273C2641B45D88900958473 /* XuniChartCoreKit.framework in Frameworks */,
-				F273C2661B45D89D00958473 /* XuniFlexChartKit.framework in Frameworks */,
+				8456E5891C7D41B7007DBBC9 /* XuniChartCoreKit.framework in Frameworks */,
+				8456E58A1C7D41B7007DBBC9 /* XuniCoreKit.framework in Frameworks */,
+				8456E58B1C7D41B7007DBBC9 /* XuniFlexChartKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,9 +136,9 @@
 		F273C2011B45D38000958473 = {
 			isa = PBXGroup;
 			children = (
-				F273C2651B45D89D00958473 /* XuniFlexChartKit.framework */,
-				F273C2631B45D88900958473 /* XuniChartCoreKit.framework */,
-				F273C2611B45D87D00958473 /* XuniCoreKit.framework */,
+				8456E5861C7D41B7007DBBC9 /* XuniChartCoreKit.framework */,
+				8456E5871C7D41B7007DBBC9 /* XuniCoreKit.framework */,
+				8456E5881C7D41B7007DBBC9 /* XuniFlexChartKit.framework */,
 				F273C20C1B45D38000958473 /* FlexChart101 */,
 				F273C2221B45D38000958473 /* FlexChart101Tests */,
 				F273C20B1B45D38000958473 /* Products */,
@@ -150,41 +158,42 @@
 			isa = PBXGroup;
 			children = (
 				F273C20F1B45D38000958473 /* AppDelegate.swift */,
-				F273C2111B45D38000958473 /* ViewController.swift */,
-				F273C2131B45D38000958473 /* Main.storyboard */,
+				F273C2311B45D66100958473 /* BasicChartTypesController.swift */,
+				F273C2371B45D69A00958473 /* BubbleChartController.swift */,
+				8435C94A1C86ACB6001AC90E /* ChartAnnotationsController.swift */,
+				F273C2551B45D7DF00958473 /* ChartData.swift */,
+				84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.swift */,
+				F273C23F1B45D6E000958473 /* CustomizingAxesController.swift */,
+				84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.swift */,
+				F273C2391B45D6AE00958473 /* CustomTooltipsController.swift */,
+				F2BEDB9F1B73E6BE00DD2454 /* DataLabelController.swift */,
+				F273C25B1B45D81700958473 /* DynamicChartData.swift */,
+				F273C24B1B45D76400958473 /* DynamicChartsController.swift */,
+				F273C2351B45D68900958473 /* FinancialChartController.swift */,
+				F273C2571B45D7EF00958473 /* FinancialData.swift */,
+				F273C22F1B45D65000958473 /* GettingStartedController.swift */,
+				F273C24F1B45D79200958473 /* HitTestController.swift */,
+				F273C2591B45D80200958473 /* HitTestData.swift */,
 				F273C2161B45D38000958473 /* Images.xcassets */,
 				F273C2181B45D38000958473 /* LaunchScreen.xib */,
-				F273C20D1B45D38000958473 /* Supporting Files */,
-				F273C22F1B45D65000958473 /* GettingStartedController.swift */,
-				84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.swift */,
-				84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.swift */,
-				8407E6911BA170B3001C1582 /* LineMarkerController.swift */,
-				84D4F31F1BCF89A1000B5960 /* ScrollingController.swift */,
-				84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.swift */,
-				F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.swift */,
-				F273C2311B45D66100958473 /* BasicChartTypesController.swift */,
-				F273C2331B45D67300958473 /* MixedChartTypesController.swift */,
-				F273C2351B45D68900958473 /* FinancialChartController.swift */,
-				F273C2371B45D69A00958473 /* BubbleChartController.swift */,
-				F273C2391B45D6AE00958473 /* CustomTooltipsController.swift */,
-				F273C23B1B45D6BD00958473 /* ThemingController.swift */,
-				F273C23D1B45D6CF00958473 /* StylingSeriesController.swift */,
-				F273C23F1B45D6E000958473 /* CustomizingAxesController.swift */,
 				F273C2431B45D71B00958473 /* LegendAndTitlesController.swift */,
-				F273C2451B45D72D00958473 /* SelectionModesController.swift */,
-				F273C2471B45D73E00958473 /* TogglesSeriesController.swift */,
-				F273C24B1B45D76400958473 /* DynamicChartsController.swift */,
-				F273C24D1B45D77C00958473 /* ZoomingAndScrollingController.swift */,
-				F273C24F1B45D79200958473 /* HitTestController.swift */,
-				F273C2511B45D7AF00958473 /* SnapshotController.swift */,
-				F273C2531B45D7C700958473 /* MultipleAxesController.swift */,
-				F273C2551B45D7DF00958473 /* ChartData.swift */,
-				F273C2571B45D7EF00958473 /* FinancialData.swift */,
-				F273C2591B45D80200958473 /* HitTestData.swift */,
-				F273C25B1B45D81700958473 /* DynamicChartData.swift */,
-				F273C25D1B45D82900958473 /* WeatherData.swift */,
 				F273C25F1B45D83400958473 /* License.swift */,
-				F2BEDB9F1B73E6BE00DD2454 /* DataLabelController.swift */,
+				8407E6911BA170B3001C1582 /* LineMarkerController.swift */,
+				F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.swift */,
+				F273C2131B45D38000958473 /* Main.storyboard */,
+				F273C2331B45D67300958473 /* MixedChartTypesController.swift */,
+				F273C2531B45D7C700958473 /* MultipleAxesController.swift */,
+				84D4F31F1BCF89A1000B5960 /* ScrollingController.swift */,
+				F273C2451B45D72D00958473 /* SelectionModesController.swift */,
+				F273C2511B45D7AF00958473 /* SnapshotController.swift */,
+				F273C23D1B45D6CF00958473 /* StylingSeriesController.swift */,
+				F273C20D1B45D38000958473 /* Supporting Files */,
+				F273C23B1B45D6BD00958473 /* ThemingController.swift */,
+				F273C2471B45D73E00958473 /* TogglesSeriesController.swift */,
+				84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.swift */,
+				F273C2111B45D38000958473 /* ViewController.swift */,
+				F273C25D1B45D82900958473 /* WeatherData.swift */,
+				F273C24D1B45D77C00958473 /* ZoomingAndScrollingController.swift */,
 			);
 			path = FlexChart101;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				F273C20E1B45D38000958473 /* Info.plist */,
+				84D2E7A21C03043800D46662 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -278,6 +288,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = F273C2011B45D38000958473;
 			productRefGroup = F273C20B1B45D38000958473 /* Products */;
@@ -296,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F273C2151B45D38000958473 /* Main.storyboard in Resources */,
+				84D2E7A01C03043800D46662 /* Localizable.strings in Resources */,
 				F273C21A1B45D38000958473 /* LaunchScreen.xib in Resources */,
 				F273C2171B45D38000958473 /* Images.xcassets in Resources */,
 			);
@@ -326,6 +338,7 @@
 				84E33AB91B8D6BF4002AE146 /* UpdateAnimationController.swift in Sources */,
 				F2160FD71B18EC0E00F3ADD5 /* LoadAnimationController.swift in Sources */,
 				F273C2601B45D83400958473 /* License.swift in Sources */,
+				8435C94B1C86ACB6001AC90E /* ChartAnnotationsController.swift in Sources */,
 				F273C2561B45D7DF00958473 /* ChartData.swift in Sources */,
 				F273C2121B45D38000958473 /* ViewController.swift in Sources */,
 				F273C25E1B45D82900958473 /* WeatherData.swift in Sources */,
@@ -369,10 +382,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		84D2E7A21C03043800D46662 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D2E7A11C03043800D46662 /* Base */,
+				84D2E7A31C03043B00D46662 /* en */,
+				84D2E7A41C03043C00D46662 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		F273C2131B45D38000958473 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F273C2141B45D38000958473 /* Base */,
+				84D2E79D1C0303D500D46662 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -381,6 +405,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F273C2191B45D38000958473 /* Base */,
+				84D2E79C1C0303D500D46662 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -478,10 +503,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/main-frameworks,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexChart101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -494,10 +519,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/main-frameworks,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexChart101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

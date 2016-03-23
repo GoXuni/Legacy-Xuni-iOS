@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Multiple Axes"];
+    [self setTitle:NSLocalizedString(@"Multiple Axes", nil)];
     
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];

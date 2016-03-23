@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Getting Started"];
+    [self setTitle:NSLocalizedString(@"Getting Started", nil)];
     
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];

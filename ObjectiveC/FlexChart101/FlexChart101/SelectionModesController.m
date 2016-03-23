@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Selection Modes"];
+    [self setTitle:NSLocalizedString(@"Selection Modes", nil)];
     // Do any additional setup after loading the view.
     
     chartTypePickerData =[[NSMutableArray alloc] initWithObjects:@"Column", @"Bar", @"Scatter", @"Line", @"LineSymbol", @"Area", nil];

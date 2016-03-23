@@ -10,7 +10,9 @@
 #import "XuniFlexGridKit/XuniFlexGridKit.h"
 @interface EditConfirmationController : UIViewController<FlexGridDelegate>
 
-- (void) beginningEdit:(FlexCellRangeEventArgs *)args;
-- (void) cellEditEnding:(FlexCellRangeEventArgs *)args;
+
+-(bool)beginningEdit:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range;
+-(bool)cellEditEnding:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range cancel:(BOOL)cancel;
+
 
 @end

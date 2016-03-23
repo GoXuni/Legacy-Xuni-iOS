@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Data Labels"];
+    [self setTitle:NSLocalizedString(@"Data Labels", nil)];
     
     // Do any additional setup after loading the view.
     positionPickerData = [[NSMutableArray alloc]initWithObjects:@"None", @"Left", @"Top", @"Right", @"Bottom", @"Center", nil];

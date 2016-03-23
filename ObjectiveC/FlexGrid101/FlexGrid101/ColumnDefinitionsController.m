@@ -34,12 +34,22 @@
     c4.binding = @"orderTotal";
     c4.header = @"Order Total";
     c4.format = @"N1";
-    [flex.columns addObject:c1];
+    
+    FlexColumn *c5 = [[FlexColumn alloc] init];
+    c5.binding = @"countryID";
+    c5.header = @"Country";
+    
+    
+    [flex.columns addObject:c5];
     [flex.columns addObject:c2];
     [flex.columns addObject:c3];
     [flex.columns addObject:c4];
     flex.itemsSource = [CustomerData getCustomerData:100];
-    flex.isReadOnly = true;
+    flex.isReadOnly = false;
+    
+    NSMutableArray *items = [NSMutableArray arrayWithArray:[CustomerData defaultCountries]];
+    c5.dataMap = [[FlexDataMap alloc] initWithArray:items selectedValuePath:@"identifier" displayMemberPath:@"title"];
+    
     flex.tag = 1;
     [self.view addSubview:flex];
 }

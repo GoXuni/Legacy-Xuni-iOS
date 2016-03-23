@@ -14,7 +14,7 @@ class MultipleAxesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Multiple Axes"
+        self.title = NSLocalizedString("Multiple Axes", comment: "")
         
         // Do any additional setup after loading the view.
         var precip = XuniSeries(forChart: _chart, binding: "precipitation, precipitation", name: "Precip")

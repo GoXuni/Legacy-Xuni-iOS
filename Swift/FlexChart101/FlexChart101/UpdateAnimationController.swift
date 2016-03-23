@@ -15,12 +15,12 @@ class UpdateAnimationController: UIViewController, UIPickerViewDataSource, UIPic
     var _chartTypePickerData = NSMutableArray()
     var _updatePositionPickerView = UIPickerView()
     var _updatePositionPickerData = NSMutableArray()
-    var _addPointBtn = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-    var _removePointBtn = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+    var _addPointBtn = UIButton(type: UIButtonType.System)
+    var _removePointBtn = UIButton(type: UIButtonType.System)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Update Animation"
+        self.title = NSLocalizedString("Update Animation", comment: "")
         
         // Do any additional setup after loading the view.
         _chartTypePickerData = ["Column", "Area", "Line", "LineSymbols", "Spline", "SplineSymbols", "SplineArea", "Scatter"]
@@ -36,11 +36,11 @@ class UpdateAnimationController: UIViewController, UIPickerViewDataSource, UIPic
         _updatePositionPickerView.tag = 3
         
         _addPointBtn.tag = 4
-        _addPointBtn.setTitle("Add Point", forState: UIControlState.Normal)
+        _addPointBtn.setTitle(NSLocalizedString("Add Point", comment: ""), forState: UIControlState.Normal)
         _addPointBtn.addTarget(self, action: "addPointAction", forControlEvents: UIControlEvents.TouchUpInside)
         
         _removePointBtn.tag = 5
-        _removePointBtn.setTitle("Remove Point", forState: UIControlState.Normal)
+        _removePointBtn.setTitle(NSLocalizedString("Remove Point", comment: ""), forState: UIControlState.Normal)
         _removePointBtn.addTarget(self, action: "removePointAction", forControlEvents: UIControlEvents.TouchUpInside)
         
         let value = XuniSeries(forChart: _chart, binding: "value", name: "value")
@@ -71,8 +71,8 @@ class UpdateAnimationController: UIViewController, UIPickerViewDataSource, UIPic
         
         _chartTypePickerView.frame = CGRectMake(0, 44, self.view.bounds.size.width / 2, 162)
         _updatePositionPickerView.frame = CGRectMake(self.view.bounds.size.width / 2, 44, self.view.bounds.size.width / 2, 162)
-        _addPointBtn.frame = CGRectMake(20, 206, 100, 40)
-        _removePointBtn.frame = CGRectMake(140, 206, 100, 40)
+        _addPointBtn.frame = CGRectMake(20, 206, 120, 40)
+        _removePointBtn.frame = CGRectMake(160, 206, 120, 40)
         _chart.frame = CGRectMake(0, 206 + 40, self.view.bounds.size.width, self.view.bounds.size.height - 206 - 40)
     }
     

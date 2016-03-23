@@ -54,7 +54,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Update Animation"];
+    [self setTitle:NSLocalizedString(@"Update Animation", nil)];
     
     // Do any additional setup after loading the view.
     chartTypePickerData =[[NSMutableArray alloc] initWithObjects:@"Column", @"Area", @"Line", @"LineSymbols", @"Spline", @"SplineSymbols", @"SplineArea", @"Scatter", nil];
@@ -74,11 +74,11 @@
     [updatePositionPicker selectRow:0 inComponent:0 animated:false];
     
     UIButton *addPointBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    [addPointBtn setTitle:@"Add Point" forState:UIControlStateNormal];
+    [addPointBtn setTitle:NSLocalizedString(@"Add Point", nil) forState:UIControlStateNormal];
     [addPointBtn addTarget:self action:@selector(addPointAction) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *removePointBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    [removePointBtn setTitle:@"Remove Point" forState:UIControlStateNormal];
+    [removePointBtn setTitle:NSLocalizedString(@"Remove Point", nil) forState:UIControlStateNormal];
     [removePointBtn addTarget:self action:@selector(removePointAction) forControlEvents:UIControlEventTouchUpInside];
     
     FlexChart *chart = [[FlexChart alloc] init];
@@ -121,8 +121,8 @@
     
     chartTypePicker.frame = CGRectMake(0, 44, self.view.bounds.size.width / 2, 162);
     updatePositionPicker.frame = CGRectMake(self.view.bounds.size.width / 2, 44, self.view.bounds.size.width / 2, 162);
-    addPointBtn.frame = CGRectMake(20, 206, 100, 40);
-    removePointBtn.frame = CGRectMake(140, 206, 100, 40);
+    addPointBtn.frame = CGRectMake(20, 206, 120, 40);
+    removePointBtn.frame = CGRectMake(160, 206, 150, 40);
     chart.frame = CGRectMake(0, 206 + 40, self.view.bounds.size.width, self.view.bounds.size.height - 206 - 40);
     [chart setNeedsDisplay];
 }

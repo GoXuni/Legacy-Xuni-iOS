@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+  FlexGrid101
+
+  Copyright © 2015 GrapeCity. All rights reserved.
+*/
+
+"On Demand Loading" = "ロードオンデマンド";
+"Column Layout" = "列のレイアウト";
+"Editing form" = "編集用フォーム";
+"Conditional Formatting" = "条件付き書式";
+"Cell Freezing & Merging" = "セルの固定";
+"Star Sizing" = "スターサイズ指定";
+"Edit Confirmation" = "編集の確認";
+"Full Text Filter" = "全文テキストフィルタ";
+"Filter" = "フィルタ処理";
+"Grouping" = "グループ化";
+"Custom Cells" = "カスタムセル";
+"Editing" = "セル内容の編集";
+"Selection Modes" = "選択モード";
+"Column Definitions" = "列の定義";
+"Getting Started" = "FlexGridの基本機能";
+"Row Range" = "行範囲(RowRange)";
+"Row" = "1つの行(Row)";
+"Cell Range" = "セル範囲(CellRange)";
+"Cell" = "1つのセル(Cell)";
+"None" = "設定なし";
+"First Name" = "名(First Name)";
+"Last Name" = "姓(Last Name)";
+"Total Orders" = "発注合計";
+"Ascending" = "昇順";
+"Descending" = "降順";
+"Order Total" = "発注合計";
+"Remove" = "解除";
+"Enter text to Filter" = "テキストを入力してください";
+"Equals" = "値と同じ(Equals)";
+"Ends with" = "値で終わる(Ends with)";
+"Begins with" = "値で始まる(Begins with)";
+"Contains" = "値を含む(Contains)";
+"Do you want to commit the edit?" = "編集した内容を確定しますか？";
+"Ok" = "OK";
+"Cancel" = "キャンセル";
+"ID" = "ID";
+"Total" = "合計";
+"Count" = "件数";
+"Edit Columns" = "表示列の構成を編集";
+"Done" = "完了";

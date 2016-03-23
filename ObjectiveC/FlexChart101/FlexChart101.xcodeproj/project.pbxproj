@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8407E6921BA170B3001C1582 /* LineMarkerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8407E6911BA170B3001C1582 /* LineMarkerController.m */; };
+		841A3ABA1C0593F2004853DD /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A3AB71C0593F2004853DD /* XuniChartCoreKit.framework */; };
+		841A3ABB1C0593F2004853DD /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A3AB81C0593F2004853DD /* XuniCoreKit.framework */; };
+		841A3ABC1C0593F2004853DD /* XuniFlexChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A3AB91C0593F2004853DD /* XuniFlexChartKit.framework */; };
+		8435C9491C869C11001AC90E /* ChartAnnotationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8435C9481C869C11001AC90E /* ChartAnnotationsController.m */; };
+		84D2E7911C02C02500D46662 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D2E7931C02C02500D46662 /* Localizable.strings */; };
 		84D4F3161BCCB08D000B5960 /* ConditionalFormattingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.m */; };
 		84D4F3171BCCB08D000B5960 /* CustomPlotElementsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.m */; };
 		84D4F3201BCF89A1000B5960 /* ScrollingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F31F1BCF89A1000B5960 /* ScrollingController.m */; };
-		84D95B261BD49BAA00D08667 /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D95B231BD49BAA00D08667 /* XuniChartCoreKit.framework */; };
-		84D95B271BD49BAA00D08667 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D95B241BD49BAA00D08667 /* XuniCoreKit.framework */; };
-		84D95B281BD49BAA00D08667 /* XuniFlexChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D95B251BD49BAA00D08667 /* XuniFlexChartKit.framework */; };
 		84E33AB91B8D6BF4002AE146 /* UpdateAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.m */; };
 		F2160F8B1B18D45F00F3ADD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160F8A1B18D45F00F3ADD5 /* main.m */; };
 		F2160F8E1B18D45F00F3ADD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160F8D1B18D45F00F3ADD5 /* AppDelegate.m */; };
@@ -62,15 +64,22 @@
 /* Begin PBXFileReference section */
 		8407E6901BA170B3001C1582 /* LineMarkerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineMarkerController.h; sourceTree = "<group>"; };
 		8407E6911BA170B3001C1582 /* LineMarkerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineMarkerController.m; sourceTree = "<group>"; };
+		841A3AB71C0593F2004853DD /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = "../DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniChartCoreKit.framework"; sourceTree = "<group>"; };
+		841A3AB81C0593F2004853DD /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniCoreKit.framework"; sourceTree = "<group>"; };
+		841A3AB91C0593F2004853DD /* XuniFlexChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexChartKit.framework; path = "../DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniFlexChartKit.framework"; sourceTree = "<group>"; };
+		8435C9471C869C11001AC90E /* ChartAnnotationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartAnnotationsController.h; sourceTree = "<group>"; };
+		8435C9481C869C11001AC90E /* ChartAnnotationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartAnnotationsController.m; sourceTree = "<group>"; };
+		84D2E7821C02BAA100D46662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		84D2E7831C02BAA100D46662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		84D2E7921C02C02500D46662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84D2E7941C02C02900D46662 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
+		84D2E7951C02C02B00D46662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		84D4F3121BCCB08D000B5960 /* ConditionalFormattingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionalFormattingController.h; sourceTree = "<group>"; };
 		84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionalFormattingController.m; sourceTree = "<group>"; };
 		84D4F3141BCCB08D000B5960 /* CustomPlotElementsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPlotElementsController.h; sourceTree = "<group>"; };
 		84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPlotElementsController.m; sourceTree = "<group>"; };
 		84D4F31E1BCF89A1000B5960 /* ScrollingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollingController.h; sourceTree = "<group>"; };
 		84D4F31F1BCF89A1000B5960 /* ScrollingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollingController.m; sourceTree = "<group>"; };
-		84D95B231BD49BAA00D08667 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = "../DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniChartCoreKit.framework"; sourceTree = "<group>"; };
-		84D95B241BD49BAA00D08667 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniCoreKit.framework"; sourceTree = "<group>"; };
-		84D95B251BD49BAA00D08667 /* XuniFlexChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexChartKit.framework; path = "../DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniFlexChartKit.framework"; sourceTree = "<group>"; };
 		84E33AB71B8D6BF4002AE146 /* UpdateAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateAnimationController.h; sourceTree = "<group>"; };
 		84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateAnimationController.m; sourceTree = "<group>"; };
 		F2160F851B18D45F00F3ADD5 /* FlexChart101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexChart101.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +88,7 @@
 		F2160F8C1B18D45F00F3ADD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F2160F8D1B18D45F00F3ADD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F2160F8F1B18D45F00F3ADD5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F2160F901B18D45F00F3ADD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F2160F901B18D45F00F3ADD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		F2160F931B18D45F00F3ADD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2160F951B18D45F00F3ADD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F2160F981B18D45F00F3ADD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -143,9 +152,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D95B261BD49BAA00D08667 /* XuniChartCoreKit.framework in Frameworks */,
-				84D95B271BD49BAA00D08667 /* XuniCoreKit.framework in Frameworks */,
-				84D95B281BD49BAA00D08667 /* XuniFlexChartKit.framework in Frameworks */,
+				841A3ABA1C0593F2004853DD /* XuniChartCoreKit.framework in Frameworks */,
+				841A3ABB1C0593F2004853DD /* XuniCoreKit.framework in Frameworks */,
+				841A3ABC1C0593F2004853DD /* XuniFlexChartKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,9 +171,9 @@
 		F2160F7C1B18D45F00F3ADD5 = {
 			isa = PBXGroup;
 			children = (
-				84D95B231BD49BAA00D08667 /* XuniChartCoreKit.framework */,
-				84D95B241BD49BAA00D08667 /* XuniCoreKit.framework */,
-				84D95B251BD49BAA00D08667 /* XuniFlexChartKit.framework */,
+				841A3AB71C0593F2004853DD /* XuniChartCoreKit.framework */,
+				841A3AB81C0593F2004853DD /* XuniCoreKit.framework */,
+				841A3AB91C0593F2004853DD /* XuniFlexChartKit.framework */,
 				F2160F871B18D45F00F3ADD5 /* FlexChart101 */,
 				F2160FA11B18D45F00F3ADD5 /* FlexChart101Tests */,
 				F2160F861B18D45F00F3ADD5 /* Products */,
@@ -189,6 +198,8 @@
 				F2160FB21B18EABA00F3ADD5 /* BasicChartTypesController.m */,
 				F2160FBA1B18EB1200F3ADD5 /* BubbleChartController.h */,
 				F2160FBB1B18EB1200F3ADD5 /* BubbleChartController.m */,
+				8435C9471C869C11001AC90E /* ChartAnnotationsController.h */,
+				8435C9481C869C11001AC90E /* ChartAnnotationsController.m */,
 				F2C5897C1B1CAAF100371F29 /* ChartData.h */,
 				F2C5897D1B1CAAF100371F29 /* ChartData.m */,
 				84D4F3121BCCB08D000B5960 /* ConditionalFormattingController.h */,
@@ -260,6 +271,7 @@
 			children = (
 				F2160F891B18D45F00F3ADD5 /* Info.plist */,
 				F2160F8A1B18D45F00F3ADD5 /* main.m */,
+				84D2E7931C02C02500D46662 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -344,6 +356,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = F2160F7C1B18D45F00F3ADD5;
 			productRefGroup = F2160F861B18D45F00F3ADD5 /* Products */;
@@ -362,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2160F941B18D45F00F3ADD5 /* Main.storyboard in Resources */,
+				84D2E7911C02C02500D46662 /* Localizable.strings in Resources */,
 				F2160F991B18D45F00F3ADD5 /* LaunchScreen.xib in Resources */,
 				F2160F961B18D45F00F3ADD5 /* Images.xcassets in Resources */,
 			);
@@ -386,6 +400,7 @@
 				F2160FCE1B18EBC600F3ADD5 /* LegendAndTitlesController.m in Sources */,
 				F2C5898F1B1CF43500371F29 /* FinancialData.m in Sources */,
 				F2160FC21B18EB3D00F3ADD5 /* ThemingController.m in Sources */,
+				8435C9491C869C11001AC90E /* ChartAnnotationsController.m in Sources */,
 				F2774A441B21EE69008E721D /* HitTestData.m in Sources */,
 				F2160FC81B18EB9200F3ADD5 /* StylingSeriesController.m in Sources */,
 				F2BEDB9E1B73DF4000DD2454 /* DataLabelController.m in Sources */,
@@ -436,10 +451,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		84D2E7931C02C02500D46662 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D2E7921C02C02500D46662 /* Base */,
+				84D2E7941C02C02900D46662 /* en */,
+				84D2E7951C02C02B00D46662 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		F2160F921B18D45F00F3ADD5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F2160F931B18D45F00F3ADD5 /* Base */,
+				84D2E7831C02BAA100D46662 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -448,6 +474,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2160F981B18D45F00F3ADD5 /* Base */,
+				84D2E7821C02BAA100D46662 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -545,10 +572,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "/Grapecity/Ringo/Development/iOS/ObjectiveC/DerivedData/FlexChartWorkspace/Build/Products/Debug-framework";
+				FRAMEWORK_SEARCH_PATHS = ../../../Controls;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
-					/Volumes/frameworks,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexChart101/Info.plist;
@@ -569,11 +595,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Grapecity/Ringo/Development/iOS/ObjectiveC/DerivedData/FlexChartWorkspace/Build/Products/Debug-framework",
+					../../../Controls,
 				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
-					/Volumes/frameworks,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexChart101/Info.plist;

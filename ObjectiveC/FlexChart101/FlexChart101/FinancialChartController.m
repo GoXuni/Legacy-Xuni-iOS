@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Financial Chart"];
+    [self setTitle:NSLocalizedString(@"Financial Chart", nil)];
     
     // Do any additional setup after loading the view.
     UIPickerView *pickerView;

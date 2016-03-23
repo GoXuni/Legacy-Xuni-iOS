@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     
     UIButton *snapshotButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [snapshotButton setTitle:@"Take a snapshot" forState:UIControlStateNormal];
+    [snapshotButton setTitle:NSLocalizedString(@"Take a snapshot", nil) forState:UIControlStateNormal];
     [snapshotButton addTarget:self action:@selector(snapshotButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     FlexPie *pieChart = [[FlexPie alloc] init];
     NSMutableArray *pieData = [PieChartData demoData];
@@ -57,14 +57,14 @@
     NSString *message;
     NSString *title;
     if (!error) {
-        title = @"Success";
-        message = @"Image was saved to Camera Roll succesfully";
+        title = NSLocalizedString(@"Success", nil);
+        message = NSLocalizedString(@"Image was saved to Camera Roll successfully", nil);
     }
     else{
-        title = @"Failure";
+        title = NSLocalizedString(@"Failure", nil);
         message = [error description];
     }
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
     [alert show];
 }
 /*

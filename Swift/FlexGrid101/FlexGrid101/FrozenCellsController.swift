@@ -19,9 +19,18 @@ class FrozenCellsController: UIViewController {
         _flex.isReadOnly = true
         _flex.columnHeaderFont = UIFont.boldSystemFontOfSize(_flex.columnHeaderFont.pointSize)
         _flex.itemsSource = CustomerData.getCustomerData(100)
-        _flex.autoSizeColumn(0, to: Int32(Int(_flex.columns.count)-1))
+        _flex.autoSizeColumns(0, to: Int32(Int(_flex.columns.count)-1))
         _flex.frozenRows = 1
         _flex.frozenColumns = 1
+        
+        _flex.allowMerging = FlexGridAllowMerging.Cells;
+        
+        for(var i = 0; i<Int(_flex.columns.count); i++)
+        {
+            let fc: FlexColumn = _flex.columns.objectAtIndex(UInt(i)) as! FlexColumn
+            fc.allowMerging = true
+        }
+        
         
         self.view.addSubview(_flex)
     }

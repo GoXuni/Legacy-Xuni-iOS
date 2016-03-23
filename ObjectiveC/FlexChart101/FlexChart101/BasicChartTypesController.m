@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Basic Chart Types"];
+    [self setTitle:NSLocalizedString(@"Basic Chart Types", nil)];
     
     // Do any additional setup after loading the view.
     chartTypePickerData =[[NSMutableArray alloc] initWithObjects:@"Column", @"Bar", @"Scatter", @"Line", @"LineSymbol", @"Area", nil];

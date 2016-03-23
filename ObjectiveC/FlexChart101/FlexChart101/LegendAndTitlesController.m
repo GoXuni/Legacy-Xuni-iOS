@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Legend and Titles"];
+    [self setTitle:NSLocalizedString(@"Legend and Titles", nil)];
     // Do any additional setup after loading the view.
 
     FlexChart *chart = [[FlexChart alloc] init];

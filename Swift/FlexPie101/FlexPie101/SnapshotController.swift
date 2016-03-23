@@ -25,7 +25,7 @@ class SnapshotController: UIViewController {
         _pieChart.tooltip.isVisible = true
         
         _snapshotButton = UIButton(type: UIButtonType.System)
-        _snapshotButton.setTitle("Take a snapshot", forState: UIControlState.Normal)
+        _snapshotButton.setTitle(NSLocalizedString("Take a snapshot", comment: "Take a snapshot"), forState: UIControlState.Normal)
         _snapshotButton.addTarget(self, action: "snapshotButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(_pieChart)
@@ -52,14 +52,14 @@ class SnapshotController: UIViewController {
         var message = String()
         var title = String()
         if(error == nil){
-            title = "Success"
-            message = "Image was saved to Camera Roll successfully"
+            title = NSLocalizedString("Success", comment: "Success")
+            message = NSLocalizedString("Image was saved to Camera Roll successfully", comment: "Image was saved to Camera Roll successfully")
         }
         else{
-            title = "Failure"
+            title = NSLocalizedString("Failure", comment: "Failure")
             message = error.description
         }
-        let alert = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: NSLocalizedString("OK", comment: "OK"))
         alert.show();
     }
     /*

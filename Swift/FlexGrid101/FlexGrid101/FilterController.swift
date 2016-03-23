@@ -21,11 +21,11 @@ class FilterController: UIViewController {
 
         // Do any additional setup after loading the view.
         _filterButton = UIButton(type: UIButtonType.System) 
-        _filterButton.setTitle("Filter", forState: UIControlState.Normal)
+        _filterButton.setTitle(NSLocalizedString("Filter", comment: ""), forState: UIControlState.Normal)
         _filterButton.addTarget(self, action: "filterButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
         _removeButton = UIButton(type: UIButtonType.System)
-        _removeButton.setTitle("Remove", forState: UIControlState.Normal)
+        _removeButton.setTitle(NSLocalizedString("Remove", comment: ""), forState: UIControlState.Normal)
         _removeButton.addTarget(self, action: "removeButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
         _flex.isReadOnly = true
@@ -83,10 +83,10 @@ class FilterController: UIViewController {
         self.performSegueWithIdentifier("FilterFormSegue", sender: self)
     }
     func containsFilter(){
-        var dateFormat = NSDateFormatter()
+        let dateFormat = NSDateFormatter()
         dateFormat.setLocalizedDateFormatFromTemplate("M/d/yy")
         _flex.collectionView.filter = {(item : NSObject?) -> Bool in
-            var d = item as! CustomerData
+            let d = item as! CustomerData
             
             if (String(format: "%.f", d.customerID).rangeOfString(self.sharedData.filterString) != nil) {
                 return true
@@ -123,10 +123,10 @@ class FilterController: UIViewController {
     }
     
     func equalsFilter(){
-        var dateFormat = NSDateFormatter()
+        let dateFormat = NSDateFormatter()
         dateFormat.setLocalizedDateFormatFromTemplate("M/d/yy")
         _flex.collectionView.filter = {(item : NSObject?) -> Bool in
-            var d = item as! CustomerData
+            let d = item as! CustomerData
             
             if (String(format: "%.f", d.customerID) == self.sharedData.filterString) {
                 return true
@@ -162,10 +162,10 @@ class FilterController: UIViewController {
         } as IXuniPredicate
     }
     func endsWithFilter(){
-        var dateFormat = NSDateFormatter()
+        let dateFormat = NSDateFormatter()
         dateFormat.setLocalizedDateFormatFromTemplate("M/d/yy")
         _flex.collectionView.filter = {(item : NSObject?) -> Bool in
-            var d = item as! CustomerData
+            let d = item as! CustomerData
             
             if (String(format: "%.f", d.customerID).hasSuffix(self.sharedData.filterString)) {
                 return true
@@ -200,10 +200,10 @@ class FilterController: UIViewController {
         } as IXuniPredicate
     }
     func beginsWithFilter(){
-        var dateFormat = NSDateFormatter()
+        let dateFormat = NSDateFormatter()
         dateFormat.setLocalizedDateFormatFromTemplate("M/d/yy")
         _flex.collectionView.filter = {(item : NSObject?) -> Bool in
-            var d = item as! CustomerData
+            let d = item as! CustomerData
             
             if (String(format: "%.f", d.customerID).hasPrefix(self.sharedData.filterString)) {
                 return true

@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Mixed Chart Types"];
+    [self setTitle:NSLocalizedString(@"Mixed Chart Types", nil)];
     
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];

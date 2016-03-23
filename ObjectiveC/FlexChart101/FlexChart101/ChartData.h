@@ -18,6 +18,8 @@
 
 + (NSMutableArray *)demoData;
 
++ (NSMutableArray *)annotationData;
+
 @end
 
 @interface ChartPoint : NSObject

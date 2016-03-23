@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qEM-On-TjP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qEM-On-TjP">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Data Label Controller-->
@@ -323,6 +324,7 @@
                         <segue destination="qXB-LY-hch" kind="show" identifier="ConditionalFormattingSegue" id="hxs-gb-FIo"/>
                         <segue destination="zwk-jK-OoM" kind="show" identifier="CustomPlotElementsSegue" id="XVP-Bf-heq"/>
                         <segue destination="2di-4O-BRH" kind="show" identifier="ScrollingSegue" id="NAV-iL-Tbr"/>
+                        <segue destination="sxA-oy-Nzt" kind="show" identifier="AnnotationSegue" id="q9g-ib-cZd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6t-vg-rt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,6 +403,24 @@
             </objects>
             <point key="canvasLocation" x="-560" y="1942"/>
         </scene>
+        <!--Chart Annotations Controller-->
+        <scene sceneID="wgF-Zz-Z0P">
+            <objects>
+                <viewController id="sxA-oy-Nzt" customClass="ChartAnnotationsController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yAI-c8-SpE"/>
+                        <viewControllerLayoutGuide type="bottom" id="pTT-Ff-V9v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cwj-8p-NnI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ruo-Gm-iPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="1942"/>
+        </scene>
         <!--Update Animation Controller-->
         <scene sceneID="1a8-TH-fT7">
             <objects>
@@ -417,7 +437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bp3-gG-ogc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="1282"/>
+            <point key="canvasLocation" x="80" y="1106"/>
         </scene>
         <!--Getting Started Controller-->
         <scene sceneID="MPM-ZR-cHi">

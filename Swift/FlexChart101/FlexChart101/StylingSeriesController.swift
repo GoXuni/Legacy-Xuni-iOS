@@ -14,7 +14,7 @@ class StylingSeriesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Styling Series"
+        self.title = NSLocalizedString("Styling Series", comment: "")
         
         // Do any additional setup after loading the view.
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")

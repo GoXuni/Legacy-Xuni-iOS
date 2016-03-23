@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8456E5A41C7EA2C1007DBBC9 /* XuniCalendarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456E5A21C7EA2C1007DBBC9 /* XuniCalendarKit.framework */; };
+		8456E5A51C7EA2C1007DBBC9 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456E5A31C7EA2C1007DBBC9 /* XuniCoreKit.framework */; };
+		849720C11C647ABB001F538B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720C01C647ABB001F538B /* main.m */; };
+		849720C41C647ABB001F538B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720C31C647ABB001F538B /* AppDelegate.m */; };
+		849720C71C647ABB001F538B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720C61C647ABB001F538B /* ViewController.m */; };
+		849720CA1C647ABB001F538B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849720C81C647ABB001F538B /* Main.storyboard */; };
+		849720CC1C647ABB001F538B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849720CB1C647ABB001F538B /* Assets.xcassets */; };
+		849720CF1C647ABB001F538B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849720CD1C647ABB001F538B /* LaunchScreen.storyboard */; };
+		849720DC1C647D1A001F538B /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720DB1C647D1A001F538B /* License.m */; };
+		849720EB1C647E09001F538B /* CustomAppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720DE1C647E09001F538B /* CustomAppearanceController.m */; };
+		849720EC1C647E09001F538B /* CustomDayContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720E01C647E09001F538B /* CustomDayContentController.m */; };
+		849720ED1C647E09001F538B /* CustomHeaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720E21C647E09001F538B /* CustomHeaderController.m */; };
+		849720EE1C647E09001F538B /* CustomSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720E41C647E09001F538B /* CustomSelectionController.m */; };
+		849720EF1C647E09001F538B /* GettingStartedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720E61C647E09001F538B /* GettingStartedController.m */; };
+		849720F01C647E09001F538B /* PopupEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720E81C647E09001F538B /* PopupEditorController.m */; };
+		849720F11C647E09001F538B /* VerticalOrientationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720EA1C647E09001F538B /* VerticalOrientationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8456E5A21C7EA2C1007DBBC9 /* XuniCalendarKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCalendarKit.framework; path = "../DerivedData/XuniCalendar/Build/Products/Debug-framework/XuniCalendarKit.framework"; sourceTree = "<group>"; };
+		8456E5A31C7EA2C1007DBBC9 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../DerivedData/XuniCalendar/Build/Products/Debug-framework/XuniCoreKit.framework"; sourceTree = "<group>"; };
+		849720BC1C647ABB001F538B /* Calendar101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar101.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		849720C01C647ABB001F538B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		849720C21C647ABB001F538B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		849720C31C647ABB001F538B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		849720C51C647ABB001F538B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		849720C61C647ABB001F538B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		849720C91C647ABB001F538B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		849720CB1C647ABB001F538B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		849720CE1C647ABB001F538B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		849720D01C647ABB001F538B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849720DA1C647D1A001F538B /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
+		849720DB1C647D1A001F538B /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
+		849720DD1C647E09001F538B /* CustomAppearanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAppearanceController.h; sourceTree = "<group>"; };
+		849720DE1C647E09001F538B /* CustomAppearanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAppearanceController.m; sourceTree = "<group>"; };
+		849720DF1C647E09001F538B /* CustomDayContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDayContentController.h; sourceTree = "<group>"; };
+		849720E01C647E09001F538B /* CustomDayContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDayContentController.m; sourceTree = "<group>"; };
+		849720E11C647E09001F538B /* CustomHeaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderController.h; sourceTree = "<group>"; };
+		849720E21C647E09001F538B /* CustomHeaderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderController.m; sourceTree = "<group>"; };
+		849720E31C647E09001F538B /* CustomSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSelectionController.h; sourceTree = "<group>"; };
+		849720E41C647E09001F538B /* CustomSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSelectionController.m; sourceTree = "<group>"; };
+		849720E51C647E09001F538B /* GettingStartedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingStartedController.h; sourceTree = "<group>"; };
+		849720E61C647E09001F538B /* GettingStartedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GettingStartedController.m; sourceTree = "<group>"; };
+		849720E71C647E09001F538B /* PopupEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupEditorController.h; sourceTree = "<group>"; };
+		849720E81C647E09001F538B /* PopupEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupEditorController.m; sourceTree = "<group>"; };
+		849720E91C647E09001F538B /* VerticalOrientationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalOrientationController.h; sourceTree = "<group>"; };
+		849720EA1C647E09001F538B /* VerticalOrientationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalOrientationController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		849720B91C647ABB001F538B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8456E5A41C7EA2C1007DBBC9 /* XuniCalendarKit.framework in Frameworks */,
+				8456E5A51C7EA2C1007DBBC9 /* XuniCoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		849720B31C647ABB001F538B = {
+			isa = PBXGroup;
+			children = (
+				8456E5A21C7EA2C1007DBBC9 /* XuniCalendarKit.framework */,
+				8456E5A31C7EA2C1007DBBC9 /* XuniCoreKit.framework */,
+				849720BE1C647ABB001F538B /* Calendar101 */,
+				849720BD1C647ABB001F538B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		849720BD1C647ABB001F538B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				849720BC1C647ABB001F538B /* Calendar101.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		849720BE1C647ABB001F538B /* Calendar101 */ = {
+			isa = PBXGroup;
+			children = (
+				849720C21C647ABB001F538B /* AppDelegate.h */,
+				849720C31C647ABB001F538B /* AppDelegate.m */,
+				849720CB1C647ABB001F538B /* Assets.xcassets */,
+				849720DD1C647E09001F538B /* CustomAppearanceController.h */,
+				849720DE1C647E09001F538B /* CustomAppearanceController.m */,
+				849720DF1C647E09001F538B /* CustomDayContentController.h */,
+				849720E01C647E09001F538B /* CustomDayContentController.m */,
+				849720E11C647E09001F538B /* CustomHeaderController.h */,
+				849720E21C647E09001F538B /* CustomHeaderController.m */,
+				849720E31C647E09001F538B /* CustomSelectionController.h */,
+				849720E41C647E09001F538B /* CustomSelectionController.m */,
+				849720E51C647E09001F538B /* GettingStartedController.h */,
+				849720E61C647E09001F538B /* GettingStartedController.m */,
+				849720D01C647ABB001F538B /* Info.plist */,
+				849720CD1C647ABB001F538B /* LaunchScreen.storyboard */,
+				849720DA1C647D1A001F538B /* License.h */,
+				849720DB1C647D1A001F538B /* License.m */,
+				849720C81C647ABB001F538B /* Main.storyboard */,
+				849720E71C647E09001F538B /* PopupEditorController.h */,
+				849720E81C647E09001F538B /* PopupEditorController.m */,
+				849720BF1C647ABB001F538B /* Supporting Files */,
+				849720E91C647E09001F538B /* VerticalOrientationController.h */,
+				849720EA1C647E09001F538B /* VerticalOrientationController.m */,
+				849720C51C647ABB001F538B /* ViewController.h */,
+				849720C61C647ABB001F538B /* ViewController.m */,
+			);
+			path = Calendar101;
+			sourceTree = "<group>";
+		};
+		849720BF1C647ABB001F538B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				849720C01C647ABB001F538B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		849720BB1C647ABB001F538B /* Calendar101 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849720D31C647ABB001F538B /* Build configuration list for PBXNativeTarget "Calendar101" */;
+			buildPhases = (
+				849720B81C647ABB001F538B /* Sources */,
+				849720B91C647ABB001F538B /* Frameworks */,
+				849720BA1C647ABB001F538B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Calendar101;
+			productName = Calendar101;
+			productReference = 849720BC1C647ABB001F538B /* Calendar101.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		849720B41C647ABB001F538B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = admin;
+				TargetAttributes = {
+					849720BB1C647ABB001F538B = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 849720B71C647ABB001F538B /* Build configuration list for PBXProject "Calendar101" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 849720B31C647ABB001F538B;
+			productRefGroup = 849720BD1C647ABB001F538B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				849720BB1C647ABB001F538B /* Calendar101 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		849720BA1C647ABB001F538B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849720CF1C647ABB001F538B /* LaunchScreen.storyboard in Resources */,
+				849720CC1C647ABB001F538B /* Assets.xcassets in Resources */,
+				849720CA1C647ABB001F538B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		849720B81C647ABB001F538B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849720ED1C647E09001F538B /* CustomHeaderController.m in Sources */,
+				849720F01C647E09001F538B /* PopupEditorController.m in Sources */,
+				849720C71C647ABB001F538B /* ViewController.m in Sources */,
+				849720C41C647ABB001F538B /* AppDelegate.m in Sources */,
+				849720EE1C647E09001F538B /* CustomSelectionController.m in Sources */,
+				849720C11C647ABB001F538B /* main.m in Sources */,
+				849720DC1C647D1A001F538B /* License.m in Sources */,
+				849720F11C647E09001F538B /* VerticalOrientationController.m in Sources */,
+				849720EF1C647E09001F538B /* GettingStartedController.m in Sources */,
+				849720EB1C647E09001F538B /* CustomAppearanceController.m in Sources */,
+				849720EC1C647E09001F538B /* CustomDayContentController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		849720C81C647ABB001F538B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				849720C91C647ABB001F538B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		849720CD1C647ABB001F538B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				849720CE1C647ABB001F538B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		849720D11C647ABB001F538B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		849720D21C647ABB001F538B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		849720D41C647ABB001F538B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = ../../../Controls;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					../../../Controls,
+				);
+				INFOPLIST_FILE = Calendar101/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = GrapeCity.Calendar101;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		849720D51C647ABB001F538B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = ../../../Controls;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					../../../Controls,
+				);
+				INFOPLIST_FILE = Calendar101/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = GrapeCity.Calendar101;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		849720B71C647ABB001F538B /* Build configuration list for PBXProject "Calendar101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849720D11C647ABB001F538B /* Debug */,
+				849720D21C647ABB001F538B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		849720D31C647ABB001F538B /* Build configuration list for PBXNativeTarget "Calendar101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849720D41C647ABB001F538B /* Debug */,
+				849720D51C647ABB001F538B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 849720B41C647ABB001F538B /* Project object */;
+}

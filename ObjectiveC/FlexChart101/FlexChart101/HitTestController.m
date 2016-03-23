@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Hit Test"];
+    [self setTitle:NSLocalizedString(@"Hit Test", nil)];
     
     // Do any additional setup after loading the view.
     UILabel *chartElementlabel = [[UILabel alloc] init];
@@ -79,28 +79,19 @@
     [chart setNeedsDisplay];
 }
 
-- (void)selectionChanged:(XuniHitTestInfo*)hitTestInfo {
 
-}
-- (void)seriesVisibilityChanged:(XuniSeries*)series {
-
-}
-
-- (void)rendered {
-    
-}
-
-- (BOOL)tapped:(XuniPoint*)point {
+-(BOOL)tapped:(FlexChartBase *)sender point:(XuniPoint *)point
+{
     FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
     UILabel *s = (UILabel *)[self.view viewWithTag:2];
     UILabel *pi = (UILabel *)[self.view viewWithTag:3];
     UILabel *xy = (UILabel *)[self.view viewWithTag:4];
     UILabel *ce = (UILabel *)[self.view viewWithTag:5];
-    XuniHitTestInfo *hitTest = [chart hitTest:point];
-    pi.text = [@" Point Index: " stringByAppendingString: [NSString stringWithFormat:@"%i", hitTest.pointIndex]];
-    xy.text = [[NSString stringWithFormat:@" X:%1.2f", hitTest.x] stringByAppendingString: [NSString stringWithFormat:@" Y:%1.2f", hitTest.y]];
-    if (hitTest.series != nil) {
-        s.text = [@" Series: " stringByAppendingString: hitTest.series.name];
+    XuniChartHitTestInfo *hitTest = [chart hitTest:point];
+    pi.text = [@" Point Index: " stringByAppendingString: [NSString stringWithFormat:@"%i", hitTest.dataPoint.pointIndex]];
+    xy.text = [[NSString stringWithFormat:@" X:%@", hitTest.dataPoint.valueX] stringByAppendingString: [NSString stringWithFormat:@" Y:%1.2f", hitTest.dataPoint.value]];
+    if (hitTest.dataPoint.seriesIndex >= 0 && hitTest.dataPoint.seriesIndex < chart.series.count) {
+        s.text = [@" Series: " stringByAppendingString: hitTest.dataPoint.seriesName];
     }
     else
     {
@@ -141,15 +132,6 @@
             return @"Invalid Type";
             break;
     }
-}
-
-- (void) axisRangeChanged:(NSObject *)axis {
-    
-}
-
-
-- (void)handleTooltip:(XuniPoint*)point isVisible:(BOOL)isVisible data:(NSArray*)data {
-    
 }
 
 

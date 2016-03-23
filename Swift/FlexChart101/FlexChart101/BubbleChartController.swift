@@ -14,7 +14,7 @@ class BubbleChartController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Bubble Chart"
+        self.title = NSLocalizedString("Bubble Chart", comment: "")
 
         // Do any additional setup after loading the view.
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")

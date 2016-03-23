@@ -11,6 +11,6 @@
 
 @interface ConditionalFormattingController : UIViewController<FlexGridDelegate>
 
-- (void)formatItem:(FlexFormatItemEventArgs*)args;
+-(bool)formatItem:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range inContext:(CGContextRef)context;
 
 @end

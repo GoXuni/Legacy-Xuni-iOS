@@ -18,14 +18,14 @@ class GroupingController: UIViewController {
         _flex.autoGenerateColumns = false
         let c1: FlexColumn = FlexColumn()
         c1.binding = "firstName"
-        c1.header = "First Name"
+        c1.header = NSLocalizedString("First Name", comment: "")
         c1.width = 100
         let c2: FlexColumn = FlexColumn()
         c2.binding = "lastName"
-        c2.header = "Last Name"
+        c2.header = NSLocalizedString("Last Name", comment: "")
         let c3: FlexColumn = FlexColumn()
         c3.binding = "orderTotal"
-        c3.header = "Order Total"
+        c3.header = NSLocalizedString("Order Total", comment: "")
         c3.format = "C"
         c3.aggregate = XuniAggregate.Sum
         _flex.columns.addObject(c1)
@@ -35,11 +35,11 @@ class GroupingController: UIViewController {
 
         // Do any additional setup after loading the view.
         _sortAscendingButton = UIButton(type: UIButtonType.System)
-        _sortAscendingButton.setTitle("Ascending", forState: UIControlState.Normal)
+        _sortAscendingButton.setTitle(NSLocalizedString("Ascending", comment: ""), forState: UIControlState.Normal)
         _sortAscendingButton.addTarget(self, action: "sortAscendingButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
         _sortDescendingButton = UIButton(type: UIButtonType.System)
-        _sortDescendingButton.setTitle("Descending", forState: UIControlState.Normal)
+        _sortDescendingButton.setTitle(NSLocalizedString("Descending", comment: ""), forState: UIControlState.Normal)
         _sortDescendingButton.addTarget(self, action: "sortDescendingButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
         _flex.itemsSource = CustomerData.getCustomerData(100)

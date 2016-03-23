@@ -38,22 +38,22 @@
     stepper.stepValue = .1;
     [stepper addTarget:self action:@selector(stepperClicked:) forControlEvents:UIControlEventValueChanged];
 
-    innerRadiusLabel.text = [@"Inner Radius " stringByAppendingString:[NSString stringWithFormat:@"%1.1f", stepper.value]];
+    innerRadiusLabel.text = [NSLocalizedString(@"inner radius", nil) stringByAppendingString:[NSString stringWithFormat:@"%1.1f", stepper.value]];
     [innerRadiusLabel sizeToFit];
     
-    offsetLabel.text = @"Offset";
+    offsetLabel.text = NSLocalizedString(@"offset", nil);
     
     [offsetSlider addTarget:self action:@selector(offsetSliderChanged:) forControlEvents:UIControlEventValueChanged];
     offsetSlider.minimumValue = 0.0;
     offsetSlider.maximumValue = 1.0;
     
-    startAngleLabel.text = @"Start Angle";
+    startAngleLabel.text = NSLocalizedString(@"start angle", nil);
     
     [startAngleSlider addTarget:self action:@selector(startAngleSliderChanged:) forControlEvents:UIControlEventValueChanged];
     startAngleSlider.minimumValue = 0.0;
     startAngleSlider.maximumValue = 360.0;
     
-    reversedLabel.text = @"Reversed?";
+    reversedLabel.text = NSLocalizedString(@"Reversed?", nil);
     [reversedSwitch addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
     
     pieChart.tag = 1;
@@ -112,7 +112,7 @@
     UILabel *innerRadiusLabel = (UILabel*) [self.view viewWithTag:2];
     
     pie.innerRadius = stepper.value;
-    innerRadiusLabel.text = [@"Inner Radius " stringByAppendingString:[NSString stringWithFormat:@"%1.1f", stepper.value]];
+    innerRadiusLabel.text = [NSLocalizedString(@"inner radius", nil) stringByAppendingString:[NSString stringWithFormat:@"%1.1f", stepper.value]];
     [innerRadiusLabel sizeToFit];
 }
 

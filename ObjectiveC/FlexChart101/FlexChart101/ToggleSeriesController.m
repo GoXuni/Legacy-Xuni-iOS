@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Toggle Series"];
+    [self setTitle:NSLocalizedString(@"Toggle Series", nil)];
     
     // Do any additional setup after loading the view.
     NSMutableArray *chartData = [ChartData demoData];

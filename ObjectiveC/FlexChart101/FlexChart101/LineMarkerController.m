@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Line Marker"];
+    [self setTitle:NSLocalizedString(@"Line Marker", nil)];
     
     // Do any additional setup after loading the view.
     interactionPickerData = [[NSMutableArray alloc] initWithObjects: @"None", @"Move", @"Drag", nil];
@@ -45,7 +45,7 @@
     [chart.series addObject:downloads];
     
     chart.itemsSource = chartData;
-    chart.chartType = XuniChartTypeLine;
+    chart.chartType = XuniChartTypeBar;
     
     // Implement Chart Line Marker.
     MyMarkerView *view = [[MyMarkerView alloc] initWithLineMarker:chart.lineMarker];
@@ -217,15 +217,15 @@
         
         if (data != nil && data.count > 0) {
             NSString *str = @"";
-            XuniDataPoint *point = data[0];
-            str = [str stringByAppendingFormat:@"%@ \n", point.dataXString];
+            XuniChartDataPoint *point = data[0];
+            str = [str stringByAppendingFormat:@"%@ \n", point.valueX];
             
             for (int i = 0; i < data.count - 1; i++) {
                 point = data[i];
-                str = [str stringByAppendingFormat:@"%@ : %.0f \n", point.seriesName, point.dataY];
+                str = [str stringByAppendingFormat:@"%@ : %.0f \n", point.seriesName, point.value];
             }
             point = data[data.count - 1];
-            str = [str stringByAppendingFormat:@"%@ : %.0f", point.seriesName, point.dataY];
+            str = [str stringByAppendingFormat:@"%@ : %.0f", point.seriesName, point.value];
             
             view.content.text = str;
             view.content.numberOfLines = 4;

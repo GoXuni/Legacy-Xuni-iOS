@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "1eT-oW-hrf"; */
+"1eT-oW-hrf.text" = "住所(Address)";
+
+/* Class = "UILabel"; text = "Cancel"; ObjectID = "27j-QJ-v3z"; */
+"27j-QJ-v3z.text" = "キャンセル";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "3zE-V2-2FJ"; */
+"3zE-V2-2FJ.text" = "都市(City)";
+
+/* Class = "UINavigationItem"; title = "FlexGrid101"; ObjectID = "Gnw-bn-nSm"; */
+"Gnw-bn-nSm.title" = "FlexGrid101";
+
+/* Class = "UIBarButtonItem"; title = "FlexGrid101"; ObjectID = "Kll-7W-u7d"; */
+"Kll-7W-u7d.title" = "FlexGrid101";
+
+/* Class = "UILabel"; text = "E-Mail"; ObjectID = "MSp-cY-cG9"; */
+"MSp-cY-cG9.text" = "メール(E-Mail)";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "R1X-wj-bQr"; */
+"R1X-wj-bQr.text" = "国(Country)";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "R5M-4S-gmw"; */
+"R5M-4S-gmw.text" = "名(First Name)";
+
+/* Class = "UILabel"; text = "Confirm editing"; ObjectID = "ZXh-Mv-kdZ"; */
+"ZXh-Mv-kdZ.text" = "編集の完了";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "at8-vu-Ft0"; */
+"at8-vu-Ft0.text" = "姓(Last Name)";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "ein-f6-TS0"; */
+"ein-f6-TS0.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "r46-Kv-t99"; */
+"r46-Kv-t99.text" = ">";
+
+/* Class = "UILabel"; text = "Edit the Object"; ObjectID = "syX-hS-ICg"; */
+"syX-hS-ICg.text" = "内容を編集";

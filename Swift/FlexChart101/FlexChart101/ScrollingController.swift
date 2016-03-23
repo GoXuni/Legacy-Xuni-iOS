@@ -14,7 +14,7 @@ class ScrollingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Scrolling"
+        self.title = NSLocalizedString("Scrolling", comment: "")
         
         // Do any additional setup after loading the view.
         let precip = XuniSeries(forChart: _chart, binding: "precipitation", name: "Precip")
@@ -49,7 +49,7 @@ class ScrollingController: UIViewController {
         _chart.legend.position = XuniChartLegendPosition.Auto
         _chart.legend.orientation = XuniChartLegendOrientation.Auto
         _chart.palette = XuniPalettes.midnight()
-        _chart.header = "Drag to scroll/Pinch to zoom"
+        _chart.header = NSLocalizedString("Drag to scroll/Pinch to zoom", comment: "")
         _chart.headerFont = UIFont.systemFontOfSize(14)
         _chart.headerTextAlignment = XuniHorizontalAlignment.Center
         

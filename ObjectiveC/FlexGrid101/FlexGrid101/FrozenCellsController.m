@@ -27,7 +27,15 @@
     flex.frozenColumns = 1;
     flex.frozenRows = 1;
     
-    [flex autoSizeColumn:0 to:flex.columns.count-1];
+    flex.allowMerging = FlexGridAllowMergingCells;
+    
+    for(int i = 0; i<flex.columns.count; i++)
+    {
+        FlexColumn* fc = [flex.columns objectAtIndex:i];
+        fc.allowMerging = true;
+    }
+    
+    [flex autoSizeColumns:0 to:flex.columns.count-1];
     [self.view addSubview:flex];
 }
 

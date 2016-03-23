@@ -8,7 +8,8 @@
 #import "ChartData.h"
 
 @implementation ChartData
--(id)initWithName:(NSString *)name sales:(NSNumber *)sales expenses:(NSNumber *)expenses downloads:(NSNumber *)downloads {
+
+- (id)initWithName:(NSString *)name sales:(NSNumber *)sales expenses:(NSNumber *)expenses downloads:(NSNumber *)downloads {
     self = [super init];
     if(self){
         _name = name;
@@ -18,11 +19,11 @@
     }
     return self;
 }
-+(NSNumber *)generateRandom:(NSInteger) max {
++ (NSNumber *)generateRandom:(NSInteger) max {
     return [NSNumber numberWithUnsignedInteger:(arc4random() % max)];
 }
 
-+(NSMutableArray *)demoData {
++ (NSMutableArray *)demoData {
     ChartData *US = [[ChartData alloc] initWithName:@"US" sales:[ChartData generateRandom : 10001] expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
     ChartData *Germany = [[ChartData alloc] initWithName:@"Germany" sales:[ChartData generateRandom : 10001] expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
     ChartData *UK = [[ChartData alloc] initWithName:@"UK" sales:[ChartData generateRandom : 10001] expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
@@ -31,6 +32,22 @@
     ChartData *Greece = [[ChartData alloc] initWithName:@"Greece" sales:[ChartData generateRandom : 10001] expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
     return [[NSMutableArray alloc] initWithObjects:US, Germany, UK, Japan, Italy, Greece, nil];
 }
+
++ (NSMutableArray *)annotationData {
+    ChartData *US = [[ChartData alloc] initWithName:@"US" sales:@1500 expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
+    ChartData *Germany = [[ChartData alloc] initWithName:@"Germany" sales:@4000 expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
+    ChartData *UK = [[ChartData alloc] initWithName:@"UK" sales:@3000 expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
+    ChartData *Japan = [[ChartData alloc] initWithName:@"Japan" sales:@6000 expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
+    ChartData *Italy = [[ChartData alloc] initWithName:@"Italy" sales:@3500 expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
+    ChartData *Greece = [[ChartData alloc] initWithName:@"Greece" sales:@8500 expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
+    ChartData *France = [[ChartData alloc] initWithName:@"France" sales:@2300 expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
+    ChartData *Spain = [[ChartData alloc] initWithName:@"Spain" sales:@6500 expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
+    ChartData *Ireland = [[ChartData alloc] initWithName:@"Ireland" sales:@4500 expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
+    ChartData *Poland = [[ChartData alloc] initWithName:@"Poland" sales:@9500 expenses:[ChartData generateRandom : 5001] downloads:[ChartData generateRandom : 20001]];
+    
+    return [[NSMutableArray alloc] initWithObjects:US, Germany, UK, Japan, Italy, Greece, France, Spain, Ireland, Poland, nil];
+}
+
 @end
 
 @implementation ChartPoint

@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Conditional Formatting"];
+    [self setTitle:NSLocalizedString(@"Conditional Formatting", nil)];
     
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];
@@ -36,7 +36,7 @@
     {
         XuniChartPlotElementEventArgs *plotArgs = (XuniChartPlotElementEventArgs*)args;
         if (plotArgs.dataPoint != nil && plotArgs.defaultRender != nil) {
-            double y = plotArgs.dataPoint.dataY;
+            double y = plotArgs.dataPoint.value;
             
             // change color values based on y-axis values
             CGFloat r = (y >= 0 ? 1 : ((1 + y)));
@@ -44,7 +44,7 @@
             CGFloat g = (1 - fabs(y));
             CGFloat a = 0.8;
             
-            ((DefaultPlotElementRender*)plotArgs.defaultRender).fillColor = [UIColor colorWithRed:r green:g blue:b alpha:a];
+            [plotArgs.renderEngine setFill:[UIColor colorWithRed:r green:g blue:b alpha:a]];
             [plotArgs.defaultRender execute:nil];
         }
     };

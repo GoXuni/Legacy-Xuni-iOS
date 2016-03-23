@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    let samples = ["Getting Started", "Basic Features", "Legend and Titles", "Selection Sample", "Theming", "Snapshot"]
+    let samples = [NSLocalizedString("Getting Started", comment: "Getting Started"), NSLocalizedString("Basic Features", comment: "Basic Features"), NSLocalizedString("Legend Sample", comment: "Legend and Titles"), NSLocalizedString("Selection", comment: "Selection Sample"), NSLocalizedString("Theming", comment: "Theming"),
+        NSLocalizedString("Export Image", comment: "Snapshot") ]
     let SimpleIdentifier = "SimpleIdentifier"
     override func viewDidLoad() {
         super.viewDidLoad()

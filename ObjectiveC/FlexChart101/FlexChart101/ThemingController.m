@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Theming"];
+    [self setTitle:NSLocalizedString(@"Theming", nil)];
     
     // Do any additional setup after loading the view.
     UIPickerView *pickerView;

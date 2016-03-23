@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     UITextField *filterField = [[UITextField alloc] init];
     filterField.delegate = self;
-    filterField.text = @"Enter text to Filter";
+    filterField.text = NSLocalizedString(@"Enter text to Filter", nil);
     filterField.returnKeyType = UIReturnKeyDone;
     filterField.keyboardType = UIKeyboardTypeDefault;
     filterField.backgroundColor = [UIColor lightGrayColor];
@@ -64,6 +64,9 @@
     FlexGrid *flex =  (FlexGrid *)[self.view viewWithTag:1];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"M/d/yy"];
+    
+    if(textField.text.length)
+    {
     flex.collectionView.filter = ^ BOOL (NSObject *item){
         CustomerData *d = (CustomerData*)item;
 
@@ -99,6 +102,11 @@
             return false;
         }
     };
+    }
+    else
+    {
+        flex.collectionView.filter = nil;
+    }
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{

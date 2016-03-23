@@ -20,7 +20,7 @@ class TogglesSeriesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Toggle Series"
+        self.title = NSLocalizedString("Toggle Series", comment: "")
         
         // Do any additional setup after loading the view.
         

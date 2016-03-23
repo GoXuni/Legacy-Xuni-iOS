@@ -14,7 +14,7 @@ class ConditionalFormattingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Conditional Formatting"
+        self.title = NSLocalizedString("Conditional Formatting", comment: "")
         
         // Do any additional setup after loading the view.
         let sine = XuniSeries(forChart: _chart, binding: "y", name: "sine")
@@ -31,7 +31,7 @@ class ConditionalFormattingController: UIViewController {
         func plotElementLoadingHandler(sender: NSObject!, args: XuniEventArgs!) {
             var plotArgs = args as! XuniChartPlotElementEventArgs
             if plotArgs.dataPoint != nil && plotArgs.defaultRender != nil {
-                var y = plotArgs.dataPoint.dataY;
+                var y = plotArgs.dataPoint.value;
                 
                 // change color values based on y-axis values
                 var r = (y >= 0 ? 1 : ((1 + y)))
@@ -39,7 +39,7 @@ class ConditionalFormattingController: UIViewController {
                 var g = (1 - fabs(y))
                 var a = 0.8
                 
-                (plotArgs.defaultRender as! DefaultPlotElementRender).fillColor = UIColor(red: CGFloat(r), green: CGFloat(g), blue: CGFloat(b), alpha: CGFloat(a))
+                (plotArgs.renderEngine as! XuniRenderEngine).setFill(UIColor(red: CGFloat(r), green: CGFloat(g), blue: CGFloat(b), alpha: CGFloat(a)))
                 (plotArgs.defaultRender as! IXuniFunction).execute(nil)
             }
         }

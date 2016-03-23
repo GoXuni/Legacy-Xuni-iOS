@@ -14,7 +14,7 @@ class CustomPlotElementsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Custom Plot Elements"
+        self.title = NSLocalizedString("Custom Plot Elements", comment: "")
         
         // Do any additional setup after loading the view.
         let devicesSold = XuniSeries(forChart: _chart, binding: "devicesSold", name: "Devices sold")
@@ -38,7 +38,7 @@ class CustomPlotElementsController: UIViewController {
                 (plotArgs.defaultRender as! IXuniFunction).execute(nil)
                 
                 var rect = (plotArgs.defaultRender as! DefaultBarElementRender).getBarRect()
-                var customPoint: CustomPoint = _chart.itemsSource.objectAtIndex(Int(plotArgs.hitTestInfo.pointIndex)) as! CustomPoint
+                var customPoint: CustomPoint = _chart.itemsSource.objectAtIndex(Int(plotArgs.dataPoint.pointIndex)) as! CustomPoint
                 rect.origin.y += (rect.size.height - rect.size.width) / 2;
                 rect.size.height = rect.size.width;
                 customPoint.logo.drawInRect(rect)

@@ -15,7 +15,7 @@ class DynamicChartsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Dynamic Charts"
+        self.title = NSLocalizedString("Dynamic Charts", comment: "")
         
         // Do any additional setup after loading the view.
         let trucks = XuniSeries(forChart: _chart, binding: "trucks, trucks", name: "Trucks")

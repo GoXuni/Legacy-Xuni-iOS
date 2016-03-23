@@ -14,7 +14,7 @@ class LegendAndTitlesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Legend and Titles"
+        self.title = NSLocalizedString("Legend and Titles", comment: "")
         
         // Do any additional setup after loading the view.
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")

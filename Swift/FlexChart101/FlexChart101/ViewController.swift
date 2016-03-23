@@ -10,6 +10,60 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let samplesTitle = [
+        NSLocalizedString("Getting Started", comment: ""),
+        NSLocalizedString("Basic Chart Types", comment: ""),
+        NSLocalizedString("Mixed Chart Types", comment: ""),
+        NSLocalizedString("Financial Chart", comment: ""),
+        NSLocalizedString("Bubble Chart", comment: ""),
+        NSLocalizedString("Custom Tooltips", comment: ""),
+        NSLocalizedString("Data Labels", comment: ""),
+        NSLocalizedString("Annotations", comment: ""),
+        NSLocalizedString("Line Marker", comment: ""),
+        NSLocalizedString("Customizing Axes", comment: ""),
+        NSLocalizedString("Multiple Axes", comment: ""),
+        NSLocalizedString("Legend and Titles", comment: ""),
+        NSLocalizedString("Conditional Formatting", comment: ""),
+        NSLocalizedString("Custom Plot Elements", comment: ""),
+        NSLocalizedString("Selection Modes", comment: ""),
+        NSLocalizedString("Toggle Series", comment: ""),
+        NSLocalizedString("Load Animation Mode", comment: ""),
+        NSLocalizedString("Update Animation", comment: ""),
+        NSLocalizedString("Dynamic Charts", comment: ""),
+        NSLocalizedString("Hit Test", comment: ""),
+        NSLocalizedString("Scrolling", comment: ""),
+        NSLocalizedString("Zooming and Scrolling", comment: ""),
+        NSLocalizedString("Theming", comment: ""),
+        NSLocalizedString("Styling Series", comment: ""),
+        NSLocalizedString("Export Image", comment: "")]
+    
+    let samplesDescription = [
+        NSLocalizedString("Shows a simple chart with tooltips.", comment: ""),
+        NSLocalizedString("Shows the basic chart types and stacking options.", comment: ""),
+        NSLocalizedString("Shows a composite chart.", comment: ""),
+        NSLocalizedString("Shows stock data in a candle chart.", comment: ""),
+        NSLocalizedString("Shows a bubble chart.", comment: ""),
+        NSLocalizedString("Shows a customized tooltip.", comment: ""),
+        NSLocalizedString("Shows a simple chart with static data labels.", comment: ""),
+        NSLocalizedString("Shows how to display annotations on FlexChart.", comment: ""),
+        NSLocalizedString("Shows a moveable marker on top of the chart.", comment: ""),
+        NSLocalizedString("Shows customized axis style and label format.", comment: ""),
+        NSLocalizedString("Shows a chart with mutiple Y axes.", comment: ""),
+        NSLocalizedString("Shows basic chart headers and axis titles.", comment: ""),
+        NSLocalizedString("Shows conditional formatting by customizing plot elements.", comment: ""),
+        NSLocalizedString("Shows how to fully customize plot elements.", comment: ""),
+        NSLocalizedString("Shows the different selection modes.", comment: ""),
+        NSLocalizedString("Shows the ability to toggle a series visibility.", comment: ""),
+        NSLocalizedString("Shows animation modes when data is loaded.", comment: ""),
+        NSLocalizedString("Shows animation when data is updated.", comment: ""),
+        NSLocalizedString("Shows a dynamic, “live” chart.", comment: ""),
+        NSLocalizedString("Demonstrates use of the FlexChart's hitTest method.", comment: ""),
+        NSLocalizedString("Shows a chart with panning (or scrolling) along the axes.", comment: ""),
+        NSLocalizedString("Shows stretch zoom-out and pinch zoom-in gestures.", comment: ""),
+        NSLocalizedString("Shows the built-in palettes.", comment: ""),
+        NSLocalizedString("Shows custom series styling.", comment: ""),
+        NSLocalizedString("Shows how to export an image of FlexChart.", comment: "")]
+    
+    let samplesImage = [
         "Getting Started",
         "Basic Chart Types",
         "Mixed Chart Types",
@@ -17,6 +71,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         "Bubble Chart",
         "Custom Tooltips",
         "Data Labels",
+        "Annotations",
         "Line Marker",
         "Customizing Axes",
         "Multiple Axes",
@@ -34,32 +89,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         "Theming",
         "Styling Series",
         "Export Image"]
-    
-    let samplesDescription = [
-        "Shows a simple chart with tooltips.",
-        "Shows the basic chart types and stacking options.",
-        "Shows a composite chart.",
-        "Shows stock data in a candle chart.",
-        "Shows a bubble chart.",
-        "Shows a customized tooltip.",
-        "Shows a simple chart with static data labels.",
-        "Shows a moveable marker on top of the chart.",
-        "Shows customized axis style and label format.",
-        "Shows a chart with mutiple Y axes.",
-        "Shows basic chart headers and axis titles.",
-        "Shows conditional formatting by customizing plot elements.",
-        "Shows how to fully customize plot elements.",
-        "Shows the different selection modes.",
-        "Shows the ability to toggle a series visibility.",
-        "Shows animation modes when data is loaded.",
-        "Shows animation when data is updated.",
-        "Shows a dynamic, “live” chart.",
-        "Demonstrates use of the FlexChart's hitTest method.",
-        "Shows a chart with panning (or scrolling) along the axes.",
-        "Shows stretch zoom-out and pinch zoom-in gestures.",
-        "Shows the built-in palettes.",
-        "Shows custom series styling.",
-        "Shows how to export an image of FlexChart."]
     
     let SimpleIdentifier = "SimpleIdentifier"
     
@@ -92,7 +121,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var cell : UITableViewCell?
         var imageName : String
         
-        imageName = samplesTitle[row].stringByReplacingOccurrencesOfString(" ", withString: "")
+        imageName = samplesImage[row].stringByReplacingOccurrencesOfString(" ", withString: "")
         imageName = imageName.lowercaseString + ".png"
         
         if(cell == nil){
@@ -132,54 +161,57 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.performSegueWithIdentifier("DataLabelSegue", sender:tableView)
             break;
         case 7:
-            self.performSegueWithIdentifier("CustomLineMarkerSegue", sender:tableView)
+            self.performSegueWithIdentifier("AnnotationSegue", sender:tableView)
             break;
         case 8:
-            self.performSegueWithIdentifier("CustomizingAxesSegue", sender:tableView)
+            self.performSegueWithIdentifier("CustomLineMarkerSegue", sender:tableView)
             break;
         case 9:
-            self.performSegueWithIdentifier("MultipleAxesSegue", sender:tableView)
+            self.performSegueWithIdentifier("CustomizingAxesSegue", sender:tableView)
             break;
         case 10:
-            self.performSegueWithIdentifier("LegendsAndTitlesSegue", sender:tableView)
+            self.performSegueWithIdentifier("MultipleAxesSegue", sender:tableView)
             break;
         case 11:
-            self.performSegueWithIdentifier("ConditionalFormattingSegue", sender:tableView)
+            self.performSegueWithIdentifier("LegendsAndTitlesSegue", sender:tableView)
             break;
         case 12:
-            self.performSegueWithIdentifier("CustomPlotElementsSegue", sender:tableView)
+            self.performSegueWithIdentifier("ConditionalFormattingSegue", sender:tableView)
             break;
         case 13:
-            self.performSegueWithIdentifier("SelectionModesSegue", sender:tableView)
+            self.performSegueWithIdentifier("CustomPlotElementsSegue", sender:tableView)
             break;
         case 14:
-            self.performSegueWithIdentifier("ToggleSeriesSegue", sender:tableView)
+            self.performSegueWithIdentifier("SelectionModesSegue", sender:tableView)
             break;
         case 15:
-            self.performSegueWithIdentifier("LoadAnimationSegue", sender:tableView)
+            self.performSegueWithIdentifier("ToggleSeriesSegue", sender:tableView)
             break;
         case 16:
-            self.performSegueWithIdentifier("UpdateAnimationSegue", sender:tableView)
+            self.performSegueWithIdentifier("LoadAnimationSegue", sender:tableView)
             break;
         case 17:
-            self.performSegueWithIdentifier("DynamicChartsSegue", sender:tableView)
+            self.performSegueWithIdentifier("UpdateAnimationSegue", sender:tableView)
             break;
         case 18:
-            self.performSegueWithIdentifier("HitTestSegue", sender:tableView)
+            self.performSegueWithIdentifier("DynamicChartsSegue", sender:tableView)
             break;
         case 19:
-            self.performSegueWithIdentifier("ScrollingSegue", sender:tableView)
+            self.performSegueWithIdentifier("HitTestSegue", sender:tableView)
             break;
         case 20:
-            self.performSegueWithIdentifier("ZoomingAndScrollingSegue", sender:tableView)
+            self.performSegueWithIdentifier("ScrollingSegue", sender:tableView)
             break;
         case 21:
-            self.performSegueWithIdentifier("ThemingSegue", sender:tableView)
+            self.performSegueWithIdentifier("ZoomingAndScrollingSegue", sender:tableView)
             break;
         case 22:
-            self.performSegueWithIdentifier("StylingSeriesSegue", sender:tableView)
+            self.performSegueWithIdentifier("ThemingSegue", sender:tableView)
             break;
         case 23:
+            self.performSegueWithIdentifier("StylingSeriesSegue", sender:tableView)
+            break;
+        case 24:
             self.performSegueWithIdentifier("SnapshotSegue", sender:tableView)
             break;
         default:

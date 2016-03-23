@@ -33,7 +33,7 @@ CustomerData* edited;
     flex.delegate = self;
     flex.itemsSource = [CustomerData getCustomerData:100];
     flex.tag = 1;
-    [flex autoSizeColumn:0 to:flex.columns.count-1];
+    [flex autoSizeColumns:0 to:flex.columns.count-1];
     [self.view addSubview:flex];
     [self.view sendSubviewToBack:flex];
 }
@@ -55,14 +55,14 @@ CustomerData* edited;
     [self cancel];
 }
 
--(BOOL)tapped:(XuniPoint *)point
+-(BOOL)tapped:(FlexGrid *)sender point:(XuniPoint *)point
 {
     [self cancel];
     
     return false;
 }
 
--(void)cellDoubleTapped:(FlexCellRangeEventArgs *)args
+-(bool)cellDoubleTapped:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range
 {
     /*int i = args.row;
     
@@ -73,11 +73,11 @@ CustomerData* edited;
     
     if(!_editpanel.hidden)
     {
-        [self tapped:nil];
-        return;
+        [self tapped:nil point:nil];
+        return false;
     }
     
-    edited = [flex.itemsSource objectAtIndex:args.row];
+    edited = [flex.collectionView.items objectAtIndex:range.row];
     
     [objEdit initObject];
     
@@ -89,7 +89,7 @@ CustomerData* edited;
     } completion:^(BOOL finished){
         _editpanel.alpha = 1;
     }];
-    
+    return false;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -25,7 +25,7 @@ ColumnLayoutController* columnLayoutController;
     
     [super viewDidLoad];
     
-    editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit Columns" style:UIBarButtonItemStylePlain target:self action:@selector(editColumns:)];
+    editButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit Columns", nil) style:UIBarButtonItemStylePlain target:self action:@selector(editColumns:)];
     self.navigationItem.rightBarButtonItem = editButton;
     
     self.columnList.hidden = true;
@@ -35,7 +35,7 @@ ColumnLayoutController* columnLayoutController;
     _flex.isReadOnly = true;
     _flex.itemsSource = [CustomerData getCustomerData:100];
     _flex.tag = 1;
-    [_flex autoSizeColumn:0 to:_flex.columns.count-1];
+    [_flex autoSizeColumns:0 to:_flex.columns.count-1];
     [self.view addSubview:_flex];
     [self.view sendSubviewToBack:_flex];
 }
@@ -53,7 +53,7 @@ ColumnLayoutController* columnLayoutController;
     }];
     
     
-    editButton.title = @"Done";
+    editButton.title = NSLocalizedString(@"Done", nil);
 }
 
 -(void)endEditing
@@ -65,7 +65,7 @@ ColumnLayoutController* columnLayoutController;
     }];
     
     
-    editButton.title = @"Edit Columns";
+    editButton.title = NSLocalizedString(@"Edit Columns", nil);
 }
 
 

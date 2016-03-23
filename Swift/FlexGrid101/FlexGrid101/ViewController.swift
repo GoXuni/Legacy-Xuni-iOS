@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let samples = ["Getting Started", "Column Definitions", "Selection Modes", "Editing", "Custom Cells", "Grouping", "Filter", "Full Text Filter", "Edit Confirmation", "Star Sizing", "Frozen Cells", "Conditional Formatting"]
+    let samples = [NSLocalizedString("Getting Started", comment: ""), NSLocalizedString("Column Definitions", comment: ""), NSLocalizedString("Selection Modes", comment: ""), NSLocalizedString("Editing", comment: ""), NSLocalizedString("Custom Cells", comment: ""), NSLocalizedString("Grouping", comment: ""), NSLocalizedString("Filter", comment: ""), NSLocalizedString("Full Text Filter", comment: ""), NSLocalizedString("Edit Confirmation", comment: ""), NSLocalizedString("Star Sizing", comment: ""), NSLocalizedString("Cell Freezing & Merging", comment: ""), NSLocalizedString("Conditional Formatting", comment: ""), NSLocalizedString("Editing form", comment: ""), NSLocalizedString("Column Layout", comment: ""), NSLocalizedString("On Demand Loading", comment: "")]
     let SimpleIdentifier = "SimpleIdentifier"
     
     override func viewDidLoad() {
@@ -65,6 +65,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.performSegueWithIdentifier("FrozenCellsSegue", sender:tableView)
         case 11:
             self.performSegueWithIdentifier("ConditionalFormattingSegue", sender:tableView)
+        case 12:
+            self.performSegueWithIdentifier("EditingFormSegue", sender:tableView)
+        case 13:
+            self.performSegueWithIdentifier("ColumnLayoutSegue", sender:tableView)
+        case 14:
+            self.performSegueWithIdentifier("OnDemandLoadingSegue", sender:tableView)
         default:
             break
         }

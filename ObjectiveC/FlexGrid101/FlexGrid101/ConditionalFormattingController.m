@@ -23,18 +23,18 @@
     flex.autoGenerateColumns = false;
     FlexColumn *c1 = [[FlexColumn alloc] init];
     c1.binding = @"firstName";
-    c1.header = @"First Name";
+    c1.header = NSLocalizedString(@"First Name", nil);
     c1.width = 100;
     FlexColumn *c2 = [[FlexColumn alloc] init];
     c2.binding = @"lastName";
-    c2.header = @"Last Name";
+    c2.header = NSLocalizedString(@"Last Name", nil);
     FlexColumn *c3 = [[FlexColumn alloc] init];
     c3.binding = @"orderTotal";
-    c3.header = @"Total";
+    c3.header = NSLocalizedString(@"Total", nil);
     c3.format = @"C";
     FlexColumn *c4 = [[FlexColumn alloc] init];
     c4.binding = @"orderCount";
-    c4.header = @"Count";
+    c4.header = NSLocalizedString(@"Count", nil);
     c4.format = @"N1";
     [flex.columns addObject:c1];
     [flex.columns addObject:c2];
@@ -50,40 +50,41 @@
     [self.view addSubview:flex];
 }
 
-- (void)formatItem:(FlexFormatItemEventArgs*)args {
-    if (args.panel.cellType == FlexCellTypeCell) {
+-(bool)formatItem:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range inContext:(CGContextRef)context {
+    if (panel.cellType == FlexCellTypeCell) {
         FlexGrid *g = (FlexGrid*)[self.view viewWithTag:1];
-        FlexColumn *col = [g.columns objectAtIndex:args.col];
+        FlexColumn *col = [g.columns objectAtIndex:range.col];
         
         if ([col.binding isEqualToString:@"orderCount"]) {
-            NSNumber *n = (NSNumber*)[args.panel getCellDataForRow:args.row inColumn:args.col formatted:NO];
+            NSNumber *n = (NSNumber*)[panel getCellDataForRow:range.row inColumn:range.col formatted:NO];
             if (n != nil) {
                 if (n.integerValue >= 50) {
-                    CGRect r = [args.panel getCellRectForRow:args.row inColumn:args.col];
-                    CGContextSetFillColorWithColor(args.context, [UIColor colorWithRed:0.15 green:0.31 blue:0.07 alpha:1.0].CGColor);
-                    CGContextFillRect(args.context, r);
+                    CGRect r = [panel getCellRectForRow:range.row inColumn:range.col];
+                    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:0.15 green:0.31 blue:0.07 alpha:1.0].CGColor);
+                    CGContextFillRect(context, r);
                 }
                 else if (n.integerValue < 50) {
-                    CGRect r = [args.panel getCellRectForRow:args.row inColumn:args.col];
-                    CGContextSetFillColorWithColor(args.context, [UIColor redColor].CGColor);
-                    CGContextFillRect(args.context, r);
+                    CGRect r = [panel getCellRectForRow:range.row inColumn:range.col];
+                    CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
+                    CGContextFillRect(context, r);
                 }
-                [args.panel.textAttributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+                [panel.textAttributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
             }
         }
         
         if ([col.binding isEqualToString:@"orderTotal"]) {
-            NSNumber *n = (NSNumber*)[args.panel getCellDataForRow:args.row inColumn:args.col formatted:NO];
+            NSNumber *n = (NSNumber*)[panel getCellDataForRow:range.row inColumn:range.col formatted:NO];
             if (n != nil) {
                 if (n.integerValue >= 5000) {
-                    [args.panel.textAttributes setValue:[UIColor colorWithRed:0.15 green:0.31 blue:0.07 alpha:1.0] forKey:NSForegroundColorAttributeName];
+                    [panel.textAttributes setValue:[UIColor colorWithRed:0.15 green:0.31 blue:0.07 alpha:1.0] forKey:NSForegroundColorAttributeName];
                 }
                 else if (n.integerValue < 5000) {
-                    [args.panel.textAttributes setValue:[UIColor redColor] forKey:NSForegroundColorAttributeName];
+                    [panel.textAttributes setValue:[UIColor redColor] forKey:NSForegroundColorAttributeName];
                 }
             }
         }
     }
+    return false;
 }
 
 - (void)didReceiveMemoryWarning {

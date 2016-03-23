@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Dynamic Charts"];
+    [self setTitle:NSLocalizedString(@"Dynamic Charts", nil)];
     
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];

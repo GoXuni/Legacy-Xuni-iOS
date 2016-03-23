@@ -39,29 +39,31 @@
     flex.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65);
     [flex setNeedsDisplay];
 }
--(void) beginningEdit:(FlexCellRangeEventArgs *)args{
+
+-(bool)beginningEdit:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range{
     FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    _temp = [flex.cells getCellDataForRow:args.row inColumn:args.col formatted:false];
-    
+    _temp = [flex.cells getCellDataForRow:range.row inColumn:range.col formatted:false];
+    return false;
 }
--(void) cellEditEnding:(FlexCellRangeEventArgs *)args{
+
+-(bool)cellEditEnding:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range cancel:(BOOL)cancel{
     dispatch_async(dispatch_get_main_queue(), ^{
         
     FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
     
-    if([[flex.cells getCellDataForRow:args.row inColumn:args.col formatted:false] isEqual:_temp])
+    if([[flex.cells getCellDataForRow:range.row inColumn:range.col formatted:false] isEqual:_temp])
     {
         return;
     }
     
     NSString *title = [[NSString alloc] init];
     NSString *message = [[NSString alloc] init];
-    title = @"Edit Confirmation";
-    message = @"Do you want to commit the edit?";
+    title = NSLocalizedString(@"Edit Confirmation", nil);
+    message = NSLocalizedString(@"Do you want to commit the edit?", nil);
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
-        [flex.cells setCellData:_temp forRow:args.row inColumn:args.col];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Ok", nil) style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+        [flex.cells setCellData:_temp forRow:range.row inColumn:range.col];
         [flex invalidate];
     }];
     [alertController addAction:okAction];
@@ -69,5 +71,7 @@
     [self presentViewController:alertController animated:true completion:nil];
         
     });
+    
+    return false;
 }
 @end

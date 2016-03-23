@@ -19,7 +19,7 @@ class BasicChartTypesController: UIViewController, UIPickerViewDataSource, UIPic
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Basic Chart Types"
+        self.title = NSLocalizedString("Basic Chart Types", comment: "")
         
         // Do any additional setup after loading the view.
         _rotatedSwitch.addTarget(self, action: "switchChanged:", forControlEvents: UIControlEvents.ValueChanged)
@@ -165,7 +165,6 @@ class BasicChartTypesController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
     func switchChanged(switchState: UISwitch) {
-        var temp = String()
         if (switchState.on) {
             _chart.rotated = true
         }
@@ -173,9 +172,13 @@ class BasicChartTypesController: UIViewController, UIPickerViewDataSource, UIPic
         {
             _chart.rotated = false
         }
-        temp = _chart.axisX.format
-        _chart.axisX.format = _chart.axisY.format
-        _chart.axisY.format = temp
+        
+        if (_chart.axisX.format != nil && _chart.axisY.format != nil) {
+            var temp = String()
+            temp = _chart.axisX.format
+            _chart.axisX.format = _chart.axisY.format
+            _chart.axisY.format = temp
+        }
     }
     
     /*

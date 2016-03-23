@@ -33,31 +33,33 @@ class EditConfirmationController: UIViewController, FlexGridDelegate {
         _flex.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65)
         _flex.setNeedsDisplay()
     }
-    func beginningEdit(args: FlexCellRangeEventArgs!) {
-        _temp = _flex.cells.getCellDataForRow(args.row, inColumn: args.col, formatted: false)
+    
+    func beginningEdit(sender: FlexGrid!, panel: FlexGridPanel!, forRange range: FlexCellRange!) -> Bool  {
+        _temp = _flex.cells.getCellDataForRow(range.row, inColumn: range.col, formatted: false)
+        return false
     }
     
-    func cellEditEnding(args: FlexCellRangeEventArgs!) {
+    func cellEditEnding(sender: FlexGrid!, panel: FlexGridPanel!, forRange range: FlexCellRange!, cancel: Bool) -> Bool  {
         
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             
-            if(self._flex.cells.getCellDataForRow(args.row, inColumn: args.col, formatted: false).isEqual(self._temp))
+            if(self._flex.cells.getCellDataForRow(range.row, inColumn: range.col, formatted: false).isEqual(self._temp))
             {
                 return;
             }
             
-            let title = "Edit Confirmation"
-            let message = "Do you want to commit the edit?"
+            let title = NSLocalizedString("Edit Confirmation", comment: "")
+            let message = NSLocalizedString("Do you want to commit the edit?", comment: "")
             let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: {(action) -> Void in
-                self._flex.cells.setCellData(self._temp, forRow: args.row, inColumn: args.col)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .Default, handler: nil))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .Cancel, handler: {(action) -> Void in
+                self._flex.cells.setCellData(self._temp, forRow: range.row, inColumn: range.col)
                 self._flex.invalidate()
             }))
             self.presentViewController(alert, animated: true, completion: nil)
         }
         
-
+        return false;
     }
     /*
     // MARK: - Navigation

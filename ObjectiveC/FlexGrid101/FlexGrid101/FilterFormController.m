@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     sharedData = [SharedFilterData sharedInstance];
-    pickerData =[[NSMutableArray alloc] initWithObjects:@"Contains", @"Begins with", @"Ends with", @"Equals", nil];
+    pickerData =[[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"Contains", nil), NSLocalizedString(@"Begins with", nil), NSLocalizedString(@"Ends with", nil), NSLocalizedString(@"Equals", nil), nil];
     UIPickerView *filterPicker = [[UIPickerView alloc] init];
     
     filterPicker.delegate = self;
@@ -35,7 +35,7 @@
 
     _filterField = [[UITextField alloc] init];
     _filterField.delegate = self;
-    _filterField.text = @"Enter text to Filter";
+    _filterField.text = NSLocalizedString(@"Enter text to Filter", nil);
     _filterField.returnKeyType = UIReturnKeyDone;
     _filterField.keyboardType = UIKeyboardTypeDefault;
     _filterField.backgroundColor = [UIColor lightGrayColor];
@@ -43,7 +43,7 @@
     
     UIButton *filterButton = [UIButton buttonWithType:UIButtonTypeSystem];
     
-    [filterButton setTitle:@"Filter" forState:UIControlStateNormal];
+    [filterButton setTitle:NSLocalizedString(@"Filter", nil) forState:UIControlStateNormal];
     [filterButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [filterButton addTarget:self action:@selector(filterButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [filterButton setBackgroundColor:[UIColor blueColor]];

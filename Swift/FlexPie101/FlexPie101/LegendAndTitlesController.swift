@@ -23,24 +23,24 @@ class LegendAndTitlesController: UIViewController, UIPickerViewDelegate, UIPicke
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        _pickerData = ["None", "Left", "Top", "Right", "Bottom"]
+        _pickerData = [NSLocalizedString("None", comment:"None"), NSLocalizedString("Left", comment:"Left"), NSLocalizedString("Top", comment:"Top"), NSLocalizedString("Right", comment:"Right"), NSLocalizedString("Bottom", comment:"Bottom")]
         
         _pickerView.delegate = self;
         _pickerView.showsSelectionIndicator = true
         _pickerView.hidden = false
         
-        _headerLabel.text = "Header"
-        _footerLabel.text = "Footer"
-        _legendLabel.text = "Legend Position"
+        _headerLabel.text = NSLocalizedString("header", comment: "Header")
+        _footerLabel.text = NSLocalizedString("footer", comment: "Footer")
+        _legendLabel.text = NSLocalizedString("legend position", comment: "legend position")
         
         _headerField.delegate = self
-        _headerField.text = "Fruit By Value"
+        _headerField.text = NSLocalizedString("Fruit By Value", comment:"Fruit By Value")
         _headerField.returnKeyType = UIReturnKeyType.Done
         _headerField.keyboardType = UIKeyboardType.Default
         _headerField.backgroundColor = UIColor.lightGrayColor()
         
         _footerField.delegate = self;
-        _footerField.text = "4 GrapeCity, inc."
+        _footerField.text =  NSLocalizedString("GrapeCity inc.", comment:"GrapeCity inc.")
         _footerField.returnKeyType = UIReturnKeyType.Done
         _footerField.keyboardType = UIKeyboardType.Default
         _footerField.backgroundColor = UIColor.lightGrayColor()
@@ -52,6 +52,7 @@ class LegendAndTitlesController: UIViewController, UIPickerViewDelegate, UIPicke
         _pieChart.itemsSource = pieData
         _pieChart.tooltip.isVisible = true
         _pieChart.header = _headerField.text
+        _pieChart.footer = _footerField.text
         _pieChart.sizeToFit()
         self.view.addSubview(_footerField)
         self.view.addSubview(_footerLabel)

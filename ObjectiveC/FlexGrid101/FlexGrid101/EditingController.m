@@ -38,13 +38,15 @@
     flex.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65);
     [flex setNeedsDisplay];
 }
-- (void)prepareCellForEdit:(FlexCellRangeEventArgs*)args {
+
+-(bool)prepareCellForEdit:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range
+ {
     FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    FlexColumn *col = [flex.columns objectAtIndex:args.col];
-    if ([col.binding isEqualToString:@"hireDate"]) {
+    FlexColumn *col = [flex.columns objectAtIndex:range.col];
+    if ([col.binding isEqualToString:@"lastOrderDate"]) {
         UITextField *editor = (UITextField*)flex.activeEditor;
         UIDatePicker *picker = [[UIDatePicker alloc] init];
-        NSDate *d = (NSDate*)[flex.cells getCellDataForRow:args.row inColumn:args.col formatted:NO];
+        NSDate *d = (NSDate*)[flex.cells getCellDataForRow:range.row inColumn:range.col formatted:NO];
         picker.opaque = true;
         picker.datePickerMode = UIDatePickerModeDate;
         picker.date = d;
@@ -58,7 +60,9 @@
         editor.inputAccessoryView = toolbar;
         editor.clearButtonMode = UITextFieldViewModeNever;
     }
+     return false;
 }
+
 - (void)onDatePickerChanged:(UIDatePicker*)sender {
     FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
     UITextField *editor = (UITextField*)flex.activeEditor;

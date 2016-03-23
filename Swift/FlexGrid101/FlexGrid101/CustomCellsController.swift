@@ -20,13 +20,13 @@ class CustomCellsController: UIViewController, FlexGridDelegate {
         _flex.delegate = self
         _flex.autoGenerateColumns = false
         let c1: FlexColumn = FlexColumn()
-        c1.header = "First Name"
+        c1.header = NSLocalizedString("First Name", comment: "")
         c1.binding = "firstName"
         let c2: FlexColumn = FlexColumn()
-        c2.header = "Last Name"
+        c2.header = NSLocalizedString("Last Name", comment: "")
         c2.binding = "lastName"
         let c3: FlexColumn = FlexColumn()
-        c3.header = "Total Orders"
+        c3.header = NSLocalizedString("Total Orders", comment: "")
         c3.binding = "orderTotal"
 
         _flex.columns.addObject(c1)
@@ -45,14 +45,14 @@ class CustomCellsController: UIViewController, FlexGridDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    func formatItem(args: FlexFormatItemEventArgs!) {
-        let col = _flex.columns.objectAtIndex(UInt(args.col)) as! FlexColumn
-        if(col.header == "Total Orders"){
-            let v = args.panel.getCellDataForRow(args.row, inColumn: args.col, formatted: false)
+    
+    func formatItem(sender: FlexGrid!, panel: FlexGridPanel!, forRange range: FlexCellRange!, inContext context: CGContext!) -> Bool {
+        let col = _flex.columns.objectAtIndex(UInt(range.col)) as! FlexColumn
+        if(col.header == NSLocalizedString("Total Orders", comment: "")){
+            let v = panel.getCellDataForRow(range.row, inColumn: range.col, formatted: false)
             if(v != nil){
                 //check for column header... if not equal to header performance  proceed
-                if(v.description != "Total Orders"){
+                if(v.description != NSLocalizedString("Total Orders", comment: "")){
                     let radialGauge = XuniRadialGauge()
                     let lower = XuniGaugeRange(gauge: radialGauge)
                     lower.min = 0
@@ -79,7 +79,7 @@ class CustomCellsController: UIViewController, FlexGridDelegate {
                     radialGauge.value = Double(v.description)! * (100.0/90000.0);
                     radialGauge.showRanges = false
                     
-                    var r : CGRect = args.panel.getCellRectForRow(args.row, inColumn: args.col)
+                    var r : CGRect = panel.getCellRectForRow(range.row, inColumn: range.col)
                     
                     r.size.width-=4;
                     r.size.height-=4;
@@ -94,10 +94,11 @@ class CustomCellsController: UIViewController, FlexGridDelegate {
                     var image = UIImage()
                     image = UIImage(data: radialGauge.getImage())!
                     image.drawInRect(r)
-                    args.cancel = true
+                    return true
                     }
             }
         }
+        return false
     }
     
     override func viewDidLayoutSubviews() {

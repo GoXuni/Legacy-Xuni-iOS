@@ -23,8 +23,8 @@
     
     UIButton *sortDescendingButton = [UIButton buttonWithType:UIButtonTypeSystem];
 
-    [sortAscendingButton setTitle:@"Ascending" forState:UIControlStateNormal];
-    [sortDescendingButton setTitle:@"Descending" forState:UIControlStateNormal];
+    [sortAscendingButton setTitle:NSLocalizedString(@"Ascending", nil) forState:UIControlStateNormal];
+    [sortDescendingButton setTitle:NSLocalizedString(@"Descending", nil) forState:UIControlStateNormal];
     [sortAscendingButton addTarget:self action:@selector(sortAscendingButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [sortDescendingButton addTarget:self action:@selector(sortDescendingButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [sortAscendingButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
@@ -35,15 +35,15 @@
     flex.autoGenerateColumns = false;
     FlexColumn *c1 = [[FlexColumn alloc] init];
     c1.binding = @"firstName";
-    c1.header = @"First Name";
+    c1.header = NSLocalizedString(@"First Name", nil);
     
     c1.width = 100;
     FlexColumn *c2 = [[FlexColumn alloc] init];
     c2.binding = @"lastName";
-    c2.header = @"Last Name";
+    c2.header = NSLocalizedString(@"Last Name", nil);
     FlexColumn *c3 = [[FlexColumn alloc] init];
     c3.binding = @"orderTotal";
-    c3.header = @"Order Total";
+    c3.header = NSLocalizedString(@"Order Total", nil);
     c3.format = @"C";
     c3.aggregate = XuniAggregateSum;
     [flex.columns addObject:c1];

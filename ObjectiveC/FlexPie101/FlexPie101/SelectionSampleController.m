@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UIPickerView *pickerView = [[UIPickerView alloc] init];
-    pickerData =[[NSMutableArray alloc] initWithObjects:@"None", @"Left", @"Top", @"Right", @"Bottom", nil];
+    pickerData =[[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"None", nil),NSLocalizedString(@"Left", nil) , NSLocalizedString(@"Top", nil),NSLocalizedString(@"Right", nil), NSLocalizedString(@"Bottom", nil), nil];
     UILabel *offsetLabel = [[UILabel alloc] init];
     UILabel *positionLabel = [[UILabel alloc] init];
     UILabel *isAnimatedLabel = [[UILabel alloc] init];
@@ -42,11 +42,11 @@
     NSMutableArray *pieData = [PieChartData demoData];
     
     offsetLabel.tag = 2;
-    offsetLabel.text = [@"Selected Item offset " stringByAppendingString:[NSString stringWithFormat:@"%1.1f", stepper.value]];
+    offsetLabel.text = [NSLocalizedString(@"Selected Item offset", nil) stringByAppendingString:[NSString stringWithFormat:@"%1.1f", stepper.value]];
     
-    positionLabel.text = @"Position";
+    positionLabel.text = NSLocalizedString(@"position", nil);
     
-    isAnimatedLabel.text = @"IsAnimated?";
+    isAnimatedLabel.text = NSLocalizedString(@"animation", nil);
     
     pieChart.binding = @"value";
     pieChart.bindingName = @"name";
@@ -136,7 +136,7 @@
     UILabel *offsetLabel = (UILabel*) [self.view viewWithTag:2];
     
     pie.selectedItemOffset = stepper.value;
-    offsetLabel.text = [@"Selected Item offset " stringByAppendingString:[NSString stringWithFormat:@"%1.1f", stepper.value]];
+    offsetLabel.text = [NSLocalizedString(@"offset", nil) stringByAppendingString:[NSString stringWithFormat:@"%1.1f", stepper.value]];
     [offsetLabel sizeToFit];
 }
 -(void)switchChanged:(UISwitch *) switchState{

@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Load Animation Mode"];
+    [self setTitle:NSLocalizedString(@"Load Animation Mode", nil)];
     
     // Do any additional setup after loading the view.
     chartTypePickerData =[[NSMutableArray alloc] initWithObjects:@"Column", @"Area", @"Line", @"LineSymbols", @"Spline", @"SplineSymbols", @"SplineArea", @"Scatter", nil];

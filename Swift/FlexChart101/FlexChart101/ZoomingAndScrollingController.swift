@@ -17,7 +17,7 @@ class ZoomingAndScrollingController: UIViewController, UIPickerViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Zooming and Scrolling"
+        self.title = NSLocalizedString("Zooming and Scrolling", comment: "")
         
         // Do any additional setup after loading the view.
         _pickerData = ["X", "Y", "XY", "Disabled"]
@@ -35,7 +35,7 @@ class ZoomingAndScrollingController: UIViewController, UIPickerViewDataSource, U
         _chart.chartType = XuniChartType.Scatter
         _chart.zoomMode = XuniZoomMode.XY
         _chart.isAnimated = false
-        _chart.header = "Drag to scroll/Pinch to zoom"
+        _chart.header = NSLocalizedString("Drag to scroll/Pinch to zoom", comment: "")
         _chart.headerFont = UIFont.systemFontOfSize(14)
         _chart.headerTextAlignment = XuniHorizontalAlignment.Center
         _chart.palette = XuniPalettes.superhero()

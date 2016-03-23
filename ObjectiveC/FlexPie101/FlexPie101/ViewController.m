@@ -18,7 +18,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     UITableView *table = (UITableView*)[self.view viewWithTag:1];
     table.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-    self.samples = @[@"Getting Started", @"Basic Features", @"Legend And Titles", @"Selection Sample", @"Theming", @"Snapshot"];
+    self.samples = @[NSLocalizedString(@"Getting Started",nil), NSLocalizedString(@"Basic Features",nil),
+        NSLocalizedString(@"Legend Sample",nil),
+        NSLocalizedString(@"Selection",nil),
+        NSLocalizedString(@"Theming",nil),
+        NSLocalizedString(@"Export Image",nil)];
 }
 
 - (void)didReceiveMemoryWarning {

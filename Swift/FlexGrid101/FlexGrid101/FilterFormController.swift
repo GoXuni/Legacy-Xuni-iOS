@@ -22,14 +22,14 @@ class FilterFormController: UIViewController, UIPickerViewDataSource, UIPickerVi
         checkStartingFilterValues()
 
         // Do any additional setup after loading the view.
-        _pickerData = ["Contains", "Begins with", "Ends with", "Equals"]
+        _pickerData = [NSLocalizedString("Contains", comment: ""), NSLocalizedString("Begins with", comment: ""), NSLocalizedString("Ends with", comment: ""), NSLocalizedString("Equals", comment: "")]
         
         _filterPicker.delegate = self
         _filterPicker.showsSelectionIndicator = true
         _filterPicker.hidden = false
         
         _filterButton = UIButton(type: UIButtonType.System)
-        _filterButton.setTitle("Filter", forState: UIControlState.Normal)
+        _filterButton.setTitle(NSLocalizedString("Filter", comment: ""), forState: UIControlState.Normal)
         _filterButton.addTarget(self, action: "filterButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         _filterButton.titleLabel?.textAlignment = NSTextAlignment.Center
         _filterButton.backgroundColor = UIColor.blueColor()
@@ -73,7 +73,7 @@ class FilterFormController: UIViewController, UIPickerViewDataSource, UIPickerVi
             _filterField.text = self.sharedData.filterString
         }
         else{
-            _filterField.text = "Enter text to Filter"
+            _filterField.text = NSLocalizedString("Enter text to Filter",comment:"")
         }
     }
     func filterButtonClicked(){

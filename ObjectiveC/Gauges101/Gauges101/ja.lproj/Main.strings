@@ -1,0 +1,201 @@
+
+/* Class = "UIViewController"; title = "Displaying Values"; ObjectID = "08v-Js-otx"; */
+"08v-Js-otx.title" = "Displaying Values";
+
+/* Class = "UILabel"; text = "Getting Started"; ObjectID = "1ee-Cf-CWG"; */
+"1ee-Cf-CWG.text" = "Getting Started";
+
+/* Class = "UILabel"; text = "Target:"; ObjectID = "3ED-w9-Ppg"; */
+"3ED-w9-Ppg.text" = "Target:";
+
+/* Class = "UILabel"; text = "Using Ranges"; ObjectID = "7J6-GK-aNv"; */
+"7J6-GK-aNv.text" = "Using Ranges";
+
+/* Class = "UIViewController"; title = "Direction"; ObjectID = "8HJ-fh-1SY"; */
+"8HJ-fh-1SY.title" = "Direction";
+
+/* Class = "UINavigationItem"; title = "Gauges101"; ObjectID = "8Wf-a8-DaP"; */
+"8Wf-a8-DaP.title" = "Gauges101";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "90n-xp-2bQ"; */
+"90n-xp-2bQ.text" = ">";
+
+/* Class = "UIViewController"; title = "Using Ranges"; ObjectID = "97A-vA-PeO"; */
+"97A-vA-PeO.title" = "Using Ranges";
+
+/* Class = "UILabel"; text = "Automatic Scaling"; ObjectID = "9Cb-yd-23P"; */
+"9Cb-yd-23P.text" = "Automatic Scaling";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "9NI-Dt-7eP"; */
+"9NI-Dt-7eP.text" = ">";
+
+/* Class = "UILabel"; text = "BulletGraph"; ObjectID = "9el-8a-fhh"; */
+"9el-8a-fhh.text" = "BulletGraph";
+
+/* Class = "UITableViewController"; title = "Gauges101"; ObjectID = "AU1-cr-RgQ"; */
+"AU1-cr-RgQ.title" = "Gauges101";
+
+/* Class = "UILabel"; text = "Shows custom animation techniques"; ObjectID = "Alq-na-nFv"; */
+"Alq-na-nFv.text" = "Shows custom animation techniques";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "FBK-za-8GA"; */
+"FBK-za-8GA.title" = "Save";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "FxO-w8-ck0"; */
+"FxO-w8-ck0.text" = "25";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "Gzc-OC-a4X"; */
+"Gzc-OC-a4X.text" = "25";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "HBI-Dp-7R8"; */
+"HBI-Dp-7R8.text" = "25";
+
+/* Class = "UIViewController"; title = "Getting Started"; ObjectID = "K37-G5-oNb"; */
+"K37-G5-oNb.title" = "Getting Started";
+
+/* Class = "UILabel"; text = "Value:"; ObjectID = "L1J-cb-T1O"; */
+"L1J-cb-T1O.text" = "Value:";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "MY9-fZ-afe"; */
+"MY9-fZ-afe.text" = "25";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "OGj-UI-bB3"; */
+"OGj-UI-bB3.text" = "25";
+
+/* Class = "UILabel"; text = "Bad:"; ObjectID = "Pub-T4-qcT"; */
+"Pub-T4-qcT.text" = "Bad:";
+
+/* Class = "UILabel"; text = "Direction"; ObjectID = "SAF-Yp-pdT"; */
+"SAF-Yp-pdT.text" = "Direction";
+
+/* Class = "UINavigationItem"; title = "Export Image"; ObjectID = "SNe-ez-n5s"; */
+"SNe-ez-n5s.title" = "Export Image";
+
+/* Class = "UIBarButtonItem"; title = "Take"; ObjectID = "SfY-tf-4K4"; */
+"SfY-tf-4K4.title" = "Take";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "V8W-Od-sjy"; */
+"V8W-Od-sjy.text" = "25";
+
+/* Class = "UILabel"; text = "Shows a radial gauge with different sweep angles"; ObjectID = "Van-sG-8er"; */
+"Van-sG-8er.text" = "Shows a radial gauge with different sweep angles";
+
+/* Class = "UIViewController"; title = "Export Image"; ObjectID = "WDz-EX-ieM"; */
+"WDz-EX-ieM.title" = "Export Image";
+
+/* Class = "UILabel"; text = "Displaying Values"; ObjectID = "Wge-Jg-8BX"; */
+"Wge-Jg-8BX.text" = "Displaying Values";
+
+/* Class = "UILabel"; text = "Export Image"; ObjectID = "XMx-92-4cz"; */
+"XMx-92-4cz.text" = "Export Image";
+
+/* Class = "UILabel"; text = "Bullet Graph"; ObjectID = "XNt-pY-JQX"; */
+"XNt-pY-JQX.text" = "Bullet Graph";
+
+/* Class = "UILabel"; text = "Shows how to export an image of a gauge"; ObjectID = "XWe-Ze-WII"; */
+"XWe-Ze-WII.text" = "Shows how to export an image of a gauge";
+
+/* Class = "UILabel"; text = "Animation"; ObjectID = "Xl9-rg-7Sy"; */
+"Xl9-rg-7Sy.text" = "Animation";
+
+/* Class = "UISegmentedControl"; YMs-gj-yEm.segmentTitles[0] = "Right"; ObjectID = "YMs-gj-yEm"; */
+"YMs-gj-yEm.segmentTitles[0]" = "Right";
+
+/* Class = "UISegmentedControl"; YMs-gj-yEm.segmentTitles[1] = "Left"; ObjectID = "YMs-gj-yEm"; */
+"YMs-gj-yEm.segmentTitles[1]" = "Left";
+
+/* Class = "UISegmentedControl"; YMs-gj-yEm.segmentTitles[2] = "Down"; ObjectID = "YMs-gj-yEm"; */
+"YMs-gj-yEm.segmentTitles[2]" = "Down";
+
+/* Class = "UISegmentedControl"; YMs-gj-yEm.segmentTitles[3] = "Up"; ObjectID = "YMs-gj-yEm"; */
+"YMs-gj-yEm.segmentTitles[3]" = "Up";
+
+/* Class = "UILabel"; text = "Radial Gauge:"; ObjectID = "aG3-kp-5yy"; */
+"aG3-kp-5yy.text" = "Radial Gauge:";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "bGa-Ca-sVM"; */
+"bGa-Ca-sVM.text" = ">";
+
+/* Class = "UILabel"; text = "Linear Gauge"; ObjectID = "bSF-Vv-iOI"; */
+"bSF-Vv-iOI.text" = "Linear Gauge";
+
+/* Class = "UILabel"; text = "Direction:"; ObjectID = "dkS-jp-MbA"; */
+"dkS-jp-MbA.text" = "Direction:";
+
+/* Class = "UILabel"; text = "Shows customized ranges behind the pointer"; ObjectID = "eFO-oh-g7u"; */
+"eFO-oh-g7u.text" = "Shows customized ranges behind the pointer";
+
+/* Class = "UILabel"; text = "Good:"; ObjectID = "fKb-LG-Ipi"; */
+"fKb-LG-Ipi.text" = "Good:";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "fXK-Pj-z2I"; */
+"fXK-Pj-z2I.text" = "25";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "gM7-nb-edl"; */
+"gM7-nb-edl.text" = "25";
+
+/* Class = "UILabel"; text = "Shows a bulletgraph with good, bad and target ranges"; ObjectID = "i1t-bi-tIj"; */
+"i1t-bi-tIj.text" = "Shows a bulletgraph with good, bad and target ranges";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "ip3-22-hTU"; */
+"ip3-22-hTU.text" = ">";
+
+/* Class = "UINavigationController"; title = "Gauges101"; ObjectID = "jKi-Lt-4No"; */
+"jKi-Lt-4No.title" = "Gauges101";
+
+/* Class = "UILabel"; text = "Show ranges:"; ObjectID = "kWE-Ws-VUg"; */
+"kWE-Ws-VUg.text" = "Show ranges:";
+
+/* Class = "UIViewController"; title = "Automatic Scaling"; ObjectID = "lsw-OR-pPQ"; */
+"lsw-OR-pPQ.title" = "Automatic Scaling";
+
+/* Class = "UILabel"; text = "Sweep Angle:"; ObjectID = "ox7-O5-nN1"; */
+"ox7-O5-nN1.text" = "Sweep Angle:";
+
+/* Class = "UILabel"; text = "Shows linear gauges at different directions"; ObjectID = "qT9-gI-3dF"; */
+"qT9-gI-3dF.text" = "Shows linear gauges at different directions";
+
+/* Class = "UISegmentedControl"; qsf-cb-II0.segmentTitles[0] = "All"; ObjectID = "qsf-cb-II0"; */
+"qsf-cb-II0.segmentTitles[0]" = "All";
+
+/* Class = "UISegmentedControl"; qsf-cb-II0.segmentTitles[1] = "MinMax"; ObjectID = "qsf-cb-II0"; */
+"qsf-cb-II0.segmentTitles[1]" = "MinMax";
+
+/* Class = "UISegmentedControl"; qsf-cb-II0.segmentTitles[2] = "Value"; ObjectID = "qsf-cb-II0"; */
+"qsf-cb-II0.segmentTitles[2]" = "Value";
+
+/* Class = "UISegmentedControl"; qsf-cb-II0.segmentTitles[3] = "None"; ObjectID = "qsf-cb-II0"; */
+"qsf-cb-II0.segmentTitles[3]" = "None";
+
+/* Class = "UIViewController"; title = "BulletGraph"; ObjectID = "qxu-TE-WXN"; */
+"qxu-TE-WXN.title" = "BulletGraph";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "rSe-fm-Gxe"; */
+"rSe-fm-Gxe.text" = ">";
+
+/* Class = "UILabel"; text = "Value:"; ObjectID = "rZc-UW-ghl"; */
+"rZc-UW-ghl.text" = "Value:";
+
+/* Class = "UILabel"; text = "Start Angle:"; ObjectID = "t1k-Of-tJc"; */
+"t1k-Of-tJc.text" = "Start Angle:";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "uWs-YC-BOy"; */
+"uWs-YC-BOy.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "v4P-ZC-9ef"; */
+"v4P-ZC-9ef.text" = ">";
+
+/* Class = "UIViewController"; title = "Animation"; ObjectID = "yDK-XO-7Ae"; */
+"yDK-XO-7Ae.title" = "Animation";
+
+/* Class = "UILabel"; text = "Shows simple gauge controls with interaction"; ObjectID = "yEl-vp-kjt"; */
+"yEl-vp-kjt.text" = "Shows simple gauge controls with interaction";
+
+/* Class = "UILabel"; text = "Shows value labels on the gauges"; ObjectID = "yWQ-mg-ImF"; */
+"yWQ-mg-ImF.text" = "Shows value labels on the gauges";
+
+/* Class = "UILabel"; text = "Value:"; ObjectID = "z2t-xN-ZFN"; */
+"z2t-xN-ZFN.text" = "Value:";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "zUw-ej-Vj6"; */
+"zUw-ej-Vj6.text" = ">";

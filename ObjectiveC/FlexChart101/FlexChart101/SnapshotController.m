@@ -17,11 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Export Image"];
+    [self setTitle:NSLocalizedString(@"Export Image", nil)];
     
     // Do any additional setup after loading the view.
     UIButton *snapshotButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [snapshotButton setTitle:@"Take a snapshot" forState:UIControlStateNormal];
+    [snapshotButton setTitle:NSLocalizedString(@"Take a snapshot", nil) forState:UIControlStateNormal];
     [snapshotButton addTarget:self action:@selector(snapshotButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     
     FlexChart *chart = [[FlexChart alloc] init];
@@ -71,15 +71,15 @@
     NSString *title;
     
     if (!error) {
-        title = @"Succes";
-        message = @"Image was saved to Camera Roll succesfully";
+        title = NSLocalizedString(@"Succes", nil);
+        message = NSLocalizedString(@"Image was saved to Camera Roll successfully", nil);
     }
     else {
-        title = @"Failure";
+        title = NSLocalizedString(@"Failure", nil);
         message = [error description];
     }
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
     [alert show];
 }
 

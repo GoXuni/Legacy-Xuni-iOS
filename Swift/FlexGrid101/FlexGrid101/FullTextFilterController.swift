@@ -18,7 +18,7 @@ class FullTextFilterController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         _filterField.delegate = self
-        _filterField.text = "Enter text to Filter"
+        _filterField.text = NSLocalizedString("Enter text to Filter", comment: "")
         _filterField.returnKeyType = UIReturnKeyType.Done
         _filterField.keyboardType = UIKeyboardType.Default
         _filterField.backgroundColor = UIColor.lightGrayColor()
@@ -51,10 +51,10 @@ class FullTextFilterController: UIViewController, UITextFieldDelegate {
         return true
     }
     func textFieldDidEndEditing(textField: UITextField) {
-        var dateFormat = NSDateFormatter()
+        let dateFormat = NSDateFormatter()
         dateFormat.setLocalizedDateFormatFromTemplate("M/d/yy")
         _flex.collectionView.filter = {(item : NSObject?) -> Bool in
-            var d = item as! CustomerData;
+            let d = item as! CustomerData;
         
             if (String(format: "%.f", d.customerID) == textField.text) {
                 return true

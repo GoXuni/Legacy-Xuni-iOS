@@ -18,7 +18,7 @@ class LoadAnimationController: UIViewController, UIPickerViewDataSource, UIPicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Load Animation Mode"
+        self.title = NSLocalizedString("Load Animation Mode", comment: "")
         
         // Do any additional setup after loading the view.
         _chartTypePickerData = ["Column", "Area", "Line", "LineSymbols", "Spline", "SplineSymbols", "SplineArea", "Scatter"]

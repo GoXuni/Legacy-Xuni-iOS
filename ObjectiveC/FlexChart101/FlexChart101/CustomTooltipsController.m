@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Custom Tooltips"];
+    [self setTitle:NSLocalizedString(@"Custom Tooltips", nil)];
     
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];
@@ -84,14 +84,15 @@
 @implementation MyTooltip
 
 -(void)setChartData:(XuniDataPoint *)chartData{
-    NSNumber *countryNum = [NSNumber numberWithDouble:chartData.dataX];
+    XuniChartDataPoint *cdpt = (XuniChartDataPoint *)chartData;
+    NSNumber *countryNum = [NSNumber numberWithDouble:cdpt.pointIndex];
 
     if (label == nil  && imageView == nil) {
         label = [[UILabel alloc] initWithFrame:CGRectMake(self.bounds.size.width/4, 0, self.bounds.size.width*3/4, self.bounds.size.height)];
         label.textColor = [UIColor blackColor];
 
         label.numberOfLines = 3;
-        label.text = [NSString stringWithFormat:@"%@ \n\n $%.2f", chartData.seriesName, chartData.dataY];
+        label.text = [NSString stringWithFormat:@"%@ \n\n $%.2f", cdpt.seriesName, cdpt.value];
         label.font = [label.font fontWithSize:11];
         image = [UIImage imageNamed:[countryNum stringValue]];
         imageView = [[UIImageView alloc] initWithImage:image];
@@ -101,7 +102,7 @@
     else{
         image = [UIImage imageNamed:[countryNum stringValue]];
         [imageView setImage:image];
-        label.text = [NSString stringWithFormat:@"%@ \n\n $%.2f", chartData.seriesName, chartData.dataY];
+        label.text = [NSString stringWithFormat:@"%@ \n\n $%.2f", cdpt.seriesName, cdpt.value];
         [imageView setNeedsLayout];
         [label setNeedsLayout];
     }

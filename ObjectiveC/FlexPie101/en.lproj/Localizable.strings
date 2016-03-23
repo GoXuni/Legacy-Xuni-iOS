@@ -1,0 +1,54 @@
+//
+//  Localizable.strings
+//  FlexPie101
+//
+//  Copyright (c) 2015 GrapeCity. All rights reserved.
+//
+
+/* FlexPie101 */
+"Getting Started" = "Getting Started";
+
+/* FlexPie101 */
+"Basic Features" = "Basic Features";
+
+/* FlexPie101 */
+"Legend Sample" = "Legend and Titles";
+
+/* FlexPie101 */
+"Selection" = "Selection Sample";
+
+/* FlexPie101 */
+"Theming" = "Theming";
+
+/* FlexPie101 */
+"Export Image" = "Snapshot";
+
+/* FlexPie101 */
+"inner radius" = "inner radius ";
+
+/* FlexPie101 */
+"offset" = "offset";
+
+/* FlexPie101 */
+"Selected Item offset" = "Selected Item offset ";
+
+/* FlexPie101 */
+"start angle" = "start angle";
+
+/* FlexPie101 */
+"header" = "header";
+
+/* FlexPie101 */
+"footer" = "footer";
+
+/* FlexPie101 */
+"legend position" = "Legend Position";
+
+/* FlexPie101 */
+"animation" = "isAnimated?";
+
+/* FlexPie101 */
+"position" = "position";
+
+/* FlexPie101 */
+"Take a snapshot" = "Take a snapshot";

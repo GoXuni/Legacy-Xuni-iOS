@@ -1,0 +1,82 @@
+//
+//  Localizable.strings
+//  FlexPie101
+//
+//  Copyright (c) 2015 GrapeCity. All rights reserved.
+//
+
+/* FlexPie101 */
+"Getting Started" = "FlexPie の基本機能";
+
+/* FlexPie101 */
+"Basic Features" = "FlexPie のカスタマイズ";
+
+/* FlexPie101 */
+"Legend Sample" = "凡例とタイトル";
+
+/* FlexPie101 */
+"Selection" = "スライスの選択";
+
+/* FlexPie101 */
+"Theming" = "テーマ（組み込みカラーパレット）";
+
+/* FlexPie101 */
+"Export Image" = "画像として保存";
+
+/* FlexPie101 */
+"inner radius" = "内側半径：";
+
+/* FlexPie101 */
+"offset" = "オフセット";
+
+/* FlexPie101 */
+"Reversed?" = "反転する";
+
+/* FlexPie101 */
+"start angle" = "開始角度";
+
+/* FlexPie101 */
+"header" = "ヘッダに表示";
+
+/* FlexPie101 */
+"footer" = "フッタに表示";
+
+/* FlexPie101 */
+"legend position" = "凡例の配置";
+
+/* FlexPie101 */
+"animation" = "選択時に回転";
+
+/* FlexPie101 */
+"position" = "選択項目の表示位置";
+
+/* FlexPie101 */
+"Take a snapshot" = "画像を保存";
+
+/* FlexPie101 */
+"Selected Item offset" = "選択項目のオフセット：";
+
+/* FlexPie101  */
+"Success" = "成功";
+
+/* FlexPie101  */
+"Image was saved to Camera Roll successfully" = "画像をカメラロールに保存しました。";
+
+/* FlexPie101  */
+"Failure" = "失敗";
+
+/* FlexPie101  */
+"GrapeCity inc." = "グレープシティ株式会社";
+
+/* FlexPie101  */
+"Fruit By Value" = "果実の出荷量";
+
+/* FlexPie101  */
+"None" = "なし(None)";
+"Top" = "上部(Top)";
+"Bottom" = "下部(Bottom)";
+"Left" = "左側(Left)";
+"Right" = "右側(Right)";
+
+/* FlexPie101 */
+//"OK" = "";

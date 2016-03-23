@@ -14,7 +14,7 @@ class MixedChartTypesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Mixed Chart Types"
+        self.title = NSLocalizedString("Mixed Chart Types", comment: "")
         
         // Do any additional setup after loading the view.
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")

@@ -17,7 +17,8 @@ class GettingStartedController: UIViewController {
         // Do any additional setup after loading the view.
         _flex.isReadOnly = true
         _flex.itemsSource = CustomerData.getCustomerData(100)
-        _flex.autoSizeColumn(0, to: Int32(Int(_flex.columns.count)-1))
+        _flex.autoSizeColumns(0, to: Int32(Int(_flex.columns.count)-1))
+        
         self.view.addSubview(_flex)
     }
 

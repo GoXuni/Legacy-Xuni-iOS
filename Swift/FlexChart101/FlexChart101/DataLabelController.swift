@@ -16,7 +16,7 @@ class DataLabelController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Data Labels"
+        self.title = NSLocalizedString("Data Labels", comment: "")
         
         // Do any additional setup after loading the view.
         _positionPickerData = ["None", "Left", "Top", "Right", "Bottom", "Center"]

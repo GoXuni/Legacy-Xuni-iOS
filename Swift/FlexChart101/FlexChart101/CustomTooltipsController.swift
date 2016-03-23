@@ -16,7 +16,7 @@ class CustomTooltipsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Custom Tooltips"
+        self.title = NSLocalizedString("Custom Tooltips", comment: "")
         
         // Do any additional setup after loading the view.
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")
@@ -79,23 +79,24 @@ class MyTooltip : XuniBaseChartTooltipView {
         }
         
         set{
-
+            var cdpt: XuniChartDataPoint = newValue as! XuniChartDataPoint
+            
             if (imageView.image == nil) {
                 label = UILabel()
                 label.frame = CGRectMake(self.bounds.size.width/4, 0, self.bounds.size.width*3/4, self.bounds.size.height)
                 label.textColor = UIColor.blackColor()
                 label.numberOfLines = 3
-                label.text = "\(newValue!.seriesName) \n\n $\(newValue!.dataY)"
+                label.text = "\(cdpt.seriesName) \n\n $\(cdpt.value)"
                 label.font = label.font.fontWithSize(11)
-                image = UIImage(named:"\(newValue!.dataX)")!
+                image = UIImage(named:"\(cdpt.pointIndex)")!
                 imageView =  UIImageView(image: image)
                 self.addSubview(imageView)
                 self.addSubview(label)
             }
             else{
-                image = UIImage(named:"\(newValue!.dataX)")!
+                image = UIImage(named:"\(cdpt.pointIndex)")!
                 imageView.image = image
-                label.text = "\(newValue!.seriesName) \n\n $\(newValue!.dataY)"
+                label.text = "\(cdpt.seriesName) \n\n $\(cdpt.value)"
                 imageView.setNeedsLayout()
             }
         }

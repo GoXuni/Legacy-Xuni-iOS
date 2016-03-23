@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "XuniCoreKit/XuniCoreKit.h"
+#import <XuniGaugeKit/XuniGaugeKit.h>
 #import "License.h"
 
 @interface AppDelegate ()
@@ -19,6 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [XuniLicenseManager setKey:key];
+    [XuniRadialGauge class];
+    [XuniLinearGauge class];
+    [XuniBulletGraph class];
     return YES;
 }
 

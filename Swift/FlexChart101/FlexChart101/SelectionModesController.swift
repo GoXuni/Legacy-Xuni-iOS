@@ -18,7 +18,7 @@ class SelectionModesController: UIViewController, UIPickerViewDataSource, UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Selection Modes"
+        self.title = NSLocalizedString("Selection Modes", comment: "")
         
         // Do any additional setup after loading the view.
         _chartTypePickerData = ["Column", "Bar", "Scatter", "Line", "LineSymbol", "Area"]

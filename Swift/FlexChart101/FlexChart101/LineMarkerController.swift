@@ -18,7 +18,7 @@ class LineMarkerController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Line Marker"
+        self.title = NSLocalizedString("Line Marker", comment: "")
         
         // Do any additional setup after loading the view.
         _interactionPickerData = ["None", "Move", "Drag"]
@@ -174,7 +174,7 @@ class MyMarkerView : XuniChartMarkerBaseView {
      required init(coder aDecoder: NSCoder) {
         self.myLineMarker = XuniChartLineMarker()
         self.content = UILabel()
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
      }
     
     override init(frame: CGRect) {
@@ -196,15 +196,15 @@ class MyChartMarkerRender : NSObject, IXuniChartMarkerRender {
         var data = view.myLineMarker.dataPoints
         
         if (data != nil && data.count > 0) {
-            var point: XuniDataPoint = data[0] as! XuniDataPoint
-            var str: String = String(format: "%@ \n", point.dataXString)
+            var point: XuniChartDataPoint = data[0] as! XuniChartDataPoint
+            var str: String = String(format: "%@ \n", point.valueX)
             
             for var i = 0; i < data.count - 1; i++ {
-                point = data[i] as! XuniDataPoint;
-                str += String(format: "%@ : %.0f \n", point.seriesName, point.dataY)
+                point = data[i] as! XuniChartDataPoint;
+                str += String(format: "%@ : %.0f \n", point.seriesName, point.value)
             }
-            point = data[data.count - 1] as! XuniDataPoint;
-            str += String(format: "%@ : %.0f", point.seriesName, point.dataY)
+            point = data[data.count - 1] as! XuniChartDataPoint;
+            str += String(format: "%@ : %.0f", point.seriesName, point.value)
             
             view.content.text = str;
             view.content.numberOfLines = 4;

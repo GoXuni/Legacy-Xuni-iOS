@@ -7,6 +7,11 @@
 
 #import <Foundation/Foundation.h>
 
+@interface CountryPair: NSObject
+@property NSString* title;
+@property NSNumber* identifier;
+@end
+
 @interface CustomerData : NSObject
 @property NSUInteger customerID;
 @property NSString *firstName, *lastName, *address, *city;
@@ -21,7 +26,7 @@
 
 
 +(NSMutableArray *) getCustomerData: (NSInteger) count;
-
++ (NSArray *)defaultCountries;
 
 ///TODO - remove obsolete properties and constructor
 

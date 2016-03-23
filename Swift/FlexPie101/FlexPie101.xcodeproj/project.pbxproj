@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED31B92D1C02C4BE00164D57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED31B92F1C02C4BE00164D57 /* Localizable.strings */; };
+		ED9233691BFC0436008F09CF /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9233661BFC0436008F09CF /* XuniChartCoreKit.framework */; };
+		ED92336A1BFC0436008F09CF /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9233671BFC0436008F09CF /* XuniCoreKit.framework */; };
+		ED92336B1BFC0436008F09CF /* XuniFlexPieKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9233681BFC0436008F09CF /* XuniFlexPieKit.framework */; };
 		F235736D1B447EB300F300D7 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235736C1B447EB300F300D7 /* License.swift */; };
-		F235736F1B447F0800F300D7 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F235736E1B447F0800F300D7 /* XuniCoreKit.framework */; };
-		F23573711B447F1E00F300D7 /* XuniFlexPieKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23573701B447F1E00F300D7 /* XuniFlexPieKit.framework */; };
-		F23573731B45829A00F300D7 /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23573721B45829A00F300D7 /* XuniChartCoreKit.framework */; };
 		F2EC7C041B4315ED00A140F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EC7C031B4315ED00A140F4 /* AppDelegate.swift */; };
 		F2EC7C061B4315ED00A140F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EC7C051B4315ED00A140F4 /* ViewController.swift */; };
 		F2EC7C091B4315ED00A140F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2EC7C071B4315ED00A140F4 /* Main.storyboard */; };
@@ -37,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED31B92E1C02C4BE00164D57 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ED31B9301C02C4C100164D57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ED9233661BFC0436008F09CF /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = "../../../../../../../../Desktop/培训材料/XuniChartCoreKit.framework"; sourceTree = "<group>"; };
+		ED9233671BFC0436008F09CF /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../../../../../../../../Desktop/培训材料/XuniCoreKit.framework"; sourceTree = "<group>"; };
+		ED9233681BFC0436008F09CF /* XuniFlexPieKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexPieKit.framework; path = "../../../../../../../../Desktop/培训材料/XuniFlexPieKit.framework"; sourceTree = "<group>"; };
 		F235736C1B447EB300F300D7 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
-		F235736E1B447F0800F300D7 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = ../../../Controls/XuniCoreKit.framework; sourceTree = "<group>"; };
-		F23573701B447F1E00F300D7 /* XuniFlexPieKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexPieKit.framework; path = ../../../Controls/XuniFlexPieKit.framework; sourceTree = "<group>"; };
-		F23573721B45829A00F300D7 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = ../../../Controls/XuniChartCoreKit.framework; sourceTree = "<group>"; };
 		F2EC7BFE1B4315ED00A140F4 /* FlexPie101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexPie101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2EC7C021B4315ED00A140F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2EC7C031B4315ED00A140F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,9 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F235736F1B447F0800F300D7 /* XuniCoreKit.framework in Frameworks */,
-				F23573731B45829A00F300D7 /* XuniChartCoreKit.framework in Frameworks */,
-				F23573711B447F1E00F300D7 /* XuniFlexPieKit.framework in Frameworks */,
+				ED9233691BFC0436008F09CF /* XuniChartCoreKit.framework in Frameworks */,
+				ED92336A1BFC0436008F09CF /* XuniCoreKit.framework in Frameworks */,
+				ED92336B1BFC0436008F09CF /* XuniFlexPieKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,9 +87,9 @@
 		F2EC7BF51B4315ED00A140F4 = {
 			isa = PBXGroup;
 			children = (
-				F23573701B447F1E00F300D7 /* XuniFlexPieKit.framework */,
-				F23573721B45829A00F300D7 /* XuniChartCoreKit.framework */,
-				F235736E1B447F0800F300D7 /* XuniCoreKit.framework */,
+				ED9233661BFC0436008F09CF /* XuniChartCoreKit.framework */,
+				ED9233671BFC0436008F09CF /* XuniCoreKit.framework */,
+				ED9233681BFC0436008F09CF /* XuniFlexPieKit.framework */,
 				F2EC7C001B4315ED00A140F4 /* FlexPie101 */,
 				F2EC7C161B4315ED00A140F4 /* FlexPie101Tests */,
 				F2EC7BFF1B4315ED00A140F4 /* Products */,
@@ -126,6 +129,7 @@
 		F2EC7C011B4315ED00A140F4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ED31B92F1C02C4BE00164D57 /* Localizable.strings */,
 				F2EC7C021B4315ED00A140F4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -230,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2EC7C091B4315ED00A140F4 /* Main.storyboard in Resources */,
+				ED31B92D1C02C4BE00164D57 /* Localizable.strings in Resources */,
 				F2EC7C0E1B4315ED00A140F4 /* LaunchScreen.xib in Resources */,
 				F2EC7C0B1B4315ED00A140F4 /* Images.xcassets in Resources */,
 			);
@@ -281,6 +286,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		ED31B92F1C02C4BE00164D57 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED31B92E1C02C4BE00164D57 /* ja */,
+				ED31B9301C02C4C100164D57 /* en */,
+			);
+			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		F2EC7C071B4315ED00A140F4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -390,10 +405,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/main-frameworks,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexPie101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -406,10 +421,10 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Volumes/main-frameworks,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = FlexPie101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

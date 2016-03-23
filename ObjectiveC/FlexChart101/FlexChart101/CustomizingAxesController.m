@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Customizing Axes"];
+    [self setTitle:NSLocalizedString(@"Customizing Axes", nil)];
     
     // Do any additional setup after loading the view.
     NSNumber *max = [[NSNumber alloc] initWithInt:10000];

@@ -16,7 +16,7 @@ class ThemingController: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Theming"
+        self.title = NSLocalizedString("Theming", comment: "")
         
         // Do any additional setup after loading the view.
         _pickerData = ["Standard", "Cocoa", "Coral", "Dark", "HighContrast", "Light", "Midnight", "Minimal", "Modern", "Organic", "Slate", "Zen", "Cyborg", "Superhero", "Flatly", "Darkly", "Cerulean"]

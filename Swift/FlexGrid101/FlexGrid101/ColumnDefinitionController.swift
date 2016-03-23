@@ -18,17 +18,17 @@ class ColumnDefinitionController: UIViewController {
         _flex.autoGenerateColumns = false
         let c1 = FlexColumn()
         c1.binding = "customerID"
-        c1.header = "ID"
+        c1.header = NSLocalizedString("ID", comment: "")
         c1.width = 100
         let c2 = FlexColumn()
         c2.binding = "firstName"
-        c2.header = "First name"
+        c2.header = NSLocalizedString("First name", comment: "")
         let c3 = FlexColumn()
-        c3.header = "Last name"
+        c3.header = NSLocalizedString("Last name", comment: "")
         c3.binding = "lastName"
         let c4 = FlexColumn()
         c4.binding = "orderTotal"
-        c4.header = "Total orders"
+        c4.header = NSLocalizedString("Total orders", comment: "")
         c4.format = "N1"
         _flex.columns.addObject(c1)
         _flex.columns.addObject(c2)

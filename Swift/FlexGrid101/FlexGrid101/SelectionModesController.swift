@@ -18,7 +18,7 @@ class SelectionModesController: UIViewController, UIPickerViewDelegate, UIPicker
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        _pickerData = ["None", "Cell", "Cell Range", "Row", "Row Range"]
+        _pickerData = [NSLocalizedString("None", comment: ""), NSLocalizedString("Cell", comment: ""), NSLocalizedString("Cell Range", comment: ""), NSLocalizedString("Row", comment: ""), NSLocalizedString("Row Range", comment: "")]
         
         _flex.isReadOnly = true
         _flex.itemsSource = CustomerData.getCustomerData(100)
@@ -63,8 +63,9 @@ class SelectionModesController: UIViewController, UIPickerViewDelegate, UIPicker
             break;
         }
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return _pickerData.objectAtIndex(row) as! String
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return _pickerData.objectAtIndex(row) as? String
     }    /*
     // MARK: - Navigation
 

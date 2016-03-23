@@ -18,7 +18,7 @@ class HitTestController: UIViewController, FlexChartDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Hit Test"
+        self.title = NSLocalizedString("Hit Test", comment: "")
         
         // Do any additional setup after loading the view.
         _chartElementLabel.text = " Chart element"
@@ -64,12 +64,15 @@ class HitTestController: UIViewController, FlexChartDelegate {
         _chartElementLabel.frame = CGRectMake(0, self.view.bounds.size.height * 6 / 8, self.view.bounds.size.width, self.view.bounds.size.height / 16)
     }
     
-    func tapped(point: XuniPoint!) -> Bool {
+    func tapped(sender: FlexChartBase!, point: XuniPoint!) -> Bool {
         var hitTest = _chart.hitTest(point)
-        var seriesName = (hitTest.series != nil) ? hitTest.series.name : ""
+        var seriesName = "";
+        if (hitTest.dataPoint.seriesIndex >= 0 && hitTest.dataPoint.seriesIndex < Int32(_chart.series.count)) {
+            seriesName = hitTest.dataPoint.seriesName;
+        }
         
-        _pointIndexLabel.text = " Point Index: " + String(hitTest.pointIndex);
-        _xyLabel.text = " X:" + String(format: "%1.2f", hitTest.x) + " Y:" + String(format: "%1.2f", hitTest.y)
+        _pointIndexLabel.text = " Point Index: " + String(hitTest.dataPoint.pointIndex);
+        _xyLabel.text = " X:" + String(format: "%@", hitTest.dataPoint.valueX ?? "0") + " Y:" + String(format: "%1.2f", hitTest.dataPoint.value)
         _seriesLabel.text = " Series: " + seriesName
         _chartElementLabel.text = " Chart element: " + getChartTypeString(hitTest.chartElement)
         

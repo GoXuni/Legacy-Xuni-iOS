@@ -37,21 +37,21 @@ class BasicFeaturesController: UIViewController {
         stepper.stepValue = 0.1
         stepper.addTarget(self, action: "stepperClicked:", forControlEvents:UIControlEvents.ValueChanged)
         
-        innerRadiusLabel.text = "Inner Radius " + String(stringInterpolationSegment: stepper.value)
+        innerRadiusLabel.text = NSLocalizedString("inner radius", comment: "Inner Radius ") + String(stringInterpolationSegment: stepper.value)
         
-        offsetLabel.text = "Offset"
+        offsetLabel.text = NSLocalizedString("offset", comment: "Offset")
         
         offsetSlider.addTarget(self, action:"offsetSliderChanged:", forControlEvents:UIControlEvents.ValueChanged)
         offsetSlider.minimumValue = 0.0
         offsetSlider.maximumValue = 1.0
         
-        startAngleLabel.text = "Start Angle"
+        startAngleLabel.text = NSLocalizedString("start angle", comment: "Start Angle")
         
         startAngleSlider.addTarget(self, action:"startAngleSliderChanged:", forControlEvents:UIControlEvents.ValueChanged)
         startAngleSlider.minimumValue = 0.0
         startAngleSlider.maximumValue = 360.0
         
-        reversedLabel.text = "Reversed?"
+        reversedLabel.text = NSLocalizedString("Reversed?", comment: "Start Angle")
         reversedSwitch.addTarget(self, action:"switchChanged:", forControlEvents:UIControlEvents.ValueChanged)
         
         self.view.addSubview(innerRadiusLabel)
@@ -98,7 +98,7 @@ class BasicFeaturesController: UIViewController {
     
     func stepperClicked(sender: UIStepper) {
         pieChart.innerRadius = stepper.value
-        innerRadiusLabel.text = "Inner Radius " + String(stringInterpolationSegment: stepper.value)
+        innerRadiusLabel.text = NSLocalizedString("inner radius", comment: "Inner Radius ") + String(stringInterpolationSegment: stepper.value)
         innerRadiusLabel.sizeToFit()
     }
     func offsetSliderChanged(sender: UISlider){

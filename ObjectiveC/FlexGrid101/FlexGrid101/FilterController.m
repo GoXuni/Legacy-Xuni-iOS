@@ -28,8 +28,8 @@
     FlexGrid *flex = [[FlexGrid alloc] init];
     flex.isReadOnly = true;
     flex.itemsSource = [CustomerData getCustomerData:100];
-    [filterButton setTitle:@"Filter" forState:UIControlStateNormal];
-    [removeButton setTitle:@"Remove" forState:UIControlStateNormal];
+    [filterButton setTitle:NSLocalizedString(@"Filter", nil) forState:UIControlStateNormal];
+    [removeButton setTitle:NSLocalizedString(@"Remove", nil) forState:UIControlStateNormal];
     [filterButton addTarget:self action:@selector(filterButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [removeButton addTarget:self action:@selector(removeButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     

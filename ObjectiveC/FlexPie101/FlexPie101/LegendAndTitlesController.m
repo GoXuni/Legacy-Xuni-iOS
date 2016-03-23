@@ -28,7 +28,7 @@
     
     UILabel *footerLabel = [[UILabel alloc] init];
     _footerField = [[UITextField alloc] init];
-    pickerData =[[NSMutableArray alloc] initWithObjects:@"None", @"Left", @"Top", @"Right", @"Bottom", nil];
+    pickerData =[[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"None", nil),NSLocalizedString(@"Left", nil) , NSLocalizedString(@"Top", nil),NSLocalizedString(@"Right", nil), NSLocalizedString(@"Bottom", nil), nil];
     
     UILabel *legendlabel = [[UILabel alloc] init];
     pickerView = [[UIPickerView alloc] init];
@@ -38,18 +38,18 @@
     pickerView.hidden = false;
     [pickerView selectRow:3 inComponent:0 animated:false];
     
-    headerLabel.text = @"Header";
-    footerLabel.text = @"Footer";
-    legendlabel.text = @"Legend Position";
+    headerLabel.text = NSLocalizedString(@"header", nil);
+    footerLabel.text = NSLocalizedString(@"footer", nil);;
+    legendlabel.text = NSLocalizedString(@"legend position", nil);
     
     _headerField.delegate = self;
-    _headerField.text = @"Fruit By Value";
+    _headerField.text = NSLocalizedString(@"Fruit By Value", nil);
     _headerField.returnKeyType = UIReturnKeyDone;
     _headerField.keyboardType = UIKeyboardTypeDefault;
     _headerField.backgroundColor = [UIColor lightGrayColor];
     
     _footerField.delegate = self;
-    _footerField.text = @"4 GrapeCity, inc.";
+    _footerField.text = NSLocalizedString(@"GrapeCity inc.", nil);
     _footerField.returnKeyType = UIReturnKeyDone;
     _footerField.keyboardType = UIKeyboardTypeDefault;
     _footerField.backgroundColor = [UIColor lightGrayColor];

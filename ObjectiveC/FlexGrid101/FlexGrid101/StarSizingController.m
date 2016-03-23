@@ -24,25 +24,25 @@
     
     FlexColumn *c1 = [[FlexColumn alloc] init];
     c1.binding = @"customerID";
-    c1.header = @"ID";
+    c1.header = NSLocalizedString(@"ID", nil);
     c1.widthType = FlexColumnWidthStar;
     c1.width = 1;
     
     FlexColumn *c2 = [[FlexColumn alloc] init];
     c2.binding = @"firstName";
-    c2.header = @"First Name";
+    c2.header = NSLocalizedString(@"First Name", nil);
     c2.widthType = FlexColumnWidthStar;
     c2.width = 3;
     
     FlexColumn *c3 = [[FlexColumn alloc] init];
     c3.binding = @"lastName";
-    c3.header = @"Last Name";
+    c3.header = NSLocalizedString(@"Last Name", nil);
     c3.widthType = FlexColumnWidthStar;
     c3.width = 3;
     
     FlexColumn *c4 = [[FlexColumn alloc] init];
     c4.binding = @"orderTotal";
-    c4.header = @"Total";
+    c4.header = NSLocalizedString(@"Total", nil);
     c4.format = @"C";
     c4.widthType = FlexColumnWidthStar;
     c4.width = 2;

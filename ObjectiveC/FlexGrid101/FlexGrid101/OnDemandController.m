@@ -8,6 +8,7 @@
 #import "OnDemandController.h"
 #import "CustomerData.h"
 #import "XuniFlexGridKit/XuniFlexGridKit.h"
+#import <XuniCoreKit/CollectionView.h>
 
 @interface DemoCursorCollectionView: XuniCursorCollectionView
 
@@ -51,7 +52,7 @@
     flex.collectionView = [[DemoCursorCollectionView alloc] init];
     
     flex.tag = 1;
-    [flex autoSizeColumn:0 to:flex.columns.count-1];
+    [flex autoSizeColumns:0 to:flex.columns.count-1];
     [self.view addSubview:flex];
 }
 

@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Gauges101
+
+  Copyright © 2015 GrapeCity. All rights reserved.
+*/
+
+"Value" = "現在の値：";
+"All" = "すべて表示";
+"MinMax" = "最小値と最大値を表示";
+"None" = "表示なし";
+"Show text" = "表示するテキスト";
+"Good" = "良　値：";
+"Bad" = "不良値：";
+"Target" = "目標値：";
+"Custom Animations" = "ゲージを表示する場合のアニメーション効果";
+"Take a snapshot" = "画像を保存";
+"Success" = "成功";
+"Image was saved to Camera Roll successfully" = "画像をカメラロールに保存しました。";
+"Failure" = "失敗";
+"Automatic scaling" = "自動スケーリング";
+"Start Angle" = "開始角度：";
+"Sweep Angle" = "移動角度：";
+"Up" = "上方向(Up)";
+"Down" = "下方向(Down)";
+"Left" = "左方向(Left)";
+"Right" = "右方向(Right)";
+"Show ranges" = "範囲を表示";
+
+"Getting Started" = "Gaugeの基本機能";
+"Displaying Values" = "ゲージに表示する値";
+"Using Ranges" = "範囲の使用";
+"Automatic Scaling" = "自動スケーリング";
+"Direction" = "ポインタの方向";
+"Bullet Graph" = "ブレットグラフ";
+"Animation" = "アニメーション";
+"Snapshot" = "画像として保存";

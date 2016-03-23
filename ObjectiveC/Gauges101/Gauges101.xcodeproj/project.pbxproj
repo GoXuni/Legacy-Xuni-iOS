@@ -7,24 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F22B15741B0BBFAE00C1647E /* DisplayingValuesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B15731B0BBFAE00C1647E /* DisplayingValuesController.m */; };
-		F22B15771B0CC03100C1647E /* BulletGraphController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B15761B0CC03100C1647E /* BulletGraphController.m */; };
-		F22B157A1B0CD3FA00C1647E /* UsingRangesController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B15791B0CD3FA00C1647E /* UsingRangesController.m */; };
-		F22B157D1B0CDE8700C1647E /* AutomaticScalingController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B157C1B0CDE8700C1647E /* AutomaticScalingController.m */; };
-		F22B15801B0CDE9B00C1647E /* DirectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B157F1B0CDE9B00C1647E /* DirectionController.m */; };
-		F22B15831B0CDEAF00C1647E /* CustomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22B15821B0CDEAF00C1647E /* CustomAnimationController.m */; };
+		4C4E83C21C074F3B00EFFC98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C4E83C41C074F3B00EFFC98 /* Localizable.strings */; };
+		4C5FF2981C485551008794F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5FF29A1C485551008794F4 /* Main.storyboard */; };
+		4CBCD9811C42BA92005959E5 /* XGGettingStartedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD9801C42BA92005959E5 /* XGGettingStartedViewController.m */; };
+		4CE6A52F1C4527B80074C229 /* gauge_basic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE6A5291C4527B80074C229 /* gauge_basic.png */; };
+		4CE6A5301C4527B80074C229 /* gauge_bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE6A52A1C4527B80074C229 /* gauge_bullet.png */; };
+		4CE6A5311C4527B80074C229 /* gauge_linear.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE6A52B1C4527B80074C229 /* gauge_linear.png */; };
+		4CE6A5321C4527B80074C229 /* gauge_radial.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE6A52C1C4527B80074C229 /* gauge_radial.png */; };
+		4CE6A5331C4527B80074C229 /* gauge_ranges.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE6A52D1C4527B80074C229 /* gauge_ranges.png */; };
+		4CE6A5341C4527B80074C229 /* gauge_scaling.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE6A52E1C4527B80074C229 /* gauge_scaling.png */; };
+		4CE6A5391C45426D0074C229 /* XGDisplayingValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6A5381C45426D0074C229 /* XGDisplayingValuesViewController.m */; };
+		4CE6A53E1C4586200074C229 /* XGUsingRangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6A53D1C4586200074C229 /* XGUsingRangesViewController.m */; };
+		4CE6A5411C4595AF0074C229 /* XGAutomaticScalingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6A5401C4595AF0074C229 /* XGAutomaticScalingViewController.m */; };
+		4CE6A5441C46A0CE0074C229 /* XGDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6A5431C46A0CE0074C229 /* XGDirectionViewController.m */; };
+		4CE6A5471C480D380074C229 /* XGBulletGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6A5461C480D380074C229 /* XGBulletGraphViewController.m */; };
+		4CE6A54A1C4830BB0074C229 /* XGAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6A5491C4830BB0074C229 /* XGAnimationViewController.m */; };
+		4CE6A54D1C483E0A0074C229 /* XGExportImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6A54C1C483E0A0074C229 /* XGExportImageViewController.m */; };
 		F23573601B443ECA00F300D7 /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = F235735F1B443ECA00F300D7 /* License.m */; };
 		F23653EF1B0FA0CB008518FE /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23653EE1B0FA0CB008518FE /* XuniCoreKit.framework */; };
 		F23653F11B0FA0D7008518FE /* XuniGaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23653F01B0FA0D7008518FE /* XuniGaugeKit.framework */; };
-		F254FAB91B31BF11009CD853 /* SnapshotController.m in Sources */ = {isa = PBXBuildFile; fileRef = F254FAB81B31BF11009CD853 /* SnapshotController.m */; };
 		F26DAA9A1B0A2011005E5B6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F26DAA991B0A2011005E5B6D /* main.m */; };
 		F26DAA9D1B0A2011005E5B6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F26DAA9C1B0A2011005E5B6D /* AppDelegate.m */; };
-		F26DAAA01B0A2011005E5B6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26DAA9F1B0A2011005E5B6D /* ViewController.m */; };
-		F26DAAA31B0A2011005E5B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26DAAA11B0A2011005E5B6D /* Main.storyboard */; };
 		F26DAAA51B0A2011005E5B6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26DAAA41B0A2011005E5B6D /* Images.xcassets */; };
 		F26DAAA81B0A2011005E5B6D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F26DAAA61B0A2011005E5B6D /* LaunchScreen.xib */; };
 		F26DAAB41B0A2011005E5B6D /* Gauages101Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F26DAAB31B0A2011005E5B6D /* Gauages101Tests.m */; };
-		F26DAABF1B0A5681005E5B6D /* GettingStartedController.m in Sources */ = {isa = PBXBuildFile; fileRef = F26DAABE1B0A5681005E5B6D /* GettingStartedController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,39 +44,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F22B15721B0BBFAE00C1647E /* DisplayingValuesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayingValuesController.h; sourceTree = "<group>"; };
-		F22B15731B0BBFAE00C1647E /* DisplayingValuesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayingValuesController.m; sourceTree = "<group>"; };
-		F22B15751B0CC03100C1647E /* BulletGraphController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletGraphController.h; sourceTree = "<group>"; };
-		F22B15761B0CC03100C1647E /* BulletGraphController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletGraphController.m; sourceTree = "<group>"; };
-		F22B15781B0CD3FA00C1647E /* UsingRangesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsingRangesController.h; sourceTree = "<group>"; };
-		F22B15791B0CD3FA00C1647E /* UsingRangesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsingRangesController.m; sourceTree = "<group>"; };
-		F22B157B1B0CDE8700C1647E /* AutomaticScalingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomaticScalingController.h; sourceTree = "<group>"; };
-		F22B157C1B0CDE8700C1647E /* AutomaticScalingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomaticScalingController.m; sourceTree = "<group>"; };
-		F22B157E1B0CDE9B00C1647E /* DirectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionController.h; sourceTree = "<group>"; };
-		F22B157F1B0CDE9B00C1647E /* DirectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionController.m; sourceTree = "<group>"; };
-		F22B15811B0CDEAF00C1647E /* CustomAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimationController.h; sourceTree = "<group>"; };
-		F22B15821B0CDEAF00C1647E /* CustomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimationController.m; sourceTree = "<group>"; };
+		4C4E83B91C0737B800EFFC98 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4C4E83C31C074F3B00EFFC98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C4E83C61C074F4300EFFC98 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C5FF2991C485551008794F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C5FF29C1C485555008794F4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		4CBCD97F1C42BA92005959E5 /* XGGettingStartedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGGettingStartedViewController.h; sourceTree = "<group>"; };
+		4CBCD9801C42BA92005959E5 /* XGGettingStartedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGGettingStartedViewController.m; sourceTree = "<group>"; };
+		4CE6A5291C4527B80074C229 /* gauge_basic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_basic.png; sourceTree = "<group>"; };
+		4CE6A52A1C4527B80074C229 /* gauge_bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_bullet.png; sourceTree = "<group>"; };
+		4CE6A52B1C4527B80074C229 /* gauge_linear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_linear.png; sourceTree = "<group>"; };
+		4CE6A52C1C4527B80074C229 /* gauge_radial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_radial.png; sourceTree = "<group>"; };
+		4CE6A52D1C4527B80074C229 /* gauge_ranges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_ranges.png; sourceTree = "<group>"; };
+		4CE6A52E1C4527B80074C229 /* gauge_scaling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_scaling.png; sourceTree = "<group>"; };
+		4CE6A5371C45426D0074C229 /* XGDisplayingValuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGDisplayingValuesViewController.h; sourceTree = "<group>"; };
+		4CE6A5381C45426D0074C229 /* XGDisplayingValuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGDisplayingValuesViewController.m; sourceTree = "<group>"; };
+		4CE6A53C1C4586200074C229 /* XGUsingRangesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGUsingRangesViewController.h; sourceTree = "<group>"; };
+		4CE6A53D1C4586200074C229 /* XGUsingRangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGUsingRangesViewController.m; sourceTree = "<group>"; };
+		4CE6A53F1C4595AF0074C229 /* XGAutomaticScalingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGAutomaticScalingViewController.h; sourceTree = "<group>"; };
+		4CE6A5401C4595AF0074C229 /* XGAutomaticScalingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGAutomaticScalingViewController.m; sourceTree = "<group>"; };
+		4CE6A5421C46A0CE0074C229 /* XGDirectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGDirectionViewController.h; sourceTree = "<group>"; };
+		4CE6A5431C46A0CE0074C229 /* XGDirectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGDirectionViewController.m; sourceTree = "<group>"; };
+		4CE6A5451C480D380074C229 /* XGBulletGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGBulletGraphViewController.h; sourceTree = "<group>"; };
+		4CE6A5461C480D380074C229 /* XGBulletGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGBulletGraphViewController.m; sourceTree = "<group>"; };
+		4CE6A5481C4830BB0074C229 /* XGAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGAnimationViewController.h; sourceTree = "<group>"; };
+		4CE6A5491C4830BB0074C229 /* XGAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGAnimationViewController.m; sourceTree = "<group>"; };
+		4CE6A54B1C483E0A0074C229 /* XGExportImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGExportImageViewController.h; sourceTree = "<group>"; };
+		4CE6A54C1C483E0A0074C229 /* XGExportImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGExportImageViewController.m; sourceTree = "<group>"; };
 		F235735E1B443ECA00F300D7 /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
 		F235735F1B443ECA00F300D7 /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
 		F23653EE1B0FA0CB008518FE /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../../../Controls/XuniCoreKit.framework"; sourceTree = "<group>"; };
 		F23653F01B0FA0D7008518FE /* XuniGaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeKit.framework; path = "../../../Controls/XuniGaugeKit.framework"; sourceTree = "<group>"; };
-		F254FAB71B31BF11009CD853 /* SnapshotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapshotController.h; sourceTree = "<group>"; };
-		F254FAB81B31BF11009CD853 /* SnapshotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnapshotController.m; sourceTree = "<group>"; };
 		F26DAA941B0A2011005E5B6D /* Gauges101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauges101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26DAA981B0A2011005E5B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26DAA991B0A2011005E5B6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F26DAA9B1B0A2011005E5B6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F26DAA9C1B0A2011005E5B6D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F26DAA9E1B0A2011005E5B6D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F26DAA9F1B0A2011005E5B6D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F26DAAA21B0A2011005E5B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F26DAAA41B0A2011005E5B6D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F26DAAA71B0A2011005E5B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F26DAAAD1B0A2011005E5B6D /* Gauges101Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gauges101Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26DAAB21B0A2011005E5B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26DAAB31B0A2011005E5B6D /* Gauages101Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gauages101Tests.m; sourceTree = "<group>"; };
-		F26DAABD1B0A5681005E5B6D /* GettingStartedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingStartedController.h; sourceTree = "<group>"; };
-		F26DAABE1B0A5681005E5B6D /* GettingStartedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GettingStartedController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +107,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CE6A5531C4851710074C229 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4CE6A5291C4527B80074C229 /* gauge_basic.png */,
+				4CE6A52A1C4527B80074C229 /* gauge_bullet.png */,
+				4CE6A52B1C4527B80074C229 /* gauge_linear.png */,
+				4CE6A52C1C4527B80074C229 /* gauge_radial.png */,
+				4CE6A52D1C4527B80074C229 /* gauge_ranges.png */,
+				4CE6A52E1C4527B80074C229 /* gauge_scaling.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		F26DAA8B1B0A2011005E5B6D = {
 			isa = PBXGroup;
 			children = (
@@ -117,32 +144,32 @@
 		F26DAA961B0A2011005E5B6D /* Gauges101 */ = {
 			isa = PBXGroup;
 			children = (
+				4C5FF29A1C485551008794F4 /* Main.storyboard */,
+				4CE6A5531C4851710074C229 /* Images */,
+				4C4E83C41C074F3B00EFFC98 /* Localizable.strings */,
 				F26DAA9B1B0A2011005E5B6D /* AppDelegate.h */,
 				F26DAA9C1B0A2011005E5B6D /* AppDelegate.m */,
-				F26DAA9E1B0A2011005E5B6D /* ViewController.h */,
-				F26DAA9F1B0A2011005E5B6D /* ViewController.m */,
-				F26DAAA11B0A2011005E5B6D /* Main.storyboard */,
 				F26DAAA41B0A2011005E5B6D /* Images.xcassets */,
 				F26DAAA61B0A2011005E5B6D /* LaunchScreen.xib */,
 				F26DAA971B0A2011005E5B6D /* Supporting Files */,
-				F26DAABD1B0A5681005E5B6D /* GettingStartedController.h */,
-				F26DAABE1B0A5681005E5B6D /* GettingStartedController.m */,
-				F22B15721B0BBFAE00C1647E /* DisplayingValuesController.h */,
-				F22B15731B0BBFAE00C1647E /* DisplayingValuesController.m */,
-				F22B15751B0CC03100C1647E /* BulletGraphController.h */,
-				F22B15761B0CC03100C1647E /* BulletGraphController.m */,
-				F22B15781B0CD3FA00C1647E /* UsingRangesController.h */,
-				F22B15791B0CD3FA00C1647E /* UsingRangesController.m */,
-				F22B157B1B0CDE8700C1647E /* AutomaticScalingController.h */,
-				F22B157C1B0CDE8700C1647E /* AutomaticScalingController.m */,
-				F22B157E1B0CDE9B00C1647E /* DirectionController.h */,
-				F22B157F1B0CDE9B00C1647E /* DirectionController.m */,
-				F22B15811B0CDEAF00C1647E /* CustomAnimationController.h */,
-				F22B15821B0CDEAF00C1647E /* CustomAnimationController.m */,
-				F254FAB71B31BF11009CD853 /* SnapshotController.h */,
-				F254FAB81B31BF11009CD853 /* SnapshotController.m */,
 				F235735E1B443ECA00F300D7 /* License.h */,
 				F235735F1B443ECA00F300D7 /* License.m */,
+				4CBCD97F1C42BA92005959E5 /* XGGettingStartedViewController.h */,
+				4CBCD9801C42BA92005959E5 /* XGGettingStartedViewController.m */,
+				4CE6A5371C45426D0074C229 /* XGDisplayingValuesViewController.h */,
+				4CE6A5381C45426D0074C229 /* XGDisplayingValuesViewController.m */,
+				4CE6A53C1C4586200074C229 /* XGUsingRangesViewController.h */,
+				4CE6A53D1C4586200074C229 /* XGUsingRangesViewController.m */,
+				4CE6A53F1C4595AF0074C229 /* XGAutomaticScalingViewController.h */,
+				4CE6A5401C4595AF0074C229 /* XGAutomaticScalingViewController.m */,
+				4CE6A5421C46A0CE0074C229 /* XGDirectionViewController.h */,
+				4CE6A5431C46A0CE0074C229 /* XGDirectionViewController.m */,
+				4CE6A5451C480D380074C229 /* XGBulletGraphViewController.h */,
+				4CE6A5461C480D380074C229 /* XGBulletGraphViewController.m */,
+				4CE6A5481C4830BB0074C229 /* XGAnimationViewController.h */,
+				4CE6A5491C4830BB0074C229 /* XGAnimationViewController.m */,
+				4CE6A54B1C483E0A0074C229 /* XGExportImageViewController.h */,
+				4CE6A54C1C483E0A0074C229 /* XGExportImageViewController.m */,
 			);
 			path = Gauges101;
 			sourceTree = "<group>";
@@ -237,6 +264,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = F26DAA8B1B0A2011005E5B6D;
 			productRefGroup = F26DAA951B0A2011005E5B6D /* Products */;
@@ -254,9 +282,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F26DAAA31B0A2011005E5B6D /* Main.storyboard in Resources */,
+				4CE6A5301C4527B80074C229 /* gauge_bullet.png in Resources */,
+				4C4E83C21C074F3B00EFFC98 /* Localizable.strings in Resources */,
+				4CE6A5321C4527B80074C229 /* gauge_radial.png in Resources */,
 				F26DAAA81B0A2011005E5B6D /* LaunchScreen.xib in Resources */,
+				4CE6A52F1C4527B80074C229 /* gauge_basic.png in Resources */,
+				4CE6A5341C4527B80074C229 /* gauge_scaling.png in Resources */,
+				4CE6A5311C4527B80074C229 /* gauge_linear.png in Resources */,
 				F26DAAA51B0A2011005E5B6D /* Images.xcassets in Resources */,
+				4C5FF2981C485551008794F4 /* Main.storyboard in Resources */,
+				4CE6A5331C4527B80074C229 /* gauge_ranges.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,18 +309,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F26DAAA01B0A2011005E5B6D /* ViewController.m in Sources */,
+				4CE6A54A1C4830BB0074C229 /* XGAnimationViewController.m in Sources */,
 				F26DAA9D1B0A2011005E5B6D /* AppDelegate.m in Sources */,
-				F22B157A1B0CD3FA00C1647E /* UsingRangesController.m in Sources */,
+				4CE6A5471C480D380074C229 /* XGBulletGraphViewController.m in Sources */,
 				F23573601B443ECA00F300D7 /* License.m in Sources */,
-				F22B157D1B0CDE8700C1647E /* AutomaticScalingController.m in Sources */,
-				F22B15741B0BBFAE00C1647E /* DisplayingValuesController.m in Sources */,
-				F26DAABF1B0A5681005E5B6D /* GettingStartedController.m in Sources */,
-				F22B15771B0CC03100C1647E /* BulletGraphController.m in Sources */,
-				F22B15801B0CDE9B00C1647E /* DirectionController.m in Sources */,
-				F254FAB91B31BF11009CD853 /* SnapshotController.m in Sources */,
+				4CE6A5441C46A0CE0074C229 /* XGDirectionViewController.m in Sources */,
+				4CBCD9811C42BA92005959E5 /* XGGettingStartedViewController.m in Sources */,
+				4CE6A53E1C4586200074C229 /* XGUsingRangesViewController.m in Sources */,
+				4CE6A54D1C483E0A0074C229 /* XGExportImageViewController.m in Sources */,
 				F26DAA9A1B0A2011005E5B6D /* main.m in Sources */,
-				F22B15831B0CDEAF00C1647E /* CustomAnimationController.m in Sources */,
+				4CE6A5391C45426D0074C229 /* XGDisplayingValuesViewController.m in Sources */,
+				4CE6A5411C4595AF0074C229 /* XGAutomaticScalingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,10 +342,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F26DAAA11B0A2011005E5B6D /* Main.storyboard */ = {
+		4C4E83C41C074F3B00EFFC98 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F26DAAA21B0A2011005E5B6D /* Base */,
+				4C4E83C31C074F3B00EFFC98 /* Base */,
+				4C4E83C61C074F4300EFFC98 /* ja */,
+			);
+			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4C5FF29A1C485551008794F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C5FF2991C485551008794F4 /* Base */,
+				4C5FF29C1C485555008794F4 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -320,6 +365,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F26DAAA71B0A2011005E5B6D /* Base */,
+				4C4E83B91C0737B800EFFC98 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -417,9 +463,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Volumes/main-frameworks",
 					../../../Controls,
-					"/Users/kotyuck/Desktop/Volumes/main-frameworks/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Gauges101/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -434,9 +478,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Volumes/main-frameworks",
 					../../../Controls,
-					"/Users/kotyuck/Desktop/Volumes/main-frameworks/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Gauges101/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

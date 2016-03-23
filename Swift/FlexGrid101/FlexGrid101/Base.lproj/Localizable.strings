@@ -1,0 +1,48 @@
+/* 
+  Localizable.strings
+  FlexGrid101
+
+  Created by Mykola Kotyuck on 27.11.15.
+  Copyright © 2015 GrapeCity. All rights reserved.
+*/
+
+"On Demand Loading" = "On Demand Loading";
+"Column Layout" = "Column Layout";
+"Editing form" = "Editing form";
+"Conditional Formatting" = "Conditional Formatting";
+"Cell Freezing & Merging" = "Cell Freezing & Merging";
+"Star Sizing" = "Star Sizing";
+"Edit Confirmation" = "Edit Confirmation";
+"Full Text Filter" = "Full Text Filter";
+"Filter" = "Filter";
+"Grouping" = "Grouping";
+"Custom Cells" = "Custom Cells";
+"Editing" = "Editing";
+"Selection Modes" = "Selection Modes";
+"Column Definitions" = "Column Definitions";
+"Getting Started" = "Getting Started";
+"Row Range" = "Row Range";
+"Row" = "Row";
+"Cell Range" = "Cell Range";
+"Cell" = "Cell";
+"None" = "None";
+"First Name" = "First Name";
+"Last Name" = "Last Name";
+"Total Orders" = "Total Orders";
+"Ascending" = "Ascending";
+"Descending" = "Descending";
+"Order Total" = "Order Total";
+"Remove" = "Remove";
+"Enter text to Filter" = "Enter text to Filter";
+"Equals" = "Equals";
+"Ends with" = "Ends with";
+"Begins with" = "Begins with";
+"Contains" = "Contains";
+"Do you want to commit the edit?" = "Do you want to commit the edit?";
+"Ok" = "Ok";
+"Cancel" = "Cancel";
+"ID" = "ID";
+"Total" = "Total";
+"Count" = "Count";
+"Edit Columns" = "Edit Columns";
+"Done" = "Done";

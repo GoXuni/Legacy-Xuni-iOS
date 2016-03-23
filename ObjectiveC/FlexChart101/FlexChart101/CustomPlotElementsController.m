@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Custom Plot Elements"];
+    [self setTitle:NSLocalizedString(@"Custom Plot Elements", nil)];
     
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];
@@ -44,7 +44,7 @@
             [plotArgs.defaultRender execute:nil];
             
             CGRect rect = [(DefaultBarElementRender*)(plotArgs.defaultRender) getBarRect];
-            CustomPoint *customPoint = [chart.itemsSource objectAtIndex:plotArgs.hitTestInfo.pointIndex];
+            CustomPoint *customPoint = [chart.itemsSource objectAtIndex:plotArgs.dataPoint.pointIndex];
             if (customPoint != nil) {
                 rect.origin.y += (rect.size.height - rect.size.width) / 2;
                 rect.size.height = rect.size.width;

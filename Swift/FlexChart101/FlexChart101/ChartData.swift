@@ -30,6 +30,21 @@ class ChartData: NSObject {
             ChartData(name: "Greece", sales: Double(arc4random()%10001), expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001))
         ]
     }
+    
+    class func annotationData() -> NSMutableArray {
+        return[
+            ChartData(name: "US", sales: 1500, expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001)),
+            ChartData(name: "Germany", sales: 4000, expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001)),
+            ChartData(name: "UK", sales: 3000, expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001)),
+            ChartData(name: "Japan", sales: 6000, expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001)),
+            ChartData(name: "Italy", sales: 3500, expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001)),
+            ChartData(name: "Greece", sales: 8500, expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001)),
+            ChartData(name: "France", sales: 2300, expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001)),
+            ChartData(name: "Spain", sales: 6500, expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001)),
+            ChartData(name: "Ireland", sales: 4500, expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001)),
+            ChartData(name: "Poland", sales: 9500, expenses: Double(arc4random()%5001), downloads: Double(arc4random()%20001))
+        ]
+    }
 }
 
 class ChartPoint : NSObject {
@@ -50,11 +65,11 @@ class ChartPoint : NSObject {
         }
         
         for var i = 0; i < innerCount / 2; i++ {
-            do
+            repeat
             {
-                var random: Double = Double(rand()) / Double(RAND_MAX)
-                var u: Double = 2 * random - 1
-                var v: Double = 2 * random - 1
+                let random: Double = Double(rand()) / Double(RAND_MAX)
+                let u: Double = 2 * random - 1
+                let v: Double = 2 * random - 1
                 
                 var s: Double = u * u + v * v
                 

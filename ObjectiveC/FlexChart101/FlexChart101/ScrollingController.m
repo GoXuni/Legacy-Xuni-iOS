@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Scrolling"];
+    [self setTitle:NSLocalizedString(@"Scrolling", nil)];
     
     // Do any additional setup after loading the view.
     FlexChart *chart = [[FlexChart alloc] init];
@@ -53,7 +53,7 @@
     chart.axisX.majorGridVisible = NO;
     chart.axisX.displayedRange = 10;
     chart.palette = [XuniPalettes midnight];
-    chart.header = @"Drag to scroll/Pinch to zoom";
+    chart.header = NSLocalizedString(@"Drag to scroll/Pinch to zoom", nil);
     chart.headerFont = [UIFont systemFontOfSize:14];
     chart.headerTextAlignment = XuniHorizontalAlignmentCenter;
     

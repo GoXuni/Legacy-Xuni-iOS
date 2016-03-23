@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    pickerData =[[NSMutableArray alloc] initWithObjects:@"None", @"Cell", @"Cell Range", @"Row", @"Row Range", nil];
+    pickerData =[[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"None", nil), NSLocalizedString(@"Cell", nil), NSLocalizedString(@"Cell Range", nil), NSLocalizedString(@"Row", nil), NSLocalizedString(@"Row Range", nil), nil];
     UIPickerView *selectionModePicker = [[UIPickerView alloc] init];
     FlexGrid *flex = [[FlexGrid alloc] init];
     flex.isReadOnly = true;

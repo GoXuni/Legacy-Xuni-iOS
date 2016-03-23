@@ -8,9 +8,9 @@
 import UIKit
 
 class CustomerData: NSObject {
+    var customerID: Int
     var firstName, lastName: String
     var address, postalCode, country: String
-    var customerID: Int
     var city: String
     var countryID: Int
     var email: String

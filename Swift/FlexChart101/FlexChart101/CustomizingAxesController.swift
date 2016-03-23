@@ -14,7 +14,7 @@ class CustomizingAxesController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Customizing Axes"
+        self.title = NSLocalizedString("Customizing Axes", comment: "")
         
         // Do any additional setup after loading the view.
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")

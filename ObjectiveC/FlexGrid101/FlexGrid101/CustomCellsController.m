@@ -27,13 +27,13 @@
     flex.tag = 1;
     
     FlexColumn *c1 = [[FlexColumn alloc] init];
-    c1.header = @"First Name";
+    c1.header = NSLocalizedString(@"First Name", nil);
     c1.binding = @"firstName";
     FlexColumn *c2 = [[FlexColumn alloc] init];
-    c2.header = @"Last Name";
+    c2.header = NSLocalizedString(@"Last Name", nil);
     c2.binding = @"lastName";
     FlexColumn *c3 = [[FlexColumn alloc] init];
-    c3.header = @"Total Orders";
+    c3.header = NSLocalizedString(@"Total Orders", nil);
     c3.binding = @"orderTotal";
     [flex.columns addObject:c1];
     [flex.columns addObject:c2];
@@ -68,13 +68,14 @@
         c.width = (i == 0) ? 5 : (i == 3) ? 3 : 4;
     }
 }
-- (void)formatItem:(FlexFormatItemEventArgs*)args{
+-(bool)formatItem:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range inContext:(CGContextRef)context{
+    bool result = NO;
         FlexGrid *g = (FlexGrid*)[self.view viewWithTag:1];
-        FlexColumn *col = [g.columns objectAtIndex:args.col];
+        FlexColumn *col = [g.columns objectAtIndex:range.col];
         if ([col.binding isEqualToString:@"orderTotal"]) {
-            NSObject *v = [args.panel getCellDataForRow:args.row inColumn:args.col formatted:false];
+            NSObject *v = [panel getCellDataForRow:range.row inColumn:range.col formatted:false];
             if (v != nil) {
-                if (![v.description  isEqual: @"Total Orders"]){
+                if (![v.description  isEqual: NSLocalizedString(@"Total Orders", nil)]){
                     XuniRadialGauge *radialGauge = [[XuniRadialGauge alloc] init];
                     XuniGaugeRange *lower = [[XuniGaugeRange alloc] initWithGauge:radialGauge];
                     lower.min = 0;
@@ -101,7 +102,7 @@
                     radialGauge.value =[v.description doubleValue]*(100.0/90000.0);
                     radialGauge.showRanges = false;
                     
-                    CGRect r = [args.panel getCellRectForRow:args.row inColumn:args.col];
+                    CGRect r = [panel getCellRectForRow:range.row inColumn:range.col];
                     
                     r.size.width-=4;
                     r.size.height-=4;
@@ -116,9 +117,10 @@
                     UIImage *image = [[UIImage alloc] init];
                     image = [UIImage imageWithData:[radialGauge getImage]];
                     [image drawInRect:r];
-                    args.cancel = YES;
+                    result = YES;
                 }
             }
         }
+    return result;
 }
 @end

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uNv-2u-nJf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uNv-2u-nJf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -380,6 +381,24 @@
             </objects>
             <point key="canvasLocation" x="-3188" y="1216"/>
         </scene>
+        <!--Chart Annotations Controller-->
+        <scene sceneID="fOb-7O-3DU">
+            <objects>
+                <viewController id="hK8-2v-rcH" customClass="ChartAnnotationsController" customModule="FlexChart101" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sUl-In-hlM"/>
+                        <viewControllerLayoutGuide type="bottom" id="6CC-RJ-0mQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C7E-jh-wkV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQe-hK-07h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2284" y="1961"/>
+        </scene>
         <!--FlexChart101-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -431,6 +450,7 @@
                         <segue destination="NIR-YT-1QT" kind="show" identifier="CustomPlotElementsSegue" id="6Xd-Re-b3g"/>
                         <segue destination="y7A-y4-m8c" kind="show" identifier="UpdateAnimationSegue" id="jTS-UN-raW"/>
                         <segue destination="aHB-Em-glY" kind="show" identifier="ScrollingSegue" id="v1C-Zg-nyk"/>
+                        <segue destination="hK8-2v-rcH" kind="show" identifier="AnnotationSegue" id="lYf-sm-fBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

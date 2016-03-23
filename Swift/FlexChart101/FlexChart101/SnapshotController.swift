@@ -16,11 +16,11 @@ class SnapshotController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Export Image"
+        self.title = NSLocalizedString("Export Image", comment: "")
         
         // Do any additional setup after loading the view.
-        _snapshotButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        _snapshotButton.setTitle("Take a snapshot", forState: UIControlState.Normal)
+        _snapshotButton = UIButton(type: UIButtonType.System)
+        _snapshotButton.setTitle(NSLocalizedString("Take a snapshot", comment: ""), forState: UIControlState.Normal)
         _snapshotButton.addTarget(self, action: "snapshotButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         
         let sales = XuniSeries(forChart: _chart, binding: "sales, sales", name: "Sales")
@@ -58,15 +58,15 @@ class SnapshotController: UIViewController {
         var title = String()
         
         if (error == nil) {
-            title = "Success"
-            message = "Image was saved to Camera Roll successfully"
+            title = NSLocalizedString("Success", comment: "")
+            message = NSLocalizedString("Image was saved to Camera Roll successfully", comment: "")
         }
         else {
-            title = "Failure"
+            title = NSLocalizedString("Failure", comment: "")
             message = error.description
         }
         
-        var alert = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: NSLocalizedString("OK", comment: ""))
         alert.show();
     }
     

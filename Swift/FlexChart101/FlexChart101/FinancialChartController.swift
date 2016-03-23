@@ -16,7 +16,7 @@ class FinancialChartController: UIViewController, UIPickerViewDataSource, UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Financial Chart"
+        self.title = NSLocalizedString("Financial Chart", comment: "")
         
         // Do any additional setup after loading the view.
         _pickerData = ["Candlestick", "HLOC"]

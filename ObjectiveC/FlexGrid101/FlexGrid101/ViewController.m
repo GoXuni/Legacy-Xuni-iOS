@@ -18,7 +18,7 @@
     UITableView *table = (UITableView*)[self.view viewWithTag:1];
     table.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     // Do any additional setup after loading the view, typically from a nib.
-    self.samples = @[@"Getting Started", @"Column Definitions", @"Selection Modes", @"Editing", @"Custom Cells", @"Grouping", @"Filter", @"Full Text Filter", @"Edit Confirmation", @"Star Sizing", @"Frozen Cells", @"Conditional Formatting", @"Editing form", @"Column Layout", @"On Demand Loading"];
+    self.samples = @[NSLocalizedString(@"Getting Started", nil), NSLocalizedString(@"Column Definitions", nil), NSLocalizedString(@"Selection Modes", nil), NSLocalizedString(@"Editing", nil), NSLocalizedString(@"Custom Cells", nil), NSLocalizedString(@"Grouping", nil), NSLocalizedString(@"Filter", nil), NSLocalizedString(@"Full Text Filter", nil), NSLocalizedString(@"Edit Confirmation", nil), NSLocalizedString(@"Star Sizing", nil), NSLocalizedString(@"Cell Freezing & Merging", nil), NSLocalizedString(@"Conditional Formatting", nil), NSLocalizedString(@"Editing form", nil), NSLocalizedString(@"Column Layout", nil), NSLocalizedString(@"On Demand Loading", nil)];
 }
 
 - (void)didReceiveMemoryWarning {

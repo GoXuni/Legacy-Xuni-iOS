@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Zooming and Scrolling"];
+    [self setTitle:NSLocalizedString(@"Zooming and Scrolling", nil)];
     
     // Do any additional setup after loading the view.
     pickerData =[[NSMutableArray alloc] initWithObjects:@"X", @"Y", @"XY", @"Disabled", nil];
@@ -42,7 +42,7 @@
     chart.chartType = XuniChartTypeScatter;
     chart.zoomMode = XuniZoomModeXY;
     chart.isAnimated = NO;
-    chart.header = @"Drag to scroll/Pinch to zoom";
+    chart.header = NSLocalizedString(@"Drag to scroll/Pinch to zoom", nil);
     chart.headerFont = [UIFont systemFontOfSize:14];
     chart.headerTextAlignment = XuniHorizontalAlignmentCenter;
     chart.palette = [XuniPalettes superhero];

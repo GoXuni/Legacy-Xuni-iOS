@@ -1,0 +1,116 @@
+//
+//  Localizable.strings
+//  FlexChart101
+//
+//  Copyright (c) 2015 GrapeCity. All rights reserved.
+//
+
+// Samples Title
+
+"Getting Started" = "Getting Started";
+
+"Basic Chart Types" = "Basic Chart Types";
+
+"Mixed Chart Types" = "Mixed Chart Types";
+
+"Financial Chart" = "Financial Chart";
+
+"Bubble Chart" = "Bubble Chart";
+
+"Custom Tooltips" = "Custom Tooltips";
+
+"Data Labels" = "Data Labels";
+
+"Line Marker" = "Line Marker";
+
+"Customizing Axes" = "Customizing Axes";
+
+"Multiple Axes" = "Multiple Axes";
+
+"Legend and Titles" = "Legend and Titles";
+
+"Conditional Formatting" = "Conditional Formatting";
+
+"Custom Plot Elements" = "Custom Plot Elements";
+
+"Selection Modes" = "Selection Modes";
+
+"Toggle Series" = "Toggle Series";
+
+"Load Animation Mode" = "Load Animation Mode";
+
+"Update Animation" = "Update Animation";
+
+"Dynamic Charts" = "Dynamic Charts";
+
+"Hit Test" = "Hit Test";
+
+"Scrolling" = "Scrolling";
+
+"Zooming and Scrolling" = "Zooming and Scrolling";
+
+"Theming" = "Theming";
+
+"Styling Series" = "Styling Series";
+
+"Export Image" = "Export Image";
+
+// Samples Description
+
+"Shows a simple chart with tooltips." = "Shows a simple chart with tooltips.";
+
+"Shows the basic chart types and stacking options." = "Shows the basic chart types and stacking options.";
+
+"Shows a composite chart." = "Shows a composite chart.";
+
+"Shows stock data in a candle chart." = "Shows stock data in a candle chart.";
+
+"Shows a bubble chart." = "Shows a bubble chart.";
+
+"Shows a customized tooltip." = "Shows a customized tooltip.";
+
+"Shows a simple chart with static data labels." = "Shows a simple chart with static data labels.";
+
+"Shows a moveable marker on top of the chart." = "Shows a moveable marker on top of the chart.";
+
+"Shows customized axis style and label format." = "Shows customized axis style and label format.";
+
+"Shows a chart with mutiple Y axes." = "Shows a chart with mutiple Y axes.";
+
+"Shows basic chart headers and axis titles." = "Shows basic chart headers and axis titles.";
+
+"Shows conditional formatting by customizing plot elements." = "Shows conditional formatting by customizing plot elements.";
+
+"Shows how to fully customize plot elements." = "Shows how to fully customize plot elements.";
+
+"Shows the different selection modes." = "Shows the different selection modes.";
+
+"Shows the ability to toggle a series visibility." = "Shows the ability to toggle a series visibility.";
+
+"Shows animation modes when data is loaded." = "Shows animation modes when data is loaded.";
+
+"Shows animation when data is updated." = "Shows animation when data is updated.";
+
+"Shows a dynamic, “live” chart." = "Shows a dynamic, “live” chart.";
+
+"Demonstrates use of the FlexChart's hitTest method." = "Demonstrates use of the FlexChart's hitTest method.";
+
+"Shows a chart with panning (or scrolling) along the axes." = "Shows a chart with panning (or scrolling) along the axes.";
+
+"Shows stretch zoom-out and pinch zoom-in gestures." = "Shows stretch zoom-out and pinch zoom-in gestures.";
+
+"Shows the built-in palettes." = "Shows the built-in palettes.";
+
+"Shows custom series styling." = "Shows custom series styling.";
+
+"Shows how to export an image of FlexChart." = "Shows how to export an image of FlexChart.";
+
+// Strings
+
+"Add Point" = "Add Point";
+
+"Remove Point" = "Remove Point";
+
+"Drag to scroll/Pinch to zoom" = "Drag to scroll/Pinch to zoom";
+
+

@@ -7,6 +7,10 @@
 
 #import "CustomerData.h"
 
+@implementation CountryPair
+
+@end
+
 @implementation CustomerData
 
 -(id)initWithCustomerID:(NSUInteger)customerID countryID:(NSUInteger)countryID firstName:(NSString *)first lastName:(NSString *) last address:(NSString *) address city:(NSString *) city country:(NSString *) country postalCode:(NSString *) postalCode lastOrderDate:(NSDate *)lastOrderDate orderCount:(NSUInteger) orderCount orderTotal:(double)orderTotal active: (BOOL) active
@@ -41,6 +45,21 @@
     else{
         return false;
     }
+}
+
++ (NSArray *)defaultCountries {
+    NSString *countries = @"China|India|United States|Indonesia|Brazil|Pakistan|Bangladesh|Nigeria|Russia|Japan|Mexico|Philippines|Vietnam|Germany|Ethiopia|Egypt|Iran|Turkey|Congo|France|Thailand|United Kingdom|Italy|Myanmar";
+    NSArray *countriesArray = [countries componentsSeparatedByString:@"|"];
+    
+    NSMutableArray* result = [[NSMutableArray alloc]init];
+    for (NSString* country in countriesArray) {
+        CountryPair* pair = [[CountryPair alloc]init];
+        pair.title = country;
+        pair.identifier = @([countriesArray indexOfObject:country]);
+        [result addObject:pair];
+    }
+    
+    return result;
 }
 
 +(NSMutableArray *) getCustomerData: (NSInteger) total{

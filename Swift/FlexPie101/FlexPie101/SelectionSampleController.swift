@@ -24,7 +24,7 @@ class SelectionSampleController: UIViewController, UIPickerViewDelegate, UIPicke
         
         // Do any additional setup after loading the view.
         
-        _pickerData = ["None", "Left", "Top", "Right", "Bottom"]
+        _pickerData = [NSLocalizedString("None", comment:"None"), NSLocalizedString("Left", comment:"Left"), NSLocalizedString("Top", comment:"Top"), NSLocalizedString("Right", comment:"Right"), NSLocalizedString("Bottom", comment:"Bottom")]
         _pickerView.delegate = self
         _pickerView.showsSelectionIndicator = true
         _pickerView.hidden = false
@@ -36,11 +36,11 @@ class SelectionSampleController: UIViewController, UIPickerViewDelegate, UIPicke
         stepper.stepValue = 0.1
         stepper.addTarget(self, action:"stepperClicked:", forControlEvents: UIControlEvents.ValueChanged)
         
-        offsetLabel.text = "Selected Item offset " + String(stringInterpolationSegment: stepper.value)
+        offsetLabel.text = NSLocalizedString("Selected Item offset", comment: "Selected Item offset ") + String(stringInterpolationSegment: stepper.value)
         
-        positionLabel.text = "Position"
+        positionLabel.text = NSLocalizedString("position", comment: "Position")
         
-        isAnimatedLabel.text = "IsAnimated?"
+        isAnimatedLabel.text = NSLocalizedString("animation", comment: "IsAnimated?")
         
         var pieData = NSMutableArray()
         pieData = PieChartData.demoData()
@@ -48,6 +48,7 @@ class SelectionSampleController: UIViewController, UIPickerViewDelegate, UIPicke
         _pieChart.bindingName = "name"
         _pieChart.itemsSource = pieData
         _pieChart.tooltip.isVisible = true
+        _pieChart.selectedItemOffset = stepper.value
         
         self.view.addSubview(_pieChart)
         self.view.addSubview(_pickerView)
@@ -90,7 +91,7 @@ class SelectionSampleController: UIViewController, UIPickerViewDelegate, UIPicke
     
     func stepperClicked(sender: UIStepper) {
         _pieChart.selectedItemOffset = stepper.value
-        offsetLabel.text = "Selected Item offset " + String(stringInterpolationSegment: stepper.value)
+        offsetLabel.text = NSLocalizedString("Selected Item offset", comment: "Selected Item offset ") + String(stringInterpolationSegment: stepper.value)
         offsetLabel.sizeToFit()
     }
     
