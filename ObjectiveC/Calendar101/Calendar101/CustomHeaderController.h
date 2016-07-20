@@ -6,8 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XuniCalendarKit/XuniCalendarKit.h"
+@import XuniCalendarDynamicKit;
 
-@interface CustomHeaderController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource, XuniCalendarDelegate>
+@interface CustomHeaderController : UIViewController<XuniCalendarDelegate>
 
 @end

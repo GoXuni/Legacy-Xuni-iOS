@@ -7,9 +7,10 @@
 
 #import "ConditionalFormattingController.h"
 #import "ChartData.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 
 @interface ConditionalFormattingController ()
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
 
 @end
 
@@ -17,24 +18,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"Conditional Formatting", nil)];
     
-    // Do any additional setup after loading the view.
-    FlexChart *chart = [[FlexChart alloc] init];
-    XuniSeries *sine = [[XuniSeries alloc] initForChart:chart binding:@"y" name:@"sine"];
+    XuniSeries *sine = [[XuniSeries alloc] initForChart:self.chart binding:@"y" name:@"sine"];
     sine.bindingX = @"x";
-    [chart.series addObject:sine];
+    [self.chart.series addObject:sine];
     
-    chart.chartType = XuniChartTypeLineSymbols;
-    chart.bindingX = @"x";
-    chart.itemsSource = [self getData];
-    chart.loadAnimation.animationMode = XuniAnimationModePoint;
-    chart.axisY.format = @"F1";
-    chart.axisX.format = @"F1";
+    self.chart.chartType = XuniChartTypeLineSymbols;
+    self.chart.bindingX = @"x";
+    self.chart.itemsSource = [self getData];
+    self.chart.loadAnimation.animationMode = XuniAnimationModePoint;
+    self.chart.axisY.format = @"F1";
+    self.chart.axisX.format = @"F1";
     
-    IXuniEventHandler plotElementLoadingHandler = ^(NSObject *sender, XuniEventArgs *args)
-    {
-        XuniChartPlotElementEventArgs *plotArgs = (XuniChartPlotElementEventArgs*)args;
+    [self.chart.plotElementLoading addHandler: ^(XuniEventContainer<XuniChartPlotElementEventArgs *> *eventContainer) {
+        XuniChartPlotElementEventArgs *plotArgs = eventContainer.eventArgs;
         if (plotArgs.dataPoint != nil && plotArgs.defaultRender != nil) {
             double y = plotArgs.dataPoint.value;
             
@@ -47,11 +44,8 @@
             [plotArgs.renderEngine setFill:[UIColor colorWithRed:r green:g blue:b alpha:a]];
             [plotArgs.defaultRender execute:nil];
         }
-    };
-    [chart.plotElementLoading addHandler:plotElementLoadingHandler forObject:self];
+    } forObject:self];
     
-    chart.tag = 1;
-    [self.view addSubview:chart];
 }
 
 - (NSMutableArray*)getData {
@@ -63,27 +57,5 @@
     
     return array;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    chart.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65);
-    [chart setNeedsDisplay];
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

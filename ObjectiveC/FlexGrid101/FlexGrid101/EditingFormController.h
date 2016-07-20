@@ -7,14 +7,14 @@
 
 #import <UIKit/UIKit.h>
 
-#import "XuniFlexGridKit/XuniFlexGridKit.h"
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
 #import "CustomerData.h"
 
 
-@interface EditingFormController : UIViewController<FlexGridDelegate>
+@interface EditingFormController : UIViewController
+
+@property CustomerData* edited;
+
 -(void)cancel;
 -(void)confirm;
 @end
-
-extern EditingFormController* efc;
-extern CustomerData* edited;

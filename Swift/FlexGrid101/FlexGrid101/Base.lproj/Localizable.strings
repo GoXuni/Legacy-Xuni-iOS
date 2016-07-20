@@ -2,8 +2,7 @@
   Localizable.strings
   FlexGrid101
 
-  Created by Mykola Kotyuck on 27.11.15.
-  Copyright © 2015 GrapeCity. All rights reserved.
+  Copyright (c) 2015 GrapeCity. All rights reserved.
 */
 
 "On Demand Loading" = "On Demand Loading";
@@ -46,3 +45,10 @@
 "Count" = "Count";
 "Edit Columns" = "Edit Columns";
 "Done" = "Done";
+"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday";
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"Sunday" = "Sunday";

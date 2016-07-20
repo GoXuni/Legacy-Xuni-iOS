@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  CollectionView101
+
+  Copyright © 2016 GrapeCity. All rights reserved.
+*/
+
+"Sort A-Z" = "昇順(A-Z)";
+
+"Sort Z-A" = "降順(Z-A)";

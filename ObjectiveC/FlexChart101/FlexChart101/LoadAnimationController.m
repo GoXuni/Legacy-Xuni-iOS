@@ -6,13 +6,15 @@
 //
 
 #import "LoadAnimationController.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 #import "ChartData.h"
 
 @interface LoadAnimationController () {
     NSMutableArray *chartTypePickerData;
     NSMutableArray *selectionModePickerData;
 }
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
 
 @end
 
@@ -20,25 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"Load Animation Mode", nil)];
     
-    // Do any additional setup after loading the view.
     chartTypePickerData =[[NSMutableArray alloc] initWithObjects:@"Column", @"Area", @"Line", @"LineSymbols", @"Spline", @"SplineSymbols", @"SplineArea", @"Scatter", nil];
     selectionModePickerData = [[NSMutableArray alloc]initWithObjects: @"All", @"Point", @"Series", nil];
     
-    UIPickerView *chartTypePicker = [[UIPickerView alloc] init];
-    chartTypePicker.delegate = self;
-    chartTypePicker.showsSelectionIndicator = YES;
-    chartTypePicker.hidden = false;
-    [chartTypePicker selectRow:0 inComponent:0 animated:false];
+    self.picker.delegate = self;
     
-    UIPickerView *selectionModePicker = [[UIPickerView alloc] init];
-    selectionModePicker.delegate = self;
-    selectionModePicker.showsSelectionIndicator = YES;
-    selectionModePicker.hidden = false;
-    [selectionModePicker selectRow:1 inComponent:0 animated:false];
-    
-    FlexChart *chart = [[FlexChart alloc] init];
+    FlexChart *chart = self.chart;
     NSMutableArray *chartData = [ChartData demoData];
     XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
     XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses, expenses" name:@"Expenses"];
@@ -53,39 +43,15 @@
     chart.loadAnimation.animationMode = XuniAnimationModePoint;
     chart.palette = [XuniPalettes modern];
 
-    chart.tag = 1;
-    chartTypePicker.tag = 2;
-    selectionModePicker.tag = 3;
-    
-    [self.view addSubview:chartTypePicker];
-    [self.view addSubview:selectionModePicker];
-    [self.view addSubview:chart];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    UIPickerView *chartTypePicker = (UIPickerView*)[self.view viewWithTag:2];
-    UIPickerView *selectionModePicker = (UIPickerView*)[self.view viewWithTag:3];
-    
-    chartTypePicker.frame = CGRectMake(0, 44, self.view.bounds.size.width / 2, 162);
-    selectionModePicker.frame = CGRectMake(self.view.bounds.size.width / 2, 44, self.view.bounds.size.width / 2, 162);
-    chart.frame = CGRectMake(0, 206, self.view.bounds.size.width, self.view.bounds.size.height - 206);
-    [chart setNeedsDisplay];
-}
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    
-    if (pickerView.tag == 2) {
+    if (component == 0) {
         return [chartTypePickerData count];
     }
     else {
@@ -94,9 +60,9 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    FlexChart *chart = (FlexChart *)[self.view viewWithTag:1];
+    FlexChart *chart = self.chart;
     
-    if (pickerView.tag == 2) {
+    if (component == 0) {
         if (row == 0) {
             chart.chartType = XuniChartTypeColumn;
         }
@@ -122,7 +88,7 @@
             chart.chartType = XuniChartTypeScatter;
         }
     }
-    else if (pickerView.tag == 3) {
+    else {
         if (row == 0) {
             chart.loadAnimation.animationMode = XuniAnimationModeAll;
             
@@ -139,24 +105,16 @@
 }
 
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    if (pickerView.tag == 2) {
+    if (component == 0) {
         return [chartTypePickerData objectAtIndex:row];
     }
-    else if (pickerView.tag == 3) {
+    else if (component == 1) {
         return [selectionModePickerData objectAtIndex:row];
     }
     else {
         return @"error";
     }
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

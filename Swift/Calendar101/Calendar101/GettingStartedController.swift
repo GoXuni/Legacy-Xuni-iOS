@@ -14,7 +14,7 @@ class GettingStartedController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Getting Started"
+        self.title = NSLocalizedString("Getting Started", comment: "")
 
         // Do any additional setup after loading the view.
         self.view.addSubview(_calendar)

@@ -1,49 +1,94 @@
 //
-//  GettingStartedController.swift
+//  EditingController.h
 //  FlexGrid101
 //
 //  Copyright (c) 2015 GrapeCity. All rights reserved.
 //
-
 import UIKit
-import XuniFlexGridKit
+import XuniCoreDynamicKit
+import XuniFlexGridDynamicKit
 
-class GettingStartedController: UIViewController {
-    var _flex = FlexGrid()
-    
+class GettingStartedController: UIViewController, FlexGridDelegate {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.flex.columnHeaderFont = UIFont.boldSystemFontOfSize(self.flex.columnHeaderFont.pointSize)
+        self.flex.isReadOnly = false
+        self.flex.delegate = self
+        self.flex.flexGridAutoGeneratingColumn.addHandler({(eventContainer: XuniEventContainer!) -> Void in
+            let eventContainerEventArgs = eventContainer.eventArgs as! GridAutoGeneratingColumnEventArgs
+            if (eventContainerEventArgs.propertyInfo.name == "country") || (eventContainerEventArgs.propertyInfo.name == "name") || (eventContainerEventArgs.propertyInfo.name == "orderAverage") {
+                eventContainerEventArgs.cancel = true
+            }
+            else if (eventContainerEventArgs.propertyInfo.name == "customerID") {
+                eventContainerEventArgs.column.isReadOnly = true
+            }
+            else if (eventContainerEventArgs.propertyInfo.name == "countryID") {
+                eventContainerEventArgs.column.header = "Country"
+                eventContainerEventArgs.column.horizontalAlignment = .Left
+                let items = CustomerData.defaultCountries()
+                eventContainerEventArgs.column.dataMap = GridDataMap(array: items, selectedValuePath: "identifier", displayMemberPath: "title")
+            }
+            else if (eventContainerEventArgs.propertyInfo.name == "orderTotal") {
+                eventContainerEventArgs.column.format = "C2"
+            }
+            else if (eventContainerEventArgs.propertyInfo.name == "address") {
+                eventContainerEventArgs.column.wordWrap = true
+            }
 
-        // Do any additional setup after loading the view.
-        _flex.isReadOnly = true
-        _flex.itemsSource = CustomerData.getCustomerData(100)
-        _flex.autoSizeColumns(0, to: Int32(Int(_flex.columns.count)-1))
-        
-        self.view.addSubview(_flex)
+        }, forObject: self)
+        self.flex.itemsSource = NSMutableArray(array:CustomerData.getCustomerData(100))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        if (self.navigationController == nil) {return;}
-        
-        let ss = UIApplication.sharedApplication().statusBarFrame.size.height + self.navigationController!.navigationBar.intrinsicContentSize().height;
-        
-        _flex.frame = CGRectMake(0, ss, self.view.bounds.size.width, self.view.bounds.size.height - ss)
-        _flex.setNeedsDisplay()
-    }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func prepareCellForEdit(sender: FlexGrid, panel: GridPanel, forRange range: GridCellRange) -> Bool {
+        let flex: FlexGrid = self.flex
+        let col: GridColumn = flex.columns![range.col] as! GridColumn
+        if (col.binding == "lastOrderDate") {
+            let editor: UITextField = (flex.activeEditor as! UITextField)
+            let picker: UIDatePicker = UIDatePicker()
+            let d: NSDate = (flex.cells.getCellDataForRow(range.row, inColumn: range.col, formatted: false) as! NSDate)
+            picker.opaque = true
+            picker.datePickerMode = .Date
+            picker.date = d
+            picker.addTarget(self, action: #selector(onDatePickerChanged(_:)), forControlEvents: .ValueChanged)
+            editor.inputView = picker
+            let toolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, flex.frame.size.width, 44))
+            toolbar.barStyle = .Default
+            let done: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(endEditDatePicker(_:)))
+            let space: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+            toolbar.items = [space, done]
+            editor.inputAccessoryView = toolbar
+            editor.clearButtonMode = .Never
+        }
+        return false
     }
-    */
 
+    func onDatePickerChanged(sender: UIDatePicker) {
+        let flex: FlexGrid = self.flex
+        let editor: UITextField = (flex.activeEditor as! UITextField)
+        let c: GridColumn = flex.columns![flex.editRange.col] as! GridColumn
+        editor.text = String(c.getFormattedValue(sender.date))
+    }
+
+    func endEditDatePicker(textField: UITextField) -> Bool {
+        let flex: FlexGrid = self.flex
+        let editor: UITextField = (flex.activeEditor as! UITextField)
+        let picker: UIDatePicker = (editor.inputView as! UIDatePicker)
+        flex.cells.setCellData(picker.date, forRow: flex.editRange.row, inColumn: flex.editRange.col)
+        flex.finishEditing(true)
+        return true
+    }
+
+    @IBOutlet weak var flex: FlexGrid!
 }
+//
+//  EditingController.m
+//  FlexGrid101
+//
+//  Copyright (c) 2015 GrapeCity. All rights reserved.
+//

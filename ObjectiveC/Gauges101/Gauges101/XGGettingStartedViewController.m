@@ -6,7 +6,8 @@
 //
 
 #import "XGGettingStartedViewController.h"
-#import "XuniGaugeKit/XuniGaugeKit.h"
+
+@import XuniGaugeDynamicKit;
 
 @interface XGGettingStartedViewController ()
 @property (weak, nonatomic) IBOutlet XuniRadialGauge *radialGauge;
@@ -32,50 +33,32 @@
     
     _valueDisplay.text = [NSString stringWithFormat:@"%i", (int)_valueStepper.value];
     
-    _radialGauge.showText = XuniShowTextNone;
-    _radialGauge.thickness = 0.6;
-    _radialGauge.min = _valueStepper.minimumValue;
-    _radialGauge.max = _valueStepper.maximumValue;
-    _radialGauge.value = _valueStepper.value;
     _radialGauge.loadAnimation.duration = 2;
     _radialGauge.updateAnimation.duration = 0.5;
-    _radialGauge.isReadOnly = false;
-    _radialGauge.showText = XuniShowTextNone;
+    
+     [_radialGauge.gaugeValueChanged addHandler:^(XuniEventContainer *eventContainer) {
+         _valueStepper.value = _radialGauge.value;
+         [self stepperValueChanged:nil];
+     } forObject:self];
     
     
-    [_radialGauge.gaugeValueChanged addHandler:^(NSObject* sender, XuniEventArgs* args)
-    {
-        _valueStepper.value = _radialGauge.value;
-        [self stepperValueChanged:nil];
-    }
-                                     forObject:self];
     
-    
-    _linearGauge.showText = XuniShowTextNone;
-    _linearGauge.min = _valueStepper.minimumValue;
-    _linearGauge.max = _valueStepper.maximumValue;
-    _linearGauge.value = _valueStepper.value;
     _linearGauge.loadAnimation.duration = 2;
     _linearGauge.updateAnimation.duration = 0.5;
-    _linearGauge.isReadOnly = false;
-    [_linearGauge.gaugeValueChanged addHandler:^(NSObject* sender, XuniEventArgs* args)
+    
+    
+    [_linearGauge.gaugeValueChanged addHandler:^(XuniEventContainer *eventContainer)
      {
          _valueStepper.value = _linearGauge.value;
          [self stepperValueChanged:nil];
      }
                                      forObject:self];
     
-    _bulletGraph.showText = XuniShowTextNone;
-    _bulletGraph.min = _valueStepper.minimumValue;
-    _bulletGraph.max = _valueStepper.maximumValue;
-    _bulletGraph.value = _valueStepper.value;
+
     _bulletGraph.loadAnimation.duration = 2;
     _bulletGraph.updateAnimation.duration = 0.5;
-    _bulletGraph.isReadOnly = false;
-    _bulletGraph.bad = 45;
-    _bulletGraph.good = 80;
-    _bulletGraph.target = 90;
-    [_bulletGraph.gaugeValueChanged addHandler:^(NSObject* sender, XuniEventArgs* args)
+    
+    [_bulletGraph.gaugeValueChanged addHandler:^(XuniEventContainer *eventContainer)
      {
          _valueStepper.value = _bulletGraph.value;
          [self stepperValueChanged:nil];

@@ -16,11 +16,11 @@ class CustomSelectionController: UIViewController, XuniCalendarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Custom Selection"
+        self.title = NSLocalizedString("Custom Selection", comment: "")
 
         // Do any additional setup after loading the view.
         _stepsLabel.numberOfLines = 3
-        _stepsLabel.text = "Step1: Select a date.\nStep2: Select another date in a different week.\nObserve: The weekend days are not selected."
+        _stepsLabel.text = NSLocalizedString("Step1: Select a date.\nStep2: Select another date in a different week.\nObserve: The weekend days are not selected.", comment: "")
         
         _calendar.delegate = self
         _calendar.maxSelectionCount = -1
@@ -43,15 +43,15 @@ class CustomSelectionController: UIViewController, XuniCalendarDelegate {
         _calendar.frame = CGRectMake(0, 55 + 100, width, width - 55 - 100)
     }
     
-    func selectionChanging(sender: XuniCalendar, args: XuniCalendarSelectionChangedEventArgs) {
-        for (var date = args.selectedDates.startDate;
-            date.compare(args.selectedDates.endDate) == NSComparisonResult.OrderedAscending
-            || date.compare(args.selectedDates.endDate) == NSComparisonResult.OrderedSame;
+    func selectionChanging(sender: XuniCalendar, selectedDates: XuniCalendarRange) {
+        for (var date = selectedDates.startDate;
+            date.compare(selectedDates.endDate) == NSComparisonResult.OrderedAscending
+            || date.compare(selectedDates.endDate) == NSComparisonResult.OrderedSame;
         date = getNextDateOf(date)) {
             
             let weekday = NSCalendar.currentCalendar().components(NSCalendarUnit.Weekday, fromDate: date).weekday
             if (weekday == 1 || weekday == 7) {
-                args.selectedDates.addExcludedDates(date)
+                selectedDates.addExcludedDates(date)
             }
         }
     }

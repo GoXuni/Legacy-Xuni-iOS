@@ -1,6 +1,156 @@
 
-/* Class = "UIBarButtonItem"; title = "FlexChart101"; ObjectID = "agU-Ri-rsm"; */
-"agU-Ri-rsm.title" = "FlexChart101";
+/* Class = "UILabel"; text = "Downloads"; ObjectID = "1ma-Si-CBO"; */
+"1ma-Si-CBO.text" = "Downloads";
 
-/* Class = "UINavigationItem"; title = "FlexChart101"; ObjectID = "geB-Xl-WoV"; */
-"geB-Xl-WoV.title" = "FlexChart101";
+/* Class = "UISegmentedControl"; 1zT-tA-usj.segmentTitles[0] = "Candle"; ObjectID = "1zT-tA-usj"; */
+"1zT-tA-usj.segmentTitles[0]" = "Candle";
+
+/* Class = "UISegmentedControl"; 1zT-tA-usj.segmentTitles[1] = "HLOC"; ObjectID = "1zT-tA-usj"; */
+"1zT-tA-usj.segmentTitles[1]" = "HLOC";
+
+/* Class = "UINavigationItem"; title = "Mixed Chart Types"; ObjectID = "2mT-gA-nEZ"; */
+"2mT-gA-nEZ.title" = "Mixed Chart Types";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "3We-j7-APK"; */
+"3We-j7-APK.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "X Y Values"; ObjectID = "3Zb-aI-qhA"; */
+"3Zb-aI-qhA.text" = "X Y Values";
+
+/* Class = "UISegmentedControl"; 3fn-CR-JhB.segmentTitles[0] = "X"; ObjectID = "3fn-CR-JhB"; */
+"3fn-CR-JhB.segmentTitles[0]" = "X";
+
+/* Class = "UISegmentedControl"; 3fn-CR-JhB.segmentTitles[1] = "Y"; ObjectID = "3fn-CR-JhB"; */
+"3fn-CR-JhB.segmentTitles[1]" = "Y";
+
+/* Class = "UISegmentedControl"; 3fn-CR-JhB.segmentTitles[2] = "XY"; ObjectID = "3fn-CR-JhB"; */
+"3fn-CR-JhB.segmentTitles[2]" = "XY";
+
+/* Class = "UISegmentedControl"; 3fn-CR-JhB.segmentTitles[3] = "Disabled"; ObjectID = "3fn-CR-JhB"; */
+"3fn-CR-JhB.segmentTitles[3]" = "Disabled";
+
+/* Class = "UINavigationItem"; title = "Selection Modes"; ObjectID = "3jf-fg-a1m"; */
+"3jf-fg-a1m.title" = "Selection Modes";
+
+/* Class = "UINavigationItem"; title = "Custom Tooltips"; ObjectID = "4mt-3y-STV"; */
+"4mt-3y-STV.title" = "Custom Tooltips";
+
+/* Class = "UILabel"; text = "Point Index"; ObjectID = "75d-9j-w5m"; */
+"75d-9j-w5m.text" = "Point Index";
+
+/* Class = "UINavigationItem"; title = "Annotations"; ObjectID = "7WY-l1-EQK"; */
+"7WY-l1-EQK.title" = "Annotations";
+
+/* Class = "UINavigationItem"; title = "Theming"; ObjectID = "8HY-5m-v7a"; */
+"8HY-5m-v7a.title" = "Theming";
+
+/* Class = "UILabel"; text = "Zoom mode"; ObjectID = "8qC-od-0ts"; */
+"8qC-od-0ts.text" = "Zoom mode";
+
+/* Class = "UISegmentedControl"; 8rk-86-cgC.segmentTitles[0] = "None"; ObjectID = "8rk-86-cgC"; */
+"8rk-86-cgC.segmentTitles[0]" = "None";
+
+/* Class = "UISegmentedControl"; 8rk-86-cgC.segmentTitles[1] = "Left"; ObjectID = "8rk-86-cgC"; */
+"8rk-86-cgC.segmentTitles[1]" = "Left";
+
+/* Class = "UISegmentedControl"; 8rk-86-cgC.segmentTitles[2] = "Top"; ObjectID = "8rk-86-cgC"; */
+"8rk-86-cgC.segmentTitles[2]" = "Top";
+
+/* Class = "UISegmentedControl"; 8rk-86-cgC.segmentTitles[3] = "Right"; ObjectID = "8rk-86-cgC"; */
+"8rk-86-cgC.segmentTitles[3]" = "Right";
+
+/* Class = "UISegmentedControl"; 8rk-86-cgC.segmentTitles[4] = "Bottom"; ObjectID = "8rk-86-cgC"; */
+"8rk-86-cgC.segmentTitles[4]" = "Bottom";
+
+/* Class = "UISegmentedControl"; 8rk-86-cgC.segmentTitles[5] = "Center"; ObjectID = "8rk-86-cgC"; */
+"8rk-86-cgC.segmentTitles[5]" = "Center";
+
+/* Class = "UILabel"; text = "Series"; ObjectID = "9xl-bu-qNV"; */
+"9xl-bu-qNV.text" = "Series";
+
+/* Class = "UINavigationItem"; title = "Getting Started"; ObjectID = "AQM-7d-rGy"; */
+"AQM-7d-rGy.title" = "Getting Started";
+
+/* Class = "UIBarButtonItem"; title = "Snapshot"; ObjectID = "DfF-89-8OJ"; */
+"DfF-89-8OJ.title" = "Snapshot";
+
+/* Class = "UINavigationItem"; title = "Multiple Axes"; ObjectID = "Il8-E5-FBG"; */
+"Il8-E5-FBG.title" = "Multiple Axes";
+
+/* Class = "UINavigationItem"; title = "Legend and TItles"; ObjectID = "JkL-T7-VtW"; */
+"JkL-T7-VtW.title" = "Legend and TItles";
+
+/* Class = "UINavigationItem"; title = "Data Labels"; ObjectID = "KCT-aG-Rg4"; */
+"KCT-aG-Rg4.title" = "Data Labels";
+
+/* Class = "UINavigationItem"; title = "Update Animation"; ObjectID = "KTI-ZM-zHy"; */
+"KTI-ZM-zHy.title" = "Update Animation";
+
+/* Class = "UILabel"; text = "Chart Element"; ObjectID = "LWa-Kl-acd"; */
+"LWa-Kl-acd.text" = "Chart Element";
+
+/* Class = "UINavigationItem"; title = "Basic Chart Types"; ObjectID = "NBt-FV-QtC"; */
+"NBt-FV-QtC.title" = "Basic Chart Types";
+
+/* Class = "UINavigationItem"; title = "Conditional Formatting"; ObjectID = "NP2-Pc-gE0"; */
+"NP2-Pc-gE0.title" = "Conditional Formatting";
+
+/* Class = "UINavigationItem"; title = "Export Image"; ObjectID = "PU8-Nc-hf9"; */
+"PU8-Nc-hf9.title" = "Export Image";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Qaz-W0-69e"; */
+"Qaz-W0-69e.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Dynamic Charts"; ObjectID = "UMe-kt-zOT"; */
+"UMe-kt-zOT.title" = "Dynamic Charts";
+
+/* Class = "UINavigationItem"; title = "Styling"; ObjectID = "Upi-Db-O1U"; */
+"Upi-Db-O1U.title" = "Styling";
+
+/* Class = "UINavigationItem"; title = "Scrolling"; ObjectID = "VFR-EG-SYX"; */
+"VFR-EG-SYX.title" = "Scrolling";
+
+/* Class = "UILabel"; text = "Expenses"; ObjectID = "W68-pQ-mxe"; */
+"W68-pQ-mxe.text" = "Expenses";
+
+/* Class = "UINavigationItem"; title = "Load Animation"; ObjectID = "WEr-SH-6Ni"; */
+"WEr-SH-6Ni.title" = "Load Animation";
+
+/* Class = "UINavigationItem"; title = "Line Marker"; ObjectID = "Wep-bA-SwB"; */
+"Wep-bA-SwB.title" = "Line Marker";
+
+/* Class = "UINavigationItem"; title = "Customizing Axes"; ObjectID = "YF1-Hl-vBx"; */
+"YF1-Hl-vBx.title" = "Customizing Axes";
+
+/* Class = "UISegmentedControl"; a4W-9s-xi7.segmentTitles[0] = "None"; ObjectID = "a4W-9s-xi7"; */
+"a4W-9s-xi7.segmentTitles[0]" = "None";
+
+/* Class = "UISegmentedControl"; a4W-9s-xi7.segmentTitles[1] = "Move"; ObjectID = "a4W-9s-xi7"; */
+"a4W-9s-xi7.segmentTitles[1]" = "Move";
+
+/* Class = "UISegmentedControl"; a4W-9s-xi7.segmentTitles[2] = "Drag"; ObjectID = "a4W-9s-xi7"; */
+"a4W-9s-xi7.segmentTitles[2]" = "Drag";
+
+/* Class = "UINavigationItem"; title = "Hit Test"; ObjectID = "aPy-25-HQh"; */
+"aPy-25-HQh.title" = "Hit Test";
+
+/* Class = "UINavigationItem"; title = "Financial Chart"; ObjectID = "bh7-Or-Iq1"; */
+"bh7-Or-Iq1.title" = "Financial Chart";
+
+/* Class = "UINavigationItem"; title = "Custom Plot Elements"; ObjectID = "hna-U0-UrC"; */
+"hna-U0-UrC.title" = "Custom Plot Elements";
+
+/* Class = "UINavigationItem"; title = "Bubble Chart"; ObjectID = "i8F-MK-1Fc"; */
+"i8F-MK-1Fc.title" = "Bubble Chart";
+
+/* Class = "UINavigationItem"; title = "Zooming and Scrolling"; ObjectID = "txQ-Vd-QOC"; */
+"txQ-Vd-QOC.title" = "Zooming and Scrolling";
+
+/* Class = "UINavigationItem"; title = "Toggle Series"; ObjectID = "vVz-HP-feV"; */
+"vVz-HP-feV.title" = "Toggle Series";
+
+/* Class = "UILabel"; text = "Sales"; ObjectID = "wu0-uU-Fa0"; */
+"wu0-uU-Fa0.text" = "Sales";
+
+/* Class = "UINavigationItem"; title = "FlexChart101"; ObjectID = "xGO-ok-ekk"; */
+"xGO-ok-ekk.title" = "FlexChart101";

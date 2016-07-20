@@ -53,9 +53,9 @@ class PopupEditorController: UIViewController, XuniCalendarDelegate {
         _calendar.hidden = !_calendar.hidden
     }
 
-    func selectionChanged(sender: XuniCalendar, args: XuniCalendarSelectionChangedEventArgs) {
+    func selectionChanged(sender: XuniCalendar, selectedDates: XuniCalendarRange) {
         _dateFormatter.dateFormat = "M/d/yyyy"
-        _dateLabel.text = String(format: "The date %@ was selected.", _dateFormatter.stringFromDate(args.selectedDates.startDate))
+        _dateLabel.text = String(format: "The date %@ was selected.", _dateFormatter.stringFromDate(selectedDates.startDate))
         _calendar.hidden = true
     }
     

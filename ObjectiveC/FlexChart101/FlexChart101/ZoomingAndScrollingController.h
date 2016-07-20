@@ -7,5 +7,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZoomingAndScrollingController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
+@interface ZoomingAndScrollingController : UIViewController
 @end

@@ -6,7 +6,7 @@
 //
 
 #import "XGAutomaticScalingViewController.h"
-#import <XuniGaugeKit/XuniGaugeKit.h>
+@import XuniGaugeDynamicKit;
 
 @interface XGAutomaticScalingViewController ()
 @property (weak, nonatomic) IBOutlet UIStepper *startAngleStepper;
@@ -30,25 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _radialGauge.thickness = 0.6;
-    _radialGauge.min = 0;
-    _radialGauge.max = 200;
-    _radialGauge.value = 25;
+
     _radialGauge.loadAnimation.duration = 2;
     _radialGauge.updateAnimation.duration = 3.5;
-    _radialGauge.isReadOnly = true;
-    _radialGauge.startAngle = 90;
-    _radialGauge.sweepAngle = 90;
-    
-    _radialGauge.backgroundColor =  [UIColor clearColor];
-    _radialGauge.pointerColor =  [UIColor whiteColor];
-    _radialGauge.faceBorderWidth  =  1;
-    _radialGauge.faceBorderColor = [UIColor whiteColor];
-    _radialGauge.faceColor = [UIColor clearColor];
-    _radialGauge.valueFontColor = [UIColor whiteColor];
-    _radialGauge.minFontColor = [UIColor whiteColor];
-    _radialGauge.maxFontColor = [UIColor whiteColor];
-    _radialGauge.valueFont = [UIFont fontWithName:@"Optima" size:19];
     
     
     [self angleChanged:nil];

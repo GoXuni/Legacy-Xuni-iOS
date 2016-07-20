@@ -3,91 +3,91 @@
 "0Wn-El-nmX.text" = ">";
 
 /* Class = "UILabel"; text = "Sorting"; ObjectID = "0ft-v2-ojG"; */
-"0ft-v2-ojG.text" = "Sorting";
+"0ft-v2-ojG.text" = "ソート";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "4na-Qg-5gl"; */
-"4na-Qg-5gl.text" = "Detail";
+"4na-Qg-5gl.text" = "詳細";
 
 /* Class = "UILabel"; text = "Displays a grouped list of YouTube videos"; ObjectID = "5gY-WI-I4l"; */
-"5gY-WI-I4l.text" = "Displays a grouped list of YouTube videos";
+"5gY-WI-I4l.text" = "リストをグループ化して表示";
 
 /* Class = "UIViewController"; title = "YouTube OnDemand"; ObjectID = "69x-Gx-Nb6"; */
-"69x-Gx-Nb6.title" = "YouTube OnDemand";
+"69x-Gx-Nb6.title" = "YouTube オンデマンド";
 
 /* Class = "UILabel"; text = "Shows on-demand loading with a ListView"; ObjectID = "6QK-Cc-y15"; */
-"6QK-Cc-y15.text" = "Shows on-demand loading with a ListView";
+"6QK-Cc-y15.text" = "表示時にデータを要求してリストビューに読み込み";
 
 /* Class = "UINavigationController"; title = "CollectionView101"; ObjectID = "798-98-Js3"; */
 "798-98-Js3.title" = "CollectionView101";
 
 /* Class = "UITableViewController"; title = "Sorting"; ObjectID = "7ih-MR-4Cm"; */
-"7ih-MR-4Cm.title" = "Sorting";
+"7ih-MR-4Cm.title" = "ソート";
 
 /* Class = "UITableViewController"; title = "CollectionView101"; ObjectID = "A3s-lV-pdi"; */
 "A3s-lV-pdi.title" = "CollectionView101";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "Anb-IA-gi3"; */
-"Anb-IA-gi3.text" = "Title";
+"Anb-IA-gi3.text" = "タイトル";
 
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "DtY-OV-zVb"; */
-"DtY-OV-zVb.title" = "Back";
+"DtY-OV-zVb.title" = "戻る";
 
 /* Class = "UINavigationItem"; title = "Grouping"; ObjectID = "Eop-Sz-bMd"; */
-"Eop-Sz-bMd.title" = "Grouping";
+"Eop-Sz-bMd.title" = "グループ化";
 
 /* Class = "UINavigationItem"; title = "Filtering Demo"; ObjectID = "F1y-Xk-xGA"; */
-"F1y-Xk-xGA.title" = "Filtering Demo";
+"F1y-Xk-xGA.title" = "フィルター処理";
 
 /* Class = "UILabel"; text = "Simple OnDemand"; ObjectID = "F73-Yk-65J"; */
-"F73-Yk-65J.text" = "Simple OnDemand";
+"F73-Yk-65J.text" = "シンプルオンデマンド";
 
 /* Class = "UITextField"; placeholder = "Enter your search request"; ObjectID = "FzP-fF-yx0"; */
-"FzP-fF-yx0.placeholder" = "Enter your search request";
+"FzP-fF-yx0.placeholder" = "検索するキーワードを入力";
 
 /* Class = "UILabel"; text = "Sort a list of items from the action bar"; ObjectID = "GLZ-02-Gdg"; */
-"GLZ-02-Gdg.text" = "Sort a list of items from the action bar";
+"GLZ-02-Gdg.text" = "アクションバーを操作して項目をソート";
 
 /* Class = "UITableViewController"; title = "Filtering Subview"; ObjectID = "HE6-a9-uUW"; */
-"HE6-a9-uUW.title" = "Filtering Subview";
+"HE6-a9-uUW.title" = "フィルター処理 補助画面";
 
 /* Class = "UISegmentedControl"; IfT-lu-aWn.segmentTitles[0] = "Relevance"; ObjectID = "IfT-lu-aWn"; */
-"IfT-lu-aWn.segmentTitles[0]" = "Relevance";
+"IfT-lu-aWn.segmentTitles[0]" = "関連性";
 
 /* Class = "UISegmentedControl"; IfT-lu-aWn.segmentTitles[1] = "Date"; ObjectID = "IfT-lu-aWn"; */
-"IfT-lu-aWn.segmentTitles[1]" = "Date";
+"IfT-lu-aWn.segmentTitles[1]" = "日付";
 
 /* Class = "UISegmentedControl"; IfT-lu-aWn.segmentTitles[2] = "View Count"; ObjectID = "IfT-lu-aWn"; */
-"IfT-lu-aWn.segmentTitles[2]" = "View Count";
+"IfT-lu-aWn.segmentTitles[2]" = "閲覧数";
 
 /* Class = "UISegmentedControl"; IfT-lu-aWn.segmentTitles[3] = "Rating"; ObjectID = "IfT-lu-aWn"; */
-"IfT-lu-aWn.segmentTitles[3]" = "Rating";
+"IfT-lu-aWn.segmentTitles[3]" = "評価";
 
 /* Class = "UISegmentedControl"; IfT-lu-aWn.segmentTitles[4] = "Title"; ObjectID = "IfT-lu-aWn"; */
-"IfT-lu-aWn.segmentTitles[4]" = "Title";
+"IfT-lu-aWn.segmentTitles[4]" = "タイトル";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "IpZ-Hb-7b0"; */
-"IpZ-Hb-7b0.text" = "Detail";
+"IpZ-Hb-7b0.text" = "詳細";
 
 /* Class = "UILabel"; text = "Filtering"; ObjectID = "JAY-lX-H0m"; */
-"JAY-lX-H0m.text" = "Filtering";
+"JAY-lX-H0m.text" = "フィルター処理";
 
 /* Class = "UINavigationItem"; title = "Simple OnDemand"; ObjectID = "JXY-hG-Bev"; */
-"JXY-hG-Bev.title" = "Simple OnDemand";
+"JXY-hG-Bev.title" = "シンプルオンデマンド";
 
 /* Class = "UINavigationItem"; title = "Sorting"; ObjectID = "Jcm-u1-tk4"; */
-"Jcm-u1-tk4.title" = "Sorting";
+"Jcm-u1-tk4.title" = "ソート";
 
 /* Class = "UILabel"; text = "Grouping"; ObjectID = "KOu-Xm-dsd"; */
-"KOu-Xm-dsd.text" = "Grouping";
+"KOu-Xm-dsd.text" = "グループ化";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "L4e-gD-TaT"; */
 "L4e-gD-TaT.text" = ">";
 
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "PaI-0O-mFv"; */
-"PaI-0O-mFv.title" = "Back";
+"PaI-0O-mFv.title" = "戻る";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "S6E-uQ-8gP"; */
-"S6E-uQ-8gP.text" = "Detail";
+"S6E-uQ-8gP.text" = "詳細";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "W5a-cG-S8t"; */
 "W5a-cG-S8t.text" = ">";
@@ -96,58 +96,58 @@
 "XJb-4a-6I6.text" = ">";
 
 /* Class = "UIViewController"; title = "Filtering Demo"; ObjectID = "ZzD-FA-sPI"; */
-"ZzD-FA-sPI.title" = "Filtering Demo";
+"ZzD-FA-sPI.title" = "フィルター処理";
 
 /* Class = "UILabel"; text = "Shows on-demand loading with YouTube API"; ObjectID = "aEa-i1-YqZ"; */
-"aEa-i1-YqZ.text" = "Shows on-demand loading with YouTube API";
+"aEa-i1-YqZ.text" = "YouTube APIを使用したロードオンデマンド";
 
 /* Class = "UILabel"; text = "Filters a list of items by typing in an Entry"; ObjectID = "ali-Ve-8YO"; */
-"ali-Ve-8YO.text" = "Filters a list of items by typing in an Entry";
+"ali-Ve-8YO.text" = "テキストを入力して項目をフィルタリング";
 
 /* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "amh-J3-5Vm"; */
-"amh-J3-5Vm.title" = "Back";
+"amh-J3-5Vm.title" = "戻る";
 
 /* Class = "UIBarButtonItem"; title = "Sort"; ObjectID = "cDH-85-JES"; */
-"cDH-85-JES.title" = "Sort";
+"cDH-85-JES.title" = "ソート";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "dnA-mh-F16"; */
-"dnA-mh-F16.text" = "Title";
+"dnA-mh-F16.text" = "タイトル";
 
 /* Class = "UINavigationItem"; title = "CollectionView101"; ObjectID = "fCS-cL-WFr"; */
 "fCS-cL-WFr.title" = "CollectionView101";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "ia5-D3-eAA"; */
-"ia5-D3-eAA.text" = "Detail";
+"ia5-D3-eAA.text" = "詳細";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "lkP-cp-Jjv"; */
-"lkP-cp-Jjv.text" = "Title";
+"lkP-cp-Jjv.text" = "タイトル";
 
 /* Class = "UITextField"; placeholder = "Enter your search request"; ObjectID = "m8O-7S-noj"; */
-"m8O-7S-noj.placeholder" = "Enter your search request";
+"m8O-7S-noj.placeholder" = "検索するキーワードを入力";
 
 /* Class = "UILabel"; text = "YouTube OnDemand"; ObjectID = "qaW-JU-eaf"; */
-"qaW-JU-eaf.text" = "YouTube OnDemand";
+"qaW-JU-eaf.text" = "YouTube オンデマンド";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "rKx-lQ-Ibr"; */
-"rKx-lQ-Ibr.text" = "Title";
+"rKx-lQ-Ibr.text" = "タイトル";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "sLW-zD-73r"; */
-"sLW-zD-73r.text" = "Title";
+"sLW-zD-73r.text" = "タイトル";
 
 /* Class = "UINavigationItem"; title = "YouTube OnDemand"; ObjectID = "snp-Lp-uik"; */
-"snp-Lp-uik.title" = "YouTube OnDemand";
+"snp-Lp-uik.title" = "YouTube オンデマンド";
 
 /* Class = "UITableViewController"; title = "Sorting"; ObjectID = "tEM-Ha-q5d"; */
-"tEM-Ha-q5d.title" = "Sorting";
+"tEM-Ha-q5d.title" = "ソート";
 
 /* Class = "UITableViewController"; title = "Grouping"; ObjectID = "ujQ-dv-l4y"; */
-"ujQ-dv-l4y.title" = "Grouping";
+"ujQ-dv-l4y.title" = "グループ化";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "vNr-Nf-FJA"; */
 "vNr-Nf-FJA.text" = ">";
 
 /* Class = "UITableViewController"; title = "Sorting"; ObjectID = "wLZ-oO-gNR"; */
-"wLZ-oO-gNR.title" = "Sorting";
+"wLZ-oO-gNR.title" = "ソート";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "yLd-8q-2dX"; */
-"yLd-8q-2dX.text" = "Detail";
+"yLd-8q-2dX.text" = "詳細";

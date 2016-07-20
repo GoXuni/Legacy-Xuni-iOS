@@ -64,8 +64,8 @@ class HitTestController: UIViewController, FlexChartDelegate {
         _chartElementLabel.frame = CGRectMake(0, self.view.bounds.size.height * 6 / 8, self.view.bounds.size.width, self.view.bounds.size.height / 16)
     }
     
-    func tapped(sender: FlexChartBase!, point: XuniPoint!) -> Bool {
-        var hitTest = _chart.hitTest(point)
+    func tapped(sender: XuniView!, point: XuniPoint!) -> Bool {
+        let hitTest = _chart.hitTest(point)
         var seriesName = "";
         if (hitTest.dataPoint.seriesIndex >= 0 && hitTest.dataPoint.seriesIndex < Int32(_chart.series.count)) {
             seriesName = hitTest.dataPoint.seriesName;

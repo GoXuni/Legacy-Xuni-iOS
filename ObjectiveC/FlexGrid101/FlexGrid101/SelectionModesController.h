@@ -7,6 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SelectionModesController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
+@interface SelectionModesController : UIViewController
 
 @end

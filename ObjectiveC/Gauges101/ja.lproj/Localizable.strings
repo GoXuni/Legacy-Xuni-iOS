@@ -40,3 +40,5 @@
 "Failure" = "失敗";
 "Image was saved to Camera Roll succesfully" = "画像はカメラロールに正常に保存されました。";
 "OK" = "OK";
+"Warning" = "注意";
+"You should take the snapshot before saving it to Camera Roll" = "カメラロールに保存する前に、画像を取得する必要があります";

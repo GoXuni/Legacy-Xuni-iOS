@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C03A2081D257DF50002EB08 /* XuniInputDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0A768F1D257CB90020670C /* XuniInputDynamicKit.framework */; };
+		4C03A2091D257DF50002EB08 /* XuniInputDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0A768F1D257CB90020670C /* XuniInputDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C03A20A1D257DF50002EB08 /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0A76901D257CB90020670C /* XuniCoreDynamicKit.framework */; };
+		4C03A20B1D257DF50002EB08 /* XuniCoreDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0A76901D257CB90020670C /* XuniCoreDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C03A2641D2581E70002EB08 /* XuniCalendarDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C03A2631D2581E70002EB08 /* XuniCalendarDynamicKit.framework */; };
+		4C03A2651D2581EA0002EB08 /* XuniCalendarDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C03A2631D2581E70002EB08 /* XuniCalendarDynamicKit.framework */; };
+		4C03A2661D2581EA0002EB08 /* XuniCalendarDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C03A2631D2581E70002EB08 /* XuniCalendarDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C0A76911D257CB90020670C /* XuniInputDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0A768F1D257CB90020670C /* XuniInputDynamicKit.framework */; };
+		4C0A76921D257CB90020670C /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0A76901D257CB90020670C /* XuniCoreDynamicKit.framework */; };
+		4C393DD61D266C230053B783 /* XuniCoreDesignTimeStoryboardSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C393DD41D266C230053B783 /* XuniCoreDesignTimeStoryboardSupport.m */; };
+		4C393DD71D266C230053B783 /* XuniInputDesignTimeStoryboardSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C393DD51D266C230053B783 /* XuniInputDesignTimeStoryboardSupport.m */; };
+		844FD0DF1CED8F6E0011DEA1 /* ComboBoxController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FD0DE1CED8F6E0011DEA1 /* ComboBoxController.m */; };
+		84837B031CE574FC0008468B /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = 84837B021CE574FC0008468B /* License.m */; };
+		84BD21811D13E35900CCE1BF /* input_autocomplete.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BD217D1D13E35900CCE1BF /* input_autocomplete.png */; };
+		84BD21821D13E35900CCE1BF /* input_combobox.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BD217E1D13E35900CCE1BF /* input_combobox.png */; };
+		84BD21831D13E35900CCE1BF /* input_dropdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BD217F1D13E35900CCE1BF /* input_dropdown.png */; };
+		84BD21841D13E35900CCE1BF /* input_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 84BD21801D13E35900CCE1BF /* input_mask.png */; };
+		84D383511CD8431C004C1DBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D383501CD8431C004C1DBF /* main.m */; };
+		84D383541CD8431C004C1DBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D383531CD8431C004C1DBF /* AppDelegate.m */; };
+		84D3835A1CD8431C004C1DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D383581CD8431C004C1DBF /* Main.storyboard */; };
+		84D3835C1CD8431C004C1DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3835B1CD8431C004C1DBF /* Assets.xcassets */; };
+		84D3835F1CD8431C004C1DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D3835D1CD8431C004C1DBF /* LaunchScreen.storyboard */; };
+		84D383731CD87859004C1DBF /* MaskedInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D383721CD87859004C1DBF /* MaskedInputController.m */; };
+		ED7284E21CE960E2006768D6 /* DropDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7284E11CE960E2006768D6 /* DropDownController.m */; };
+		ED79E2D21CF2915900FB4F4B /* AutoCompleteController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED79E2CF1CF2915900FB4F4B /* AutoCompleteController.m */; };
+		ED79E2D31CF2915900FB4F4B /* AutoCompleteData.m in Sources */ = {isa = PBXBuildFile; fileRef = ED79E2D11CF2915900FB4F4B /* AutoCompleteData.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C03A20C1D257DF60002EB08 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C03A2661D2581EA0002EB08 /* XuniCalendarDynamicKit.framework in Embed Frameworks */,
+				4C03A20B1D257DF50002EB08 /* XuniCoreDynamicKit.framework in Embed Frameworks */,
+				4C03A2091D257DF50002EB08 /* XuniInputDynamicKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4C03A2631D2581E70002EB08 /* XuniCalendarDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCalendarDynamicKit.framework; path = ../../../Controls/XuniCalendarDynamicKit.framework; sourceTree = "<group>"; };
+		4C0A768F1D257CB90020670C /* XuniInputDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniInputDynamicKit.framework; path = ../../../Controls/XuniInputDynamicKit.framework; sourceTree = "<group>"; };
+		4C0A76901D257CB90020670C /* XuniCoreDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreDynamicKit.framework; path = ../../../Controls/XuniCoreDynamicKit.framework; sourceTree = "<group>"; };
+		4C393DD41D266C230053B783 /* XuniCoreDesignTimeStoryboardSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XuniCoreDesignTimeStoryboardSupport.m; path = ../../../Controls/XuniCoreDesignTimeStoryboardSupport.m; sourceTree = "<group>"; };
+		4C393DD51D266C230053B783 /* XuniInputDesignTimeStoryboardSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XuniInputDesignTimeStoryboardSupport.m; path = ../../../Controls/XuniInputDesignTimeStoryboardSupport.m; sourceTree = "<group>"; };
+		844FD0DD1CED8F6E0011DEA1 /* ComboBoxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComboBoxController.h; path = Samples/ComboBoxController.h; sourceTree = "<group>"; };
+		844FD0DE1CED8F6E0011DEA1 /* ComboBoxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComboBoxController.m; path = Samples/ComboBoxController.m; sourceTree = "<group>"; };
+		84837B011CE574FC0008468B /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
+		84837B021CE574FC0008468B /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
+		84BD217D1D13E35900CCE1BF /* input_autocomplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = input_autocomplete.png; path = Images/input_autocomplete.png; sourceTree = "<group>"; };
+		84BD217E1D13E35900CCE1BF /* input_combobox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = input_combobox.png; path = Images/input_combobox.png; sourceTree = "<group>"; };
+		84BD217F1D13E35900CCE1BF /* input_dropdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = input_dropdown.png; path = Images/input_dropdown.png; sourceTree = "<group>"; };
+		84BD21801D13E35900CCE1BF /* input_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = input_mask.png; path = Images/input_mask.png; sourceTree = "<group>"; };
+		84D3834C1CD8431C004C1DBF /* Input101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Input101.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D383501CD8431C004C1DBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84D383521CD8431C004C1DBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84D383531CD8431C004C1DBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84D383591CD8431C004C1DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84D3835B1CD8431C004C1DBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84D3835E1CD8431C004C1DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84D383601CD8431C004C1DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D383711CD87859004C1DBF /* MaskedInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaskedInputController.h; path = Samples/MaskedInputController.h; sourceTree = "<group>"; };
+		84D383721CD87859004C1DBF /* MaskedInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaskedInputController.m; path = Samples/MaskedInputController.m; sourceTree = "<group>"; };
+		ED7284E01CE960E2006768D6 /* DropDownController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropDownController.h; path = Samples/DropDownController.h; sourceTree = "<group>"; };
+		ED7284E11CE960E2006768D6 /* DropDownController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropDownController.m; path = Samples/DropDownController.m; sourceTree = "<group>"; };
+		ED79E2CE1CF2915900FB4F4B /* AutoCompleteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoCompleteController.h; path = Samples/AutoCompleteController.h; sourceTree = "<group>"; };
+		ED79E2CF1CF2915900FB4F4B /* AutoCompleteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoCompleteController.m; path = Samples/AutoCompleteController.m; sourceTree = "<group>"; };
+		ED79E2D01CF2915900FB4F4B /* AutoCompleteData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoCompleteData.h; path = Samples/AutoCompleteData.h; sourceTree = "<group>"; };
+		ED79E2D11CF2915900FB4F4B /* AutoCompleteData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoCompleteData.m; path = Samples/AutoCompleteData.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84D383491CD8431C004C1DBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C03A2651D2581EA0002EB08 /* XuniCalendarDynamicKit.framework in Frameworks */,
+				4C03A2641D2581E70002EB08 /* XuniCalendarDynamicKit.framework in Frameworks */,
+				4C03A20A1D257DF50002EB08 /* XuniCoreDynamicKit.framework in Frameworks */,
+				4C0A76911D257CB90020670C /* XuniInputDynamicKit.framework in Frameworks */,
+				4C0A76921D257CB90020670C /* XuniCoreDynamicKit.framework in Frameworks */,
+				4C03A2081D257DF50002EB08 /* XuniInputDynamicKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84D383431CD8431C004C1DBF = {
+			isa = PBXGroup;
+			children = (
+				4C393DD41D266C230053B783 /* XuniCoreDesignTimeStoryboardSupport.m */,
+				4C393DD51D266C230053B783 /* XuniInputDesignTimeStoryboardSupport.m */,
+				4C03A2631D2581E70002EB08 /* XuniCalendarDynamicKit.framework */,
+				4C0A768F1D257CB90020670C /* XuniInputDynamicKit.framework */,
+				4C0A76901D257CB90020670C /* XuniCoreDynamicKit.framework */,
+				84D3834E1CD8431C004C1DBF /* Input101 */,
+				84D3834D1CD8431C004C1DBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84D3834D1CD8431C004C1DBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84D3834C1CD8431C004C1DBF /* Input101.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84D3834E1CD8431C004C1DBF /* Input101 */ = {
+			isa = PBXGroup;
+			children = (
+				84D383521CD8431C004C1DBF /* AppDelegate.h */,
+				84D383531CD8431C004C1DBF /* AppDelegate.m */,
+				84D3835B1CD8431C004C1DBF /* Assets.xcassets */,
+				84D3836E1CD876F7004C1DBF /* Images */,
+				84D383601CD8431C004C1DBF /* Info.plist */,
+				84D3835D1CD8431C004C1DBF /* LaunchScreen.storyboard */,
+				84837B011CE574FC0008468B /* License.h */,
+				84837B021CE574FC0008468B /* License.m */,
+				84D383581CD8431C004C1DBF /* Main.storyboard */,
+				84D3836D1CD876F1004C1DBF /* Samples */,
+				84D3834F1CD8431C004C1DBF /* Supporting Files */,
+			);
+			path = Input101;
+			sourceTree = "<group>";
+		};
+		84D3834F1CD8431C004C1DBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84D383501CD8431C004C1DBF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84D3836D1CD876F1004C1DBF /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				ED79E2CE1CF2915900FB4F4B /* AutoCompleteController.h */,
+				ED79E2CF1CF2915900FB4F4B /* AutoCompleteController.m */,
+				ED79E2D01CF2915900FB4F4B /* AutoCompleteData.h */,
+				ED79E2D11CF2915900FB4F4B /* AutoCompleteData.m */,
+				844FD0DD1CED8F6E0011DEA1 /* ComboBoxController.h */,
+				844FD0DE1CED8F6E0011DEA1 /* ComboBoxController.m */,
+				ED7284E01CE960E2006768D6 /* DropDownController.h */,
+				ED7284E11CE960E2006768D6 /* DropDownController.m */,
+				84D383711CD87859004C1DBF /* MaskedInputController.h */,
+				84D383721CD87859004C1DBF /* MaskedInputController.m */,
+			);
+			name = Samples;
+			sourceTree = "<group>";
+		};
+		84D3836E1CD876F7004C1DBF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84BD217D1D13E35900CCE1BF /* input_autocomplete.png */,
+				84BD217E1D13E35900CCE1BF /* input_combobox.png */,
+				84BD217F1D13E35900CCE1BF /* input_dropdown.png */,
+				84BD21801D13E35900CCE1BF /* input_mask.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84D3834B1CD8431C004C1DBF /* Input101 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D383631CD8431C004C1DBF /* Build configuration list for PBXNativeTarget "Input101" */;
+			buildPhases = (
+				84D383481CD8431C004C1DBF /* Sources */,
+				84D383491CD8431C004C1DBF /* Frameworks */,
+				84D3834A1CD8431C004C1DBF /* Resources */,
+				4C03A20C1D257DF60002EB08 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Input101;
+			productName = Input101;
+			productReference = 84D3834C1CD8431C004C1DBF /* Input101.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84D383441CD8431C004C1DBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = ComponentOne;
+				TargetAttributes = {
+					84D3834B1CD8431C004C1DBF = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 84D383471CD8431C004C1DBF /* Build configuration list for PBXProject "Input101" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84D383431CD8431C004C1DBF;
+			productRefGroup = 84D3834D1CD8431C004C1DBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84D3834B1CD8431C004C1DBF /* Input101 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84D3834A1CD8431C004C1DBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BD21811D13E35900CCE1BF /* input_autocomplete.png in Resources */,
+				84D3835F1CD8431C004C1DBF /* LaunchScreen.storyboard in Resources */,
+				84BD21831D13E35900CCE1BF /* input_dropdown.png in Resources */,
+				84D3835C1CD8431C004C1DBF /* Assets.xcassets in Resources */,
+				84BD21841D13E35900CCE1BF /* input_mask.png in Resources */,
+				84BD21821D13E35900CCE1BF /* input_combobox.png in Resources */,
+				84D3835A1CD8431C004C1DBF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84D383481CD8431C004C1DBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D383541CD8431C004C1DBF /* AppDelegate.m in Sources */,
+				4C393DD61D266C230053B783 /* XuniCoreDesignTimeStoryboardSupport.m in Sources */,
+				ED79E2D31CF2915900FB4F4B /* AutoCompleteData.m in Sources */,
+				84D383511CD8431C004C1DBF /* main.m in Sources */,
+				844FD0DF1CED8F6E0011DEA1 /* ComboBoxController.m in Sources */,
+				ED7284E21CE960E2006768D6 /* DropDownController.m in Sources */,
+				4C393DD71D266C230053B783 /* XuniInputDesignTimeStoryboardSupport.m in Sources */,
+				84D383731CD87859004C1DBF /* MaskedInputController.m in Sources */,
+				84837B031CE574FC0008468B /* License.m in Sources */,
+				ED79E2D21CF2915900FB4F4B /* AutoCompleteController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84D383581CD8431C004C1DBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D383591CD8431C004C1DBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84D3835D1CD8431C004C1DBF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D3835E1CD8431C004C1DBF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84D383611CD8431C004C1DBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84D383621CD8431C004C1DBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84D383641CD8431C004C1DBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = ../../../Controls;
+				INFOPLIST_FILE = Input101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = GrapeCity.Input101;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84D383651CD8431C004C1DBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = ../../../Controls;
+				INFOPLIST_FILE = Input101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = GrapeCity.Input101;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84D383471CD8431C004C1DBF /* Build configuration list for PBXProject "Input101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D383611CD8431C004C1DBF /* Debug */,
+				84D383621CD8431C004C1DBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84D383631CD8431C004C1DBF /* Build configuration list for PBXNativeTarget "Input101" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D383641CD8431C004C1DBF /* Debug */,
+				84D383651CD8431C004C1DBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84D383441CD8431C004C1DBF /* Project object */;
+}

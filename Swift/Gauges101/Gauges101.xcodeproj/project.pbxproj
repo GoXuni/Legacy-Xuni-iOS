@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4796081D30263700BD39C9 /* XuniGaugeDesignTimeStoryboardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4796071D30263700BD39C9 /* XuniGaugeDesignTimeStoryboardSupport.swift */; };
 		4C5FF2B11C49565E008794F4 /* gauge_basic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C5FF2A31C49565D008794F4 /* gauge_basic.png */; };
 		4C5FF2B21C49565E008794F4 /* gauge_bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C5FF2A41C49565E008794F4 /* gauge_bullet.png */; };
 		4C5FF2B31C49565E008794F4 /* gauge_linear.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C5FF2A51C49565E008794F4 /* gauge_linear.png */; };
@@ -24,12 +25,16 @@
 		4C5FF2C01C4957C0008794F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5FF2C21C4957C0008794F4 /* Main.storyboard */; };
 		4C5FF2C51C4957C8008794F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C5FF2C71C4957C8008794F4 /* LaunchScreen.xib */; };
 		4C862F731C07717600EA942C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C862F751C07717600EA942C /* Localizable.strings */; };
+		4CC37CAE1D2A66D000DF85BC /* XuniGaugeDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC37CAC1D2A66D000DF85BC /* XuniGaugeDynamicKit.framework */; };
+		4CC37CAF1D2A66D000DF85BC /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC37CAD1D2A66D000DF85BC /* XuniCoreDynamicKit.framework */; };
+		4CC37CB01D2A66D500DF85BC /* XuniGaugeDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC37CAC1D2A66D000DF85BC /* XuniGaugeDynamicKit.framework */; };
+		4CC37CB11D2A66D500DF85BC /* XuniGaugeDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC37CAC1D2A66D000DF85BC /* XuniGaugeDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CC37CB21D2A66D500DF85BC /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC37CAD1D2A66D000DF85BC /* XuniCoreDynamicKit.framework */; };
+		4CC37CB31D2A66D500DF85BC /* XuniCoreDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC37CAD1D2A66D000DF85BC /* XuniCoreDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F23573621B4441F400F300D7 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23573611B4441F400F300D7 /* License.swift */; };
 		F28241B71B39A6DA00B72CBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28241B61B39A6DA00B72CBE /* AppDelegate.swift */; };
 		F28241BE1B39A6DA00B72CBE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28241BD1B39A6DA00B72CBE /* Images.xcassets */; };
 		F28241CD1B39A6DA00B72CBE /* Gauges101Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28241CC1B39A6DA00B72CBE /* Gauges101Tests.swift */; };
-		F28241D91B39C5DB00B72CBE /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28241D81B39C5DB00B72CBE /* XuniCoreKit.framework */; };
-		F28241DB1B39C60000B72CBE /* XuniGaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28241DA1B39C60000B72CBE /* XuniGaugeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +47,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4CC37CB41D2A66D500DF85BC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4CC37CB31D2A66D500DF85BC /* XuniCoreDynamicKit.framework in Embed Frameworks */,
+				4CC37CB11D2A66D500DF85BC /* XuniGaugeDynamicKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4C4796071D30263700BD39C9 /* XuniGaugeDesignTimeStoryboardSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuniGaugeDesignTimeStoryboardSupport.swift; path = ../../../Controls/XuniGaugeDesignTimeStoryboardSupport.swift; sourceTree = "<group>"; };
 		4C5FF2A31C49565D008794F4 /* gauge_basic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_basic.png; sourceTree = "<group>"; };
 		4C5FF2A41C49565E008794F4 /* gauge_bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_bullet.png; sourceTree = "<group>"; };
 		4C5FF2A51C49565E008794F4 /* gauge_linear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_linear.png; sourceTree = "<group>"; };
@@ -63,6 +84,8 @@
 		4C5FF2C91C4957D3008794F4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4C862F741C07717600EA942C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C862F761C07717B00EA942C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CC37CAC1D2A66D000DF85BC /* XuniGaugeDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeDynamicKit.framework; path = ../../../Controls/XuniGaugeDynamicKit.framework; sourceTree = "<group>"; };
+		4CC37CAD1D2A66D000DF85BC /* XuniCoreDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreDynamicKit.framework; path = ../../../Controls/XuniCoreDynamicKit.framework; sourceTree = "<group>"; };
 		F23573611B4441F400F300D7 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		F28241B11B39A6DA00B72CBE /* Gauges101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauges101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28241B51B39A6DA00B72CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,8 +94,6 @@
 		F28241C61B39A6DA00B72CBE /* Gauges101Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gauges101Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28241CB1B39A6DA00B72CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F28241CC1B39A6DA00B72CBE /* Gauges101Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gauges101Tests.swift; sourceTree = "<group>"; };
-		F28241D81B39C5DB00B72CBE /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../../../Controls/XuniCoreKit.framework"; sourceTree = "<group>"; };
-		F28241DA1B39C60000B72CBE /* XuniGaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeKit.framework; path = "../../../Controls/XuniGaugeKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +101,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F28241D91B39C5DB00B72CBE /* XuniCoreKit.framework in Frameworks */,
-				F28241DB1B39C60000B72CBE /* XuniGaugeKit.framework in Frameworks */,
+				4CC37CAF1D2A66D000DF85BC /* XuniCoreDynamicKit.framework in Frameworks */,
+				4CC37CAE1D2A66D000DF85BC /* XuniGaugeDynamicKit.framework in Frameworks */,
+				4CC37CB21D2A66D500DF85BC /* XuniCoreDynamicKit.framework in Frameworks */,
+				4CC37CB01D2A66D500DF85BC /* XuniGaugeDynamicKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +134,9 @@
 		F28241A81B39A6DA00B72CBE = {
 			isa = PBXGroup;
 			children = (
-				F28241DA1B39C60000B72CBE /* XuniGaugeKit.framework */,
-				F28241D81B39C5DB00B72CBE /* XuniCoreKit.framework */,
+				4C4796071D30263700BD39C9 /* XuniGaugeDesignTimeStoryboardSupport.swift */,
+				4CC37CAC1D2A66D000DF85BC /* XuniGaugeDynamicKit.framework */,
+				4CC37CAD1D2A66D000DF85BC /* XuniCoreDynamicKit.framework */,
 				F28241B31B39A6DA00B72CBE /* Gauges101 */,
 				F28241C91B39A6DA00B72CBE /* Gauges101Tests */,
 				F28241B21B39A6DA00B72CBE /* Products */,
@@ -186,6 +210,7 @@
 				F28241AD1B39A6DA00B72CBE /* Sources */,
 				F28241AE1B39A6DA00B72CBE /* Frameworks */,
 				F28241AF1B39A6DA00B72CBE /* Resources */,
+				4CC37CB41D2A66D500DF85BC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,6 +315,7 @@
 				4C5FF2BE1C49565E008794F4 /* XGUsingRangesViewController.swift in Sources */,
 				4C5FF2B91C49565E008794F4 /* XGBulletGraphViewController.swift in Sources */,
 				4C5FF2B71C49565E008794F4 /* XGAnimationViewController.swift in Sources */,
+				4C4796081D30263700BD39C9 /* XuniGaugeDesignTimeStoryboardSupport.swift in Sources */,
 				4C5FF2BD1C49565E008794F4 /* XGGettingStartedViewController.swift in Sources */,
 				4C5FF2B81C49565E008794F4 /* XGAutomaticScalingViewController.swift in Sources */,
 				F28241B71B39A6DA00B72CBE /* AppDelegate.swift in Sources */,

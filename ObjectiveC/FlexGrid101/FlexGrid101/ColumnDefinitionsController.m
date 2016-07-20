@@ -6,66 +6,68 @@
 //
 
 #import "ColumnDefinitionsController.h"
-#import "XuniFlexGridKit/XuniFlexGridKit.h"
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
 #import "CustomerData.h"
 @interface ColumnDefinitionsController ()
+@property (weak, nonatomic) IBOutlet FlexGrid *flex;
 
 @end
 
 @implementation ColumnDefinitionsController
-
+ 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    FlexGrid *flex = [[FlexGrid alloc] init];
-    flex.columnHeaderFont = [UIFont boldSystemFontOfSize:flex.columnHeaderFont.pointSize];
-    flex.autoGenerateColumns = false;
-    FlexColumn *c1 = [[FlexColumn alloc] init];
-    c1.binding = @"customerID";
-    c1.header = @"ID";
-    c1.width = 100;
-    FlexColumn *c2 = [[FlexColumn alloc] init];
-    c2.binding = @"firstName";
-    c2.header = @"First Name";
-    FlexColumn *c3 = [[FlexColumn alloc] init];
-    c3.binding = @"lastName";
-    c3.header = @"Last Name";
-    FlexColumn *c4 = [[FlexColumn alloc] init];
-    c4.binding = @"orderTotal";
-    c4.header = @"Order Total";
-    c4.format = @"N1";
+    self.flex.columnHeaderFont = [UIFont boldSystemFontOfSize:self.flex.columnHeaderFont.pointSize];
+    self.flex.autoGenerateColumns = false;
     
-    FlexColumn *c5 = [[FlexColumn alloc] init];
-    c5.binding = @"countryID";
-    c5.header = @"Country";
+    GridColumn *active = [[GridColumn alloc] init];
+    active.binding = @"active";
+    active.widthType = GridColumnWidthPixel;
+    active.width = 70;
+    [self.flex.columns addObject:active];
     
+    GridColumn *identifier = [[GridColumn alloc] init];
+    identifier.binding = @"customerID";
+    identifier.isReadOnly = true;
+    identifier.widthType = GridColumnWidthPixel;
+    identifier.width = 100;
+    [self.flex.columns addObject:identifier];
     
-    [flex.columns addObject:c5];
-    [flex.columns addObject:c2];
-    [flex.columns addObject:c3];
-    [flex.columns addObject:c4];
-    flex.itemsSource = [CustomerData getCustomerData:100];
-    flex.isReadOnly = false;
+    GridColumn *firstName = [[GridColumn alloc] init];
+    firstName.binding = @"firstName";
+    [self.flex.columns addObject:firstName];
     
+    GridColumn *lastName = [[GridColumn alloc] init];
+    lastName.binding = @"lastName";
+    [self.flex.columns addObject:lastName];
+    
+    GridColumn *orderTotal = [[GridColumn alloc] init];
+    orderTotal.binding = @"orderTotal";
+    orderTotal.format = @"C2";
+    [self.flex.columns addObject:orderTotal];
+    
+    GridColumn *countryID = [[GridColumn alloc] init];
+    countryID.binding = @"countryID";
+    countryID.header = @"Country";
+    countryID.horizontalAlignment = NSTextAlignmentLeft;
     NSMutableArray *items = [NSMutableArray arrayWithArray:[CustomerData defaultCountries]];
-    c5.dataMap = [[FlexDataMap alloc] initWithArray:items selectedValuePath:@"identifier" displayMemberPath:@"title"];
+    countryID.dataMap = [[GridDataMap alloc] initWithArray:items selectedValuePath:@"identifier" displayMemberPath:@"title"];
+    [self.flex.columns addObject:countryID];
     
-    flex.tag = 1;
-    [self.view addSubview:flex];
+    GridColumn *lastOrderDate = [[GridColumn alloc] init];
+    lastOrderDate.binding = @"lastOrderDate";
+    [self.flex.columns addObject:lastOrderDate];
+    
+    GridColumn *lastOrderTime = [[GridColumn alloc] init];
+    lastOrderTime.binding = @"lastOrderDate";
+    lastOrderTime.header = @"Last Order Time";
+    NSDateFormatter* datefmt           = [[NSDateFormatter alloc] init];
+    [datefmt setDateFormat:@"hh:mm a"];
+    lastOrderTime.formatter = datefmt;
+    [self.flex.columns addObject:lastOrderTime];
+    
+    self.flex.itemsSource = [CustomerData getCustomerData:100];
+    self.flex.isReadOnly = false;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    
-    CGFloat ss = [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.intrinsicContentSize.height;
-    
-    flex.frame = CGRectMake(0, ss, self.view.bounds.size.width, self.view.bounds.size.height - ss);
-    [flex setNeedsDisplay];
-}
 @end

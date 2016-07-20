@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C06B2C31D1F4F4900363CF9 /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C06B2C11D1F4F4900363CF9 /* XuniCoreDynamicKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		4C06B2C41D1F4F4900363CF9 /* XuniCoreDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C06B2C11D1F4F4900363CF9 /* XuniCoreDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C06B2C51D1F4F4900363CF9 /* XuniGaugeDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C06B2C21D1F4F4900363CF9 /* XuniGaugeDynamicKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		4C06B2C61D1F4F4900363CF9 /* XuniGaugeDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C06B2C21D1F4F4900363CF9 /* XuniGaugeDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C1C57041D26DD39007491EB /* XuniGaugeDesignTimeStoryboardSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1C57031D26DD39007491EB /* XuniGaugeDesignTimeStoryboardSupport.m */; };
 		4C4E83C21C074F3B00EFFC98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C4E83C41C074F3B00EFFC98 /* Localizable.strings */; };
 		4C5FF2981C485551008794F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5FF29A1C485551008794F4 /* Main.storyboard */; };
 		4CBCD9811C42BA92005959E5 /* XGGettingStartedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD9801C42BA92005959E5 /* XGGettingStartedViewController.m */; };
@@ -24,8 +29,6 @@
 		4CE6A54A1C4830BB0074C229 /* XGAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6A5491C4830BB0074C229 /* XGAnimationViewController.m */; };
 		4CE6A54D1C483E0A0074C229 /* XGExportImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE6A54C1C483E0A0074C229 /* XGExportImageViewController.m */; };
 		F23573601B443ECA00F300D7 /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = F235735F1B443ECA00F300D7 /* License.m */; };
-		F23653EF1B0FA0CB008518FE /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23653EE1B0FA0CB008518FE /* XuniCoreKit.framework */; };
-		F23653F11B0FA0D7008518FE /* XuniGaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23653F01B0FA0D7008518FE /* XuniGaugeKit.framework */; };
 		F26DAA9A1B0A2011005E5B6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F26DAA991B0A2011005E5B6D /* main.m */; };
 		F26DAA9D1B0A2011005E5B6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F26DAA9C1B0A2011005E5B6D /* AppDelegate.m */; };
 		F26DAAA51B0A2011005E5B6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26DAAA41B0A2011005E5B6D /* Images.xcassets */; };
@@ -43,7 +46,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C06B2C71D1F4F4A00363CF9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C06B2C41D1F4F4900363CF9 /* XuniCoreDynamicKit.framework in Embed Frameworks */,
+				4C06B2C61D1F4F4900363CF9 /* XuniGaugeDynamicKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4C06B2C11D1F4F4900363CF9 /* XuniCoreDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreDynamicKit.framework; path = ../../../Controls/XuniCoreDynamicKit.framework; sourceTree = "<group>"; };
+		4C06B2C21D1F4F4900363CF9 /* XuniGaugeDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeDynamicKit.framework; path = ../../../Controls/XuniGaugeDynamicKit.framework; sourceTree = "<group>"; };
+		4C1C57031D26DD39007491EB /* XuniGaugeDesignTimeStoryboardSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XuniGaugeDesignTimeStoryboardSupport.m; path = ../../../Controls/XuniGaugeDesignTimeStoryboardSupport.m; sourceTree = "<group>"; };
 		4C4E83B91C0737B800EFFC98 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4C4E83C31C074F3B00EFFC98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C4E83C61C074F4300EFFC98 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -73,8 +94,6 @@
 		4CE6A54C1C483E0A0074C229 /* XGExportImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGExportImageViewController.m; sourceTree = "<group>"; };
 		F235735E1B443ECA00F300D7 /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
 		F235735F1B443ECA00F300D7 /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
-		F23653EE1B0FA0CB008518FE /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../../../Controls/XuniCoreKit.framework"; sourceTree = "<group>"; };
-		F23653F01B0FA0D7008518FE /* XuniGaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniGaugeKit.framework; path = "../../../Controls/XuniGaugeKit.framework"; sourceTree = "<group>"; };
 		F26DAA941B0A2011005E5B6D /* Gauges101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauges101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26DAA981B0A2011005E5B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26DAA991B0A2011005E5B6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,8 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23653EF1B0FA0CB008518FE /* XuniCoreKit.framework in Frameworks */,
-				F23653F11B0FA0D7008518FE /* XuniGaugeKit.framework in Frameworks */,
+				4C06B2C31D1F4F4900363CF9 /* XuniCoreDynamicKit.framework in Frameworks */,
+				4C06B2C51D1F4F4900363CF9 /* XuniGaugeDynamicKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +142,9 @@
 		F26DAA8B1B0A2011005E5B6D = {
 			isa = PBXGroup;
 			children = (
-				F23653F01B0FA0D7008518FE /* XuniGaugeKit.framework */,
-				F23653EE1B0FA0CB008518FE /* XuniCoreKit.framework */,
+				4C1C57031D26DD39007491EB /* XuniGaugeDesignTimeStoryboardSupport.m */,
+				4C06B2C11D1F4F4900363CF9 /* XuniCoreDynamicKit.framework */,
+				4C06B2C21D1F4F4900363CF9 /* XuniGaugeDynamicKit.framework */,
 				F26DAA961B0A2011005E5B6D /* Gauges101 */,
 				F26DAAB01B0A2011005E5B6D /* Gauges101Tests */,
 				F26DAA951B0A2011005E5B6D /* Products */,
@@ -211,6 +231,7 @@
 				F26DAA901B0A2011005E5B6D /* Sources */,
 				F26DAA911B0A2011005E5B6D /* Frameworks */,
 				F26DAA921B0A2011005E5B6D /* Resources */,
+				4C06B2C71D1F4F4A00363CF9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE6A54A1C4830BB0074C229 /* XGAnimationViewController.m in Sources */,
+				4C1C57041D26DD39007491EB /* XuniGaugeDesignTimeStoryboardSupport.m in Sources */,
 				F26DAA9D1B0A2011005E5B6D /* AppDelegate.m in Sources */,
 				4CE6A5471C480D380074C229 /* XGBulletGraphViewController.m in Sources */,
 				F23573601B443ECA00F300D7 /* License.m in Sources */,

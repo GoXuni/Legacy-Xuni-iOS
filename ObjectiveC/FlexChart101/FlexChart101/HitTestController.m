@@ -7,9 +7,14 @@
 
 #import "HitTestController.h"
 #import "HitTestData.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 
 @interface HitTestController ()
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
+@property (weak, nonatomic) IBOutlet UILabel *chartElementLabel;
+@property (weak, nonatomic) IBOutlet UILabel *seriesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pointIndexLabel;
+@property (weak, nonatomic) IBOutlet UILabel *xyValuesLabel;
 
 @end
 
@@ -17,20 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"Hit Test", nil)];
     
-    // Do any additional setup after loading the view.
-    UILabel *chartElementlabel = [[UILabel alloc] init];
-    chartElementlabel.text = @" Chart element";
-    UILabel *seriesLabel = [[UILabel alloc] init];
-    seriesLabel.text = @" Series";
     
-    UILabel *pointIndexlabel = [[UILabel alloc] init];
-    pointIndexlabel.text = @" Point Index";
-    UILabel *xyLabel = [[UILabel alloc] init];
-    xyLabel.text = @" X Y Values";
-
-    FlexChart *chart = [[FlexChart alloc] init];
+    FlexChart *chart = self.chart;
     chart.bindingX = @"x";
     XuniSeries *seriesCosX = [[XuniSeries alloc] initForChart:chart binding:@"y, y" name:@"cos(x)"];
     XuniSeries *seriesSinX = [[XuniSeries alloc] initForChart:chart binding:@"y, y" name:@"sin(x)"];
@@ -45,48 +39,18 @@
     chart.axisY.format = @"F";
     chart.header = @"Trigonometric Functions";
     chart.footer = @"Cartesian coordinates";
-    
-    chart.tag = 1;
-    seriesLabel.tag = 2;
-    pointIndexlabel.tag = 3;
-    xyLabel.tag = 4;
-    chartElementlabel.tag = 5;
-    
-    [self.view addSubview:chartElementlabel];
-    [self.view addSubview:chart];
-    [self.view addSubview:pointIndexlabel];
-    [self.view addSubview:seriesLabel];
-    [self.view addSubview:xyLabel];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    UILabel *seriesLabel = (UILabel *)[self.view viewWithTag:2];
-    UILabel *pointIndexLabel = (UILabel *)[self.view viewWithTag:3];
-    UILabel *xyLabel = (UILabel *)[self.view viewWithTag:4];
-    UILabel *chartElementLabel = (UILabel *)[self.view viewWithTag:5];
-    chart.frame = CGRectMake(0, self.view.bounds.size.height/8, self.view.bounds.size.width, self.view.bounds.size.height*5/8);
-    seriesLabel.frame = CGRectMake(0, self.view.bounds.size.height*13/16, self.view.bounds.size.width, self.view.bounds.size.height/16);
-    pointIndexLabel.frame = CGRectMake(0, self.view.bounds.size.height *14/16, self.view.bounds.size.width, self.view.bounds.size.height/16);
-    xyLabel.frame = CGRectMake(0, self.view.bounds.size.height *15/16, self.view.bounds.size.width, self.view.bounds.size.height/16);
-    chartElementLabel.frame = CGRectMake(0, self.view.bounds.size.height*6/8, self.view.bounds.size.width, self.view.bounds.size.height/16);
-    [chart setNeedsDisplay];
-}
 
 
 -(BOOL)tapped:(FlexChartBase *)sender point:(XuniPoint *)point
 {
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    UILabel *s = (UILabel *)[self.view viewWithTag:2];
-    UILabel *pi = (UILabel *)[self.view viewWithTag:3];
-    UILabel *xy = (UILabel *)[self.view viewWithTag:4];
-    UILabel *ce = (UILabel *)[self.view viewWithTag:5];
+    FlexChart *chart = self.chart;
+    UILabel *s = self.seriesLabel;
+    UILabel *pi = self.pointIndexLabel;
+    UILabel *xy = self.xyValuesLabel;
+    UILabel *ce = self.chartElementLabel;
     XuniChartHitTestInfo *hitTest = [chart hitTest:point];
     pi.text = [@" Point Index: " stringByAppendingString: [NSString stringWithFormat:@"%i", hitTest.dataPoint.pointIndex]];
     xy.text = [[NSString stringWithFormat:@" X:%@", hitTest.dataPoint.valueX] stringByAppendingString: [NSString stringWithFormat:@" Y:%1.2f", hitTest.dataPoint.value]];
@@ -134,14 +98,5 @@
     }
 }
 
-
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
 
 @end

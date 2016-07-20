@@ -7,10 +7,10 @@
 
 #import "CustomPlotElementsController.h"
 #import "ChartData.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 
-@interface CustomPlotElementsController () {
-}
+@interface CustomPlotElementsController ()
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
 
 @end
 
@@ -18,10 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"Custom Plot Elements", nil)];
     
-    // Do any additional setup after loading the view.
-    FlexChart *chart = [[FlexChart alloc] init];
+    FlexChart *chart = self.chart;
     XuniSeries *devicesSold = [[XuniSeries alloc] initForChart:chart binding:@"devicesSold" name:@"Devices sold"];
     [chart.series addObject:devicesSold];
     
@@ -36,9 +34,8 @@
     chart.axisX.majorTickWidth = 0;
     chart.axisX.minorTickWidth = 1;
     
-    IXuniEventHandler plotElementLoadingHandler = ^(NSObject *sender, XuniEventArgs *args)
-    {
-        XuniChartPlotElementEventArgs *plotArgs = (XuniChartPlotElementEventArgs*)args;
+    [chart.plotElementLoading addHandler: ^(XuniEventContainer<XuniChartPlotElementEventArgs *> *eventContainer) {
+        XuniChartPlotElementEventArgs *plotArgs = eventContainer.eventArgs;
         if (plotArgs.renderEngine != nil && plotArgs.hitTestInfo != nil && plotArgs.defaultRender != nil) {
             [plotArgs.renderEngine setFill:[UIColor grayColor]];
             [plotArgs.defaultRender execute:nil];
@@ -51,34 +48,9 @@
                 [customPoint.logo drawInRect:rect];
             }
         }
-    };
-    [chart.plotElementLoading addHandler:plotElementLoadingHandler forObject:self];
-    
-    chart.tag = 1;
-    [self.view addSubview:chart];
+    } forObject:self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    chart.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65);
-    [chart setNeedsDisplay];
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
 

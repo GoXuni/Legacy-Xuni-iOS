@@ -6,10 +6,11 @@
 //
 
 #import "StylingSeriesController.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 #import "ChartData.h"
 
 @interface StylingSeriesController ()
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
 
 @end
 
@@ -17,10 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"Styling Series", nil)];
     
-    // Do any additional setup after loading the view.
-    FlexChart *chart = [[FlexChart alloc] init];
+    FlexChart *chart = self.chart;
     XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales" name:@"Sales"];
     XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses" name:@"Expenses"];
     XuniSeries *downloads = [[XuniSeries alloc] initForChart:chart binding:@"downloads" name:@"Downloads"];
@@ -44,31 +43,7 @@
     chart.bindingX = @"name";
     chart.itemsSource = [ChartData demoData];
     
-    chart.tag = 1;
-    [self.view addSubview:chart];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    chart.frame = CGRectMake(0, 55, self.view.bounds.size.width, self.view.bounds.size.height - 55);
-    [chart setNeedsDisplay];
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

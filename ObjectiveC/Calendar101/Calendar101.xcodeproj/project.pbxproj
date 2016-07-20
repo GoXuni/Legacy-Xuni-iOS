@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8456E5A41C7EA2C1007DBBC9 /* XuniCalendarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456E5A21C7EA2C1007DBBC9 /* XuniCalendarKit.framework */; };
-		8456E5A51C7EA2C1007DBBC9 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456E5A31C7EA2C1007DBBC9 /* XuniCoreKit.framework */; };
+		4C82378F1D26727C002D2BFE /* XuniCalendarDesignTimeStoryboardSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C82378E1D26727C002D2BFE /* XuniCalendarDesignTimeStoryboardSupport.m */; };
+		4C876D141D2583C100AEBAD8 /* XuniCalendarDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C876D121D2583C100AEBAD8 /* XuniCalendarDynamicKit.framework */; };
+		4C876D151D2583C100AEBAD8 /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C876D131D2583C100AEBAD8 /* XuniCoreDynamicKit.framework */; };
+		4C876D161D2583C500AEBAD8 /* XuniCalendarDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C876D121D2583C100AEBAD8 /* XuniCalendarDynamicKit.framework */; };
+		4C876D171D2583C500AEBAD8 /* XuniCalendarDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C876D121D2583C100AEBAD8 /* XuniCalendarDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C876D181D2583C500AEBAD8 /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C876D131D2583C100AEBAD8 /* XuniCoreDynamicKit.framework */; };
+		4C876D191D2583C500AEBAD8 /* XuniCoreDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C876D131D2583C100AEBAD8 /* XuniCoreDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		849720C11C647ABB001F538B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720C01C647ABB001F538B /* main.m */; };
 		849720C41C647ABB001F538B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720C31C647ABB001F538B /* AppDelegate.m */; };
-		849720C71C647ABB001F538B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720C61C647ABB001F538B /* ViewController.m */; };
 		849720CA1C647ABB001F538B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849720C81C647ABB001F538B /* Main.storyboard */; };
 		849720CC1C647ABB001F538B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849720CB1C647ABB001F538B /* Assets.xcassets */; };
 		849720CF1C647ABB001F538B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849720CD1C647ABB001F538B /* LaunchScreen.storyboard */; };
@@ -25,15 +29,31 @@
 		849720F11C647E09001F538B /* VerticalOrientationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849720EA1C647E09001F538B /* VerticalOrientationController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C876D1A1D2583C500AEBAD8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C876D191D2583C500AEBAD8 /* XuniCoreDynamicKit.framework in Embed Frameworks */,
+				4C876D171D2583C500AEBAD8 /* XuniCalendarDynamicKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		8456E5A21C7EA2C1007DBBC9 /* XuniCalendarKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCalendarKit.framework; path = "../DerivedData/XuniCalendar/Build/Products/Debug-framework/XuniCalendarKit.framework"; sourceTree = "<group>"; };
-		8456E5A31C7EA2C1007DBBC9 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../DerivedData/XuniCalendar/Build/Products/Debug-framework/XuniCoreKit.framework"; sourceTree = "<group>"; };
+		4C37D42B1CD30E32009113A8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4C37D42C1CD30E33009113A8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		4C82378E1D26727C002D2BFE /* XuniCalendarDesignTimeStoryboardSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XuniCalendarDesignTimeStoryboardSupport.m; path = ../../../Controls/XuniCalendarDesignTimeStoryboardSupport.m; sourceTree = "<group>"; };
+		4C876D121D2583C100AEBAD8 /* XuniCalendarDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCalendarDynamicKit.framework; path = ../../../Controls/XuniCalendarDynamicKit.framework; sourceTree = "<group>"; };
+		4C876D131D2583C100AEBAD8 /* XuniCoreDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreDynamicKit.framework; path = ../../../Controls/XuniCoreDynamicKit.framework; sourceTree = "<group>"; };
 		849720BC1C647ABB001F538B /* Calendar101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849720C01C647ABB001F538B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		849720C21C647ABB001F538B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		849720C31C647ABB001F538B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		849720C51C647ABB001F538B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		849720C61C647ABB001F538B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		849720C91C647ABB001F538B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		849720CB1C647ABB001F538B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849720CE1C647ABB001F538B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,19 +81,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8456E5A41C7EA2C1007DBBC9 /* XuniCalendarKit.framework in Frameworks */,
-				8456E5A51C7EA2C1007DBBC9 /* XuniCoreKit.framework in Frameworks */,
+				4C876D161D2583C500AEBAD8 /* XuniCalendarDynamicKit.framework in Frameworks */,
+				4C876D141D2583C100AEBAD8 /* XuniCalendarDynamicKit.framework in Frameworks */,
+				4C876D181D2583C500AEBAD8 /* XuniCoreDynamicKit.framework in Frameworks */,
+				4C876D151D2583C100AEBAD8 /* XuniCoreDynamicKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CA1F2451CCE7AEB004B1C98 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				849720E91C647E09001F538B /* VerticalOrientationController.h */,
+				849720EA1C647E09001F538B /* VerticalOrientationController.m */,
+				849720E71C647E09001F538B /* PopupEditorController.h */,
+				849720E81C647E09001F538B /* PopupEditorController.m */,
+				849720DD1C647E09001F538B /* CustomAppearanceController.h */,
+				849720DE1C647E09001F538B /* CustomAppearanceController.m */,
+				849720DF1C647E09001F538B /* CustomDayContentController.h */,
+				849720E01C647E09001F538B /* CustomDayContentController.m */,
+				849720E11C647E09001F538B /* CustomHeaderController.h */,
+				849720E21C647E09001F538B /* CustomHeaderController.m */,
+				849720E31C647E09001F538B /* CustomSelectionController.h */,
+				849720E41C647E09001F538B /* CustomSelectionController.m */,
+				849720E51C647E09001F538B /* GettingStartedController.h */,
+				849720E61C647E09001F538B /* GettingStartedController.m */,
+			);
+			name = Samples;
+			sourceTree = "<group>";
+		};
 		849720B31C647ABB001F538B = {
 			isa = PBXGroup;
 			children = (
-				8456E5A21C7EA2C1007DBBC9 /* XuniCalendarKit.framework */,
-				8456E5A31C7EA2C1007DBBC9 /* XuniCoreKit.framework */,
+				4C82378E1D26727C002D2BFE /* XuniCalendarDesignTimeStoryboardSupport.m */,
+				4C876D121D2583C100AEBAD8 /* XuniCalendarDynamicKit.framework */,
+				4C876D131D2583C100AEBAD8 /* XuniCoreDynamicKit.framework */,
 				849720BE1C647ABB001F538B /* Calendar101 */,
 				849720BD1C647ABB001F538B /* Products */,
 			);
@@ -90,31 +134,16 @@
 		849720BE1C647ABB001F538B /* Calendar101 */ = {
 			isa = PBXGroup;
 			children = (
+				4CA1F2451CCE7AEB004B1C98 /* Samples */,
 				849720C21C647ABB001F538B /* AppDelegate.h */,
 				849720C31C647ABB001F538B /* AppDelegate.m */,
 				849720CB1C647ABB001F538B /* Assets.xcassets */,
-				849720DD1C647E09001F538B /* CustomAppearanceController.h */,
-				849720DE1C647E09001F538B /* CustomAppearanceController.m */,
-				849720DF1C647E09001F538B /* CustomDayContentController.h */,
-				849720E01C647E09001F538B /* CustomDayContentController.m */,
-				849720E11C647E09001F538B /* CustomHeaderController.h */,
-				849720E21C647E09001F538B /* CustomHeaderController.m */,
-				849720E31C647E09001F538B /* CustomSelectionController.h */,
-				849720E41C647E09001F538B /* CustomSelectionController.m */,
-				849720E51C647E09001F538B /* GettingStartedController.h */,
-				849720E61C647E09001F538B /* GettingStartedController.m */,
 				849720D01C647ABB001F538B /* Info.plist */,
 				849720CD1C647ABB001F538B /* LaunchScreen.storyboard */,
 				849720DA1C647D1A001F538B /* License.h */,
 				849720DB1C647D1A001F538B /* License.m */,
 				849720C81C647ABB001F538B /* Main.storyboard */,
-				849720E71C647E09001F538B /* PopupEditorController.h */,
-				849720E81C647E09001F538B /* PopupEditorController.m */,
 				849720BF1C647ABB001F538B /* Supporting Files */,
-				849720E91C647E09001F538B /* VerticalOrientationController.h */,
-				849720EA1C647E09001F538B /* VerticalOrientationController.m */,
-				849720C51C647ABB001F538B /* ViewController.h */,
-				849720C61C647ABB001F538B /* ViewController.m */,
 			);
 			path = Calendar101;
 			sourceTree = "<group>";
@@ -137,6 +166,7 @@
 				849720B81C647ABB001F538B /* Sources */,
 				849720B91C647ABB001F538B /* Frameworks */,
 				849720BA1C647ABB001F538B /* Resources */,
+				4C876D1A1D2583C500AEBAD8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,11 +229,11 @@
 			files = (
 				849720ED1C647E09001F538B /* CustomHeaderController.m in Sources */,
 				849720F01C647E09001F538B /* PopupEditorController.m in Sources */,
-				849720C71C647ABB001F538B /* ViewController.m in Sources */,
 				849720C41C647ABB001F538B /* AppDelegate.m in Sources */,
 				849720EE1C647E09001F538B /* CustomSelectionController.m in Sources */,
 				849720C11C647ABB001F538B /* main.m in Sources */,
 				849720DC1C647D1A001F538B /* License.m in Sources */,
+				4C82378F1D26727C002D2BFE /* XuniCalendarDesignTimeStoryboardSupport.m in Sources */,
 				849720F11C647E09001F538B /* VerticalOrientationController.m in Sources */,
 				849720EF1C647E09001F538B /* GettingStartedController.m in Sources */,
 				849720EB1C647E09001F538B /* CustomAppearanceController.m in Sources */,
@@ -218,6 +248,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				849720C91C647ABB001F538B /* Base */,
+				4C37D42C1CD30E33009113A8 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -226,6 +257,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				849720CE1C647ABB001F538B /* Base */,
+				4C37D42B1CD30E32009113A8 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -324,6 +356,7 @@
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					../../../Controls,
+					../../../../Controls,
 				);
 				INFOPLIST_FILE = Calendar101/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -341,6 +374,7 @@
 				FRAMEWORK_SEARCH_PATHS = ../../../Controls;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
+					../../../Controls,
 					../../../Controls,
 				);
 				INFOPLIST_FILE = Calendar101/Info.plist;

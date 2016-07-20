@@ -11,5 +11,3 @@
 @interface ColumnReordererTableViewController : UITableViewController
 
 @end
-
-extern ColumnReordererTableViewController* columnReorderTable;

@@ -7,10 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "XuniFlexGridKit/XuniFlexGridKit.h"
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
 
-@interface ConditionalFormattingController : UIViewController<FlexGridDelegate>
+@interface ConditionalFormattingController: UIViewController
 
--(bool)formatItem:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range inContext:(CGContextRef)context;
 
 @end

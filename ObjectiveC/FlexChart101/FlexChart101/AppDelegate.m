@@ -6,8 +6,10 @@
 //
 
 #import "AppDelegate.h"
-#import "XuniCoreKit/XuniCorekit.h"
+@import XuniCoreDynamicKit;
 #import "License.h"
+@import XuniFlexChartDynamicKit;
+
 
 @interface AppDelegate ()
 
@@ -19,6 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [XuniLicenseManager setKey:key];
+    [FlexChart class];
     return YES;
 }
 

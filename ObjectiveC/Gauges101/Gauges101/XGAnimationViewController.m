@@ -6,7 +6,7 @@
 //
 
 #import "XGAnimationViewController.h"
-#import <XuniGaugeKit/XuniGaugeKit.h>
+@import XuniGaugeDynamicKit;
 
 @interface XGAnimationViewController ()
 @property (weak, nonatomic) IBOutlet XuniLinearGauge *linearGauge;
@@ -19,35 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _radialGauge.thickness = 0.6;
-    _radialGauge.min = 0;
-    _radialGauge.max = 100;
-    _radialGauge.value = 25;
     _radialGauge.loadAnimation.duration = 2;
     _radialGauge.updateAnimation.duration = 2.5;
-    _radialGauge.isReadOnly = true;
     
     
-    _linearGauge.min = 0;
-    _linearGauge.max = 100;
-    _linearGauge.value = 25;
     _linearGauge.loadAnimation.duration = 2;
     _linearGauge.updateAnimation.duration = 2.5;
-    _linearGauge.isReadOnly = true;
-    _linearGauge.backgroundColor = [UIColor clearColor];
 
-    
-    
-    _radialGauge.backgroundColor = _linearGauge.backgroundColor = [UIColor clearColor];
-    _radialGauge.pointerColor = _linearGauge.pointerColor =  [UIColor whiteColor];
-    _radialGauge.faceBorderWidth = _linearGauge.faceBorderWidth =  1;
-    _radialGauge.faceBorderColor = _linearGauge.faceBorderColor = [UIColor whiteColor];
-    _radialGauge.faceColor = _linearGauge.faceColor = [UIColor clearColor];
-    _radialGauge.valueFontColor = [UIColor whiteColor];
-    _linearGauge.valueFontColor = [UIColor blueColor];
-    _radialGauge.minFontColor = _linearGauge.minFontColor = [UIColor whiteColor];
-    _radialGauge.maxFontColor = _linearGauge.maxFontColor = [UIColor whiteColor];
-    _radialGauge.valueFont = _linearGauge.valueFont = [UIFont fontWithName:@"Optima" size:19];
     
     
     // Create ranges.

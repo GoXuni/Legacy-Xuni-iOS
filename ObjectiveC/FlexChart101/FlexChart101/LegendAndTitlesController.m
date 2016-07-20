@@ -7,9 +7,10 @@
 
 #import "LegendAndTitlesController.h"
 #import "ChartData.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 
 @interface LegendAndTitlesController ()
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
 
 @end
 
@@ -17,65 +18,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"Legend and Titles", nil)];
-    // Do any additional setup after loading the view.
-
-    FlexChart *chart = [[FlexChart alloc] init];
+    
     NSMutableArray *chartData = [ChartData demoData];
-    chart.bindingX = @"name";
-    XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
-    XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses, expenses" name:@"Expenses"];
-    XuniSeries *downloads = [[XuniSeries alloc] initForChart:chart binding:@"downloads, downloads" name:@"Downloads"];
+    self.chart.bindingX = @"name";
+    XuniSeries *sales = [[XuniSeries alloc] initForChart:self.chart binding:@"sales, sales" name:@"Sales"];
+    XuniSeries *expenses = [[XuniSeries alloc] initForChart:self.chart binding:@"expenses, expenses" name:@"Expenses"];
+    XuniSeries *downloads = [[XuniSeries alloc] initForChart:self.chart binding:@"downloads, downloads" name:@"Downloads"];
     
-    [chart.series addObject:sales];
-    [chart.series addObject:expenses];
-    [chart.series addObject:downloads];
+    [self.chart.series addObject:sales];
+    [self.chart.series addObject:expenses];
+    [self.chart.series addObject:downloads];
     
-    chart.itemsSource = chartData;
-    chart.chartType = XuniChartTypeScatter;
+    self.chart.itemsSource = chartData;
+    self.chart.chartType = XuniChartTypeScatter;
     
-    chart.header = @"Sample Chart";
-    chart.headerTextColor = [UIColor colorWithRed:0.502 green:0.016 blue:0.302 alpha:1];
-    chart.headerFont = [UIFont boldSystemFontOfSize:24.0f];
-    chart.headerTextAlignment = XuniHorizontalAlignmentCenter;
-    chart.footer = @"2015 GrapeCity, Inc.";
-    chart.footerTextColor = [UIColor colorWithRed:0.502 green:0.016 blue:0.302 alpha:1];
-    chart.footerFont = [UIFont systemFontOfSize:16.0f];
-    chart.footerTextAlignment = XuniHorizontalAlignmentCenter;
+    self.chart.header = @"Sample Chart";
+    self.chart.headerTextColor = [UIColor colorWithRed:0.502 green:0.016 blue:0.302 alpha:1];
+    self.chart.headerFont = [UIFont boldSystemFontOfSize:24.0f];
+    self.chart.headerTextAlignment = XuniHorizontalAlignmentCenter;
+    self.chart.footer = @"2015 GrapeCity, Inc.";
+    self.chart.footerTextColor = [UIColor colorWithRed:0.502 green:0.016 blue:0.302 alpha:1];
+    self.chart.footerFont = [UIFont systemFontOfSize:16.0f];
+    self.chart.footerTextAlignment = XuniHorizontalAlignmentCenter;
     
-    chart.axisX.title = @"Country";
-    chart.axisX.titleFont = [UIFont boldSystemFontOfSize:16.0f];
-    chart.axisX.titleFont = [UIFont italicSystemFontOfSize:16.0f];
-    chart.axisX.majorGridVisible = YES;
-    chart.axisY.title = @"Amount";
-    chart.axisY.titleFont = [UIFont boldSystemFontOfSize:16.0f];
-    chart.axisY.titleFont = [UIFont italicSystemFontOfSize:16.0f];
-    chart.axisY.format = @"C0";
-    
-    chart.tag = 1;
-    [self.view addSubview:chart];
+    self.chart.axisX.title = @"Country";
+    self.chart.axisX.titleFont = [UIFont boldSystemFontOfSize:16.0f];
+    self.chart.axisX.titleFont = [UIFont italicSystemFontOfSize:16.0f];
+    self.chart.axisX.majorGridVisible = YES;
+    self.chart.axisY.title = @"Amount";
+    self.chart.axisY.titleFont = [UIFont boldSystemFontOfSize:16.0f];
+    self.chart.axisY.titleFont = [UIFont italicSystemFontOfSize:16.0f];
+    self.chart.axisY.format = @"C0";
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    chart.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65);
-    [chart setNeedsDisplay];
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

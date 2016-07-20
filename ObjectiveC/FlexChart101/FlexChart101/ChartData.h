@@ -31,4 +31,6 @@
 
 + (NSMutableArray *)generateRandomPoints:(NSInteger)count;
 
++ (NSMutableArray *)generateRandomData:(NSInteger)count;
+
 @end

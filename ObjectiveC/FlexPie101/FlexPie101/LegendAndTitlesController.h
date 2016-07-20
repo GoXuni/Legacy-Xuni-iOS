@@ -7,6 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LegendAndTitlesController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate>
+@interface LegendAndTitlesController : UIViewController
 
 @end

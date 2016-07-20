@@ -1,15 +1,18 @@
-import Foundation
+//
+//  EditingFormController.h
+//  FlexGrid101
+//
+//  Copyright © 2015 GrapeCity. All rights reserved.
+//
 import UIKit
-import XuniFlexGridKit
+import XuniCoreDynamicKit
+import XuniFlexGridDynamicKit
 
-class EditingFormController: UIViewController, FlexGridDelegate {
-    
+class EditingFormController: UIViewController {
+    var edited: CustomerData!
 
-    @IBOutlet weak var editpanel: UIVisualEffectView!
-    
-    var flex: FlexGrid! = nil;
-    
     func cancel() {
+        let objEdit: CustomerObjectEditor = (self.childViewControllers[0] as! CustomerObjectEditor)
         objEdit.resignFirstResponder()
         UIView.animateWithDuration(0.7, animations: {() -> Void in
             self.editpanel.alpha = 0
@@ -19,35 +22,40 @@ class EditingFormController: UIViewController, FlexGridDelegate {
     }
 
     func confirm() {
-        flex.collectionView.raiseCollectionChanged()
-        cancel()
+        self.flex.collectionView.raiseCollectionChanged()
+        self.cancel()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        efc = self
-        flex = FlexGrid()
-        flex.columnHeaderFont = UIFont.boldSystemFontOfSize(flex.columnHeaderFont.pointSize)
-        flex.isReadOnly = true
-        flex.delegate = self
-        flex.itemsSource = CustomerData.getCustomerData(100)
-        flex.tag = 1
-        flex.autoSizeColumns(0, to: Int32(flex.columns.count) - 1)
-        view.addSubview(flex)
-        view.sendSubviewToBack(flex)
+        self.flex.columnHeaderFont = UIFont.boldSystemFontOfSize(self.flex.columnHeaderFont.pointSize)
+        self.flex.isReadOnly = true
+        self.flex.itemsSource = NSMutableArray(array: CustomerData.getCustomerData(100))
+        self.flex.flexGridSelectionChanged.addHandler({(eventContainer: XuniEventContainer!) -> Void in
+            self.editaction.enabled = true
+        }, forObject: self)
+        self.flex.flexGridTapped.addHandler({(eventContainer: XuniEventContainer!) -> Void in
+            self.cancel()
+        }, forObject: self)
+        self.flex.flexGridCellDoubleTapped.addHandler({(eventContainer: XuniEventContainer!) -> Void in
+            if !self.editpanel.hidden {
+                self.cancel()
+                return
+            }
+            dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                self.beginEditing()
+            })
+        }, forObject: self)
+        self.flex.autoSizeColumns(0, to: Int32(self.flex.columns.count - 1))
     }
 
-    func tapped(sender: FlexGrid!, point: XuniPoint!) -> Bool {
-        cancel()
-        return false
+    @IBAction func doedit(sender: AnyObject) {
+        self.beginEditing()
     }
-    
-    func cellDoubleTapped(sender: FlexGrid!, panel: FlexGridPanel!, forRange range: FlexCellRange!) -> Bool {
-        if !editpanel.hidden {
-            tapped(nil, point: nil)
-            return false
-        }
-        edited = flex.itemsSource.objectAtIndex(Int(range.row)) as! CustomerData
+
+    func beginEditing() {
+        self.edited = self.flex.collectionView.items![Int(self.flex.selection.row)] as! CustomerData
+        let objEdit: CustomerObjectEditor = (self.childViewControllers[0] as! CustomerObjectEditor)
         objEdit.initObject()
         self.editpanel.alpha = 0
         self.editpanel.hidden = false
@@ -56,22 +64,15 @@ class EditingFormController: UIViewController, FlexGridDelegate {
         }, completion: {(finished: Bool) -> Void in
             self.editpanel.alpha = 1
         })
-        return false
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        if (self.navigationController == nil) {return;}
-        let ss: CGFloat = UIApplication.sharedApplication().statusBarFrame.size.height + navigationController!.navigationBar.intrinsicContentSize().height
-        flex.frame = CGRectMake(0, ss, view.bounds.size.width, view.bounds.size.height - ss)
-        flex.setNeedsDisplay()
-    }
+    @IBOutlet weak var editpanel: UIVisualEffectView!
+    @IBOutlet weak var flex: FlexGrid!
+    @IBOutlet weak var editaction: UIBarButtonItem!
 }
-
-var efc: EditingFormController! = nil
-
-var edited: CustomerData! = nil
+//
+//  GettingStartedController.m
+//  FlexGrid101
+//
+//  Copyright (c) 2015 GrapeCity. All rights reserved.
+//

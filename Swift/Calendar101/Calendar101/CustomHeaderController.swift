@@ -19,17 +19,20 @@ class CustomHeaderController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var _viewTypePicker = UIPickerView()
     var _dateLabel = UILabel()
     var _todayBtn = UIButton(type: UIButtonType.System)
+    var _isEnglish = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Custom Header"
 
         // Do any additional setup after loading the view.
+        _dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
+        let language = NSLocale.preferredLanguages()[0]
+        _isEnglish = !language.containsString("ja") && !language.containsString("zh")
+        
         _viewTypePicker.delegate = self
         _viewTypePicker.showsSelectionIndicator = true
         _viewTypePicker.hidden = false
-        
-        _dateLabel.text = ""
         
         _todayBtn.setTitle("Today", forState: UIControlState.Normal)
         _todayBtn.addTarget(self, action: "todayBtnClick:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -37,10 +40,14 @@ class CustomHeaderController: UIViewController, UIPickerViewDelegate, UIPickerVi
         _calendar.delegate = self
         _calendar.showHeader = false
         
+        updateDateLabel()
+        
         self.view.addSubview(_viewTypePicker)
         self.view.addSubview(_dateLabel)
         self.view.addSubview(_todayBtn)
         self.view.addSubview(_calendar)
+        
+        updateDateLabel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,14 +85,21 @@ class CustomHeaderController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (row == 0) {
-            _calendar.viewMode = XuniCalendarViewMode.Month
+            _calendar.changeViewModeAsync(XuniCalendarViewMode.Month, date: nil)
         }
         else if (row == 1) {
-            _calendar.viewMode = XuniCalendarViewMode.Year
+            _calendar.changeViewModeAsync(XuniCalendarViewMode.Year, date: nil)
         }
     }
     
     func viewModeChanged(sender: XuniCalendar) {
+        if (_calendar.viewMode == XuniCalendarViewMode.Month) {
+            _viewTypePicker.selectRow(0, inComponent: 0, animated: false)
+        }
+        else if (_calendar.viewMode == XuniCalendarViewMode.Year) {
+            _viewTypePicker.selectRow(1, inComponent: 0, animated: false)
+        }
+        
         updateDateLabel()
     }
     
@@ -94,7 +108,7 @@ class CustomHeaderController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func updateDateLabel() {
-        _dateFormatter.dateFormat = (_calendar.viewMode == XuniCalendarViewMode.Month) ? "MMMM yyyy" : "yyyy"
+        _dateFormatter.dateFormat = (_calendar.viewMode == XuniCalendarViewMode.Month) ? (_isEnglish ? "MMMM yyyy" : "yyyy年M月") : "yyyy"
         _dateLabel.text = _dateFormatter.stringFromDate(_calendar.displayDate)
     }
     

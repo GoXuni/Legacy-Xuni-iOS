@@ -33,6 +33,16 @@
     return self;
 }
 
+-(double)orderAverage
+{
+    return self.orderTotal / ((double)self.orderCount);
+}
+
+-(NSString *)name
+{
+    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
+}
+
 
 +(NSUInteger) generateRandom: (NSUInteger) max{
     return arc4random()% max;
@@ -87,7 +97,7 @@
     NSMutableArray *array = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < total; i++) {
-        dateComps.day = ([CustomerData generateRandom:1000] * -1);
+        dateComps.second = ([CustomerData generateRandom:100000000] * -1);
         previousDate = [calendar dateByAddingComponents:dateComps toDate:now options:false];
         CustomerData *customer = [[CustomerData alloc] init];
         customer.customerID = i;
@@ -96,11 +106,11 @@
         customer.firstName = [firstNamesArray objectAtIndex:[CustomerData generateRandom:[firstNamesArray count]]];
         customer.lastName = [lastNamesArray objectAtIndex:[CustomerData generateRandom:[lastNamesArray count]]];
         customer.city = [citiesArray objectAtIndex:[CustomerData generateRandom:[citiesArray count]]];
-        customer.address = [streetsArray objectAtIndex:[CustomerData generateRandom:[streetsArray count]]];
+        customer.address = [NSString stringWithFormat:@"%i %@", (int)[CustomerData generateRandom:500], [streetsArray objectAtIndex:[CustomerData generateRandom:[streetsArray count]]]];
         customer.postalCode = [NSString stringWithFormat:@"%lu%lu%lu%lu%lu", [self generateRandom:9], [self generateRandom:9],[self generateRandom:9],[self generateRandom:9],[self generateRandom:9]];
         customer.lastOrderDate = previousDate;
         customer.email = [emailsArray objectAtIndex:[CustomerData generateRandom:[emailsArray count]]];
-        customer.orderCount = [self generateRandom:100];
+        customer.orderCount = [self generateRandom:100]+1;
         customer.orderTotal = [self generateRandom:100]/100.0+[self generateRandom:90000];
         customer.active = [CustomerData generateRandomBool];
         [array addObject:customer];

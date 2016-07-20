@@ -7,71 +7,89 @@
 
 #import "EditConfirmationController.h"
 #import "CustomerData.h"
-#import "XuniFlexGridKit/XuniFlexGridKit.h"
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
 
-@interface EditConfirmationController (){
-    NSObject *_temp;
-}
+@interface EditConfirmationController ()
+@property (weak, nonatomic) IBOutlet FlexGrid *flex;
 @end
 
 @implementation EditConfirmationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    FlexGrid *flex = [[FlexGrid alloc] init];
-    _temp = [[NSObject alloc] init];
-    flex.tag = 1;
-    flex.delegate = self;
-    flex.isReadOnly = false;
-    flex.itemsSource = [CustomerData getCustomerData:100];
-    [flex.columns removeObjectAtIndex:1];
-    [self.view addSubview:flex];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    flex.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65);
-    [flex setNeedsDisplay];
-}
-
--(bool)beginningEdit:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range{
-    FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    _temp = [flex.cells getCellDataForRow:range.row inColumn:range.col formatted:false];
-    return false;
-}
-
--(bool)cellEditEnding:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range cancel:(BOOL)cancel{
-    dispatch_async(dispatch_get_main_queue(), ^{
+    self.flex.isReadOnly = false;
+    
+    self.flex.columnHeaderFont = [UIFont boldSystemFontOfSize:self.flex.columnHeaderFont.pointSize];
+    self.flex.autoGenerateColumns = false;
+    
+    GridColumn *identifier = [[GridColumn alloc] init];
+    identifier.binding = @"customerID";
+    identifier.isReadOnly = true;
+    identifier.widthType = GridColumnWidthPixel;
+    identifier.width = 100;
+    [self.flex.columns addObject:identifier];
+    
+    GridColumn *firstName = [[GridColumn alloc] init];
+    firstName.binding = @"firstName";
+    [self.flex.columns addObject:firstName];
+    
+    GridColumn *lastName = [[GridColumn alloc] init];
+    lastName.binding = @"lastName";
+    [self.flex.columns addObject:lastName];
+    
+    GridColumn *address = [[GridColumn alloc] init];
+    address.binding = @"address";
+    [self.flex.columns addObject:address];
+    
+    GridColumn *city = [[GridColumn alloc] init];
+    city.binding = @"city";
+    [self.flex.columns addObject:city];
+    
+    GridColumn *postalCode = [[GridColumn alloc] init];
+    postalCode.binding = @"postalCode";
+    [self.flex.columns addObject:postalCode];
+    
+    GridColumn *active = [[GridColumn alloc] init];
+    active.binding = @"active";
+    active.widthType = GridColumnWidthPixel;
+    active.width = 70;
+    [self.flex.columns addObject:active];
+    
+    self.flex.itemsSource = [CustomerData getCustomerData:100];
+    
+    [self.flex.flexGridCellEditEnding addHandler:^(XuniEventContainer<GridCellRangeEventArgs *> *eventContainer) {
+        NSObject* activeEditorValue = self.flex.activeEditorValue;
         
-    FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    
-    if([[flex.cells getCellDataForRow:range.row inColumn:range.col formatted:false] isEqual:_temp])
-    {
-        return;
-    }
-    
-    NSString *title = [[NSString alloc] init];
-    NSString *message = [[NSString alloc] init];
-    title = NSLocalizedString(@"Edit Confirmation", nil);
-    message = NSLocalizedString(@"Do you want to commit the edit?", nil);
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Ok", nil) style:UIAlertActionStyleDefault handler:nil];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
-        [flex.cells setCellData:_temp forRow:range.row inColumn:range.col];
-        [flex invalidate];
-    }];
-    [alertController addAction:okAction];
-    [alertController addAction:cancelAction];
-    [self presentViewController:alertController animated:true completion:nil];
+        if(activeEditorValue == nil) activeEditorValue = @"";
         
-    });
-    
-    return false;
+        if([[self.flex.cells getCellDataForRow:eventContainer.eventArgs.row inColumn:eventContainer.eventArgs.col formatted:false] isEqual:activeEditorValue])
+        {
+            eventContainer.eventArgs.cancel = true;
+            return;
+        }
+        
+        NSObject* prev = [self.flex.cells getCellDataForRow:eventContainer.eventArgs.row inColumn:eventContainer.eventArgs.col formatted:false];
+        
+        NSString *title = [[NSString alloc] init];
+        NSString *message = [[NSString alloc] init];
+        title = NSLocalizedString(@"Edit Confirmation", nil);
+        message = NSLocalizedString(@"Do you want to commit the edit?", nil);
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Ok", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+            [self.flex.cells setCellData:prev forRow:eventContainer.eventArgs.row inColumn:eventContainer.eventArgs.col];
+        }];
+        
+        
+        [alertController addAction:okAction];
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:true completion:nil];
+        
+        eventContainer.eventArgs.cancel = false;
+
+    } forObject:self];
 }
+
+
 @end

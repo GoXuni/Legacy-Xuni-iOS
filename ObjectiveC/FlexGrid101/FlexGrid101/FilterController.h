@@ -6,6 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
 
 @interface FilterController : UIViewController
+@property (weak, nonatomic) IBOutlet FlexGrid *flex;
 @end

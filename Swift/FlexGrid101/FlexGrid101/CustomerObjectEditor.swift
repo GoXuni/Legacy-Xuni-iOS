@@ -1,67 +1,63 @@
-import Foundation
+//
+//  CustomerObjectEditor.h
+//  FlexGrid101
+//
+//  Copyright © 2015 GrapeCity. All rights reserved.
+//
 import UIKit
-import XuniFlexGridKit
-
 class CustomerObjectEditor: UITableViewController {
-    
-    
-    @IBOutlet weak var firstNameEdit: UITextField!
-    @IBOutlet weak var secondNameEdit: UITextField!
-    @IBOutlet weak var countryEdit: UITextField!
-    @IBOutlet weak var cityEdit: UITextField!
-    @IBOutlet weak var emailEdit: UITextField!
-    @IBOutlet weak var addressEdit: UITextField!
-    
     func initObject() {
-        self.firstNameEdit.text = edited.firstName
-        self.secondNameEdit.text = edited.lastName
-        self.countryEdit.text = edited.country
-        self.cityEdit.text = edited.city
-        self.addressEdit.text = edited.address
-        self.emailEdit.text = edited.email
-        self.firstNameEdit.placeholder = firstNameEdit.text
-        self.secondNameEdit.placeholder = secondNameEdit.text
-        self.countryEdit.placeholder = countryEdit.text
-        self.cityEdit.placeholder = cityEdit.text
-        self.addressEdit.placeholder = addressEdit.text
-        self.emailEdit.placeholder = emailEdit.text
+        let efc: EditingFormController = (self.parentViewController as! EditingFormController)
+        self.firstNameEdit.text = efc.edited.firstName
+        self.secondNameEdit.text = efc.edited.lastName
+        self.countryEdit.text = efc.edited.country
+        self.cityEdit.text = efc.edited.city
+        self.addressEdit.text = efc.edited.address
+        self.emailEdit.text = efc.edited.email
+        self.firstNameEdit.placeholder = self.firstNameEdit.text!
+        self.secondNameEdit.placeholder = self.secondNameEdit.text!
+        self.countryEdit.placeholder = self.countryEdit.text!
+        self.cityEdit.placeholder = self.cityEdit.text!
+        self.addressEdit.placeholder = self.addressEdit.text!
+        self.emailEdit.placeholder = self.emailEdit.text!
     }
 
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.clearColor()
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        objEdit = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == tableView.numberOfRowsInSection(indexPath.section) - 2 {
+        let efc: EditingFormController = (self.parentViewController as! EditingFormController)
+        if indexPath.row == self.tableView(tableView, numberOfRowsInSection: indexPath.section) - 2 {
             efc.cancel()
         }
-        else {
-            if indexPath.row == tableView.numberOfRowsInSection(indexPath.section) - 3
-            {
-                edited.firstName = objEdit.firstNameEdit.text!
-                edited.lastName = objEdit.secondNameEdit.text!
-                edited.country = objEdit.countryEdit.text!
-                edited.city = objEdit.cityEdit.text!
-                edited.address = objEdit.addressEdit.text!
-                edited.email = objEdit.emailEdit.text!
-                efc.confirm()
-            }
+        else if indexPath.row == self.tableView(tableView, numberOfRowsInSection: indexPath.section) - 3 {
+            efc.edited.firstName = self.firstNameEdit.text!
+            efc.edited.lastName = self.secondNameEdit.text!
+            efc.edited.country = self.countryEdit.text!
+            efc.edited.city = self.cityEdit.text!
+            efc.edited.address = self.addressEdit.text!
+            efc.edited.email = self.emailEdit.text!
+            efc.confirm()
         }
-        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
 
     @IBAction func endEdit(sender: AnyObject) {
-        resignFirstResponder()
+        self.resignFirstResponder()
     }
-}
 
-var objEdit: CustomerObjectEditor! = nil
+    @IBOutlet weak var firstNameEdit: UITextField!
+    @IBOutlet weak var secondNameEdit: UITextField!
+    @IBOutlet weak var countryEdit: UITextField!
+    @IBOutlet weak var cityEdit: UITextField!
+    @IBOutlet weak var addressEdit: UITextField!
+    @IBOutlet weak var emailEdit: UITextField!
+}
+//
+//  CustomerObjectEditor.m
+//  FlexGrid101
+//
+//  Copyright © 2015 GrapeCity. All rights reserved.
+//

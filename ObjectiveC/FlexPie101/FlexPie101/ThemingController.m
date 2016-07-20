@@ -6,57 +6,38 @@
 //
 
 #import "ThemingController.h"
-#import "XuniFlexPieKit/XuniFlexPieKit.h"
+@import XuniFlexPieDynamicKit;
 #import "PieChartData.h"
 
 @interface ThemingController (){
     NSMutableArray *pickerData;
 }
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (weak, nonatomic) IBOutlet FlexPie *pieChart;
 @end
 
 @implementation ThemingController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    UIPickerView *pickerView;
+    
     pickerData =[[NSMutableArray alloc] initWithObjects:@"Standard", @"Cocoa", @"Coral", @"Dark", @"HighContrast", @"Light", @"Midnight", @"Minimal", @"Modern", @"Organic", @"Slate", @"Zen", @"Cyborg", @"Superhero", @"Flatly", @"Darkly", @"Cerulean", nil];
-
     
-    pickerView = [[UIPickerView alloc] init];
-    pickerView.delegate = self;
-    pickerView.showsSelectionIndicator = YES;
-    pickerView.hidden = false;
+    self.pickerView.delegate = self;
+    self.pickerView.showsSelectionIndicator = YES;
+    self.pickerView.hidden = false;
     
     
-    FlexPie *pieChart = [[FlexPie alloc] init];
     NSMutableArray *pieData = [PieChartData demoData];
     
-    pieChart.binding = @"value";
-    pieChart.bindingName = @"name";
-    pieChart.itemsSource = pieData;
-    pieChart.tooltip.isVisible = true;
+    self.pieChart.binding = @"value";
+    self.pieChart.bindingName = @"name";
+    self.pieChart.itemsSource = pieData;
+    self.pieChart.tooltip.isVisible = true;
 
-    pieChart.tag = 1;
-    pickerView.tag = 2;
-    
-    [self.view addSubview:pieChart];
-    [self.view addSubview:pickerView];
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexPie *pieChart= (FlexPie*)[self.view viewWithTag:1];
-    UIPickerView *pickerView = (UIPickerView*)[self.view viewWithTag:2];
-    pieChart.frame = CGRectMake(0, 227, self.view.bounds.size.width, (self.view.bounds.size.height-227));
-    pickerView.frame = CGRectMake(self.view.bounds.size.width/4, 65, self.view.bounds.size.width/2, 162);
-}
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
@@ -68,7 +49,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     
-    FlexPie *chart = (FlexPie*)[self.view viewWithTag:1];
+    FlexPie *chart = self.pieChart;
     switch (row) {
         case 0:
             chart.palette = [XuniPalettes standard];
@@ -131,14 +112,5 @@
 }
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

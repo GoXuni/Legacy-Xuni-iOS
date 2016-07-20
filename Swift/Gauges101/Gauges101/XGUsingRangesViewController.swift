@@ -5,6 +5,9 @@
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
 import UIKit
+import XuniCoreDynamicKit
+import XuniGaugeDynamicKit
+
 class XGUsingRangesViewController: UIViewController {
 
     @IBAction func stepperValueChanged(sender: AnyObject) {
@@ -38,7 +41,7 @@ class XGUsingRangesViewController: UIViewController {
         self.radialGauge.updateAnimation.duration = 0.5
         self.radialGauge.isReadOnly = false
         
-        radialGauge.gaugeValueChanged.addHandler({(sender: NSObject!, args: XuniEventArgs!) -> Void in
+        radialGauge.gaugeValueChanged.addHandler({(a) in
             self.valueStepper.value = self.radialGauge.value
             self.stepperValueChanged(self)
         }, forObject: self)
@@ -51,7 +54,7 @@ class XGUsingRangesViewController: UIViewController {
         self.linearGauge.isReadOnly = false
         self.linearGauge.backgroundColor = UIColor.clearColor()
         
-        linearGauge.gaugeValueChanged.addHandler({(sender: NSObject!, args: XuniEventArgs!) -> Void in
+        linearGauge.gaugeValueChanged.addHandler({(a) in
             self.valueStepper.value = self.linearGauge.value
             self.stepperValueChanged(self)
         }, forObject: self)
@@ -122,4 +125,3 @@ class XGUsingRangesViewController: UIViewController {
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
 
-import XuniGaugeKit

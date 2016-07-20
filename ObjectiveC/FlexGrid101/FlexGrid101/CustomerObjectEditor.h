@@ -10,5 +10,3 @@
 @interface CustomerObjectEditor : UITableViewController
 -(void) initObject;
 @end
-
-extern CustomerObjectEditor* objEdit;

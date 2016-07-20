@@ -18,12 +18,12 @@
 -(void) searchBody
 {
     FilteringDemoCanvasTableViewController* canvas = [self.childViewControllers  objectAtIndex:0];
-    canvas.collectionView.filter = ^(NSObject *item) {
+    canvas.collectionView.filter = ^BOOL(NSObject *item) {
         if(!self.searchRequest.text.length) {
-            return (bool)true;
+            return true;
         }
         SampleData *sd = (SampleData *)item;
-        return (bool)([[sd.title uppercaseString] containsString:[self.searchRequest.text uppercaseString]] || [[sd.description uppercaseString] containsString:[self.searchRequest.text uppercaseString]]);
+        return ([[sd.title uppercaseString] containsString:[self.searchRequest.text uppercaseString]] || [[sd.description uppercaseString] containsString:[self.searchRequest.text uppercaseString]]);
     };
     
     [canvas.tableView reloadData];

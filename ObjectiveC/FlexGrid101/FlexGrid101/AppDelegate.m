@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "XuniCoreKit/XuniCoreKit.h"
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
 #import "License.h"
 
 @interface AppDelegate ()

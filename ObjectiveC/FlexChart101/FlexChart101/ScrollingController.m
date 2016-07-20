@@ -6,10 +6,11 @@
 //
 
 #import "ScrollingController.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 #import "WeatherData.h"
 
 @interface ScrollingController ()
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
 
 @end
 
@@ -17,10 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"Scrolling", nil)];
     
-    // Do any additional setup after loading the view.
-    FlexChart *chart = [[FlexChart alloc] init];
+    FlexChart *chart = self.chart;
     NSMutableArray *chartData = [WeatherData demoData];
     
     XuniSeries *precip = [[XuniSeries alloc] initForChart:chart binding:@"precipitation" name:@"Precip"];
@@ -53,7 +52,7 @@
     chart.axisX.majorGridVisible = NO;
     chart.axisX.displayedRange = 10;
     chart.palette = [XuniPalettes midnight];
-    chart.header = NSLocalizedString(@"Drag to scroll/Pinch to zoom", nil);
+    chart.header = @"Drag to scroll/Pinch to zoom";
     chart.headerFont = [UIFont systemFontOfSize:14];
     chart.headerTextAlignment = XuniHorizontalAlignmentCenter;
     
@@ -63,30 +62,8 @@
     [chart.series addObject:temp];
     [chart.series addObject:volume];
     
-    chart.tag = 1;
-    [self.view addSubview:chart];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    chart.frame = CGRectMake(0, 65, self.view.bounds.size.width, self.view.bounds.size.height - 65);
-    [chart setNeedsDisplay];
-}
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

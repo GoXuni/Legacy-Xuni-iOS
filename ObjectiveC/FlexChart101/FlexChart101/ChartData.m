@@ -18,7 +18,7 @@
         _downloads = downloads;
     }
     return self;
-}
+}   
 + (NSNumber *)generateRandom:(NSInteger) max {
     return [NSNumber numberWithUnsignedInteger:(arc4random() % max)];
 }
@@ -87,6 +87,18 @@
                 break;
             }
         } while (true);
+    }
+    
+    return points;
+}
+
++ (NSMutableArray *)generateRandomData:(NSInteger)count {
+    NSMutableArray *points = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < count ; i++) {
+        double random = arc4random()%10000 + 100;
+        [points addObject:[[ChartPoint alloc] initWithX:[NSNumber numberWithInt:i*10]
+        y:[NSNumber numberWithDouble:random]]];
     }
     
     return points;

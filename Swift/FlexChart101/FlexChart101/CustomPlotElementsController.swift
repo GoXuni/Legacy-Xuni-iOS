@@ -31,20 +31,21 @@ class CustomPlotElementsController: UIViewController {
         _chart.axisX.majorTickWidth = 0
         _chart.axisX.minorTickWidth = 1
         
-        func plotElementLoadingHandler(sender: NSObject!, args: XuniEventArgs!) {
-            var plotArgs = args as! XuniChartPlotElementEventArgs
+        func plotElementLoadingHandler(args: XuniEventContainer!) {
+            let plotArgs = args.eventArgs as! XuniChartPlotElementEventArgs
             if plotArgs.renderEngine != nil && plotArgs.hitTestInfo != nil && plotArgs.defaultRender != nil {
                 (plotArgs.renderEngine as! XuniRenderEngine).setFill(UIColor.grayColor())
-                (plotArgs.defaultRender as! IXuniFunction).execute(nil)
+                plotArgs.defaultRender.execute()
                 
                 var rect = (plotArgs.defaultRender as! DefaultBarElementRender).getBarRect()
-                var customPoint: CustomPoint = _chart.itemsSource.objectAtIndex(Int(plotArgs.dataPoint.pointIndex)) as! CustomPoint
+                let customPoint: CustomPoint = _chart.itemsSource.objectAtIndex(Int(plotArgs.dataPoint.pointIndex)) as! CustomPoint
                 rect.origin.y += (rect.size.height - rect.size.width) / 2;
                 rect.size.height = rect.size.width;
                 customPoint.logo.drawInRect(rect)
             }
         }
         _chart.plotElementLoading.addHandler(plotElementLoadingHandler, forObject: self)
+
         
         self.view.addSubview(_chart)
     }

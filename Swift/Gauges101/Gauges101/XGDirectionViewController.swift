@@ -135,4 +135,4 @@ class XGDirectionViewController: UIViewController {
 //
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
-import XuniGaugeKit
+import XuniGaugeDynamicKit

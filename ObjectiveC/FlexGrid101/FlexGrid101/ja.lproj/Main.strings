@@ -1,21 +1,132 @@
 
+/* Class = "UILabel"; text = "Display, edit and aggregate your data all at once with FlexGrid"; ObjectID = "04q-Qk-1Uw"; */
+"04q-Qk-1Uw.text" = "FlexGrid でデータを表示、編集、集計";
+
+/* Class = "UILabel"; text = "Expand and collapse row details"; ObjectID = "06n-gc-HrI"; */
+"06n-gc-HrI.text" = "グリッドを展開／折りたたみして詳細を表示";
+
 /* Class = "UILabel"; text = "Address"; ObjectID = "1eT-oW-hrf"; */
 "1eT-oW-hrf.text" = "住所(Address)";
 
 /* Class = "UILabel"; text = "Cancel"; ObjectID = "27j-QJ-v3z"; */
 "27j-QJ-v3z.text" = "キャンセル";
 
+/* Class = "UIBarButtonItem"; title = "Collapse"; ObjectID = "2Eb-oV-Hai"; */
+"2Eb-oV-Hai.title" = "折りたたみ";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "2LZ-vR-psM"; */
+"2LZ-vR-psM.text" = "フィルター";
+
+/* Class = "UILabel"; text = "Custom Cells"; ObjectID = "2Th-7C-8LJ"; */
+"2Th-7C-8LJ.text" = "カスタムセル";
+
+/* Class = "UILabel"; text = "Cell Freezing&Merging"; ObjectID = "2gG-ng-mWe"; */
+"2gG-ng-mWe.text" = "セルの固定と結合";
+
+/* Class = "UINavigationItem"; title = "Star Sizing"; ObjectID = "3qT-IC-ym1"; */
+"3qT-IC-ym1.title" = "スターサイズ機能";
+
 /* Class = "UILabel"; text = "City"; ObjectID = "3zE-V2-2FJ"; */
 "3zE-V2-2FJ.text" = "都市(City)";
 
-/* Class = "UINavigationItem"; title = "FlexGrid101"; ObjectID = "Gnw-bn-nSm"; */
-"Gnw-bn-nSm.title" = "FlexGrid101";
+/* Class = "UILabel"; text = "Shows the various cell selection modes"; ObjectID = "4tS-YM-9aG"; */
+"4tS-YM-9aG.text" = "各種セル選択モードを表示";
 
-/* Class = "UIBarButtonItem"; title = "FlexGrid101"; ObjectID = "Kll-7W-u7d"; */
-"Kll-7W-u7d.title" = "FlexGrid101";
+/* Class = "UILabel"; text = ">"; ObjectID = "AA4-TE-lHv"; */
+"AA4-TE-lHv.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "BGo-Hy-EXj"; */
+"BGo-Hy-EXj.text" = ">";
+
+/* Class = "UINavigationItem"; title = "On Demand"; ObjectID = "BlD-bH-UCJ"; */
+"BlD-bH-UCJ.title" = "データオンデマンド";
+
+/* Class = "UINavigationItem"; title = "Getting Started"; ObjectID = "Bmk-c4-cSH"; */
+"Bmk-c4-cSH.title" = "FlexGridの基本機能";
+
+/* Class = "UILabel"; text = "Groups and aggregates a collection of videos"; ObjectID = "DJX-fJ-Pwm"; */
+"DJX-fJ-Pwm.text" = "コレクションをグループ化して集計";
+
+/* Class = "UISegmentedControl"; DNg-23-xSo.segmentTitles[0] = "None"; ObjectID = "DNg-23-xSo"; */
+"DNg-23-xSo.segmentTitles[0]" = "なし";
+
+/* Class = "UISegmentedControl"; DNg-23-xSo.segmentTitles[1] = "Cell"; ObjectID = "DNg-23-xSo"; */
+"DNg-23-xSo.segmentTitles[1]" = "セル";
+
+/* Class = "UISegmentedControl"; DNg-23-xSo.segmentTitles[2] = "CellRange"; ObjectID = "DNg-23-xSo"; */
+"DNg-23-xSo.segmentTitles[2]" = "セル範囲";
+
+/* Class = "UISegmentedControl"; DNg-23-xSo.segmentTitles[3] = "Row"; ObjectID = "DNg-23-xSo"; */
+"DNg-23-xSo.segmentTitles[3]" = "行";
+
+/* Class = "UISegmentedControl"; DNg-23-xSo.segmentTitles[4] = "RowRange"; ObjectID = "DNg-23-xSo"; */
+"DNg-23-xSo.segmentTitles[4]" = "行範囲";
+
+/* Class = "UISegmentedControl"; EGj-kt-ixf.segmentTitles[0] = "Single"; ObjectID = "EGj-kt-ixf"; */
+"EGj-kt-ixf.segmentTitles[0]" = "単一";
+
+/* Class = "UISegmentedControl"; EGj-kt-ixf.segmentTitles[1] = "Multiple"; ObjectID = "EGj-kt-ixf"; */
+"EGj-kt-ixf.segmentTitles[1]" = "複数";
+
+/* Class = "UISegmentedControl"; EGj-kt-ixf.segmentTitles[2] = "Selection"; ObjectID = "EGj-kt-ixf"; */
+"EGj-kt-ixf.segmentTitles[2]" = "選択";
+
+/* Class = "UIBarButtonItem"; title = "Sort"; ObjectID = "Fwd-0m-rRb"; */
+"Fwd-0m-rRb.title" = "ソート";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "GPg-el-nwa"; */
+"GPg-el-nwa.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "Hgo-7Q-HXe"; */
+"Hgo-7Q-HXe.text" = ">";
+
+/* Class = "UINavigationItem"; title = "Freezing&Merging"; ObjectID = "I2u-HG-HDn"; */
+"I2u-HG-HDn.title" = "セルの固定と結合";
+
+/* Class = "UILabel"; text = "Shows a grid with custom cell merging"; ObjectID = "IHh-tS-Qvb"; */
+"IHh-tS-Qvb.text" = "隣接セルを結合(マージ)してグリッドをレイアウトする";
+
+/* Class = "UILabel"; text = "Edit cells by input form rather than inline"; ObjectID = "Jnc-m9-pHa"; */
+"Jnc-m9-pHa.text" = "入力フォームでセルの内容を編集";
+
+/* Class = "UILabel"; text = "Customizes a cell by displaying a numeric value in a gauge"; ObjectID = "Jqb-XX-nWX"; */
+"Jqb-XX-nWX.text" = "値をゲージで表現した独自形式のセルを表示";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "LUH-fq-7yE"; */
+"LUH-fq-7yE.text" = ">";
 
 /* Class = "UILabel"; text = "E-Mail"; ObjectID = "MSp-cY-cG9"; */
 "MSp-cY-cG9.text" = "メール(E-Mail)";
+
+/* Class = "UILabel"; text = "Edit Confirmation"; ObjectID = "Mh8-MY-tUv"; */
+"Mh8-MY-tUv.text" = "編集の確認";
+
+/* Class = "UILabel"; text = "Shows how to prompt the user with a confirmation dialog before committing changes to a cell"; ObjectID = "N9S-vR-gzU"; */
+"N9S-vR-gzU.text" = "セルの内容を変更する前にダイアログを表示";
+
+/* Class = "UILabel"; text = "Column Layout"; ObjectID = "NDk-U5-GbB"; */
+"NDk-U5-GbB.text" = "列のレイアウト";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "NbF-kJ-Na8"; */
+"NbF-kJ-Na8.text" = ">";
+
+/* Class = "UINavigationItem"; title = "Custom Merging"; ObjectID = "PAA-vu-4Dw"; */
+"PAA-vu-4Dw.title" = "セル結合の応用";
+
+/* Class = "UILabel"; text = "Selection Modes"; ObjectID = "Pgu-0Z-VMV"; */
+"Pgu-0Z-VMV.text" = "選択モード";
+
+/* Class = "UILabel"; text = "Filters and highlights the data across all columns"; ObjectID = "Qk7-tT-4qi"; */
+"Qk7-tT-4qi.text" = "列のデータをフィルタリングして強調表示";
+
+/* Class = "UILabel"; text = "Rotate the device to see star-sizing in action"; ObjectID = "QkN-hJ-IoU"; */
+"QkN-hJ-IoU.text" = "デバイスを回転させてスターサイズ機能を確認";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "QoG-Dk-6QL"; */
+"QoG-Dk-6QL.title" = "編集";
+
+/* Class = "UITableViewController"; title = "FlexGrid101"; ObjectID = "Qz0-jK-VdE"; */
+"Qz0-jK-VdE.title" = "FlexGrid101";
 
 /* Class = "UILabel"; text = "Country"; ObjectID = "R1X-wj-bQr"; */
 "R1X-wj-bQr.text" = "国(Country)";
@@ -23,17 +134,140 @@
 /* Class = "UILabel"; text = "First Name"; ObjectID = "R5M-4S-gmw"; */
 "R5M-4S-gmw.text" = "名(First Name)";
 
+/* Class = "UILabel"; text = "Here you will see the timetable"; ObjectID = "VU5-qF-FzC"; */
+"VU5-qF-FzC.text" = "タイムテーブルが確認できます";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "WQg-a8-FOy"; */
+"WQg-a8-FOy.text" = ">";
+
+/* Class = "UILabel"; text = "On Demand"; ObjectID = "WUb-mq-rHk"; */
+"WUb-mq-rHk.text" = "データオンデマンド";
+
 /* Class = "UILabel"; text = "Confirm editing"; ObjectID = "ZXh-Mv-kdZ"; */
 "ZXh-Mv-kdZ.text" = "編集の完了";
+
+/* Class = "UINavigationItem"; title = "Edit Confirmation"; ObjectID = "Zhz-qw-39u"; */
+"Zhz-qw-39u.title" = "編集の確認";
 
 /* Class = "UILabel"; text = "Last Name"; ObjectID = "at8-vu-Ft0"; */
 "at8-vu-Ft0.text" = "姓(Last Name)";
 
+/* Class = "UILabel"; text = "Select TV show"; ObjectID = "b5w-4m-Jz3"; */
+"b5w-4m-Jz3.text" = "テレビ番組を選択";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "bil-EV-iKd"; */
+"bil-EV-iKd.text" = ">";
+
+/* Class = "UILabel"; text = "Star Sizing"; ObjectID = "cCB-Mg-zy9"; */
+"cCB-Mg-zy9.text" = "スターサイズ機能";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "cKR-sR-jnu"; */
+"cKR-sR-jnu.text" = ">";
+
+/* Class = "UILabel"; text = "Detail Visibility Mode:"; ObjectID = "ddh-EW-zce"; */
+"ddh-EW-zce.text" = "詳細の表示モード:";
+
+/* Class = "UILabel"; text = "Row Details"; ObjectID = "dsU-dQ-3PQ"; */
+"dsU-dQ-3PQ.text" = "詳細行";
+
 /* Class = "UILabel"; text = ">"; ObjectID = "ein-f6-TS0"; */
 "ein-f6-TS0.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "fAw-eT-abh"; */
+"fAw-eT-abh.text" = ">";
+
+/* Class = "UINavigationItem"; title = "Row Details"; ObjectID = "fPn-ol-nxW"; */
+"fPn-ol-nxW.title" = "詳細行";
+
+/* Class = "UINavigationItem"; title = "FlexGrid101"; ObjectID = "fQI-FH-RiG"; */
+"fQI-FH-RiG.title" = "FlexGrid101";
+
+/* Class = "UINavigationItem"; title = "Conditional Formatting"; ObjectID = "gGM-lt-hc6"; */
+"gGM-lt-hc6.title" = "条件付き書式";
+
+/* Class = "UILabel"; text = "Uses a CellFactory to apply conditional formatting"; ObjectID = "gcv-bk-jWC"; */
+"gcv-bk-jWC.text" = "条件付き書式（CellFactory 機能）";
+
+/* Class = "UINavigationItem"; title = "Column Definitions"; ObjectID = "htf-Gy-By7"; */
+"htf-Gy-By7.title" = "列の定義";
+
+/* Class = "UIBarButtonItem"; title = "0 selected"; ObjectID = "iIA-Df-AaM"; */
+"iIA-Df-AaM.title" = "選択無し";
+
+/* Class = "UILabel"; text = "Conditional Formatting"; ObjectID = "if5-fG-b6E"; */
+"if5-fG-b6E.text" = "条件付き書式";
+
+/* Class = "UINavigationItem"; title = "Editing Form"; ObjectID = "ig5-aS-Vgh"; */
+"ig5-aS-Vgh.title" = "編集画面";
+
+/* Class = "UILabel"; text = "Shows frozen columns, rows and cell merging"; ObjectID = "iwq-wR-ahB"; */
+"iwq-wR-ahB.text" = "行、列のセルを結合して固定表示する方法";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "jaL-e6-fOw"; */
+"jaL-e6-fOw.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "k2d-IG-BPG"; */
+"k2d-IG-BPG.text" = ">";
+
+/* Class = "UILabel"; text = "Filters the data by columns through a generated form"; ObjectID = "kcb-VB-G0j"; */
+"kcb-VB-G0j.text" = "列のフィルタ条件をフォームで指定";
+
+/* Class = "UILabel"; text = "Getting Started"; ObjectID = "lev-La-dSM"; */
+"lev-La-dSM.text" = "FlexGrid の基本機能";
+
+/* Class = "UILabel"; text = "Grouping"; ObjectID = "mTY-Nq-vjh"; */
+"mTY-Nq-vjh.text" = "グループ化";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "nLJ-ZY-wYK"; */
+"nLJ-ZY-wYK.text" = ">";
+
+/* Class = "UILabel"; text = "Editing Form"; ObjectID = "oUW-Ec-gDn"; */
+"oUW-Ec-gDn.text" = "編集画面";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "pBF-A7-DwK"; */
+"pBF-A7-DwK.text" = ">";
+
+/* Class = "UINavigationItem"; title = "Custom Cells"; ObjectID = "qfI-an-dEx"; */
+"qfI-an-dEx.title" = "カスタムセル";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "r46-Kv-t99"; */
 "r46-Kv-t99.text" = ">";
 
+/* Class = "UILabel"; text = ">"; ObjectID = "sIH-X3-Yo3"; */
+"sIH-X3-Yo3.text" = ">";
+
+/* Class = "UILabel"; text = "Column Definitions"; ObjectID = "sYt-Cd-lig"; */
+"sYt-Cd-lig.text" = "列の定義";
+
 /* Class = "UILabel"; text = "Edit the Object"; ObjectID = "syX-hS-ICg"; */
 "syX-hS-ICg.text" = "内容を編集";
+
+/* Class = "UILabel"; text = "Custom Merging"; ObjectID = "tmz-Ut-Msh"; */
+"tmz-Ut-Msh.text" = "セルのマージ";
+
+/* Class = "UINavigationItem"; title = "Selection Modes"; ObjectID = "ump-jf-AN4"; */
+"ump-jf-AN4.title" = "選択モード";
+
+/* Class = "UINavigationController"; title = "FlexGrid101"; ObjectID = "vQy-oz-8OE"; */
+"vQy-oz-8OE.title" = "FlexGrid101";
+
+/* Class = "UINavigationItem"; title = "Grouping"; ObjectID = "vfQ-bd-Mgq"; */
+"vfQ-bd-Mgq.title" = "グループ化";
+
+/* Class = "UILabel"; text = "Shows a custom column manager to modify column layout"; ObjectID = "wKr-Ae-bKg"; */
+"wKr-Ae-bKg.text" = "列管理機能を利用してレイアウトを変更";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "wZw-ZU-IA6"; */
+"wZw-ZU-IA6.text" = ">";
+
+/* Class = "UILabel"; text = "Load items on demand as the user scrolls down the grid"; ObjectID = "xhb-NF-nFn"; */
+"xhb-NF-nFn.text" = "スクロールの終端で表示データをロード";
+
+/* Class = "UINavigationItem"; title = "Full Text Filter"; ObjectID = "yEw-h4-u6W"; */
+"yEw-h4-u6W.title" = "全テキストフィルタ";
+
+/* Class = "UILabel"; text = "Shows how to specify and format columns"; ObjectID = "ycB-vo-am7"; */
+"ycB-vo-am7.text" = "列を指定して書式設定する方法";
+
+/* Class = "UILabel"; text = "Full Text Filter"; ObjectID = "zKl-cD-EzG"; */
+"zKl-cD-EzG.text" = "全テキストフィルタ";

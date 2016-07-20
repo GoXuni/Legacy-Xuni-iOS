@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C87CEDC1D25BC89009781F5 /* XuniChartCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CED91D25BC89009781F5 /* XuniChartCoreDynamicKit.framework */; };
+		4C87CEDD1D25BC89009781F5 /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CEDA1D25BC89009781F5 /* XuniCoreDynamicKit.framework */; };
+		4C87CEDE1D25BC89009781F5 /* XuniFlexChartDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CEDB1D25BC89009781F5 /* XuniFlexChartDynamicKit.framework */; };
+		4C87CEDF1D25BC92009781F5 /* XuniChartCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CED91D25BC89009781F5 /* XuniChartCoreDynamicKit.framework */; };
+		4C87CEE01D25BC92009781F5 /* XuniChartCoreDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CED91D25BC89009781F5 /* XuniChartCoreDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C87CEE11D25BC92009781F5 /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CEDA1D25BC89009781F5 /* XuniCoreDynamicKit.framework */; };
+		4C87CEE21D25BC92009781F5 /* XuniCoreDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CEDA1D25BC89009781F5 /* XuniCoreDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C87CEE31D25BC92009781F5 /* XuniFlexChartDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CEDB1D25BC89009781F5 /* XuniFlexChartDynamicKit.framework */; };
+		4C87CEE41D25BC92009781F5 /* XuniFlexChartDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CEDB1D25BC89009781F5 /* XuniFlexChartDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C8978E31D268F23004E468B /* XuniFlexChartDesignTimeStoryboardSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8978E21D268F23004E468B /* XuniFlexChartDesignTimeStoryboardSupport.m */; };
+		4CA1F25C1CCF8B7B004B1C98 /* MainMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1F25B1CCF8B7B004B1C98 /* MainMenuTableViewController.m */; };
 		8407E6921BA170B3001C1582 /* LineMarkerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8407E6911BA170B3001C1582 /* LineMarkerController.m */; };
-		841A3ABA1C0593F2004853DD /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A3AB71C0593F2004853DD /* XuniChartCoreKit.framework */; };
-		841A3ABB1C0593F2004853DD /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A3AB81C0593F2004853DD /* XuniCoreKit.framework */; };
-		841A3ABC1C0593F2004853DD /* XuniFlexChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A3AB91C0593F2004853DD /* XuniFlexChartKit.framework */; };
-		8435C9491C869C11001AC90E /* ChartAnnotationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8435C9481C869C11001AC90E /* ChartAnnotationsController.m */; };
-		84D2E7911C02C02500D46662 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D2E7931C02C02500D46662 /* Localizable.strings */; };
 		84D4F3161BCCB08D000B5960 /* ConditionalFormattingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.m */; };
 		84D4F3171BCCB08D000B5960 /* CustomPlotElementsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.m */; };
 		84D4F3201BCF89A1000B5960 /* ScrollingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D4F31F1BCF89A1000B5960 /* ScrollingController.m */; };
+		84D5BAEE1C33808E00EFD08B /* ChartAnnotationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D5BAED1C33808E00EFD08B /* ChartAnnotationsController.m */; };
 		84E33AB91B8D6BF4002AE146 /* UpdateAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.m */; };
 		F2160F8B1B18D45F00F3ADD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160F8A1B18D45F00F3ADD5 /* main.m */; };
 		F2160F8E1B18D45F00F3ADD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160F8D1B18D45F00F3ADD5 /* AppDelegate.m */; };
-		F2160F911B18D45F00F3ADD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2160F901B18D45F00F3ADD5 /* ViewController.m */; };
 		F2160F941B18D45F00F3ADD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2160F921B18D45F00F3ADD5 /* Main.storyboard */; };
 		F2160F961B18D45F00F3ADD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2160F951B18D45F00F3ADD5 /* Images.xcassets */; };
 		F2160F991B18D45F00F3ADD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2160F971B18D45F00F3ADD5 /* LaunchScreen.xib */; };
@@ -61,25 +67,41 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C87CEE51D25BC92009781F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C87CEE41D25BC92009781F5 /* XuniFlexChartDynamicKit.framework in Embed Frameworks */,
+				4C87CEE21D25BC92009781F5 /* XuniCoreDynamicKit.framework in Embed Frameworks */,
+				4C87CEE01D25BC92009781F5 /* XuniChartCoreDynamicKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4C37D4291CD30E1B009113A8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4C37D42A1CD30E1B009113A8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		4C87CED91D25BC89009781F5 /* XuniChartCoreDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreDynamicKit.framework; path = ../../../Controls/XuniChartCoreDynamicKit.framework; sourceTree = "<group>"; };
+		4C87CEDA1D25BC89009781F5 /* XuniCoreDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreDynamicKit.framework; path = ../../../Controls/XuniCoreDynamicKit.framework; sourceTree = "<group>"; };
+		4C87CEDB1D25BC89009781F5 /* XuniFlexChartDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexChartDynamicKit.framework; path = ../../../Controls/XuniFlexChartDynamicKit.framework; sourceTree = "<group>"; };
+		4C8978E21D268F23004E468B /* XuniFlexChartDesignTimeStoryboardSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XuniFlexChartDesignTimeStoryboardSupport.m; path = ../../../Controls/XuniFlexChartDesignTimeStoryboardSupport.m; sourceTree = "<group>"; };
+		4CA1F25A1CCF8B7B004B1C98 /* MainMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTableViewController.h; sourceTree = "<group>"; };
+		4CA1F25B1CCF8B7B004B1C98 /* MainMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTableViewController.m; sourceTree = "<group>"; };
 		8407E6901BA170B3001C1582 /* LineMarkerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineMarkerController.h; sourceTree = "<group>"; };
 		8407E6911BA170B3001C1582 /* LineMarkerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineMarkerController.m; sourceTree = "<group>"; };
-		841A3AB71C0593F2004853DD /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = "../DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniChartCoreKit.framework"; sourceTree = "<group>"; };
-		841A3AB81C0593F2004853DD /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniCoreKit.framework"; sourceTree = "<group>"; };
-		841A3AB91C0593F2004853DD /* XuniFlexChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexChartKit.framework; path = "../DerivedData/FlexChartWorkspace/Build/Products/Debug-framework/XuniFlexChartKit.framework"; sourceTree = "<group>"; };
-		8435C9471C869C11001AC90E /* ChartAnnotationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartAnnotationsController.h; sourceTree = "<group>"; };
-		8435C9481C869C11001AC90E /* ChartAnnotationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartAnnotationsController.m; sourceTree = "<group>"; };
-		84D2E7821C02BAA100D46662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		84D2E7831C02BAA100D46662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		84D2E7921C02C02500D46662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		84D2E7941C02C02900D46662 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
-		84D2E7951C02C02B00D46662 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		84D4F3121BCCB08D000B5960 /* ConditionalFormattingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionalFormattingController.h; sourceTree = "<group>"; };
 		84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionalFormattingController.m; sourceTree = "<group>"; };
 		84D4F3141BCCB08D000B5960 /* CustomPlotElementsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPlotElementsController.h; sourceTree = "<group>"; };
 		84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPlotElementsController.m; sourceTree = "<group>"; };
 		84D4F31E1BCF89A1000B5960 /* ScrollingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollingController.h; sourceTree = "<group>"; };
 		84D4F31F1BCF89A1000B5960 /* ScrollingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollingController.m; sourceTree = "<group>"; };
+		84D5BAEC1C33808E00EFD08B /* ChartAnnotationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartAnnotationsController.h; sourceTree = "<group>"; };
+		84D5BAED1C33808E00EFD08B /* ChartAnnotationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartAnnotationsController.m; sourceTree = "<group>"; };
 		84E33AB71B8D6BF4002AE146 /* UpdateAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateAnimationController.h; sourceTree = "<group>"; };
 		84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateAnimationController.m; sourceTree = "<group>"; };
 		F2160F851B18D45F00F3ADD5 /* FlexChart101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexChart101.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,8 +109,6 @@
 		F2160F8A1B18D45F00F3ADD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F2160F8C1B18D45F00F3ADD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F2160F8D1B18D45F00F3ADD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F2160F8F1B18D45F00F3ADD5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F2160F901B18D45F00F3ADD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		F2160F931B18D45F00F3ADD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2160F951B18D45F00F3ADD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F2160F981B18D45F00F3ADD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -152,9 +172,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841A3ABA1C0593F2004853DD /* XuniChartCoreKit.framework in Frameworks */,
-				841A3ABB1C0593F2004853DD /* XuniCoreKit.framework in Frameworks */,
-				841A3ABC1C0593F2004853DD /* XuniFlexChartKit.framework in Frameworks */,
+				4C87CEE11D25BC92009781F5 /* XuniCoreDynamicKit.framework in Frameworks */,
+				4C87CEDC1D25BC89009781F5 /* XuniChartCoreDynamicKit.framework in Frameworks */,
+				4C87CEDD1D25BC89009781F5 /* XuniCoreDynamicKit.framework in Frameworks */,
+				4C87CEE31D25BC92009781F5 /* XuniFlexChartDynamicKit.framework in Frameworks */,
+				4C87CEDE1D25BC89009781F5 /* XuniFlexChartDynamicKit.framework in Frameworks */,
+				4C87CEDF1D25BC92009781F5 /* XuniChartCoreDynamicKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,12 +191,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CA1F2591CCED8AB004B1C98 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				F2160FCC1B18EBC600F3ADD5 /* LegendAndTitlesController.h */,
+				F2160FCD1B18EBC600F3ADD5 /* LegendAndTitlesController.m */,
+				84D4F3121BCCB08D000B5960 /* ConditionalFormattingController.h */,
+				84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.m */,
+				F2160FC91B18EBA900F3ADD5 /* CustomizingAxesController.h */,
+				F2160FCA1B18EBA900F3ADD5 /* CustomizingAxesController.m */,
+				84D4F3141BCCB08D000B5960 /* CustomPlotElementsController.h */,
+				84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.m */,
+				F2BEDB9C1B73DF4000DD2454 /* DataLabelController.h */,
+				F2BEDB9D1B73DF4000DD2454 /* DataLabelController.m */,
+				F2160FD81B18EC2100F3ADD5 /* DynamicChartsController.h */,
+				F2160FD91B18EC2100F3ADD5 /* DynamicChartsController.m */,
+				F2160FAE1B18EA8100F3ADD5 /* GettingStartedController.h */,
+				F2160FAF1B18EA8100F3ADD5 /* GettingStartedController.m */,
+				F2160FB11B18EABA00F3ADD5 /* BasicChartTypesController.h */,
+				F2160FB21B18EABA00F3ADD5 /* BasicChartTypesController.m */,
+				F2160FB41B18EAEA00F3ADD5 /* MixedChartTypesController.h */,
+				F2160FB51B18EAEA00F3ADD5 /* MixedChartTypesController.m */,
+				F2160FBD1B18EB2C00F3ADD5 /* CustomTooltipsController.h */,
+				F2160FBE1B18EB2C00F3ADD5 /* CustomTooltipsController.m */,
+				F2160FBA1B18EB1200F3ADD5 /* BubbleChartController.h */,
+				F2160FBB1B18EB1200F3ADD5 /* BubbleChartController.m */,
+				F2160FB71B18EAFE00F3ADD5 /* FinancialChartController.h */,
+				F2160FB81B18EAFE00F3ADD5 /* FinancialChartController.m */,
+				F2160FDE1B18ECF000F3ADD5 /* HitTestController.h */,
+				F2160FDF1B18ECF000F3ADD5 /* HitTestController.m */,
+				84D5BAEC1C33808E00EFD08B /* ChartAnnotationsController.h */,
+				84D5BAED1C33808E00EFD08B /* ChartAnnotationsController.m */,
+				F2160FC01B18EB3D00F3ADD5 /* ThemingController.h */,
+				F2160FC11B18EB3D00F3ADD5 /* ThemingController.m */,
+				F2160FD21B18EBF300F3ADD5 /* ToggleSeriesController.h */,
+				F2160FD31B18EBF300F3ADD5 /* ToggleSeriesController.m */,
+				84E33AB71B8D6BF4002AE146 /* UpdateAnimationController.h */,
+				84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.m */,
+				8407E6901BA170B3001C1582 /* LineMarkerController.h */,
+				8407E6911BA170B3001C1582 /* LineMarkerController.m */,
+				F2160FD51B18EC0E00F3ADD5 /* LoadAnimationController.h */,
+				F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.m */,
+				F254FAC01B3313FF009CD853 /* MultipleAxesController.h */,
+				F254FAC11B3313FF009CD853 /* MultipleAxesController.m */,
+				84D4F31E1BCF89A1000B5960 /* ScrollingController.h */,
+				84D4F31F1BCF89A1000B5960 /* ScrollingController.m */,
+				F2160FCF1B18EBDC00F3ADD5 /* SelectionModesController.h */,
+				F2160FD01B18EBDC00F3ADD5 /* SelectionModesController.m */,
+				F254FABD1B31E8BE009CD853 /* SnapshotController.h */,
+				F254FABE1B31E8BE009CD853 /* SnapshotController.m */,
+				F2160FC61B18EB9200F3ADD5 /* StylingSeriesController.h */,
+				F2160FC71B18EB9200F3ADD5 /* StylingSeriesController.m */,
+				F2160FDB1B18EC3500F3ADD5 /* ZoomingAndScrollingController.h */,
+				F2160FDC1B18EC3500F3ADD5 /* ZoomingAndScrollingController.m */,
+			);
+			name = Samples;
+			sourceTree = "<group>";
+		};
+		4CA1F25D1CCFF789004B1C98 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				F2C5898D1B1CF43500371F29 /* FinancialData.h */,
+				F2C5898E1B1CF43500371F29 /* FinancialData.m */,
+				F24A601D1B223614000FDBD1 /* DynamicChartData.h */,
+				F24A601E1B223614000FDBD1 /* DynamicChartData.m */,
+				F2C5897C1B1CAAF100371F29 /* ChartData.h */,
+				F2C5897D1B1CAAF100371F29 /* ChartData.m */,
+				F2774A421B21EE69008E721D /* HitTestData.h */,
+				F2774A431B21EE69008E721D /* HitTestData.m */,
+				F254FAC31B331663009CD853 /* WeatherData.h */,
+				F254FAC41B331663009CD853 /* WeatherData.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
 		F2160F7C1B18D45F00F3ADD5 = {
 			isa = PBXGroup;
 			children = (
-				841A3AB71C0593F2004853DD /* XuniChartCoreKit.framework */,
-				841A3AB81C0593F2004853DD /* XuniCoreKit.framework */,
-				841A3AB91C0593F2004853DD /* XuniFlexChartKit.framework */,
+				4C8978E21D268F23004E468B /* XuniFlexChartDesignTimeStoryboardSupport.m */,
+				4C87CED91D25BC89009781F5 /* XuniChartCoreDynamicKit.framework */,
+				4C87CEDA1D25BC89009781F5 /* XuniCoreDynamicKit.framework */,
+				4C87CEDB1D25BC89009781F5 /* XuniFlexChartDynamicKit.framework */,
 				F2160F871B18D45F00F3ADD5 /* FlexChart101 */,
 				F2160FA11B18D45F00F3ADD5 /* FlexChart101Tests */,
 				F2160F861B18D45F00F3ADD5 /* Products */,
@@ -192,76 +290,18 @@
 		F2160F871B18D45F00F3ADD5 /* FlexChart101 */ = {
 			isa = PBXGroup;
 			children = (
+				4CA1F25D1CCFF789004B1C98 /* DataModel */,
+				4CA1F2591CCED8AB004B1C98 /* Samples */,
 				F2160F8C1B18D45F00F3ADD5 /* AppDelegate.h */,
 				F2160F8D1B18D45F00F3ADD5 /* AppDelegate.m */,
-				F2160FB11B18EABA00F3ADD5 /* BasicChartTypesController.h */,
-				F2160FB21B18EABA00F3ADD5 /* BasicChartTypesController.m */,
-				F2160FBA1B18EB1200F3ADD5 /* BubbleChartController.h */,
-				F2160FBB1B18EB1200F3ADD5 /* BubbleChartController.m */,
-				8435C9471C869C11001AC90E /* ChartAnnotationsController.h */,
-				8435C9481C869C11001AC90E /* ChartAnnotationsController.m */,
-				F2C5897C1B1CAAF100371F29 /* ChartData.h */,
-				F2C5897D1B1CAAF100371F29 /* ChartData.m */,
-				84D4F3121BCCB08D000B5960 /* ConditionalFormattingController.h */,
-				84D4F3131BCCB08D000B5960 /* ConditionalFormattingController.m */,
-				F2160FC91B18EBA900F3ADD5 /* CustomizingAxesController.h */,
-				F2160FCA1B18EBA900F3ADD5 /* CustomizingAxesController.m */,
-				84D4F3141BCCB08D000B5960 /* CustomPlotElementsController.h */,
-				84D4F3151BCCB08D000B5960 /* CustomPlotElementsController.m */,
-				F2160FBD1B18EB2C00F3ADD5 /* CustomTooltipsController.h */,
-				F2160FBE1B18EB2C00F3ADD5 /* CustomTooltipsController.m */,
-				F2BEDB9C1B73DF4000DD2454 /* DataLabelController.h */,
-				F2BEDB9D1B73DF4000DD2454 /* DataLabelController.m */,
-				F24A601D1B223614000FDBD1 /* DynamicChartData.h */,
-				F24A601E1B223614000FDBD1 /* DynamicChartData.m */,
-				F2160FD81B18EC2100F3ADD5 /* DynamicChartsController.h */,
-				F2160FD91B18EC2100F3ADD5 /* DynamicChartsController.m */,
-				F2160FB71B18EAFE00F3ADD5 /* FinancialChartController.h */,
-				F2160FB81B18EAFE00F3ADD5 /* FinancialChartController.m */,
-				F2C5898D1B1CF43500371F29 /* FinancialData.h */,
-				F2C5898E1B1CF43500371F29 /* FinancialData.m */,
-				F2160FAE1B18EA8100F3ADD5 /* GettingStartedController.h */,
-				F2160FAF1B18EA8100F3ADD5 /* GettingStartedController.m */,
-				F2160FDE1B18ECF000F3ADD5 /* HitTestController.h */,
-				F2160FDF1B18ECF000F3ADD5 /* HitTestController.m */,
-				F2774A421B21EE69008E721D /* HitTestData.h */,
-				F2774A431B21EE69008E721D /* HitTestData.m */,
 				F2160F951B18D45F00F3ADD5 /* Images.xcassets */,
 				F2160F971B18D45F00F3ADD5 /* LaunchScreen.xib */,
-				F2160FCC1B18EBC600F3ADD5 /* LegendAndTitlesController.h */,
-				F2160FCD1B18EBC600F3ADD5 /* LegendAndTitlesController.m */,
 				F23573661B445E3800F300D7 /* License.h */,
 				F23573671B445E3800F300D7 /* License.m */,
-				8407E6901BA170B3001C1582 /* LineMarkerController.h */,
-				8407E6911BA170B3001C1582 /* LineMarkerController.m */,
-				F2160FD51B18EC0E00F3ADD5 /* LoadAnimationController.h */,
-				F2160FD61B18EC0E00F3ADD5 /* LoadAnimationController.m */,
 				F2160F921B18D45F00F3ADD5 /* Main.storyboard */,
-				F2160FB41B18EAEA00F3ADD5 /* MixedChartTypesController.h */,
-				F2160FB51B18EAEA00F3ADD5 /* MixedChartTypesController.m */,
-				F254FAC01B3313FF009CD853 /* MultipleAxesController.h */,
-				F254FAC11B3313FF009CD853 /* MultipleAxesController.m */,
-				84D4F31E1BCF89A1000B5960 /* ScrollingController.h */,
-				84D4F31F1BCF89A1000B5960 /* ScrollingController.m */,
-				F2160FCF1B18EBDC00F3ADD5 /* SelectionModesController.h */,
-				F2160FD01B18EBDC00F3ADD5 /* SelectionModesController.m */,
-				F254FABD1B31E8BE009CD853 /* SnapshotController.h */,
-				F254FABE1B31E8BE009CD853 /* SnapshotController.m */,
-				F2160FC61B18EB9200F3ADD5 /* StylingSeriesController.h */,
-				F2160FC71B18EB9200F3ADD5 /* StylingSeriesController.m */,
 				F2160F881B18D45F00F3ADD5 /* Supporting Files */,
-				F2160FC01B18EB3D00F3ADD5 /* ThemingController.h */,
-				F2160FC11B18EB3D00F3ADD5 /* ThemingController.m */,
-				F2160FD21B18EBF300F3ADD5 /* ToggleSeriesController.h */,
-				F2160FD31B18EBF300F3ADD5 /* ToggleSeriesController.m */,
-				84E33AB71B8D6BF4002AE146 /* UpdateAnimationController.h */,
-				84E33AB81B8D6BF4002AE146 /* UpdateAnimationController.m */,
-				F2160F8F1B18D45F00F3ADD5 /* ViewController.h */,
-				F2160F901B18D45F00F3ADD5 /* ViewController.m */,
-				F254FAC31B331663009CD853 /* WeatherData.h */,
-				F254FAC41B331663009CD853 /* WeatherData.m */,
-				F2160FDB1B18EC3500F3ADD5 /* ZoomingAndScrollingController.h */,
-				F2160FDC1B18EC3500F3ADD5 /* ZoomingAndScrollingController.m */,
+				4CA1F25A1CCF8B7B004B1C98 /* MainMenuTableViewController.h */,
+				4CA1F25B1CCF8B7B004B1C98 /* MainMenuTableViewController.m */,
 			);
 			path = FlexChart101;
 			sourceTree = "<group>";
@@ -271,7 +311,6 @@
 			children = (
 				F2160F891B18D45F00F3ADD5 /* Info.plist */,
 				F2160F8A1B18D45F00F3ADD5 /* main.m */,
-				84D2E7931C02C02500D46662 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -303,6 +342,7 @@
 				F2160F811B18D45F00F3ADD5 /* Sources */,
 				F2160F821B18D45F00F3ADD5 /* Frameworks */,
 				F2160F831B18D45F00F3ADD5 /* Resources */,
+				4C87CEE51D25BC92009781F5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,7 +396,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ja,
 			);
 			mainGroup = F2160F7C1B18D45F00F3ADD5;
 			productRefGroup = F2160F861B18D45F00F3ADD5 /* Products */;
@@ -375,7 +414,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2160F941B18D45F00F3ADD5 /* Main.storyboard in Resources */,
-				84D2E7911C02C02500D46662 /* Localizable.strings in Resources */,
 				F2160F991B18D45F00F3ADD5 /* LaunchScreen.xib in Resources */,
 				F2160F961B18D45F00F3ADD5 /* Images.xcassets in Resources */,
 			);
@@ -399,12 +437,14 @@
 				84E33AB91B8D6BF4002AE146 /* UpdateAnimationController.m in Sources */,
 				F2160FCE1B18EBC600F3ADD5 /* LegendAndTitlesController.m in Sources */,
 				F2C5898F1B1CF43500371F29 /* FinancialData.m in Sources */,
+				4CA1F25C1CCF8B7B004B1C98 /* MainMenuTableViewController.m in Sources */,
 				F2160FC21B18EB3D00F3ADD5 /* ThemingController.m in Sources */,
-				8435C9491C869C11001AC90E /* ChartAnnotationsController.m in Sources */,
+				84D5BAEE1C33808E00EFD08B /* ChartAnnotationsController.m in Sources */,
 				F2774A441B21EE69008E721D /* HitTestData.m in Sources */,
 				F2160FC81B18EB9200F3ADD5 /* StylingSeriesController.m in Sources */,
 				F2BEDB9E1B73DF4000DD2454 /* DataLabelController.m in Sources */,
 				F2160FDA1B18EC2100F3ADD5 /* DynamicChartsController.m in Sources */,
+				4C8978E31D268F23004E468B /* XuniFlexChartDesignTimeStoryboardSupport.m in Sources */,
 				F2160FE01B18ECF000F3ADD5 /* HitTestController.m in Sources */,
 				F254FAC21B3313FF009CD853 /* MultipleAxesController.m in Sources */,
 				F2160FB61B18EAEA00F3ADD5 /* MixedChartTypesController.m in Sources */,
@@ -412,7 +452,6 @@
 				8407E6921BA170B3001C1582 /* LineMarkerController.m in Sources */,
 				F254FAC51B331663009CD853 /* WeatherData.m in Sources */,
 				F2160FD41B18EBF300F3ADD5 /* ToggleSeriesController.m in Sources */,
-				F2160F911B18D45F00F3ADD5 /* ViewController.m in Sources */,
 				F2160FD71B18EC0E00F3ADD5 /* LoadAnimationController.m in Sources */,
 				F2160FDD1B18EC3500F3ADD5 /* ZoomingAndScrollingController.m in Sources */,
 				F2160F8E1B18D45F00F3ADD5 /* AppDelegate.m in Sources */,
@@ -451,21 +490,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		84D2E7931C02C02500D46662 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84D2E7921C02C02500D46662 /* Base */,
-				84D2E7941C02C02900D46662 /* en */,
-				84D2E7951C02C02B00D46662 /* ja */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		F2160F921B18D45F00F3ADD5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F2160F931B18D45F00F3ADD5 /* Base */,
-				84D2E7831C02BAA100D46662 /* ja */,
+				4C37D42A1CD30E1B009113A8 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -474,7 +503,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2160F981B18D45F00F3ADD5 /* Base */,
-				84D2E7821C02BAA100D46662 /* ja */,
+				4C37D4291CD30E1B009113A8 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -503,6 +532,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kotyuck/Desktop/Volumes/main-frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -548,6 +578,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kotyuck/Desktop/Volumes/main-frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -569,6 +600,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -576,6 +608,7 @@
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					../../../Controls,
+					../../../../Controls,
 				);
 				INFOPLIST_FILE = FlexChart101/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -590,16 +623,15 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					../../../Controls,
-				);
+				FRAMEWORK_SEARCH_PATHS = ../../../Controls;
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					../../../Controls,
+					../../../../Controls,
 				);
 				INFOPLIST_FILE = FlexChart101/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;

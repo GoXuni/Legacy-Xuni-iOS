@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <XuniChartCoreKit/XuniChartCoreKit.h>
+@import XuniChartCoreDynamicKit;
 
 @interface CustomTooltipsController : UIViewController
 

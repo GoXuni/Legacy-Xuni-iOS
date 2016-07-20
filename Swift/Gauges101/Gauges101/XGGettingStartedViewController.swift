@@ -5,7 +5,8 @@
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
 import UIKit
-import XuniGaugeKit
+import XuniGaugeDynamicKit
+
 
 class XGGettingStartedViewController: UIViewController {
 
@@ -28,7 +29,7 @@ class XGGettingStartedViewController: UIViewController {
         self.radialGauge.updateAnimation.duration = 0.5
         self.radialGauge.isReadOnly = false
         self.radialGauge.showText = XuniShowText.None
-        radialGauge.gaugeValueChanged.addHandler({(sender: NSObject!, args: XuniEventArgs!) -> Void in
+        radialGauge.gaugeValueChanged.addHandler({(a) in
             self.valueStepper.value = self.radialGauge.value
             self.stepperValueChanged(self)
         }, forObject: self)
@@ -41,7 +42,7 @@ class XGGettingStartedViewController: UIViewController {
         self.linearGauge.isReadOnly = false
         
         
-        linearGauge.gaugeValueChanged.addHandler({(sender: NSObject!, args: XuniEventArgs!) -> Void in
+        linearGauge.gaugeValueChanged.addHandler({(a) -> Void in
             self.valueStepper.value = self.linearGauge.value
             self.stepperValueChanged(self)
         }, forObject: self)
@@ -55,7 +56,7 @@ class XGGettingStartedViewController: UIViewController {
         self.bulletGraph.bad = 45
         self.bulletGraph.good = 80
         self.bulletGraph.target = 90
-        bulletGraph.gaugeValueChanged.addHandler({(sender: NSObject!, args: XuniEventArgs!) -> Void in
+        bulletGraph.gaugeValueChanged.addHandler({(a) -> Void in
             self.valueStepper.value = self.bulletGraph.value
             self.stepperValueChanged(self)
         }, forObject: self)

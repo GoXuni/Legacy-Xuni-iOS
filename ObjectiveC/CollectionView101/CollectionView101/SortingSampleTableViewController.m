@@ -27,7 +27,7 @@
 }
 
 - (IBAction)doSort:(id)sender {
-    if([self.sortButton.title isEqualToString:@"Sort Z-A"])
+    if([self.sortButton.title isEqualToString:NSLocalizedString(@"Sort Z-A", nil)])
     {
         XuniSortDescription* sd = [[XuniSortDescription alloc] initWithProperty:@"title" ascending:NO];
         
@@ -36,7 +36,7 @@
         [self.collectionView.sortDescriptions addObject:sd];
         [self.tableView reloadData];
         
-        self.sortButton.title = @"Sort A-Z";
+        self.sortButton.title = NSLocalizedString(@"Sort A-Z", nil);
     }
     else
     {
@@ -47,7 +47,7 @@
         [self.collectionView.sortDescriptions addObject:sd];
         [self.tableView reloadData];
         
-        self.sortButton.title = @"Sort Z-A";
+        self.sortButton.title = NSLocalizedString(@"Sort Z-A", nil);
     }
     
 }

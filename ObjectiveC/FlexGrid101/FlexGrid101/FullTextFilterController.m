@@ -7,10 +7,12 @@
 
 #import "FullTextFilterController.h"
 #import "CustomerData.h"
-#import "XuniFlexGridKit/XuniFlexGridKit.h"
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
 
 
 @interface FullTextFilterController ()
+@property (weak, nonatomic) IBOutlet UITextField *filterField;
+@property (weak, nonatomic) IBOutlet FlexGrid *flex;
 
 @end
 
@@ -18,100 +20,127 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    UITextField *filterField = [[UITextField alloc] init];
-    filterField.delegate = self;
-    filterField.text = NSLocalizedString(@"Enter text to Filter", nil);
-    filterField.returnKeyType = UIReturnKeyDone;
-    filterField.keyboardType = UIKeyboardTypeDefault;
-    filterField.backgroundColor = [UIColor lightGrayColor];
+    
+    self.filterField.returnKeyType = UIReturnKeyDone;
+    self.filterField.keyboardType = UIKeyboardTypeDefault;
+    self.flex.columnHeaderFont = [UIFont boldSystemFontOfSize:self.flex.columnHeaderFont.pointSize];
+    self.flex.isReadOnly = true;
+    self.flex.itemsSource = [CustomerData getCustomerData:100];
+    
+    
+    [self.flex.flexGridFormatItem addHandler:^(XuniEventContainer<GridFormatItemEventArgs *> *eventContainer) {
+        if(eventContainer.eventArgs.panel == self.flex.cells)
+        {
+            if([self.flex.editRange intersects:eventContainer.eventArgs.cellRange]) return;
+            if(self.flex.columns[eventContainer.eventArgs.col].dataType==XuniDataTypeBoolean) return;
+            
+            NSError *error;
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern: self.filterField.text options:NSRegularExpressionCaseInsensitive error:&error];
+            
+            NSString* data = [self.flex getCellDataForRow:eventContainer.eventArgs.row inColumn:eventContainer.eventArgs.col formatted:true].description;
+            
+            if (!error)
+            {
+                NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:data];
+                NSArray *allMatches = [regex matchesInString:data options:0 range:NSMakeRange(0, [data length])];
+                for (NSTextCheckingResult *aMatch in allMatches)
+                {
+                    NSRange matchRange = [aMatch range];
+                    [attributedString setAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:self.flex.font.pointSize],NSForegroundColorAttributeName:[UIColor redColor]} range: matchRange];
+                }
+                
+                CGRect t = [eventContainer.eventArgs.panel getCellRectForRow:eventContainer.eventArgs.row inColumn:eventContainer.eventArgs.col];
+                
+                GridColumn *col = [self.flex.columns objectAtIndex:eventContainer.eventArgs.col];
+                
+                CGSize sz = [attributedString size];
+                
+                NSTextAlignment align = col.horizontalAlignment;
+                
+                
+                if (align == NSTextAlignmentRight) {
+                    double mod = t.size.width - sz.width - 4;
+                    if (mod < 4) mod = 4;
+                    t.origin.x += mod;
+                } else if (align == NSTextAlignmentCenter) {
+                    double mod = (t.size.width - sz.width) / 2;
+                    if (mod < 4) mod = 4;
+                    t.origin.x += mod;
+                } else {
+                    t.origin.x += 4;
+                }
+                
+                double mod = (t.size.height - sz.height) / 2;
+                if (mod < 4) mod = 4;
+                
+                t.origin.y += mod;
+                
+                [attributedString drawInRect:t];
+                eventContainer.eventArgs.cancel = true;
+            }
+        }
 
-    FlexGrid *flex = [[FlexGrid alloc] init];
-    flex.isReadOnly = true;
-    flex.itemsSource = [CustomerData getCustomerData:100];
-    flex.tag = 1;
-    filterField.tag = 2;
-    [self.view addSubview:flex];
-    [self.view addSubview:filterField];
+    } forObject:self];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    UITextField *filterField = (UITextField*)[self.view viewWithTag:2];
-
-    filterField.frame = CGRectMake(0, 65, self.view.bounds.size.width, 50);
-    flex.frame = CGRectMake(0, 115, self.view.bounds.size.width, self.view.bounds.size.height-115);
-    [flex setNeedsDisplay];
-}
-
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    return true;
-}
--(void)textFieldDidBeginEditing:(UITextField *)textField{
-    [textField selectAll:nil];
-}
--(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    return true;
-}
--(void)textFieldDidEndEditing:(UITextField *)textField{
-    FlexGrid *flex =  (FlexGrid *)[self.view viewWithTag:1];
+- (IBAction)onTextChange:(UITextField *)sender {
+    UITextField* textField = sender;
+    FlexGrid *flex =  self.flex;
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"M/d/yy"];
     
     if(textField.text.length)
     {
-    flex.collectionView.filter = ^ BOOL (NSObject *item){
-        CustomerData *d = (CustomerData*)item;
-
-        if ([[NSString stringWithFormat:@"%lu", d.customerID] isEqualToString:textField.text]) {
-            return true;
-        }
-        else if ([[NSString stringWithFormat:@"%lu", d.countryID] isEqualToString:textField.text]) {
-            return true;
-        }
-        else if ([[NSString stringWithFormat:@"%@", d.email] isEqualToString:textField.text]) {
-            return true;
-        }
-        else if ([d.firstName isEqualToString:textField.text]) {
-            return true;
-        }
-        else if ([d.lastName isEqualToString:textField.text])
-        {
-            return true;
-        }
-        else if ([d.country isEqualToString:textField.text]){
-            return true;
-        }
-        else if ([d.city isEqualToString:textField.text]){
-            return true;
-        }
-        else if ([d.address isEqualToString:textField.text]){
-            return true;
-        }
-        else if ([[dateFormat stringFromDate:d.lastOrderDate] isEqualToString:textField.text]) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
+        flex.collectionView.filter = ^ BOOL (NSObject *item){
+            CustomerData *d = (CustomerData*)item;
+            
+            if ([[NSString stringWithFormat:@"%lu", d.customerID].lowercaseString containsString:textField.text.lowercaseString]) {
+                return true;
+            }
+            else if ([[NSString stringWithFormat:@"%lu", d.countryID].lowercaseString containsString:textField.text.lowercaseString]) {
+                return true;
+            }
+            else if ([[NSString stringWithFormat:@"%@", d.email].lowercaseString containsString:textField.text.lowercaseString]) {
+                return true;
+            }
+            else if ([d.firstName.lowercaseString containsString:textField.text.lowercaseString]) {
+                return true;
+            }
+            else if ([d.lastName.lowercaseString containsString:textField.text.lowercaseString])
+            {
+                return true;
+            }
+            else if ([d.country.lowercaseString containsString:textField.text.lowercaseString]){
+                return true;
+            }
+            else if ([d.city.lowercaseString containsString:textField.text.lowercaseString]){
+                return true;
+            }
+            else if ([d.address.lowercaseString containsString:textField.text.lowercaseString]){
+                return true;
+            }
+            else if ([[dateFormat stringFromDate:d.lastOrderDate].lowercaseString containsString:textField.text.lowercaseString]) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        };
     }
     else
     {
         flex.collectionView.filter = nil;
     }
+
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    return true;
+
+
+- (IBAction)finishedit:(UITextField *)sender {
+    [sender resignFirstResponder];
 }
+
+
 
 @end

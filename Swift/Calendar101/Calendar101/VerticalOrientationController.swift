@@ -14,7 +14,7 @@ class VerticalOrientationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Vertical Orientation"
+        self.title = NSLocalizedString("Vertical Orientation", comment: "")
 
         // Do any additional setup after loading the view.
         _calendar.orientation = XuniCalendarOrientation.Vertical

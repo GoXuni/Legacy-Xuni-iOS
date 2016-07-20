@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import XuniCoreKit
+import XuniCoreDynamicKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

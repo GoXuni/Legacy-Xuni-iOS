@@ -18,19 +18,19 @@ class SortingSampleTableViewController: UITableViewController {
     }
 
     @IBAction func doSort(sender: AnyObject) {
-        if (self.sortButton.title == "Sort Z-A") {
+        if (self.sortButton.title == NSLocalizedString("Sort Z-A", comment: "")) {
             let sd: XuniSortDescription = XuniSortDescription(property: "title", ascending: false)
             self.collectionView.sortDescriptions.removeAllObjects()
             self.collectionView.sortDescriptions.addObject(sd)
             self.tableView.reloadData()
-            self.sortButton.title = "Sort A-Z"
+            self.sortButton.title = NSLocalizedString("Sort A-Z", comment: "")
         }
         else {
             let sd: XuniSortDescription = XuniSortDescription(property: "title", ascending: true)
             self.collectionView.sortDescriptions.removeAllObjects()
             self.collectionView.sortDescriptions.addObject(sd)
             self.tableView.reloadData()
-            self.sortButton.title = "Sort Z-A"
+            self.sortButton.title = NSLocalizedString("Sort Z-A", comment: "")
         }
     }
 

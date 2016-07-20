@@ -6,12 +6,14 @@
 //
 
 #import "ThemingController.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 #import "ChartData.h"
 
 @interface ThemingController (){
     NSMutableArray *pickerData;
 }
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
 @end
 
 @implementation ThemingController
@@ -20,16 +22,11 @@
     [super viewDidLoad];
     [self setTitle:NSLocalizedString(@"Theming", nil)];
     
-    // Do any additional setup after loading the view.
-    UIPickerView *pickerView;
     pickerData =[[NSMutableArray alloc] initWithObjects:@"Standard", @"Cocoa", @"Coral", @"Dark", @"HighContrast", @"Light", @"Midnight", @"Minimal", @"Modern", @"Organic", @"Slate", @"Zen", @"Cyborg", @"Superhero", @"Flatly", @"Darkly", @"Cerulean", nil];
 
-    pickerView = [[UIPickerView alloc] init];
-    pickerView.delegate = self;
-    pickerView.showsSelectionIndicator = YES;
-    pickerView.hidden = false;
+    self.picker.delegate = self;
     
-    FlexChart *chart = [[FlexChart alloc] init];
+    FlexChart *chart = self.chart;
     XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
     XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses, expenses" name:@"Expenses"];
     XuniSeries *downloads = [[XuniSeries alloc] initForChart:chart binding:@"downloads, downloads" name:@"Downloads"];
@@ -41,29 +38,8 @@
     chart.bindingX = @"name";
     chart.itemsSource = [ChartData demoData];
     
-    chart.tag = 1;
-    pickerView.tag = 2;
-    
-    [self.view addSubview:chart];
-    [self.view addSubview:pickerView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    UIPickerView *pickerView = (UIPickerView*)[self.view viewWithTag:2];
-    
-    pickerView.frame = CGRectMake(self.view.bounds.size.width/4, 44, self.view.bounds.size.width/2, 162);
-    chart.frame = CGRectMake(0, 206, self.view.bounds.size.width, self.view.bounds.size.height - 206);
-    [chart setNeedsDisplay];
-}
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
@@ -74,7 +50,7 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
+    FlexChart *chart = self.chart;
      switch (row) {
         case 0:
             chart.palette = [XuniPalettes standard];
@@ -135,14 +111,5 @@
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return [pickerData objectAtIndex:row];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

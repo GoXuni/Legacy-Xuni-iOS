@@ -2,7 +2,7 @@
   Localizable.strings
   FlexGrid101
 
-  Copyright © 2015 GrapeCity. All rights reserved.
+  Copyright (c) 2015 GrapeCity. All rights reserved.
 */
 
 "On Demand Loading" = "ロードオンデマンド";
@@ -45,3 +45,10 @@
 "Count" = "件数";
 "Edit Columns" = "表示列の構成を編集";
 "Done" = "完了";
+"Monday" = "月曜日";
+"Tuesday" = "火曜日";
+"Wednesday" = "水曜日";
+"Thursday" = "木曜日";
+"Friday" = "金曜日";
+"Saturday" = "土曜日";
+"Sunday" = "日曜日";

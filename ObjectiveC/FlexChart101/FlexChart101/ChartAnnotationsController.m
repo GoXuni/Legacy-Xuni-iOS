@@ -8,9 +8,10 @@
 #import "ChartAnnotationsController.h"
 
 #import "ChartData.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 
 @interface ChartAnnotationsController ()
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
 
 @end
 
@@ -18,20 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Annotations"];
-    
-    // Do any additional setup after loading the view.
-    FlexChart *chart = [[FlexChart alloc] init];
+  
     NSMutableArray *chartData = [ChartData annotationData];
-    chart.bindingX = @"name";
-    chart.chartType = XuniChartTypeLine;
-    XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
-    [chart.series addObject:sales];
-    chart.itemsSource = chartData;
-    [self addAnnotations:chart];
+    self.chart.bindingX = @"name";
+    self.chart.chartType = XuniChartTypeLine;
+    XuniSeries *sales = [[XuniSeries alloc] initForChart:self.chart binding:@"sales, sales" name:@"Sales"];
+    [self.chart.series addObject:sales];
+    self.chart.itemsSource = chartData;
+    [self addAnnotations:self.chart];
     
-    chart.tag = 1;
-    [self.view addSubview:chart];
 }
 
 - (void)addAnnotations:(FlexChart *)chart {
@@ -127,26 +123,6 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    chart.frame = CGRectMake(0, 55, self.view.bounds.size.width, self.view.bounds.size.height - 55);
-    [chart setNeedsDisplay];
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

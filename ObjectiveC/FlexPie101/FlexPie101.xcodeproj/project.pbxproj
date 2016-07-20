@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EDE368A21C029C3000B51400 /* XuniChartCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE3689F1C029C3000B51400 /* XuniChartCoreKit.framework */; };
-		EDE368A31C029C3000B51400 /* XuniCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE368A01C029C3000B51400 /* XuniCoreKit.framework */; };
-		EDE368A41C029C3000B51400 /* XuniFlexPieKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE368A11C029C3000B51400 /* XuniFlexPieKit.framework */; };
-		EDE368A91C02A2DE00B51400 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDE368AB1C02A2DE00B51400 /* Localizable.strings */; };
+		4C87CE681D259D09009781F5 /* XuniChartCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CE661D259D09009781F5 /* XuniChartCoreDynamicKit.framework */; };
+		4C87CE691D259D09009781F5 /* XuniFlexPieDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CE671D259D09009781F5 /* XuniFlexPieDynamicKit.framework */; };
+		4C87CE6B1D259D46009781F5 /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CE6A1D259D46009781F5 /* XuniCoreDynamicKit.framework */; };
+		4C87CE6C1D259D4C009781F5 /* XuniCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CE6A1D259D46009781F5 /* XuniCoreDynamicKit.framework */; };
+		4C87CE6D1D259D4C009781F5 /* XuniCoreDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CE6A1D259D46009781F5 /* XuniCoreDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C87CE6E1D259D4C009781F5 /* XuniChartCoreDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CE661D259D09009781F5 /* XuniChartCoreDynamicKit.framework */; };
+		4C87CE6F1D259D4C009781F5 /* XuniChartCoreDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CE661D259D09009781F5 /* XuniChartCoreDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C87CE701D259D4C009781F5 /* XuniFlexPieDynamicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CE671D259D09009781F5 /* XuniFlexPieDynamicKit.framework */; };
+		4C87CE711D259D4C009781F5 /* XuniFlexPieDynamicKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C87CE671D259D09009781F5 /* XuniFlexPieDynamicKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C8978D91D2688E9004E468B /* XuniFlexPieDesignTimeStoryboardSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8978D81D2688E9004E468B /* XuniFlexPieDesignTimeStoryboardSupport.m */; };
+		4CA1F2511CCE89C7004B1C98 /* pie_doughnut.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F24A1CCE89C7004B1C98 /* pie_doughnut.png */; };
+		4CA1F2521CCE89C7004B1C98 /* pie_labels.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F24B1CCE89C7004B1C98 /* pie_labels.png */; };
+		4CA1F2531CCE89C7004B1C98 /* pie_load.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F24C1CCE89C7004B1C98 /* pie_load.png */; };
+		4CA1F2541CCE89C7004B1C98 /* pie_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F24D1CCE89C7004B1C98 /* pie_selection.png */; };
+		4CA1F2551CCE89C7004B1C98 /* pie_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F24E1CCE89C7004B1C98 /* pie_title.png */; };
+		4CA1F2561CCE89C7004B1C98 /* pie.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F24F1CCE89C7004B1C98 /* pie.png */; };
+		4CA1F2571CCE89C7004B1C98 /* themes.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1F2501CCE89C7004B1C98 /* themes.png */; };
 		F23573651B445AAB00F300D7 /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = F23573641B445AAB00F300D7 /* License.m */; };
 		F24016291B1646A000D4D296 /* PieChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = F24016281B1646A000D4D296 /* PieChartData.m */; };
 		F254FABC1B31E10D009CD853 /* SnapshotController.m in Sources */ = {isa = PBXBuildFile; fileRef = F254FABB1B31E10D009CD853 /* SnapshotController.m */; };
 		F2A870671B15FEFF001C957B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A870661B15FEFF001C957B /* main.m */; };
 		F2A8706A1B15FEFF001C957B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A870691B15FEFF001C957B /* AppDelegate.m */; };
-		F2A8706D1B15FEFF001C957B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A8706C1B15FEFF001C957B /* ViewController.m */; };
 		F2A870701B15FEFF001C957B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A8706E1B15FEFF001C957B /* Main.storyboard */; };
 		F2A870721B15FEFF001C957B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A870711B15FEFF001C957B /* Images.xcassets */; };
 		F2A870751B15FEFF001C957B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A870731B15FEFF001C957B /* LaunchScreen.xib */; };
@@ -38,15 +50,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C87CE721D259D4C009781F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C87CE711D259D4C009781F5 /* XuniFlexPieDynamicKit.framework in Embed Frameworks */,
+				4C87CE6D1D259D4C009781F5 /* XuniCoreDynamicKit.framework in Embed Frameworks */,
+				4C87CE6F1D259D4C009781F5 /* XuniChartCoreDynamicKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		EDE3689F1C029C3000B51400 /* XuniChartCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreKit.framework; path = "../../../../../../../Desktop/培训材料/XuniChartCoreKit.framework"; sourceTree = "<group>"; };
-		EDE368A01C029C3000B51400 /* XuniCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreKit.framework; path = "../../../../../../../Desktop/培训材料/XuniCoreKit.framework"; sourceTree = "<group>"; };
-		EDE368A11C029C3000B51400 /* XuniFlexPieKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexPieKit.framework; path = "../../../../../../../Desktop/培训材料/XuniFlexPieKit.framework"; sourceTree = "<group>"; };
-		EDE368A51C029E6300B51400 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		EDE368A61C029E6300B51400 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		EDE368AA1C02A2DE00B51400 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EDE368AC1C02A30100B51400 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EDE368AD1C02A30200B51400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C37D42D1CD30E4E009113A8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		4C37D42E1CD30E4E009113A8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4C87CE661D259D09009781F5 /* XuniChartCoreDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniChartCoreDynamicKit.framework; path = ../../../Controls/XuniChartCoreDynamicKit.framework; sourceTree = "<group>"; };
+		4C87CE671D259D09009781F5 /* XuniFlexPieDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniFlexPieDynamicKit.framework; path = ../../../Controls/XuniFlexPieDynamicKit.framework; sourceTree = "<group>"; };
+		4C87CE6A1D259D46009781F5 /* XuniCoreDynamicKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XuniCoreDynamicKit.framework; path = ../../../Controls/XuniCoreDynamicKit.framework; sourceTree = "<group>"; };
+		4C8978D81D2688E9004E468B /* XuniFlexPieDesignTimeStoryboardSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XuniFlexPieDesignTimeStoryboardSupport.m; path = ../../../Controls/XuniFlexPieDesignTimeStoryboardSupport.m; sourceTree = "<group>"; };
+		4CA1F24A1CCE89C7004B1C98 /* pie_doughnut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie_doughnut.png; sourceTree = "<group>"; };
+		4CA1F24B1CCE89C7004B1C98 /* pie_labels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie_labels.png; sourceTree = "<group>"; };
+		4CA1F24C1CCE89C7004B1C98 /* pie_load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie_load.png; sourceTree = "<group>"; };
+		4CA1F24D1CCE89C7004B1C98 /* pie_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie_selection.png; sourceTree = "<group>"; };
+		4CA1F24E1CCE89C7004B1C98 /* pie_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie_title.png; sourceTree = "<group>"; };
+		4CA1F24F1CCE89C7004B1C98 /* pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie.png; sourceTree = "<group>"; };
+		4CA1F2501CCE89C7004B1C98 /* themes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = themes.png; sourceTree = "<group>"; };
 		F23573631B445AAB00F300D7 /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
 		F23573641B445AAB00F300D7 /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
 		F24016271B1646A000D4D296 /* PieChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartData.h; sourceTree = "<group>"; };
@@ -58,8 +91,6 @@
 		F2A870661B15FEFF001C957B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F2A870681B15FEFF001C957B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F2A870691B15FEFF001C957B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F2A8706B1B15FEFF001C957B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F2A8706C1B15FEFF001C957B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F2A8706F1B15FEFF001C957B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2A870711B15FEFF001C957B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F2A870741B15FEFF001C957B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,9 +114,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE368A21C029C3000B51400 /* XuniChartCoreKit.framework in Frameworks */,
-				EDE368A31C029C3000B51400 /* XuniCoreKit.framework in Frameworks */,
-				EDE368A41C029C3000B51400 /* XuniFlexPieKit.framework in Frameworks */,
+				4C87CE6B1D259D46009781F5 /* XuniCoreDynamicKit.framework in Frameworks */,
+				4C87CE681D259D09009781F5 /* XuniChartCoreDynamicKit.framework in Frameworks */,
+				4C87CE6E1D259D4C009781F5 /* XuniChartCoreDynamicKit.framework in Frameworks */,
+				4C87CE701D259D4C009781F5 /* XuniFlexPieDynamicKit.framework in Frameworks */,
+				4C87CE6C1D259D4C009781F5 /* XuniCoreDynamicKit.framework in Frameworks */,
+				4C87CE691D259D09009781F5 /* XuniFlexPieDynamicKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +133,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CA1F2481CCE899C004B1C98 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4CA1F24A1CCE89C7004B1C98 /* pie_doughnut.png */,
+				4CA1F24B1CCE89C7004B1C98 /* pie_labels.png */,
+				4CA1F24C1CCE89C7004B1C98 /* pie_load.png */,
+				4CA1F24D1CCE89C7004B1C98 /* pie_selection.png */,
+				4CA1F24E1CCE89C7004B1C98 /* pie_title.png */,
+				4CA1F24F1CCE89C7004B1C98 /* pie.png */,
+				4CA1F2501CCE89C7004B1C98 /* themes.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		4CA1F2491CCE89A0004B1C98 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				F2A870991B16152D001C957B /* SelectionSampleController.h */,
+				F2A8709A1B16152D001C957B /* SelectionSampleController.m */,
+				F2A8709C1B16153F001C957B /* ThemingController.h */,
+				F2A8709D1B16153F001C957B /* ThemingController.m */,
+				F2A870961B16150C001C957B /* LegendAndTitlesController.h */,
+				F2A870971B16150C001C957B /* LegendAndTitlesController.m */,
+				F2A870931B1614F2001C957B /* BasicFeaturesController.h */,
+				F2A870941B1614F2001C957B /* BasicFeaturesController.m */,
+				F2A870901B1614C2001C957B /* GettingStartedController.h */,
+				F2A870911B1614C2001C957B /* GettingStartedController.m */,
+				F254FABA1B31E10D009CD853 /* SnapshotController.h */,
+				F254FABB1B31E10D009CD853 /* SnapshotController.m */,
+			);
+			name = Samples;
+			sourceTree = "<group>";
+		};
 		F2A870581B15FEFF001C957B = {
 			isa = PBXGroup;
 			children = (
-				EDE3689F1C029C3000B51400 /* XuniChartCoreKit.framework */,
-				EDE368A01C029C3000B51400 /* XuniCoreKit.framework */,
-				EDE368A11C029C3000B51400 /* XuniFlexPieKit.framework */,
+				4C8978D81D2688E9004E468B /* XuniFlexPieDesignTimeStoryboardSupport.m */,
+				4C87CE6A1D259D46009781F5 /* XuniCoreDynamicKit.framework */,
+				4C87CE661D259D09009781F5 /* XuniChartCoreDynamicKit.framework */,
+				4C87CE671D259D09009781F5 /* XuniFlexPieDynamicKit.framework */,
 				F2A870631B15FEFF001C957B /* FlexPie101 */,
 				F2A8707D1B15FF00001C957B /* FlexPie101Tests */,
 				F2A870621B15FEFF001C957B /* Products */,
@@ -123,28 +191,16 @@
 		F2A870631B15FEFF001C957B /* FlexPie101 */ = {
 			isa = PBXGroup;
 			children = (
+				4CA1F2491CCE89A0004B1C98 /* Samples */,
+				4CA1F2481CCE899C004B1C98 /* Images */,
 				F2A870681B15FEFF001C957B /* AppDelegate.h */,
 				F2A870691B15FEFF001C957B /* AppDelegate.m */,
-				F2A8706B1B15FEFF001C957B /* ViewController.h */,
-				F2A8706C1B15FEFF001C957B /* ViewController.m */,
 				F2A8706E1B15FEFF001C957B /* Main.storyboard */,
 				F2A870711B15FEFF001C957B /* Images.xcassets */,
 				F2A870731B15FEFF001C957B /* LaunchScreen.xib */,
 				F2A870641B15FEFF001C957B /* Supporting Files */,
-				F2A870901B1614C2001C957B /* GettingStartedController.h */,
-				F2A870911B1614C2001C957B /* GettingStartedController.m */,
-				F2A870931B1614F2001C957B /* BasicFeaturesController.h */,
-				F2A870941B1614F2001C957B /* BasicFeaturesController.m */,
-				F2A870961B16150C001C957B /* LegendAndTitlesController.h */,
-				F2A870971B16150C001C957B /* LegendAndTitlesController.m */,
-				F2A870991B16152D001C957B /* SelectionSampleController.h */,
-				F2A8709A1B16152D001C957B /* SelectionSampleController.m */,
-				F2A8709C1B16153F001C957B /* ThemingController.h */,
-				F2A8709D1B16153F001C957B /* ThemingController.m */,
 				F24016271B1646A000D4D296 /* PieChartData.h */,
 				F24016281B1646A000D4D296 /* PieChartData.m */,
-				F254FABA1B31E10D009CD853 /* SnapshotController.h */,
-				F254FABB1B31E10D009CD853 /* SnapshotController.m */,
 				F23573631B445AAB00F300D7 /* License.h */,
 				F23573641B445AAB00F300D7 /* License.m */,
 			);
@@ -154,7 +210,6 @@
 		F2A870641B15FEFF001C957B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EDE368AB1C02A2DE00B51400 /* Localizable.strings */,
 				F2A870651B15FEFF001C957B /* Info.plist */,
 				F2A870661B15FEFF001C957B /* main.m */,
 			);
@@ -188,6 +243,7 @@
 				F2A8705D1B15FEFF001C957B /* Sources */,
 				F2A8705E1B15FEFF001C957B /* Frameworks */,
 				F2A8705F1B15FEFF001C957B /* Resources */,
+				4C87CE721D259D4C009781F5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,10 +314,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA1F2531CCE89C7004B1C98 /* pie_load.png in Resources */,
 				F2A870701B15FEFF001C957B /* Main.storyboard in Resources */,
-				EDE368A91C02A2DE00B51400 /* Localizable.strings in Resources */,
 				F2A870751B15FEFF001C957B /* LaunchScreen.xib in Resources */,
+				4CA1F2511CCE89C7004B1C98 /* pie_doughnut.png in Resources */,
 				F2A870721B15FEFF001C957B /* Images.xcassets in Resources */,
+				4CA1F2571CCE89C7004B1C98 /* themes.png in Resources */,
+				4CA1F2521CCE89C7004B1C98 /* pie_labels.png in Resources */,
+				4CA1F2561CCE89C7004B1C98 /* pie.png in Resources */,
+				4CA1F2541CCE89C7004B1C98 /* pie_selection.png in Resources */,
+				4CA1F2551CCE89C7004B1C98 /* pie_title.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,12 +342,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A870951B1614F2001C957B /* BasicFeaturesController.m in Sources */,
-				F2A8706D1B15FEFF001C957B /* ViewController.m in Sources */,
 				F2A8706A1B15FEFF001C957B /* AppDelegate.m in Sources */,
 				F2A870921B1614C2001C957B /* GettingStartedController.m in Sources */,
 				F2A870671B15FEFF001C957B /* main.m in Sources */,
 				F254FABC1B31E10D009CD853 /* SnapshotController.m in Sources */,
 				F23573651B445AAB00F300D7 /* License.m in Sources */,
+				4C8978D91D2688E9004E468B /* XuniFlexPieDesignTimeStoryboardSupport.m in Sources */,
 				F24016291B1646A000D4D296 /* PieChartData.m in Sources */,
 				F2A8709B1B16152D001C957B /* SelectionSampleController.m in Sources */,
 				F2A8709E1B16153F001C957B /* ThemingController.m in Sources */,
@@ -312,22 +374,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EDE368AB1C02A2DE00B51400 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDE368AA1C02A2DE00B51400 /* ja */,
-				EDE368AC1C02A30100B51400 /* en */,
-				EDE368AD1C02A30200B51400 /* Base */,
-			);
-			name = Localizable.strings;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		F2A8706E1B15FEFF001C957B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F2A8706F1B15FEFF001C957B /* Base */,
-				EDE368A51C029E6300B51400 /* ja */,
+				4C37D42D1CD30E4E009113A8 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -336,7 +387,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2A870741B15FEFF001C957B /* Base */,
-				EDE368A61C029E6300B51400 /* ja */,
+				4C37D42E1CD30E4E009113A8 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -436,9 +487,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					../../../Controls,
+					../../../../Controls,
 				);
 				INFOPLIST_FILE = FlexPie101/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -455,9 +506,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					../../../Controls,
+					../../../../Controls,
 				);
 				INFOPLIST_FILE = FlexPie101/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";

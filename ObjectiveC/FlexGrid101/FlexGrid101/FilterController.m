@@ -7,260 +7,122 @@
 
 #import "FilterController.h"
 #import "CustomerData.h"
-#import "XuniFlexGridKit/XuniFlexGridKit.h"
-#import "FilterFormController.h"
-#import "SharedFilterData.h"
+#import "FilterData.h"
+#import "FilterGridViewController.h"
 
-@interface FilterController (){
-    SharedFilterData *sharedData;
-}
+@interface FilterController ()
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem    *filterButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem    *removeFilterButton;
+@property (weak, nonatomic) IBOutlet UIVisualEffectView *filterPane;
 
 @end
 
 @implementation FilterController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    sharedData = [SharedFilterData sharedInstance];
-    UIButton *filterButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    UIButton *removeButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    FlexGrid *flex = [[FlexGrid alloc] init];
-    flex.isReadOnly = true;
-    flex.itemsSource = [CustomerData getCustomerData:100];
-    [filterButton setTitle:NSLocalizedString(@"Filter", nil) forState:UIControlStateNormal];
-    [removeButton setTitle:NSLocalizedString(@"Remove", nil) forState:UIControlStateNormal];
-    [filterButton addTarget:self action:@selector(filterButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    [removeButton addTarget:self action:@selector(removeButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    
-    flex.tag = 1;
-    filterButton.tag = 2;
-    removeButton.tag = 3;
-    
-    [self.view addSubview:filterButton];
-    [self.view addSubview:removeButton];
-    [self.view addSubview:flex];
-
-
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
--(void) viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:true];
-    
-    if (sharedData.filterSet == true) {
-        
-        if (sharedData.filterOperation == 0) {
-            [self containsFilter];
-        }
-        else if ([sharedData.filterOperation  isEqual: @(1)]){
-            [self beginsWithFilter];
-        }
-        else if ([sharedData.filterOperation isEqual: @(2)]){
-            [self endsWithFilter];
-        }
-        else if ([sharedData.filterOperation isEqual: @(3)]){
-            [self equalsFilter];
-        }
-    }
-}
-
--(void) viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:true];
-    sharedData.filterSet = false;
-    sharedData.filterString = @"";
-    sharedData.filterOperation = 0;
-}
-
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    UIButton *filterButton = (UIButton*)[self.view viewWithTag:2];
-    UIButton *removeButton = (UIButton*)[self.view viewWithTag:3];
-    filterButton.frame = CGRectMake(0, 60, self.view.bounds.size.width/2, 50);
-    
-    removeButton.frame = CGRectMake(self.view.bounds.size.width/2, 60, self.view.bounds.size.width/2, 50);
-    
-    flex.frame = CGRectMake(0, 110, self.view.bounds.size.width, self.view.bounds.size.height-110);
-}
-
--(void)filterButtonClicked{
-    [self performSegueWithIdentifier:@"FilterFormSegue" sender:self];
-}
--(void)containsFilter{
-    FlexGrid *flex =  (FlexGrid *)[self.view viewWithTag:1];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"M/d/yy"];
-    flex.collectionView.filter = ^ BOOL (NSObject *item){
-        CustomerData *d = (CustomerData*)item;
-        if ([[NSString stringWithFormat:@"%lu", d.customerID] rangeOfString:sharedData.filterString].location != NSNotFound) {
-            return true;
-        }
-        else if ([[NSString stringWithFormat:@"%lu", d.countryID]  rangeOfString:sharedData.filterString].location != NSNotFound) {
-            return true;
-        }
-        else if ([[NSString stringWithFormat:@"%@",d.email] rangeOfString:sharedData.filterString].location != NSNotFound) {
-            return true;
-        }
-        else if ([[d.firstName lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound) {
-            return true;
-        }
-        else if ([[d.lastName lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound)
-        {
-            return true;
-        }
-        else if ([[d.country lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound){
-            return true;
-        }
-        else if ([[d.address lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound){
-            return true;
-        }
-        else if ([[d.city lowercaseString] rangeOfString:[sharedData.filterString lowercaseString]].location != NSNotFound){
-            return true;
-        }
-        else if ([[dateFormat stringFromDate:d.lastOrderDate] rangeOfString:sharedData.filterString].location != NSNotFound) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
-
-}
-
--(void)equalsFilter{
-    FlexGrid *flex =  (FlexGrid *)[self.view viewWithTag:1];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"M/d/yy"];
-    flex.collectionView.filter = ^ BOOL (NSObject *item){
-        CustomerData *d = (CustomerData*)item;
-        
-        if ([[NSString stringWithFormat:@"%lu", d.customerID] isEqualToString:sharedData.filterString]) {
-            return true;
-        }
-        else if ([[NSString stringWithFormat:@"%lu", d.countryID] isEqualToString:sharedData.filterString]) {
-            return true;
-        }
-        else if ([[NSString stringWithFormat:@"%@", d.email] isEqualToString:sharedData.filterString]) {
-            return true;
-        }
-        else if ([d.firstName isEqualToString:sharedData.filterString]) {
-            return true;
-        }
-        else if ([d.lastName isEqualToString:sharedData.filterString])
-        {
-            return true;
-        }
-        else if ([d.country isEqualToString:sharedData.filterString]){
-            return true;
-        }
-        else if ([d.address isEqualToString:sharedData.filterString]){
-            return true;
-        }
-        else if ([d.city isEqualToString:sharedData.filterString]){
-            return true;
-        }
-        else if ([[dateFormat stringFromDate:d.lastOrderDate] isEqualToString:sharedData.filterString]) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
-}
-
--(void)beginsWithFilter{
-    FlexGrid *flex =  (FlexGrid *)[self.view viewWithTag:1];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"M/d/yy"];
-    flex.collectionView.filter = ^ BOOL (NSObject *item){
-        CustomerData *d = (CustomerData*)item;
-        if ([[NSString stringWithFormat:@"%lu", d.customerID] hasPrefix:sharedData.filterString]) {
-            return true;
-        }
-        else if ([[NSString stringWithFormat:@"%lu", d.countryID]  hasPrefix:sharedData.filterString]) {
-            return true;
-        }
-        else if ([[NSString stringWithFormat:@"%@",d.email] hasPrefix:sharedData.filterString]) {
-            return true;
-        }
-            
-        else if ([[d.firstName lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]) {
-            return true;
-        }
-        else if ([[d.lastName lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]])
-        {
-            return true;
-        }
-        else if ([[d.country lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]){
-            return true;
-        }
-        else if ([[d.address lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]){
-            return true;
-        }
-        else if ([[d.city lowercaseString] hasPrefix:[sharedData.filterString lowercaseString]]){
-            return true;
-        }
-        else if ([[dateFormat stringFromDate:d.lastOrderDate] hasPrefix:sharedData.filterString]) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
-}
-
--(void)endsWithFilter{
-    FlexGrid *flex =  (FlexGrid *)[self.view viewWithTag:1];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"M/d/yy"];
-    flex.collectionView.filter = ^ BOOL (NSObject *item){
-        CustomerData *d = (CustomerData*)item;
-        if ([[NSString stringWithFormat:@"%lu", d.customerID] hasSuffix:sharedData.filterString]) {
-            return true;
-        }
-        else if ([[NSString stringWithFormat:@"%lu", d.countryID]  hasSuffix:sharedData.filterString]) {
-            return true;
-        }
-        else if ([[NSString stringWithFormat:@"%@",d.email] hasSuffix:sharedData.filterString]) {
-            return true;
-        }
-        
-        else if ([[d.firstName lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]) {
-            return true;
-        }
-        else if ([[d.lastName lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]])
-        {
-            return true;
-        }
-        else if ([[d.country lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]){
-            return true;
-        }
-        else if ([[d.address lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]){
-            return true;
-        }
-        else if ([[d.city lowercaseString] hasSuffix:[sharedData.filterString lowercaseString]]){
-            return true;
-        }
-        else if ([[dateFormat stringFromDate:d.lastOrderDate] hasSuffix:sharedData.filterString]) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
-}
-
--(void)removeButtonClicked{
-    sharedData.filterSet = false;
-    sharedData.filterString = @"";
-    sharedData.filterOperation = 0;
-    FlexGrid *flex =  (FlexGrid *)[self.view viewWithTag:1];
-    flex.collectionView.filter = ^ BOOL (NSObject *item){
+- (void)doDropFilter {
+    self.filterButton.title         = NSLocalizedString(@"Filter", nil);
+    self.removeFilterButton.enabled = false;
+    self.filterPane.hidden          = true;
+    self.flex.collectionView.filter = ^BOOL (NSObject *item){
         return true;
     };
 }
+
+- (void)doApplyFilter {
+    self.filterButton.title         = NSLocalizedString(@"Change", nil);
+    self.filterPane.hidden          = true;
+    self.removeFilterButton.enabled = true;
+
+    self.flex.collectionView.filter = ^BOOL (NSObject *item){
+        NSMutableArray *shared = [FilterData sharedFilterData];
+        bool           result  = true;
+        for (int i = 0; i < shared.count; i++) {
+            FilterData *fd = [shared objectAtIndex:i];
+
+            GridColumn *col       = (GridColumn *)[self.flex.columns objectAtIndex:i];
+            NSString   *thisprop  = [col getBoundValue:item].description.lowercaseString;
+            NSString   *filterstr = fd.filterString.lowercaseString;
+
+            if(filterstr.length>0){
+                if (fd.filterOperation == 0) {
+                    //contains
+                    if (![thisprop containsString:filterstr]) {
+                        result = false;
+                        break;
+                    }
+
+                } else if (fd.filterOperation == 1) {
+                    //starts
+                    if (![thisprop hasPrefix:filterstr]) {
+                        result = false;
+                        break;
+                    }
+                } else if (fd.filterOperation == 2) {
+                    //ends
+                    if (![thisprop hasSuffix:filterstr]) {
+                        result = false;
+                        break;
+                    }
+                } else if (fd.filterOperation == 3) {
+                    //equalstext
+                    if (![thisprop isEqualToString:filterstr]) {
+                        result = false;
+                        break;
+                    }
+                }
+            }
+        }
+        return result;
+    };
+}
+
+- (void)doStartEditingFilter {
+    if ([self.filterButton.title isEqualToString:NSLocalizedString(@"Filter", nil)]) {
+        NSMutableArray *shared = [FilterData sharedFilterData];
+        [shared removeAllObjects];
+        for (int i = 0; i < self.flex.columns.count; i++) {
+            GridColumn *c  = [self.flex.columns objectAtIndex:i];
+            FilterData *fd = [[FilterData alloc]init];
+            fd.filterColumn    = c.header;
+            fd.filterOperation = 0;
+            fd.filterString    = nil;
+            [shared addObject:fd];
+        }
+    }
+
+    FilterGridViewController *filterController = (FilterGridViewController *)self.childViewControllers.firstObject;
+    filterController.flex.itemsSource = [FilterData sharedFilterData];
+
+    GridColumn     *operID = (GridColumn *)[filterController.flex.columns objectAtIndex:1];
+    NSMutableArray *items  = [NSMutableArray arrayWithArray:[FilterOperation defaultOperations]];
+    operID.dataMap = [[GridDataMap alloc] initWithArray:items selectedValuePath:@"identifier" displayMemberPath:@"title"];
+
+    self.filterButton.title         = NSLocalizedString(@"Done", nil);
+    self.filterPane.hidden          = false;
+    self.removeFilterButton.enabled = true;
+}
+
+- (IBAction)doFilter:(id)sender {
+    if ([self.filterButton.title isEqualToString:NSLocalizedString(@"Done", nil)]) {
+        [self doApplyFilter];
+    } else {
+        [self doStartEditingFilter];
+    }
+}
+
+- (IBAction)removeFilter:(id)sender {
+    [self doDropFilter];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    self.flex.columnHeaderFont = [UIFont boldSystemFontOfSize:self.flex.columnHeaderFont.pointSize];
+
+    self.flex.isReadOnly  = true;
+    self.flex.itemsSource = [CustomerData getCustomerData:100];
+
+}
+
 @end

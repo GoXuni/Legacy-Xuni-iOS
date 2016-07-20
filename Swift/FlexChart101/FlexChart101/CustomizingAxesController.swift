@@ -26,17 +26,17 @@ class CustomizingAxesController: UIViewController {
         _chart.itemsSource = ChartData.demoData()
         _chart.bindingX = "name"
         _chart.axisX.title = "Country"
-        _chart.axisX.lineWidth = 2;
-        _chart.axisX.minorTickWidth = 1;
-        _chart.axisX.majorTickWidth = 0;
+        _chart.axisX.lineWidth = 2
+        _chart.axisX.minorTickWidth = 1
+        _chart.axisX.majorTickWidth = 0
         
         _chart.axisY.lineWidth = 2
-        _chart.axisY.minorGridVisible = true;
-        _chart.axisY.minorGridWidth = 0.5;
-        _chart.axisY.minorGridDashes = NSArray(array: [4, 4]) as [AnyObject]
-        _chart.axisY.minorTickWidth = 1;
-        _chart.axisY.majorTickWidth = 2;
-        _chart.axisY.majorGridWidth = 1;
+        _chart.axisY.minorGridVisible = true
+        _chart.axisY.minorGridWidth = 0.5
+        _chart.axisY.minorGridDashes = NSArray(array: [4, 4]) as! [NSNumber]
+        _chart.axisY.minorTickWidth = 1
+        _chart.axisY.majorTickWidth = 2
+        _chart.axisY.majorGridWidth = 1
         
         _chart.axisY.majorGridColor = UIColor(white: 0.8, alpha: 1)
         _chart.axisY.majorGridFill = UIColor(white: 0.6, alpha: 0.2)
@@ -44,19 +44,19 @@ class CustomizingAxesController: UIViewController {
         _chart.axisY.majorUnit = 1000
         _chart.axisY.max = 10000
         
-        func axisXLabelLoadingHandler(sender: NSObject!, args: XuniEventArgs!) {
-            var labelArgs = args as! XuniLabelLoadingEventArgs
+        func axisXLabelLoadingHandler(args: XuniEventContainer!) {
+            let labelArgs = args.eventArgs as! XuniLabelLoadingEventArgs
             labelArgs.label = nil
             
-            var image = UIImage(named:"\(labelArgs.value)")!
-            var rect = CGRectMake (CGFloat(labelArgs.region.left), CGFloat(labelArgs.region.top), CGFloat(labelArgs.region.width), CGFloat(labelArgs.region.height))
+            let image = UIImage(named:"\(labelArgs.value)")!
+            let rect = CGRectMake (CGFloat(labelArgs.region.left), CGFloat(labelArgs.region.top), CGFloat(labelArgs.region.width), CGFloat(labelArgs.region.height))
             image.drawInRect(rect)
         }
         _chart.axisX.labelLoading.addHandler(axisXLabelLoadingHandler, forObject: self)
         
-        func axisYLabelLoadingHandler(sender: NSObject!, args: XuniEventArgs!) {
-            var labelArgs = args as! XuniLabelLoadingEventArgs
-            var renderEngine = labelArgs.renderEngine as! XuniRenderEngine
+        func axisYLabelLoadingHandler(args: XuniEventContainer!) {
+            let labelArgs = args.eventArgs as! XuniLabelLoadingEventArgs
+            let renderEngine = labelArgs.renderEngine as! XuniRenderEngine
             
             if (labelArgs.value <= 3000) {
                 renderEngine.setTextFill(UIColor.redColor())

@@ -6,9 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <XuniFlexChartKit/XuniFlexChartKit.h>
+@import XuniFlexChartDynamicKit;
 
-@interface LineMarkerController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
+@interface LineMarkerController : UIViewController
 @end
 
 @interface MyMarkerView : XuniChartMarkerBaseView

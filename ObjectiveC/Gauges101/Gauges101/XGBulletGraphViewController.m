@@ -5,8 +5,10 @@
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
 
+@import XuniGaugeDynamicKit;
+
 #import "XGBulletGraphViewController.h"
-#import <XuniGaugeKit/XuniGaugeKit.h>
+
 
 @interface XGBulletGraphViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *badDisplay;
@@ -37,19 +39,9 @@
     [super viewDidLoad];
 
     
-    _bulletGraph.showText = XuniShowTextNone;
-    _bulletGraph.min = 0;
-    _bulletGraph.max = 100;
-    _bulletGraph.value = 30;
     _bulletGraph.loadAnimation.duration = 2;
     _bulletGraph.updateAnimation.duration = 0.5;
-    _bulletGraph.isReadOnly = false;
-    _bulletGraph.bad = 45;
-    _bulletGraph.good = 80;
-    _bulletGraph.target = 90;
-
-    _bulletGraph.pointer.thickness = 0.33;
-    _bulletGraph.pointerColor = [UIColor blackColor];
+    
     
     [self stepperChanged:nil];
 }

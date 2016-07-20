@@ -35,6 +35,9 @@
 
     NSData *dataResult = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlAddress]];
     NSError *error      = nil;
+    
+    if(dataResult == nil) return nil;
+    
     id     object      = [NSJSONSerialization
                  JSONObjectWithData:dataResult
                             options:0

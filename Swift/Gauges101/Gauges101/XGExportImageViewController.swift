@@ -5,6 +5,8 @@
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
 import UIKit
+import XuniCoreDynamicKit
+
 class XGExportImageViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -24,7 +26,8 @@ class XGExportImageViewController: UIViewController {
 
     func animateNextStep(sender: AnyObject) {
         let random: Double = Double(Int(arc4random()) % 101)
-        radialGauge.updateAnimation.easing = XuniEasing.EaseOutElastic()
+        
+        //radialGauge.updateAnimation.easing = XuniCoreDynamicKit.XuniEasing.EaseOutElastic()
         radialGauge.value = random
     }
 
@@ -52,6 +55,8 @@ class XGExportImageViewController: UIViewController {
         }
         let alert: UIAlertView = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: NSLocalizedString("OK",comment:""))
         alert.show()
+        self.radialGauge.hidden = false
+        self.snapshotDisplay.hidden = true
     }
 
     @IBAction func takeSnapshot(sender: AnyObject) {
@@ -78,5 +83,5 @@ class XGExportImageViewController: UIViewController {
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
 
-import XuniGaugeKit
+import XuniGaugeDynamicKit
 //#define LOC(A) NSLocalizedString(A, nil)

@@ -28,19 +28,19 @@ class ConditionalFormattingController: UIViewController {
         _chart.axisY.format = "F1"
         _chart.axisX.format = "F1"
         
-        func plotElementLoadingHandler(sender: NSObject!, args: XuniEventArgs!) {
-            var plotArgs = args as! XuniChartPlotElementEventArgs
+        func plotElementLoadingHandler(args: XuniEventContainer!) {
+            let plotArgs = args.eventArgs as! XuniChartPlotElementEventArgs
             if plotArgs.dataPoint != nil && plotArgs.defaultRender != nil {
-                var y = plotArgs.dataPoint.value;
+                let y = plotArgs.dataPoint.value;
                 
                 // change color values based on y-axis values
-                var r = (y >= 0 ? 1 : ((1 + y)))
-                var b = (y < 0 ? 1 : ((1 - y)))
-                var g = (1 - fabs(y))
-                var a = 0.8
+                let r = (y >= 0 ? 1 : ((1 + y)))
+                let b = (y < 0 ? 1 : ((1 - y)))
+                let g = (1 - fabs(y))
+                let a = 0.8
                 
                 (plotArgs.renderEngine as! XuniRenderEngine).setFill(UIColor(red: CGFloat(r), green: CGFloat(g), blue: CGFloat(b), alpha: CGFloat(a)))
-                (plotArgs.defaultRender as! IXuniFunction).execute(nil)
+                plotArgs.defaultRender.execute()
             }
         }
         _chart.plotElementLoading.addHandler(plotElementLoadingHandler, forObject: self)
@@ -59,7 +59,7 @@ class ConditionalFormattingController: UIViewController {
     }
     
     func getData() -> NSMutableArray {
-        var array = NSMutableArray()
+        let array = NSMutableArray()
         
         for var i = 0; i < 30; i++ {
             array.addObject(ChartPoint(x: (0.16 * Double(i)), y: cos(0.12 * Double(i))))

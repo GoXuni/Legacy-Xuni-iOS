@@ -8,15 +8,12 @@
 #import <UIKit/UIKit.h>
 
 
-#import "XuniFlexGridKit/XuniFlexGridKit.h"
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
 #import "CustomerData.h"
 
 #import "ColumnReordererTableViewController.h"
 
 
 @interface ColumnLayoutController : UIViewController
-@property FlexGrid* flex;
+@property (weak, nonatomic) IBOutlet FlexGrid *flex;
 @end
-
-
-extern ColumnLayoutController* columnLayoutController;

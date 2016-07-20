@@ -7,6 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FinancialChartController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
+@interface FinancialChartController : UIViewController
 
 @end

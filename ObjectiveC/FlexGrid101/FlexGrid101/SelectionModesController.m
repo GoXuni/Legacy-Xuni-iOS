@@ -7,88 +7,46 @@
 
 #import "SelectionModesController.h"
 #import "CustomerData.h"
-#import "XuniFlexGridKit/XuniFlexGridKit.h"
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
 
-@interface SelectionModesController (){
-    NSMutableArray *pickerData;
-}
+@interface SelectionModesController ()
+
+@property (weak, nonatomic) IBOutlet FlexGrid           *flex;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *modeSwitch;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem    *selected;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem    *selectedCount;
+
 @end
 
 @implementation SelectionModesController
+- (IBAction)modeSwitched:(id)sender {
+    NSInteger row = self.modeSwitch.selectedSegmentIndex;
+
+    if (row == 0) {
+        self.flex.selectionMode = GridSelectionModeNone;
+    } else if (row == 1) {
+        self.flex.selectionMode = GridSelectionModeCell;
+    } else if (row == 2) {
+        self.flex.selectionMode = GridSelectionModeCellRange;
+    } else if (row == 3) {
+        self.flex.selectionMode = GridSelectionModeRow;
+    } else if (row == 4) {
+        self.flex.selectionMode = GridSelectionModeRowRange;
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    pickerData =[[NSMutableArray alloc] initWithObjects:NSLocalizedString(@"None", nil), NSLocalizedString(@"Cell", nil), NSLocalizedString(@"Cell Range", nil), NSLocalizedString(@"Row", nil), NSLocalizedString(@"Row Range", nil), nil];
-    UIPickerView *selectionModePicker = [[UIPickerView alloc] init];
-    FlexGrid *flex = [[FlexGrid alloc] init];
-    flex.isReadOnly = true;
-    flex.selectionMode = FlexSelectionModeNone;
-    flex.itemsSource = [CustomerData getCustomerData:100];
-
-    selectionModePicker.delegate = self;
-    selectionModePicker.showsSelectionIndicator = YES;
-    selectionModePicker.hidden = false;
-    [selectionModePicker selectRow:0 inComponent:0 animated:false];
+    self.flex.isReadOnly       = true;
+    self.flex.columnHeaderFont = [UIFont boldSystemFontOfSize:self.flex.columnHeaderFont.pointSize];
+    self.flex.selectionMode    = GridSelectionModeNone;
+    self.flex.itemsSource      = [CustomerData getCustomerData:100];
     
-    flex.tag = 1;
-    selectionModePicker.tag = 2;
-    
-    [self.view addSubview:selectionModePicker];
-    [self.view addSubview:flex];
+    [self.flex.flexGridSelectionChanged addHandler:^(XuniEventContainer<GridCellRangeEventArgs *> *eventContainer) {
+        int selected = self.flex.selection.columnSpan * self.flex.selection.rowSpan;
+        
+        self.selectedCount.title = [NSString stringWithFormat:@"%i selected", selected];
+    } forObject:self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    
-    CGFloat ss = [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.intrinsicContentSize.height;
-    
-    FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    UIPickerView *selectionModePicker = (UIPickerView*)[self.view viewWithTag:2];
-    selectionModePicker.frame = CGRectMake(self.view.bounds.size.width/4, ss, self.view.bounds.size.width/2, 162);
-    
-    flex.frame = CGRectMake(0, selectionModePicker.frame.origin.y+selectionModePicker.frame.size.height, self.view.bounds.size.width, (self.view.bounds.size.height-selectionModePicker.frame.origin.y-selectionModePicker.frame.size.height));
-    [flex setNeedsDisplay];
-    [selectionModePicker setNeedsDisplay];
-}
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return [pickerData count];
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    FlexGrid *flex = (FlexGrid *)[self.view viewWithTag:1];
-    
-    
-    if (row == 0) {
-        flex.selectionMode = FlexSelectionModeNone;
-    }
-    else if (row == 1){
-        flex.selectionMode = FlexSelectionModeCell;
-    }
-    else if (row == 2){
-        flex.selectionMode = FlexSelectionModeCellRange;
-    }
-    else if (row == 3){
-        flex.selectionMode = FlexSelectionModeRow;
-    }
-    else if (row == 4){
-        flex.selectionMode = FlexSelectionModeRowRange;
-    }
-}
-
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-
-    return [pickerData objectAtIndex:row];
-  
-}
 @end

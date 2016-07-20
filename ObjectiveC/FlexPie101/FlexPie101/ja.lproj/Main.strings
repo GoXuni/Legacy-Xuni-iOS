@@ -1,6 +1,147 @@
 
-/* Class = "UINavigationItem"; title = "FlexPie101"; ObjectID = "CxN-2v-3D3"; */
-"CxN-2v-3D3.title" = "FlexPie101";
+/* Class = "UISegmentedControl"; 2us-aM-jrr.segmentTitles[0] = "None"; ObjectID = "2us-aM-jrr"; */
+"2us-aM-jrr.segmentTitles[0]" = "None";
 
-/* Class = "UIBarButtonItem"; title = "FlexPie101"; ObjectID = "QaC-o2-yIE"; */
-"QaC-o2-yIE.title" = "FlexPie101";
+/* Class = "UISegmentedControl"; 2us-aM-jrr.segmentTitles[1] = "Left"; ObjectID = "2us-aM-jrr"; */
+"2us-aM-jrr.segmentTitles[1]" = "Left";
+
+/* Class = "UISegmentedControl"; 2us-aM-jrr.segmentTitles[2] = "Top"; ObjectID = "2us-aM-jrr"; */
+"2us-aM-jrr.segmentTitles[2]" = "Top";
+
+/* Class = "UISegmentedControl"; 2us-aM-jrr.segmentTitles[3] = "Right"; ObjectID = "2us-aM-jrr"; */
+"2us-aM-jrr.segmentTitles[3]" = "Right";
+
+/* Class = "UISegmentedControl"; 2us-aM-jrr.segmentTitles[4] = "Bottom"; ObjectID = "2us-aM-jrr"; */
+"2us-aM-jrr.segmentTitles[4]" = "Bottom";
+
+/* Class = "UINavigationItem"; title = "Getting Started"; ObjectID = "3Mg-95-lOi"; */
+"3Mg-95-lOi.title" = "Getting Started";
+
+/* Class = "UITextField"; placeholder = "Footer"; ObjectID = "4Ll-o1-7jf"; */
+"4Ll-o1-7jf.placeholder" = "Footer";
+
+/* Class = "UITextField"; placeholder = "Header"; ObjectID = "5Se-IW-ha4"; */
+"5Se-IW-ha4.placeholder" = "Header";
+
+/* Class = "UILabel"; text = "Selection Sample"; ObjectID = "8Om-IZ-3gS"; */
+"8Om-IZ-3gS.text" = "Selection Sample";
+
+/* Class = "UILabel"; text = "Shows inner radius, offset, and start angle"; ObjectID = "AGA-yF-HJh"; */
+"AGA-yF-HJh.text" = "Shows inner radius, offset, and start angle";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "D6b-d8-OFZ"; */
+"D6b-d8-OFZ.text" = ">";
+
+/* Class = "UISegmentedControl"; EYX-qw-RJW.segmentTitles[0] = "None"; ObjectID = "EYX-qw-RJW"; */
+"EYX-qw-RJW.segmentTitles[0]" = "None";
+
+/* Class = "UISegmentedControl"; EYX-qw-RJW.segmentTitles[1] = "Left"; ObjectID = "EYX-qw-RJW"; */
+"EYX-qw-RJW.segmentTitles[1]" = "Left";
+
+/* Class = "UISegmentedControl"; EYX-qw-RJW.segmentTitles[2] = "Top"; ObjectID = "EYX-qw-RJW"; */
+"EYX-qw-RJW.segmentTitles[2]" = "Top";
+
+/* Class = "UISegmentedControl"; EYX-qw-RJW.segmentTitles[3] = "Right"; ObjectID = "EYX-qw-RJW"; */
+"EYX-qw-RJW.segmentTitles[3]" = "Right";
+
+/* Class = "UISegmentedControl"; EYX-qw-RJW.segmentTitles[4] = "Bottom"; ObjectID = "EYX-qw-RJW"; */
+"EYX-qw-RJW.segmentTitles[4]" = "Bottom";
+
+/* Class = "UIBarButtonItem"; title = "Take snapshot"; ObjectID = "Erp-aX-XoL"; */
+"Erp-aX-XoL.title" = "Take snapshot";
+
+/* Class = "UILabel"; text = "Reversed:"; ObjectID = "GRX-8V-bkz"; */
+"GRX-8V-bkz.text" = "Reversed:";
+
+/* Class = "UITableViewController"; title = "FlexPie101"; ObjectID = "GYf-gL-MhM"; */
+"GYf-gL-MhM.title" = "FlexPie101";
+
+/* Class = "UILabel"; text = "Snapshot"; ObjectID = "HJ7-vQ-Xkx"; */
+"HJ7-vQ-Xkx.text" = "Snapshot";
+
+/* Class = "UIBarButtonItem"; title = "Select theme"; ObjectID = "ILU-It-HiN"; */
+"ILU-It-HiN.title" = "Select theme";
+
+/* Class = "UINavigationItem"; title = "FlexPie101"; ObjectID = "JGg-u3-6cT"; */
+"JGg-u3-6cT.title" = "FlexPie101";
+
+/* Class = "UILabel"; text = "Offset:"; ObjectID = "KID-dH-6qs"; */
+"KID-dH-6qs.text" = "Offset:";
+
+/* Class = "UINavigationItem"; title = "Selection"; ObjectID = "KMD-mC-9eY"; */
+"KMD-mC-9eY.title" = "Selection";
+
+/* Class = "UINavigationController"; title = "FlexPie101"; ObjectID = "MVE-nJ-8ld"; */
+"MVE-nJ-8ld.title" = "FlexPie101";
+
+/* Class = "UILabel"; text = "Shows basic header, footer, and legend positioning"; ObjectID = "Mbx-xV-h8M"; */
+"Mbx-xV-h8M.text" = "Shows basic header, footer, and legend positioning";
+
+/* Class = "UILabel"; text = "Shows selection animation, offset, and position"; ObjectID = "Mis-r9-zsr"; */
+"Mis-r9-zsr.text" = "Shows selection animation, offset, and position";
+
+/* Class = "UINavigationItem"; title = "Basic Features"; ObjectID = "N7m-He-yJE"; */
+"N7m-He-yJE.title" = "Basic Features";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Ptj-NJ-8Is"; */
+"Ptj-NJ-8Is.text" = "0";
+
+/* Class = "UINavigationItem"; title = "Snapshot"; ObjectID = "T09-pu-mNC"; */
+"T09-pu-mNC.title" = "Snapshot";
+
+/* Class = "UILabel"; text = "Getting Started"; ObjectID = "Xsl-3n-wli"; */
+"Xsl-3n-wli.text" = "Getting Started";
+
+/* Class = "UINavigationItem"; title = "Theming"; ObjectID = "Yxl-Um-f5M"; */
+"Yxl-Um-f5M.title" = "Theming";
+
+/* Class = "UILabel"; text = "Animated:"; ObjectID = "aU9-bd-QKe"; */
+"aU9-bd-QKe.text" = "Animated:";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "aZK-8n-hQQ"; */
+"aZK-8n-hQQ.text" = ">";
+
+/* Class = "UILabel"; text = "Inner radius:"; ObjectID = "aa7-fa-dS8"; */
+"aa7-fa-dS8.text" = "Inner radius:";
+
+/* Class = "UILabel"; text = "Basic Features"; ObjectID = "ar7-cq-3jx"; */
+"ar7-cq-3jx.text" = "Basic Features";
+
+/* Class = "UILabel"; text = "Shows how to export an image of FlexPie"; ObjectID = "bbC-jR-HrU"; */
+"bbC-jR-HrU.text" = "Shows how to export an image of FlexPie";
+
+/* Class = "UILabel"; text = "Start Angle:"; ObjectID = "eYn-3l-CDx"; */
+"eYn-3l-CDx.text" = "Start Angle:";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "ec8-fm-Cbr"; */
+"ec8-fm-Cbr.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "fbZ-TF-gFZ"; */
+"fbZ-TF-gFZ.text" = ">";
+
+/* Class = "UILabel"; text = "Selected item offset:"; ObjectID = "go0-qT-YIN"; */
+"go0-qT-YIN.text" = "Selected item offset:";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "iGn-QC-e2I"; */
+"iGn-QC-e2I.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "icA-SV-8Jm"; */
+"icA-SV-8Jm.text" = ">";
+
+/* Class = "UILabel"; text = "Legend And Titles"; ObjectID = "lqF-vC-dJD"; */
+"lqF-vC-dJD.text" = "Legend And Titles";
+
+/* Class = "UILabel"; text = "Theming"; ObjectID = "p1E-12-g72"; */
+"p1E-12-g72.text" = "Theming";
+
+/* Class = "UILabel"; text = "Shows available palettes"; ObjectID = "sQz-H9-2Wx"; */
+"sQz-H9-2Wx.text" = "Shows available palettes";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "uNC-aY-ZRX"; */
+"uNC-aY-ZRX.text" = "0";
+
+/* Class = "UINavigationItem"; title = "Legend and Titles"; ObjectID = "vgv-dq-uvm"; */
+"vgv-dq-uvm.title" = "Legend and Titles";
+
+/* Class = "UILabel"; text = "Shows a simple pie chart with tooltips"; ObjectID = "wlQ-YC-Ll7"; */
+"wlQ-YC-Ll7.text" = "Shows a simple pie chart with tooltips";

@@ -5,7 +5,7 @@
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
 import UIKit
-import XuniGaugeKit
+import XuniGaugeDynamicKit
 
 class XGAnimationViewController: UIViewController {
 
@@ -95,4 +95,4 @@ class XGAnimationViewController: UIViewController {
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
 
-import XuniGaugeKit
+import XuniGaugeDynamicKit

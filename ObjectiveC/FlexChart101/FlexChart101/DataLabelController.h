@@ -7,6 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DataLabelController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface DataLabelController : UIViewController
 
 @end

@@ -6,7 +6,7 @@
 //
 
 #import "XGUsingRangesViewController.h"
-#import <XuniGaugeKit/XuniGaugeKit.h>
+@import XuniGaugeDynamicKit;
 
 @interface XGUsingRangesViewController ()
 @property (weak, nonatomic) IBOutlet UIStepper *valueStepper;
@@ -43,47 +43,27 @@
     _valueDisplay.text = [NSString stringWithFormat:@"%i", (int)_valueStepper.value];
 
     
-    _radialGauge.thickness = 0.6;
-    _radialGauge.min = _valueStepper.minimumValue;
-    _radialGauge.max = _valueStepper.maximumValue;
-    _radialGauge.value = _valueStepper.value;
     _radialGauge.loadAnimation.duration = 2;
     _radialGauge.updateAnimation.duration = 0.5;
-    _radialGauge.isReadOnly = false;
     
     
-    [_radialGauge.gaugeValueChanged addHandler:^(NSObject* sender, XuniEventArgs* args)
+    [_radialGauge.gaugeValueChanged addHandler:^(XuniEventContainer *eventContainer)
      {
          _valueStepper.value = _radialGauge.value;
          [self stepperValueChanged:nil];
      }
                                      forObject:self];
     
-    _linearGauge.min = _valueStepper.minimumValue;
-    _linearGauge.max = _valueStepper.maximumValue;
-    _linearGauge.value = _valueStepper.value;
+   
     _linearGauge.loadAnimation.duration = 2;
     _linearGauge.updateAnimation.duration = 0.5;
-    _linearGauge.isReadOnly = false;
-    _linearGauge.backgroundColor = [UIColor clearColor];
-    [_linearGauge.gaugeValueChanged addHandler:^(NSObject* sender, XuniEventArgs* args)
+    
+    [_linearGauge.gaugeValueChanged addHandler:^(XuniEventContainer *eventContainer)
      {
          _valueStepper.value = _linearGauge.value;
          [self stepperValueChanged:nil];
      }
                                      forObject:self];
-    
-    
-    _radialGauge.backgroundColor = _linearGauge.backgroundColor = [UIColor clearColor];
-    _radialGauge.pointerColor = _linearGauge.pointerColor =  [UIColor whiteColor];
-    _radialGauge.faceBorderWidth = _linearGauge.faceBorderWidth =  1;
-    _radialGauge.faceBorderColor = _linearGauge.faceBorderColor = [UIColor whiteColor];
-    _radialGauge.faceColor = _linearGauge.faceColor = [UIColor clearColor];
-    _radialGauge.valueFontColor = [UIColor whiteColor];
-    _linearGauge.valueFontColor = [UIColor blueColor];
-    _radialGauge.minFontColor = _linearGauge.minFontColor = [UIColor whiteColor];
-    _radialGauge.maxFontColor = _linearGauge.maxFontColor = [UIColor whiteColor];
-    _radialGauge.valueFont = _linearGauge.valueFont = [UIFont fontWithName:@"Optima" size:19];
     
     
     // Create ranges.
@@ -105,6 +85,7 @@
     upper.color = [UIColor colorWithRed:0 green:0.635 blue:0.91 alpha:1];
     upper.borderColor = [UIColor whiteColor];
     upper.borderWidth = 1;
+    
     // Add ranges.
     [_linearGauge.ranges addObject:lower];
     [_linearGauge.ranges addObject:middle];
@@ -118,19 +99,5 @@
     [self rangesValueChanged:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

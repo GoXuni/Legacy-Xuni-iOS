@@ -7,6 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FullTextFilterController : UIViewController<UITextFieldDelegate>
+@interface FullTextFilterController : UIViewController
 
 @end

@@ -23,6 +23,7 @@
     dateFormatter = [[NSDateFormatter alloc] init];
     
     XuniCalendar *calendar = [[XuniCalendar alloc] initWithFrame:CGRectZero];
+    calendar.headerBackgroundColor = [UIColor whiteColor];
     calendar.delegate = self;
     calendar.hidden = YES;
     calendar.tag = 1;
@@ -36,14 +37,28 @@
     dateLabel.text = @"";
     dateLabel.tag = 3;
     
+    UIView *view = [[UIView alloc]initWithFrame:CGRectZero];
+    view.backgroundColor  = [UIColor whiteColor];
+    view.userInteractionEnabled = YES;
+    view.layer.cornerRadius = 4;
+    view.tag = 4;
+    
     [self.view addSubview:pickBtn];
     [self.view addSubview:dateLabel];
+    [self.view addSubview:view];
     [self.view addSubview:calendar];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -54,34 +69,40 @@
     XuniCalendar *calendar = (XuniCalendar *)[self.view viewWithTag:1];
     UIButton *pickBtn = (UIButton *)[self.view viewWithTag:2];
     UILabel *dateLabel = (UILabel *)[self.view viewWithTag:3];
+    UIView *view = (UIView *)[self.view viewWithTag:4];
     
     pickBtn.frame = CGRectMake(10, 55 + 10, size.width - 10 - 10, 30);
     dateLabel.frame = CGRectMake((size.width - 280) / 2, 55 + 50, 280, 30);
     calendar.frame = CGRectMake((size.width - width) / 2, 55 + 140, width, width);
+    view.frame = CGRectMake((size.width - width) / 2 - 4, 55 + 140 - 4, width + 8, width + 8);
 }
 
 - (void)pickBtnClick:(id)sender {
     XuniCalendar *calendar = (XuniCalendar *)[self.view viewWithTag:1];
     calendar.hidden = !calendar.hidden;
+    if (calendar.hidden == NO) {
+        self.view.backgroundColor = [UIColor lightGrayColor];
+        self.navigationController.navigationBar.barTintColor = [UIColor lightGrayColor];
+    }
+    else
+    {
+        self.view.backgroundColor = [UIColor whiteColor];
+        self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    }
 }
 
-- (void)selectionChanged:(XuniCalendar *)sender args:(XuniCalendarSelectionChangedEventArgs *)args {
+- (void)selectionChanged:(XuniCalendar *)sender selectedDates:(XuniCalendarRange*)selectedDates {
     XuniCalendar *calendar = (XuniCalendar *)[self.view viewWithTag:1];
     UILabel *dateLabel = (UILabel *)[self.view viewWithTag:3];
     
     dateFormatter.dateFormat = @"M/d/yyyy";
-    dateLabel.text = [NSString stringWithFormat:@"The date %@ was selected.", [dateFormatter stringFromDate:args.selectedDates.startDate]];
+    dateLabel.text = [NSString stringWithFormat:@"The date %@ was selected.", [dateFormatter stringFromDate:selectedDates.startDate]];
     calendar.hidden = YES;
+    if (calendar.hidden == YES) {
+        self.view.backgroundColor = [UIColor whiteColor];
+        self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

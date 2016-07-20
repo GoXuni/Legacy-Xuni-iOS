@@ -7,12 +7,13 @@
 
 
 #import "DynamicChartsController.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 #import "DynamicChartData.h"
 
 @interface DynamicChartsController (){
     NSMutableArray *chartData;
 }
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
 
 @end
 
@@ -20,10 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"Dynamic Charts", nil)];
     
-    // Do any additional setup after loading the view.
-    FlexChart *chart = [[FlexChart alloc] init];
+    FlexChart *chart = self.chart;
     chartData = [DynamicChartData demoData];
     chart.bindingX = @"time";
     XuniSeries *trucks = [[XuniSeries alloc] initForChart:chart binding:@"trucks, trucks" name:@"Trucks"];
@@ -39,6 +38,8 @@
     chart.palette = [XuniPalettes coral];
     chart.tooltip.isVisible = false;
     
+    chart.loadAnimation.animationMode = XuniAnimationModePoint;
+    
     NSDate *d = [NSDate dateWithTimeIntervalSinceNow: chart.loadAnimation.duration + 0.1];
     NSTimer *timer = [[NSTimer alloc] initWithFireDate:d
                                               interval:1
@@ -49,35 +50,12 @@
     NSRunLoop *runner = [NSRunLoop currentRunLoop];
     [runner addTimer:timer forMode: NSDefaultRunLoopMode];
     
-    chart.tag = 1;
-    [self.view addSubview:chart];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    chart.frame = CGRectMake(0, 55, self.view.bounds.size.width, self.view.bounds.size.height - 55);
-    [chart setNeedsDisplay];
 }
 
 -(void)onTick{
-    FlexChart *chart = (FlexChart *)[self.view viewWithTag:1];
+    FlexChart *chart = self.chart;
     chart.isAnimated = NO;
     chart.itemsSource = [DynamicChartData dynamicData:chartData];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

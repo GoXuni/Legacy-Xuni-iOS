@@ -7,127 +7,87 @@
 
 #import "LineMarkerController.h"
 #import "ChartData.h"
-#import "XuniFlexChartKit/XuniFlexChartKit.h"
+@import XuniFlexChartDynamicKit;
 
-@interface LineMarkerController (){
-    NSMutableArray *interactionPickerData;
-    NSMutableArray *verticalPositionPickerData;
-}
+@interface LineMarkerController ()
+@property (weak, nonatomic) IBOutlet FlexChart *chart;
+@property (weak, nonatomic) IBOutlet UISlider *positionSelect;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *modeSelect;
 
 @end
 
 @implementation LineMarkerController
+- (IBAction)modeSelected:(id)sender {
+    int row = _modeSelect.selectedSegmentIndex;
+    if (row == 0) {
+        self.chart.lineMarker.interaction = XuniChartMarkerInteractionNone;
+    }
+    else if (row == 1){
+        self.chart.lineMarker.interaction = XuniChartMarkerInteractionMove;
+    }
+    else if (row == 2){
+        self.chart.lineMarker.interaction = XuniChartMarkerInteractionDrag;
+    }
+}
+
+- (IBAction)positionChanged:(id)sender {
+    double pos = self.positionSelect.value;
+    if(pos == 0) pos = NAN;
+    self.chart.lineMarker.verticalPosition = pos;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"Line Marker", nil)];
+    [self setTitle:@"Line Marker"];
     
-    // Do any additional setup after loading the view.
-    interactionPickerData = [[NSMutableArray alloc] initWithObjects: @"None", @"Move", @"Drag", nil];
-    verticalPositionPickerData = [[NSMutableArray alloc] initWithObjects: @"NaN", @"0", @"0.25",  @"0.5", @"0.75", @"1", nil];
-    
-    UIPickerView *interactionPicker = [[UIPickerView alloc] init];
-    interactionPicker.delegate = self;
-    
-    UIPickerView *verticalPositionPicker = [[UIPickerView alloc] init];
-    verticalPositionPicker.delegate = self;
-    
-    FlexChart *chart = [[FlexChart alloc] init];
     NSMutableArray *chartData = [ChartData demoData];
-    chart.bindingX = @"name";
+    self.chart.bindingX = @"name";
     
-    XuniSeries *sales = [[XuniSeries alloc] initForChart:chart binding:@"sales, sales" name:@"Sales"];
-    XuniSeries *expenses = [[XuniSeries alloc] initForChart:chart binding:@"expenses, expenses" name:@"Expenses"];
-    XuniSeries *downloads = [[XuniSeries alloc] initForChart:chart binding:@"downloads, downloads" name:@"Downloads"];
+    XuniSeries *sales = [[XuniSeries alloc] initForChart:self.chart binding:@"sales, sales" name:@"Sales"];
+    XuniSeries *expenses = [[XuniSeries alloc] initForChart:self.chart binding:@"expenses, expenses" name:@"Expenses"];
+    XuniSeries *downloads = [[XuniSeries alloc] initForChart:self.chart binding:@"downloads, downloads" name:@"Downloads"];
     
-    [chart.series addObject:sales];
-    [chart.series addObject:expenses];
-    [chart.series addObject:downloads];
+    [self.chart.series addObject:sales];
+    [self.chart.series addObject:expenses];
+    [self.chart.series addObject:downloads];
     
-    chart.itemsSource = chartData;
-    chart.chartType = XuniChartTypeBar;
+    self.chart.itemsSource = chartData;
+    self.chart.chartType = XuniChartTypeLine;
     
     // Implement Chart Line Marker.
-    MyMarkerView *view = [[MyMarkerView alloc] initWithLineMarker:chart.lineMarker];
+    MyMarkerView *view = [[MyMarkerView alloc] initWithLineMarker:self.chart.lineMarker];
     view.markerRender = [[MyChartMarkerRender alloc] initWithView:view];
-    chart.lineMarker.content = view;
-    chart.lineMarker.isVisible = YES;
-    chart.lineMarker.alignment = XuniChartMarkerAlignmentBottomRight;
-    chart.lineMarker.lines = XuniChartMarkerLinesVertical;
-    chart.lineMarker.interaction= XuniChartMarkerInteractionMove;
-    chart.lineMarker.dragContent = YES;
-    chart.lineMarker.seriesIndex = -1;
-    chart.lineMarker.verticalLineColor = [UIColor grayColor];
-    chart.lineMarker.verticalPosition = 0;
-    [chart addSubview:view];
+    self.chart.lineMarker.content = view;
+    self.chart.lineMarker.isVisible = YES;
+    self.chart.lineMarker.alignment = XuniChartMarkerAlignmentBottomRight;
+    self.chart.lineMarker.lines = XuniChartMarkerLinesVertical;
+    self.chart.lineMarker.interaction= XuniChartMarkerInteractionMove;
+    self.chart.lineMarker.dragContent = YES;
+    self.chart.lineMarker.seriesIndex = -1;
+    self.chart.lineMarker.verticalLineColor = [UIColor grayColor];
+    self.chart.lineMarker.verticalPosition = 0;
+    [self.chart addSubview:view];
     
-    chart.tag = 1;
-    interactionPicker.tag = 2;
-    verticalPositionPicker.tag = 3;
-    
-    [self.view addSubview:interactionPicker];
-    [self.view addSubview:verticalPositionPicker];
-    [self.view addSubview:chart];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    UIPickerView *interactionPicker = (UIPickerView*)[self.view viewWithTag:2];
-    [interactionPicker selectRow:1 inComponent:0 animated:NO];
+    _modeSelect.selectedSegmentIndex = 1;
+    _positionSelect.value = 0.001;
     
-    UIPickerView *verticalPositionPicker = (UIPickerView*)[self.view viewWithTag:3];
-    [verticalPositionPicker selectRow:1 inComponent:0 animated:NO];
+    [self modeSelected:nil];
+    [self positionChanged:nil];
 }
 
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    
-    FlexChart *chart = (FlexChart*)[self.view viewWithTag:1];
-    UIPickerView *interactionPicker = (UIPickerView*)[self.view viewWithTag:2];
-    UIPickerView *verticalPositionPicker = (UIPickerView*)[self.view viewWithTag:3];
-    CGFloat halfWidth = self.view.bounds.size.width / 2;
-    
-    interactionPicker.frame = CGRectMake(0, 30, halfWidth, 162);
-    verticalPositionPicker.frame = CGRectMake(halfWidth, 30, halfWidth, 162);
-    chart.frame = CGRectMake(0, 162, self.view.bounds.size.width, self.view.bounds.size.height - 162);
-    [chart setNeedsDisplay];
-}
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    if(pickerView.tag == 2){
-        return [interactionPickerData count];
-    }
-    else if(pickerView.tag == 3){
-        return [verticalPositionPickerData count];
-    }
-    else {
-        return 0;
-    }
-}
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     FlexChart *chart = (FlexChart *)[self.view viewWithTag:1];
     
     if(pickerView.tag == 2){
-        if (row == 0) {
-            chart.lineMarker.interaction = XuniChartMarkerInteractionNone;
-        }
-        else if (row == 1){
-            chart.lineMarker.interaction = XuniChartMarkerInteractionMove;
-        }
-        else if (row == 2){
-            chart.lineMarker.interaction = XuniChartMarkerInteractionDrag;
-        }
+
     }
     else if(pickerView.tag == 3){
         if (row == 0) {
@@ -151,27 +111,7 @@
     }
 }
 
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    if(pickerView.tag == 2){
-        return [interactionPickerData objectAtIndex:row];
-    }
-    else if(pickerView.tag == 3){
-        return [verticalPositionPickerData objectAtIndex:row];
-    }
-    else{
-        return @"error";
-    }
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
 

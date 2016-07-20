@@ -14,7 +14,7 @@ class CustomAppearanceController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Custom Appearance"
+        self.title = NSLocalizedString("Custom Appearance", comment: "")
 
         // Do any additional setup after loading the view.
         _calendar.borderColor = UIColor.blackColor()

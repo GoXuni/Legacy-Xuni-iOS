@@ -1,0 +1,105 @@
+
+/* Class = "UILabel"; text = "Shows how to use the control as a pop-up date selector"; ObjectID = "0HI-zA-RCs"; */
+"0HI-zA-RCs.text" = "Shows how to use the control as a pop-up date selector";
+
+/* Class = "UILabel"; text = "Vertical Orientation"; ObjectID = "0Nj-ZU-T5v"; */
+"0Nj-ZU-T5v.text" = "Vertical Orientation";
+
+/* Class = "UITableViewController"; title = "Calendar101"; ObjectID = "0R6-jw-zkF"; */
+"0R6-jw-zkF.title" = "Calendar101";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "1bA-g4-CVS"; */
+"1bA-g4-CVS.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "3Rs-q1-T7Z"; */
+"3Rs-q1-T7Z.text" = ">";
+
+/* Class = "UIBarButtonItem"; title = "Today"; ObjectID = "8j6-O0-4Q4"; */
+"8j6-O0-4Q4.title" = "Today";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "C8f-b3-dfv"; */
+"C8f-b3-dfv.text" = ">";
+
+/* Class = "UINavigationItem"; title = "Custom Day Content"; ObjectID = "H0l-ky-yYx"; */
+"H0l-ky-yYx.title" = "Custom Day Content";
+
+/* Class = "UILabel"; text = "Custom Selection"; ObjectID = "J1v-Ac-Fc2"; */
+"J1v-Ac-Fc2.text" = "Custom Selection";
+
+/* Class = "UILabel"; text = "Shows custom selection scenarios"; ObjectID = "K3Y-fL-wIP"; */
+"K3Y-fL-wIP.text" = "Shows custom selection scenarios";
+
+/* Class = "UINavigationItem"; title = "Custom Appearance"; ObjectID = "MGE-lf-VHs"; */
+"MGE-lf-VHs.title" = "Custom Appearance";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "MMz-IR-Bsc"; */
+"MMz-IR-Bsc.text" = ">";
+
+/* Class = "UILabel"; text = "Shows a calendar with vertical navigation/scrolling"; ObjectID = "NIM-N7-jll"; */
+"NIM-N7-jll.text" = "Shows a calendar with vertical navigation/scrolling";
+
+/* Class = "UILabel"; text = "Getting Started"; ObjectID = "NQl-kn-6CR"; */
+"NQl-kn-6CR.text" = "Getting Started";
+
+/* Class = "UINavigationItem"; title = "Custom Header"; ObjectID = "Pju-Sf-Y9T"; */
+"Pju-Sf-Y9T.title" = "Custom Header";
+
+/* Class = "UILabel"; text = "Shows a basic calendar with selection and interaction"; ObjectID = "QuJ-WX-DHe"; */
+"QuJ-WX-DHe.text" = "Shows a basic calendar with selection and interaction";
+
+/* Class = "UILabel"; text = "Custom Appearance"; ObjectID = "RM7-yp-3hJ"; */
+"RM7-yp-3hJ.text" = "Custom Appearance";
+
+/* Class = "UILabel"; text = "Custom Header"; ObjectID = "SBF-Rv-TpF"; */
+"SBF-Rv-TpF.text" = "Custom Header";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SNj-QB-QKl"; */
+"SNj-QB-QKl.text" = "Label";
+
+/* Class = "UILabel"; text = "Popup Editor"; ObjectID = "Sb2-tA-wqI"; */
+"Sb2-tA-wqI.text" = "Popup Editor";
+
+/* Class = "UISegmentedControl"; Uid-0L-7EV.segmentTitles[0] = "Month"; ObjectID = "Uid-0L-7EV"; */
+"Uid-0L-7EV.segmentTitles[0]" = "Month";
+
+/* Class = "UISegmentedControl"; Uid-0L-7EV.segmentTitles[1] = "Year"; ObjectID = "Uid-0L-7EV"; */
+"Uid-0L-7EV.segmentTitles[1]" = "Year";
+
+/* Class = "UILabel"; text = "Shows a calendar with a custom style"; ObjectID = "Xi1-s4-npw"; */
+"Xi1-s4-npw.text" = "Shows a calendar with a custom style";
+
+/* Class = "UILabel"; text = "Shows a custom header inspired by a popular Android or iOS calendar app"; ObjectID = "ZaX-XG-k3O"; */
+"ZaX-XG-k3O.text" = "Shows a custom header inspired by a popular Android or iOS calendar app";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "bEZ-7Z-hbL"; */
+"bEZ-7Z-hbL.text" = ">";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "d82-8O-bpn"; */
+"d82-8O-bpn.text" = ">";
+
+/* Class = "UINavigationItem"; title = "Calendar101"; ObjectID = "f7P-D1-vH0"; */
+"f7P-D1-vH0.title" = "Calendar101";
+
+/* Class = "UILabel"; text = "Shows how to customize a day slot to show custom content"; ObjectID = "jNU-sj-ZJZ"; */
+"jNU-sj-ZJZ.text" = "Shows how to customize a day slot to show custom content";
+
+/* Class = "UINavigationItem"; title = "Vertical Orientation"; ObjectID = "jbF-Qn-Ylf"; */
+"jbF-Qn-Ylf.title" = "Vertical Orientation";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "muQ-Dv-j0T"; */
+"muQ-Dv-j0T.text" = ">";
+
+/* Class = "UILabel"; text = "Custom Day Content"; ObjectID = "oky-vv-ZVE"; */
+"oky-vv-ZVE.text" = "Custom Day Content";
+
+/* Class = "UINavigationItem"; title = "Custom Selection"; ObjectID = "tqq-2h-9gq"; */
+"tqq-2h-9gq.title" = "Custom Selection";
+
+/* Class = "UINavigationItem"; title = "Getting Started"; ObjectID = "uKQ-Hb-dhw"; */
+"uKQ-Hb-dhw.title" = "Getting Started";
+
+/* Class = "UINavigationController"; title = "Calendar101"; ObjectID = "vRJ-fS-8VE"; */
+"vRJ-fS-8VE.title" = "Calendar101";
+
+/* Class = "UILabel"; text = "Step1: Select a date. Step2: Select another date in a different week. Observe: The weekend days are not selected."; ObjectID = "ziH-bD-d63"; */
+"ziH-bD-d63.text" = "Step1: Select a date. Step2: Select another date in a different week. Observe: The weekend days are not selected.";

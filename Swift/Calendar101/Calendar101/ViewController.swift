@@ -10,6 +10,24 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let samplesTitle = [
+        NSLocalizedString("Getting Started", comment: ""),
+        NSLocalizedString("Vertical Orientation", comment: ""),
+        NSLocalizedString("Custom Day Content", comment: ""),
+        NSLocalizedString("Custom Header", comment: ""),
+        NSLocalizedString("Custom Appearance", comment: ""),
+        NSLocalizedString("Popup Editor", comment: ""),
+        NSLocalizedString("Custom Selection", comment: "")]
+    
+    let samplesDescription = [
+        NSLocalizedString("Shows a basic calendar with selection and interaction.", comment: ""),
+        NSLocalizedString("Shows a calendar with vertical navigation/scrolling.", comment: ""),
+        NSLocalizedString("Shows how to customize a day slot to show custom content.", comment: ""),
+        NSLocalizedString("Shows a custom header inspired by a popular Android or iOS calendar app.", comment: ""),
+        NSLocalizedString("Shows a calendar with a custom style.", comment: ""),
+        NSLocalizedString("Shows how to use the control as a pop-up date selector.", comment: ""),
+        NSLocalizedString("Shows custom selection scenarios.", comment: "")]
+    
+    let samplesImage = [
         "Getting Started",
         "Vertical Orientation",
         "Custom Day Content",
@@ -17,15 +35,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         "Custom Appearance",
         "Popup Editor",
         "Custom Selection"]
-    
-    let samplesDescription = [
-        "Shows a basic calendar with selection and interaction.",
-        "Shows a calendar with vertical navigation/scrolling.",
-        "Shows how to customize a day slot to show custom content.",
-        "Shows a custom header inspired by a popular Android or iOS calendar app.",
-        "Shows a calendar with a custom style.",
-        "Shows how to use the control as a pop-up date selector.",
-        "Shows custom selection scenarios."]
     
     let SimpleIdentifier = "SimpleIdentifier"
     
@@ -58,7 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var cell : UITableViewCell?
         var imageName : String
         
-        imageName = samplesTitle[row].stringByReplacingOccurrencesOfString(" ", withString: "")
+        imageName = samplesImage[row].stringByReplacingOccurrencesOfString(" ", withString: "")
         imageName = imageName.lowercaseString + ".png"
         
         if(cell == nil){

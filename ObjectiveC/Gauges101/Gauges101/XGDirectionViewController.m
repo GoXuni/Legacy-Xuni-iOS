@@ -5,7 +5,7 @@
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
 
-#import <XuniGaugeKit/XuniGaugeKit.h>
+@import XuniGaugeDynamicKit;
 #import "XGDirectionViewController.h"
 
 @interface XGDirectionViewController ()
@@ -101,37 +101,11 @@
     [super viewDidLoad];
     
     _linearGauge.isReadOnly = _bulletGraph.isReadOnly = false;
-    
-      _linearGauge.backgroundColor = _bulletGraph.backgroundColor = [UIColor clearColor];
-    
-    _linearGauge.showText = _bulletGraph.showText = XuniShowTextAll;
-    
-    _bulletGraph.backgroundColor = _linearGauge.backgroundColor = [UIColor clearColor];
-    _bulletGraph.pointerColor = _linearGauge.pointerColor =  [UIColor whiteColor];
-    _bulletGraph.faceBorderWidth = _linearGauge.faceBorderWidth =  1;
-    _bulletGraph.faceBorderColor = _linearGauge.faceBorderColor = [UIColor whiteColor];
-    _linearGauge.faceColor = [UIColor clearColor];
-    _bulletGraph.faceColor = [UIColor whiteColor];
-    _bulletGraph.valueFontColor = _linearGauge.valueFontColor = [UIColor blueColor];
-    _bulletGraph.minFontColor = _linearGauge.minFontColor = [UIColor whiteColor];
-    _bulletGraph.maxFontColor = _linearGauge.maxFontColor = [UIColor whiteColor];
-    _bulletGraph.valueFont = _linearGauge.valueFont = [UIFont fontWithName:@"Optima" size:19];
-    
-    _bulletGraph.thickness = 0.6;
-    _bulletGraph.min = 0;
-    _bulletGraph.max = 100;
-    _bulletGraph.bad = 45;
-    _bulletGraph.good = 80;
-    _bulletGraph.target = 90;
-    _bulletGraph.value = 80;
+
     _bulletGraph.pointer.thickness = 0.5;
     _bulletGraph.loadAnimation.duration = 2;
     _bulletGraph.updateAnimation.duration = 0.5;
     
-    _linearGauge.thickness = 0.6;
-    _linearGauge.min = 0;
-    _linearGauge.max = 100;
-    _linearGauge.value = 80;
     _linearGauge.loadAnimation.duration = 2;
     _linearGauge.updateAnimation.duration = 0.5;
     

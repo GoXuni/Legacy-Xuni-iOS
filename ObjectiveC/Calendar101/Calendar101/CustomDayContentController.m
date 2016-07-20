@@ -8,6 +8,7 @@
 #import "CustomDayContentController.h"
 
 @interface CustomDayContentController ()
+@property (weak, nonatomic) IBOutlet XuniCalendar *calendar;
 
 @end
 
@@ -18,47 +19,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Custom Day Content"];
     
-    // Do any additional setup after loading the view.
     weatherIcon = [[NSArray alloc] initWithObjects:@"sunny", @"cloudy", @"rainy", @"stomy", nil];
     dotIcon = [[NSArray alloc] initWithObjects:@"blue", @"red", @"green", nil];
     
-    XuniCalendar *calendar = [[XuniCalendar alloc] initWithFrame:CGRectZero];
-    calendar.delegate = self;
-    calendar.dayOfWeekFormat = XuniDayOfWeekFormatDDDD;
-    calendar.calendarFont = [UIFont systemFontOfSize:14];
-    calendar.todayFont = [UIFont boldSystemFontOfSize:14];
-    calendar.tag = 1;
-    
-    [self.view addSubview:calendar];
+    self.calendar.delegate = self;
+    self.calendar.dayOfWeekFormat = XuniDayOfWeekFormatDDDD;
+    self.calendar.calendarFont = [UIFont systemFontOfSize:14];
+    self.calendar.todayFont = [UIFont boldSystemFontOfSize:14];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dayOfWeekSlotLoading:(XuniCalendar *)sender dayOfWeek:(XuniDayOfWeek)dayOfWeek isWeekend:(BOOL)isWeekend dayOfWeekSlot:(UILabel*)dayOfWeekSlot {
+    dayOfWeekSlot.font = isWeekend ? [UIFont italicSystemFontOfSize:11.0] : [UIFont boldSystemFontOfSize:11.0];
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
-    CGSize size = self.view.bounds.size;
-    CGFloat width = fminf(size.width, size.height);
-    XuniCalendar *calendar = (XuniCalendar *)[self.view viewWithTag:1];
-    calendar.frame = CGRectMake(0, 75, width, width - 75);
-}
-
-- (void)dayOfWeekSlotLoading:(XuniCalendar *)sender args:(XuniCalendarDayOfWeekSlotLoadingEventArgs *)args {
-    args.dayOfWeekSlot.font = args.isWeekend ? [UIFont italicSystemFontOfSize:11.0] : [UIFont boldSystemFontOfSize:11.0];
-}
-
-- (void)daySlotLoading:(XuniCalendar *)sender args:(XuniCalendarDaySlotLoadingEventArgs *)args {
-    if (args.isAdjacentDay) {
-        return;
+- (XuniCalendarDaySlotBase*)daySlotLoading:(XuniCalendar *)sender date:(NSDate*)date isAdjacentDay:(BOOL)isAdjacentDay daySlot:(XuniCalendarDaySlotBase*)daySlot {
+    if (isAdjacentDay) {
+        return daySlot;
     }
     
-    NSInteger day = [[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:args.date].day;
-    CGRect rect = args.daySlot.frame;
+    NSInteger day = [[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:date].day;
+    CGRect rect = daySlot.frame;
     CGSize size = rect.size;
     CGRect rect1, rect2;
     XuniCalendarImageDaySlot *imageDaySlot = [[XuniCalendarImageDaySlot alloc] initWithCalendar:sender frame:rect];
@@ -81,17 +63,7 @@
         imageDaySlot.imageSource = [UIImage imageNamed:[dotIcon objectAtIndex:(day % 3)]];
     }
     
-    args.daySlot = imageDaySlot;
+    return imageDaySlot;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

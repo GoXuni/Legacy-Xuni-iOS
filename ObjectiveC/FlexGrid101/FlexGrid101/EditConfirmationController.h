@@ -7,12 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "XuniFlexGridKit/XuniFlexGridKit.h"
-@interface EditConfirmationController : UIViewController<FlexGridDelegate>
-
-
--(bool)beginningEdit:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range;
--(bool)cellEditEnding:(FlexGrid *)sender panel:(FlexGridPanel *)panel forRange:(FlexCellRange *)range cancel:(BOOL)cancel;
-
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
+@interface EditConfirmationController : UIViewController
 
 @end

@@ -1,64 +1,37 @@
 //
-//  FrozenCellsController.swift
+//  FrozenCellsController.h
 //  FlexGrid101
 //
-//  Created by Mykola Kotyuck on 21.10.15.
 //  Copyright © 2015 GrapeCity. All rights reserved.
 //
-
 import UIKit
-import XuniFlexGridKit
+import XuniCoreDynamicKit
+import XuniFlexGridDynamicKit
 
 class FrozenCellsController: UIViewController {
-    var _flex = FlexGrid()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        _flex.isReadOnly = true
-        _flex.columnHeaderFont = UIFont.boldSystemFontOfSize(_flex.columnHeaderFont.pointSize)
-        _flex.itemsSource = CustomerData.getCustomerData(100)
-        _flex.autoSizeColumns(0, to: Int32(Int(_flex.columns.count)-1))
-        _flex.frozenRows = 1
-        _flex.frozenColumns = 1
-        
-        _flex.allowMerging = FlexGridAllowMerging.Cells;
-        
-        for(var i = 0; i<Int(_flex.columns.count); i++)
-        {
-            let fc: FlexColumn = _flex.columns.objectAtIndex(UInt(i)) as! FlexColumn
-            fc.allowMerging = true
+        self.flex.columnHeaderFont = UIFont.boldSystemFontOfSize(self.flex.columnHeaderFont.pointSize)
+        self.flex.isReadOnly = true
+        self.flex.itemsSource = NSMutableArray(array:CustomerData.getCustomerData(100))
+        self.flex.frozenColumns = 1
+        self.flex.frozenRows = 1
+        self.flex.allowMerging = GridAllowMerging.Cells
+        for i:UInt in 0 ..< self.flex.columns.count {
+            let fc: GridColumn = self.flex.columns![Int32(i)] as! GridColumn
+            if (fc.binding == "country") {
+                fc.allowMerging = true
+            }
         }
-        
-        
-        self.view.addSubview(_flex)
+        self.flex.autoSizeColumns(0, to: Int32(self.flex.columns.count - 1))
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        if (self.navigationController == nil) {return;}
-        
-        let ss = UIApplication.sharedApplication().statusBarFrame.size.height + self.navigationController!.navigationBar.intrinsicContentSize().height;
-        
-        _flex.frame = CGRectMake(0, ss, self.view.bounds.size.width, self.view.bounds.size.height - ss)
-        _flex.setNeedsDisplay()
-    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    @IBOutlet weak var flex: FlexGrid!
 }
+//
+//  FrozenCellsController.m
+//  FlexGrid101
+//
+//  Copyright © 2015 GrapeCity. All rights reserved.
+//

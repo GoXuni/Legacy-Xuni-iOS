@@ -1,0 +1,49 @@
+/* 
+  Localizable.strings
+  Calendar101
+
+  Copyright (c) 2015 GrapeCity. All rights reserved.
+*/
+
+// Samples Title
+"Getting Started" = "Getting Started";
+
+"Vertical Orientation" = "Vertical Orientation";
+
+"Custom Day Content" = "Custom Day Content";
+
+"Custom Header" = "Custom Header";
+
+"Custom Appearance" = "Custom Appearance";
+
+"Popup Editor" = "Popup Editor";
+
+"Custom Selection" = "Custom Selection";
+
+// Samples Description
+"Shows a basic calendar with selection and interaction." = "Shows a basic calendar with selection and interaction.";
+
+"Shows a calendar with vertical navigation/scrolling." = "Shows a calendar with vertical navigation/scrolling.";
+
+"Shows how to customize a day slot to show custom content." = "Shows how to customize a day slot to show custom content.";
+
+"Shows a custom header inspired by a popular Android or iOS calendar app." = "Shows a custom header inspired by a popular Android or iOS calendar app.";
+
+"Shows a calendar with a custom style." = "Shows a calendar with a custom style.";
+
+"Shows how to use the control as a pop-up date selector." = "Shows how to use the control as a pop-up date selector.";
+
+"Shows custom selection scenarios." = "Shows custom selection scenarios.";
+
+// Strings
+"Month View" = "Month View";
+
+"Year View" = "Year View";
+
+"Today" = "Today";
+
+"Step1: Select a date.\nStep2: Select another date in a different week.\nObserve: The weekend days are not selected." = "Step1: Select a date.\nStep2: Select another date in a different week.\nObserve: The weekend days are not selected.";
+
+"Pick a date" = "Pick a date";
+
+"The date %@ was selected." = "The date %@ was selected.";

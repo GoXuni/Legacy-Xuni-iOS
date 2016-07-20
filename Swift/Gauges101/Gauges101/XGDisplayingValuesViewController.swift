@@ -5,7 +5,7 @@
 //  Copyright © 2016 GrapeCity. All rights reserved.
 //
 import UIKit
-import XuniGaugeKit
+import XuniGaugeDynamicKit
 
 class XGDisplayingValuesViewController: UIViewController {
 
@@ -51,10 +51,12 @@ class XGDisplayingValuesViewController: UIViewController {
         self.radialGauge.isReadOnly = false
         self.radialGauge.startAngle = 90
         self.radialGauge.sweepAngle = 90
-        radialGauge.gaugeValueChanged.addHandler({(sender: NSObject!, args: XuniEventArgs!) -> Void in
+        
+        radialGauge.gaugeValueChanged.addHandler({ (a) in
             self.valueStepper.value = self.radialGauge.value
             self.stepperValueChanged(self)
-        }, forObject: self)
+            }, forObject: self)
+        
         self.linearGauge.min = valueStepper.minimumValue
         self.linearGauge.max = valueStepper.maximumValue
         self.linearGauge.value = valueStepper.value
@@ -62,7 +64,7 @@ class XGDisplayingValuesViewController: UIViewController {
         self.linearGauge.updateAnimation.duration = 0.5
         self.linearGauge.isReadOnly = false
         self.linearGauge.backgroundColor = UIColor.clearColor()
-        linearGauge.gaugeValueChanged.addHandler({(sender: NSObject!, args: XuniEventArgs!) -> Void in
+        linearGauge.gaugeValueChanged.addHandler({(a) in
             self.valueStepper.value = self.linearGauge.value
             self.stepperValueChanged(self)
         }, forObject: self)

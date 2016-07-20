@@ -7,9 +7,10 @@
 
 #import "FrozenCellsController.h"
 #import "CustomerData.h"
-#import "XuniFlexGridKit/XuniFlexGridKit.h"
+#import "XuniFlexGridDynamicKit/XuniFlexGridDynamicKit.h"
 
 @interface FrozenCellsController ()
+@property (weak, nonatomic) IBOutlet FlexGrid *flex;
 
 @end
 
@@ -17,42 +18,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    FlexGrid *flex = [[FlexGrid alloc] init];
-    flex.columnHeaderFont = [UIFont boldSystemFontOfSize:flex.columnHeaderFont.pointSize];
-    flex.isReadOnly = true;
-    flex.itemsSource = [CustomerData getCustomerData:100];
-    flex.tag = 1;
     
-    flex.frozenColumns = 1;
-    flex.frozenRows = 1;
+    self.flex.columnHeaderFont = [UIFont boldSystemFontOfSize:self.flex.columnHeaderFont.pointSize];
+    self.flex.isReadOnly = true;
+    self.flex.itemsSource = [CustomerData getCustomerData:100];
     
-    flex.allowMerging = FlexGridAllowMergingCells;
+    self.flex.frozenColumns = 1;
+    self.flex.frozenRows = 1;
     
-    for(int i = 0; i<flex.columns.count; i++)
+    self.flex.allowMerging = GridAllowMergingCells;
+    
+    for(int i = 0; i<self.flex.columns.count; i++)
     {
-        FlexColumn* fc = [flex.columns objectAtIndex:i];
-        fc.allowMerging = true;
+        GridColumn* fc = [self.flex.columns objectAtIndex:i];
+        if([fc.binding isEqualToString: @"country"]) fc.allowMerging = true;
     }
     
-    [flex autoSizeColumns:0 to:flex.columns.count-1];
-    [self.view addSubview:flex];
+    [self.flex autoSizeColumns:0 to:self.flex.columns.count-1];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    FlexGrid *flex = (FlexGrid*)[self.view viewWithTag:1];
-    
-    CGFloat ss = [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.intrinsicContentSize.height;
-    
-    flex.frame = CGRectMake(0, ss, self.view.bounds.size.width, self.view.bounds.size.height - ss);
-    [flex setNeedsDisplay];
-}
-
 
 @end

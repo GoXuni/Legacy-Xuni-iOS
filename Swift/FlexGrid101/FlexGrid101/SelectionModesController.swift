@@ -1,79 +1,55 @@
 //
-//  SelectionModesController.swift
+//  SelectionModesController.h
 //  FlexGrid101
 //
 //  Copyright (c) 2015 GrapeCity. All rights reserved.
 //
-
 import UIKit
-import XuniFlexGridKit
+import XuniCoreDynamicKit
+import XuniFlexGridDynamicKit
 
-class SelectionModesController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SelectionModesController: UIViewController {
 
-    var _selectionModePicker = UIPickerView()
-    var _flex = FlexGrid()
-    var _pickerData = NSMutableArray()
-    
+    @IBAction func modeSwitched(sender: AnyObject) {
+        let row: Int = self.modeSwitch.selectedSegmentIndex
+        if row == 0 {
+            self.flex.selectionMode = GridSelectionMode.None
+        }
+        else if row == 1 {
+            self.flex.selectionMode = GridSelectionMode.Cell
+        }
+        else if row == 2 {
+            self.flex.selectionMode = GridSelectionMode.CellRange
+        }
+        else if row == 3 {
+            self.flex.selectionMode = GridSelectionMode.Row
+        }
+        else if row == 4 {
+            self.flex.selectionMode = GridSelectionMode.RowRange
+        }
+
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        _pickerData = [NSLocalizedString("None", comment: ""), NSLocalizedString("Cell", comment: ""), NSLocalizedString("Cell Range", comment: ""), NSLocalizedString("Row", comment: ""), NSLocalizedString("Row Range", comment: "")]
-        
-        _flex.isReadOnly = true
-        _flex.itemsSource = CustomerData.getCustomerData(100)
-        
-        _selectionModePicker.delegate = self
-        _selectionModePicker.showsSelectionIndicator = true
-        _selectionModePicker.hidden = false
-        
-        self.view.addSubview(_flex)
-        self.view.addSubview(_selectionModePicker)
+        self.flex.isReadOnly = true
+        self.flex.columnHeaderFont = UIFont.boldSystemFontOfSize(self.flex.columnHeaderFont.pointSize)
+        self.flex.selectionMode = GridSelectionMode.None
+        self.flex.itemsSource = NSMutableArray(array:CustomerData.getCustomerData(100))
+        self.flex.flexGridSelectionChanged.addHandler({(eventContainer: XuniEventContainer!) -> Void in
+            let selected = self.flex.selection.columnSpan * self.flex.selection.rowSpan
+            self.selectedCount.title = "\(selected) selected"
+        }, forObject: self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        _flex.frame = CGRectMake(0, 206, self.view.bounds.size.width, (self.view.bounds.size.height-206))
-        _selectionModePicker.frame = CGRectMake(self.view.bounds.size.width/4, 44, self.view.bounds.size.width/2, 162)
-        _flex.setNeedsDisplay()
-    }
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return _pickerData.count
-    }
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        switch (row) {
-        case 0:
-            _flex.selectionMode = FlexSelectionMode.None
-        case 1:
-            _flex.selectionMode = FlexSelectionMode.Cell
-        case 2:
-            _flex.selectionMode = FlexSelectionMode.CellRange
-        case 3:
-            _flex.selectionMode = FlexSelectionMode.Row
-        case 4:
-            _flex.selectionMode = FlexSelectionMode.RowRange
-        default:
-            break;
-        }
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return _pickerData.objectAtIndex(row) as? String
-    }    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    @IBOutlet weak var flex: FlexGrid!
+    @IBOutlet weak var modeSwitch: UISegmentedControl!
+    @IBOutlet weak var selected: UIBarButtonItem!
+    @IBOutlet weak var selectedCount: UIBarButtonItem!
 }
+//
+//  SelectionModesController.m
+//  FlexGrid101
+//
+//  Copyright (c) 2015 GrapeCity. All rights reserved.
+//

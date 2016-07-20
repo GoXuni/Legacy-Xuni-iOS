@@ -85,4 +85,16 @@ class ChartPoint : NSObject {
         
         return points
     }
+    
+    class func generateRandomData(count: Int) -> NSMutableArray {
+        let points = NSMutableArray()
+
+        
+        for var i = 0; i < count; i++ {
+            var random :Double = (Double)(arc4random()%10000) + 100.0
+            points.addObject(ChartPoint.init(x: (Double)(i*10), y: random))
+        }
+        
+        return points
+    }
 }

@@ -1,18 +1,18 @@
-
+﻿
 /* Class = "UIViewController"; title = "Displaying Values"; ObjectID = "08v-Js-otx"; */
-"08v-Js-otx.title" = "Displaying Values";
+"08v-Js-otx.title" = "値の表示";
 
 /* Class = "UILabel"; text = "Getting Started"; ObjectID = "1ee-Cf-CWG"; */
-"1ee-Cf-CWG.text" = "Getting Started";
+"1ee-Cf-CWG.text" = "Gaugeの基本機能";
 
 /* Class = "UILabel"; text = "Target:"; ObjectID = "3ED-w9-Ppg"; */
-"3ED-w9-Ppg.text" = "Target:";
+"3ED-w9-Ppg.text" = "目標値:";
 
 /* Class = "UILabel"; text = "Using Ranges"; ObjectID = "7J6-GK-aNv"; */
-"7J6-GK-aNv.text" = "Using Ranges";
+"7J6-GK-aNv.text" = "範囲の使用";
 
 /* Class = "UIViewController"; title = "Direction"; ObjectID = "8HJ-fh-1SY"; */
-"8HJ-fh-1SY.title" = "Direction";
+"8HJ-fh-1SY.title" = "ポインタの方向";
 
 /* Class = "UINavigationItem"; title = "Gauges101"; ObjectID = "8Wf-a8-DaP"; */
 "8Wf-a8-DaP.title" = "Gauges101";
@@ -21,25 +21,25 @@
 "90n-xp-2bQ.text" = ">";
 
 /* Class = "UIViewController"; title = "Using Ranges"; ObjectID = "97A-vA-PeO"; */
-"97A-vA-PeO.title" = "Using Ranges";
+"97A-vA-PeO.title" = "範囲の使用";
 
 /* Class = "UILabel"; text = "Automatic Scaling"; ObjectID = "9Cb-yd-23P"; */
-"9Cb-yd-23P.text" = "Automatic Scaling";
+"9Cb-yd-23P.text" = "自動スケーリング";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "9NI-Dt-7eP"; */
 "9NI-Dt-7eP.text" = ">";
 
 /* Class = "UILabel"; text = "BulletGraph"; ObjectID = "9el-8a-fhh"; */
-"9el-8a-fhh.text" = "BulletGraph";
+"9el-8a-fhh.text" = "ブレットグラフ";
 
 /* Class = "UITableViewController"; title = "Gauges101"; ObjectID = "AU1-cr-RgQ"; */
 "AU1-cr-RgQ.title" = "Gauges101";
 
 /* Class = "UILabel"; text = "Shows custom animation techniques"; ObjectID = "Alq-na-nFv"; */
-"Alq-na-nFv.text" = "Shows custom animation techniques";
+"Alq-na-nFv.text" = "カスタマイズしたアニメーション効果";
 
 /* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "FBK-za-8GA"; */
-"FBK-za-8GA.title" = "Save";
+"FBK-za-8GA.title" = "保存";
 
 /* Class = "UILabel"; text = "25"; ObjectID = "FxO-w8-ck0"; */
 "FxO-w8-ck0.text" = "25";
@@ -51,10 +51,10 @@
 "HBI-Dp-7R8.text" = "25";
 
 /* Class = "UIViewController"; title = "Getting Started"; ObjectID = "K37-G5-oNb"; */
-"K37-G5-oNb.title" = "Getting Started";
+"K37-G5-oNb.title" = "Gaugeの基本機能";
 
 /* Class = "UILabel"; text = "Value:"; ObjectID = "L1J-cb-T1O"; */
-"L1J-cb-T1O.text" = "Value:";
+"L1J-cb-T1O.text" = "値:";
 
 /* Class = "UILabel"; text = "25"; ObjectID = "MY9-fZ-afe"; */
 "MY9-fZ-afe.text" = "25";
@@ -63,70 +63,70 @@
 "OGj-UI-bB3.text" = "25";
 
 /* Class = "UILabel"; text = "Bad:"; ObjectID = "Pub-T4-qcT"; */
-"Pub-T4-qcT.text" = "Bad:";
+"Pub-T4-qcT.text" = "不良値:";
 
 /* Class = "UILabel"; text = "Direction"; ObjectID = "SAF-Yp-pdT"; */
-"SAF-Yp-pdT.text" = "Direction";
+"SAF-Yp-pdT.text" = "ポインタの方向";
 
 /* Class = "UINavigationItem"; title = "Export Image"; ObjectID = "SNe-ez-n5s"; */
-"SNe-ez-n5s.title" = "Export Image";
+"SNe-ez-n5s.title" = "画像のエクスポート";
 
 /* Class = "UIBarButtonItem"; title = "Take"; ObjectID = "SfY-tf-4K4"; */
-"SfY-tf-4K4.title" = "Take";
+"SfY-tf-4K4.title" = "画像を取得";
 
 /* Class = "UILabel"; text = "25"; ObjectID = "V8W-Od-sjy"; */
 "V8W-Od-sjy.text" = "25";
 
 /* Class = "UILabel"; text = "Shows a radial gauge with different sweep angles"; ObjectID = "Van-sG-8er"; */
-"Van-sG-8er.text" = "Shows a radial gauge with different sweep angles";
+"Van-sG-8er.text" = "角度が異なる円形ゲージを表示";
 
 /* Class = "UIViewController"; title = "Export Image"; ObjectID = "WDz-EX-ieM"; */
-"WDz-EX-ieM.title" = "Export Image";
+"WDz-EX-ieM.title" = "画像へのエクスポート";
 
 /* Class = "UILabel"; text = "Displaying Values"; ObjectID = "Wge-Jg-8BX"; */
-"Wge-Jg-8BX.text" = "Displaying Values";
+"Wge-Jg-8BX.text" = "値ラベルの表示";
 
 /* Class = "UILabel"; text = "Export Image"; ObjectID = "XMx-92-4cz"; */
-"XMx-92-4cz.text" = "Export Image";
+"XMx-92-4cz.text" = "画像へのエクスポート";
 
 /* Class = "UILabel"; text = "Bullet Graph"; ObjectID = "XNt-pY-JQX"; */
-"XNt-pY-JQX.text" = "Bullet Graph";
+"XNt-pY-JQX.text" = "ブレットグラフ";
 
 /* Class = "UILabel"; text = "Shows how to export an image of a gauge"; ObjectID = "XWe-Ze-WII"; */
-"XWe-Ze-WII.text" = "Shows how to export an image of a gauge";
+"XWe-Ze-WII.text" = "ゲージを画像として表示する方法";
 
 /* Class = "UILabel"; text = "Animation"; ObjectID = "Xl9-rg-7Sy"; */
-"Xl9-rg-7Sy.text" = "Animation";
+"Xl9-rg-7Sy.text" = "アニメーション";
 
 /* Class = "UISegmentedControl"; YMs-gj-yEm.segmentTitles[0] = "Right"; ObjectID = "YMs-gj-yEm"; */
-"YMs-gj-yEm.segmentTitles[0]" = "Right";
+"YMs-gj-yEm.segmentTitles[0]" = "右(Right)";
 
 /* Class = "UISegmentedControl"; YMs-gj-yEm.segmentTitles[1] = "Left"; ObjectID = "YMs-gj-yEm"; */
-"YMs-gj-yEm.segmentTitles[1]" = "Left";
+"YMs-gj-yEm.segmentTitles[1]" = "左(Left)";
 
 /* Class = "UISegmentedControl"; YMs-gj-yEm.segmentTitles[2] = "Down"; ObjectID = "YMs-gj-yEm"; */
-"YMs-gj-yEm.segmentTitles[2]" = "Down";
+"YMs-gj-yEm.segmentTitles[2]" = "下(Down)";
 
 /* Class = "UISegmentedControl"; YMs-gj-yEm.segmentTitles[3] = "Up"; ObjectID = "YMs-gj-yEm"; */
-"YMs-gj-yEm.segmentTitles[3]" = "Up";
+"YMs-gj-yEm.segmentTitles[3]" = "上(Up)";
 
 /* Class = "UILabel"; text = "Radial Gauge:"; ObjectID = "aG3-kp-5yy"; */
-"aG3-kp-5yy.text" = "Radial Gauge:";
+"aG3-kp-5yy.text" = "円形ゲージ";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "bGa-Ca-sVM"; */
 "bGa-Ca-sVM.text" = ">";
 
 /* Class = "UILabel"; text = "Linear Gauge"; ObjectID = "bSF-Vv-iOI"; */
-"bSF-Vv-iOI.text" = "Linear Gauge";
+"bSF-Vv-iOI.text" = "線形ゲージ";
 
 /* Class = "UILabel"; text = "Direction:"; ObjectID = "dkS-jp-MbA"; */
-"dkS-jp-MbA.text" = "Direction:";
+"dkS-jp-MbA.text" = "方向:";
 
 /* Class = "UILabel"; text = "Shows customized ranges behind the pointer"; ObjectID = "eFO-oh-g7u"; */
-"eFO-oh-g7u.text" = "Shows customized ranges behind the pointer";
+"eFO-oh-g7u.text" = "範囲の設定領域をポインタの背後に表示";
 
 /* Class = "UILabel"; text = "Good:"; ObjectID = "fKb-LG-Ipi"; */
-"fKb-LG-Ipi.text" = "Good:";
+"fKb-LG-Ipi.text" = "良　値:";
 
 /* Class = "UILabel"; text = "25"; ObjectID = "fXK-Pj-z2I"; */
 "fXK-Pj-z2I.text" = "25";
@@ -135,7 +135,7 @@
 "gM7-nb-edl.text" = "25";
 
 /* Class = "UILabel"; text = "Shows a bulletgraph with good, bad and target ranges"; ObjectID = "i1t-bi-tIj"; */
-"i1t-bi-tIj.text" = "Shows a bulletgraph with good, bad and target ranges";
+"i1t-bi-tIj.text" = "「良値/不良値/目標値」の範囲を設定して表示";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "ip3-22-hTU"; */
 "ip3-22-hTU.text" = ">";
@@ -144,40 +144,40 @@
 "jKi-Lt-4No.title" = "Gauges101";
 
 /* Class = "UILabel"; text = "Show ranges:"; ObjectID = "kWE-Ws-VUg"; */
-"kWE-Ws-VUg.text" = "Show ranges:";
+"kWE-Ws-VUg.text" = "範囲の表示:";
 
 /* Class = "UIViewController"; title = "Automatic Scaling"; ObjectID = "lsw-OR-pPQ"; */
-"lsw-OR-pPQ.title" = "Automatic Scaling";
+"lsw-OR-pPQ.title" = "自動スケーリング";
 
 /* Class = "UILabel"; text = "Sweep Angle:"; ObjectID = "ox7-O5-nN1"; */
-"ox7-O5-nN1.text" = "Sweep Angle:";
+"ox7-O5-nN1.text" = "移動角度:";
 
 /* Class = "UILabel"; text = "Shows linear gauges at different directions"; ObjectID = "qT9-gI-3dF"; */
-"qT9-gI-3dF.text" = "Shows linear gauges at different directions";
+"qT9-gI-3dF.text" = "方向が異なる線形ゲージを表示";
 
 /* Class = "UISegmentedControl"; qsf-cb-II0.segmentTitles[0] = "All"; ObjectID = "qsf-cb-II0"; */
-"qsf-cb-II0.segmentTitles[0]" = "All";
+"qsf-cb-II0.segmentTitles[0]" = "すべて表示";
 
 /* Class = "UISegmentedControl"; qsf-cb-II0.segmentTitles[1] = "MinMax"; ObjectID = "qsf-cb-II0"; */
-"qsf-cb-II0.segmentTitles[1]" = "MinMax";
+"qsf-cb-II0.segmentTitles[1]" = "最小値と最大値";
 
 /* Class = "UISegmentedControl"; qsf-cb-II0.segmentTitles[2] = "Value"; ObjectID = "qsf-cb-II0"; */
-"qsf-cb-II0.segmentTitles[2]" = "Value";
+"qsf-cb-II0.segmentTitles[2]" = "現在の値";
 
 /* Class = "UISegmentedControl"; qsf-cb-II0.segmentTitles[3] = "None"; ObjectID = "qsf-cb-II0"; */
-"qsf-cb-II0.segmentTitles[3]" = "None";
+"qsf-cb-II0.segmentTitles[3]" = "表示なし";
 
 /* Class = "UIViewController"; title = "BulletGraph"; ObjectID = "qxu-TE-WXN"; */
-"qxu-TE-WXN.title" = "BulletGraph";
+"qxu-TE-WXN.title" = "ブレットグラフ";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "rSe-fm-Gxe"; */
 "rSe-fm-Gxe.text" = ">";
 
 /* Class = "UILabel"; text = "Value:"; ObjectID = "rZc-UW-ghl"; */
-"rZc-UW-ghl.text" = "Value:";
+"rZc-UW-ghl.text" = "現在の値:";
 
 /* Class = "UILabel"; text = "Start Angle:"; ObjectID = "t1k-Of-tJc"; */
-"t1k-Of-tJc.text" = "Start Angle:";
+"t1k-Of-tJc.text" = "開始角度:";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "uWs-YC-BOy"; */
 "uWs-YC-BOy.text" = ">";
@@ -186,16 +186,16 @@
 "v4P-ZC-9ef.text" = ">";
 
 /* Class = "UIViewController"; title = "Animation"; ObjectID = "yDK-XO-7Ae"; */
-"yDK-XO-7Ae.title" = "Animation";
+"yDK-XO-7Ae.title" = "アニメーション";
 
 /* Class = "UILabel"; text = "Shows simple gauge controls with interaction"; ObjectID = "yEl-vp-kjt"; */
-"yEl-vp-kjt.text" = "Shows simple gauge controls with interaction";
+"yEl-vp-kjt.text" = "インタラクション機能を持つゲージ";
 
 /* Class = "UILabel"; text = "Shows value labels on the gauges"; ObjectID = "yWQ-mg-ImF"; */
-"yWQ-mg-ImF.text" = "Shows value labels on the gauges";
+"yWQ-mg-ImF.text" = "値ラベルをゲージに表示";
 
 /* Class = "UILabel"; text = "Value:"; ObjectID = "z2t-xN-ZFN"; */
-"z2t-xN-ZFN.text" = "Value:";
+"z2t-xN-ZFN.text" = "現在の値:";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "zUw-ej-Vj6"; */
 "zUw-ej-Vj6.text" = ">";

@@ -5,9 +5,10 @@
 //  Copyright (c) 2015 GrapeCity. All rights reserved.
 //
 
+@import XuniCoreDynamicKit;
+@import XuniGaugeDynamicKit;
+
 #import "AppDelegate.h"
-#import "XuniCoreKit/XuniCoreKit.h"
-#import <XuniGaugeKit/XuniGaugeKit.h>
 #import "License.h"
 
 @interface AppDelegate ()

@@ -6,7 +6,7 @@
 //
 
 #import "XGExportImageViewController.h"
-#import <XuniGaugeKit/XuniGaugeKit.h>
+@import XuniGaugeDynamicKit;
 
 #define LOC(A) NSLocalizedString(A, nil)
 
@@ -20,17 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    _radialGauge.showText = XuniShowTextNone;
-    _radialGauge.thickness = 0.6;
-    _radialGauge.min = 0;
-    _radialGauge.max = 100;
-    _radialGauge.value = 25;
+
     _radialGauge.loadAnimation.duration = 2;
     _radialGauge.updateAnimation.duration = 2.5;
-    _radialGauge.isReadOnly = true;
-    _radialGauge.showText = XuniShowTextAll;
 
     [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(animateNextStep:) userInfo:nil repeats:true];
  
@@ -72,6 +64,8 @@
     }
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:LOC(@"OK") otherButtonTitles:nil];
     [alert show];
+    _radialGauge.hidden = false;
+    _snapshotDisplay.hidden = true;
 }
 
 - (IBAction)takeSnapshot:(id)sender {

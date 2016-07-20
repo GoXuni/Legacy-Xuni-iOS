@@ -55,6 +55,9 @@
 
 "Export Image" = "画像として保存";
 
+"Annotations" = "チャートの注釈";
+
+
 // Samples Description
 
 "Shows a simple chart with tooltips." = "ツールチップを備えたチャート";
@@ -104,6 +107,9 @@
 "Shows custom series styling." = "カスタマイズされた系列のスタイルを設定";
 
 "Shows how to export an image of FlexChart." = "FlexChart を画像として保存する方法";
+
+"Shows how to display annotations on FlexChart." = "チャートに各種形状の注釈を表示する方法";
+
 
 // Strings
 

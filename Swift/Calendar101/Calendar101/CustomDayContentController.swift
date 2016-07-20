@@ -25,7 +25,7 @@ class CustomDayContentController: UIViewController, XuniCalendarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Custom Day Content"
+        self.title = NSLocalizedString("Custom Day Content", comment: "")
 
         // Do any additional setup after loading the view.
         _calendar.delegate = self
@@ -49,17 +49,17 @@ class CustomDayContentController: UIViewController, XuniCalendarDelegate {
         _calendar.frame = CGRectMake(0, 75, width, width - 75)
     }
 
-    func dayOfWeekSlotLoading(sender: XuniCalendar, args: XuniCalendarDayOfWeekSlotLoadingEventArgs) {
-        args.dayOfWeekSlot.font = args.isWeekend ? UIFont.italicSystemFontOfSize(11.0) : UIFont.boldSystemFontOfSize(11.0)
+    func dayOfWeekSlotLoading(sender: XuniCalendar, dayOfWeek: XuniDayOfWeek, isWeekend: Bool, dayOfWeekSlot: UILabel) {
+        dayOfWeekSlot.font = isWeekend ? UIFont.italicSystemFontOfSize(11.0) : UIFont.boldSystemFontOfSize(11.0)
     }
     
-    func daySlotLoading(sender: XuniCalendar, args: XuniCalendarDaySlotLoadingEventArgs) {
-        if (args.isAdjacentDay) {
-            return;
+    func daySlotLoading(sender: XuniCalendar, date: NSDate, isAdjacentDay: Bool, daySlot: XuniCalendarDaySlotBase) -> XuniCalendarDaySlotBase {
+        if (isAdjacentDay) {
+            return daySlot;
         }
         
-        let day = NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: args.date).day
-        let rect = args.daySlot.frame
+        let day = NSCalendar.currentCalendar().components(NSCalendarUnit.Day, fromDate: date).day
+        let rect = daySlot.frame
         let size = rect.size
         var rect1: CGRect
         var rect2: CGRect
@@ -83,7 +83,7 @@ class CustomDayContentController: UIViewController, XuniCalendarDelegate {
             imageDaySlot.imageSource = UIImage(named: dotIcon[day % 3])
         }
         
-        args.daySlot = imageDaySlot
+        return imageDaySlot
     }
     
     /*
